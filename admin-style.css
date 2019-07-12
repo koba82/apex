@@ -1948,10 +1948,6 @@ li.current a {
     font-weight: 300 !important;
 }
 
-ul.wp-submenu > li:last-of-type a {
-	margin-bottom: 10px !important;
-}
-
 #adminmenu li.wp-menu-separator {
 	display: none;
 }
