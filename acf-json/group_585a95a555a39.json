@@ -1,0 +1,804 @@
+{
+    "key": "group_585a95a555a39",
+    "title": "Ontwikkelaar",
+    "fields": [
+        {
+            "key": "field_5b103551bcd4d",
+            "label": "Theme",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b103565bcd4e",
+            "label": "Theme",
+            "name": "config-theme",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "apex-alpha": "Apex Alpha",
+                "apex-charlie.css": "Apex Charlie",
+                "apex-lima.css": "Apex Lima",
+                "apex-sierra.css": "Apex Sierra"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_595ceb21adb88",
+            "label": "Thema instellingen",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b17a675d4417",
+            "label": "Override header height",
+            "name": "override-header-height",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b11bd4450513",
+            "label": "Header height",
+            "name": "dev-header-height",
+            "type": "text",
+            "instructions": "Hoogte van header",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b17a675d4417",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "500px",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b17a6b0d4418",
+            "label": "Override sticky header breakpoint",
+            "name": "override-sticky-header-breakpoint",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b0667dda1697",
+            "label": "Sticky header breakpoint",
+            "name": "dev-sticky-header-breakpoint",
+            "type": "text",
+            "instructions": "Breakpoint (hoogte) in px. Vanaf dit punt wordt class=\"scroll-top\" verwijderd en class=\"scroll-offset\" toegevoegd.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b17a6b0d4418",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 480,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b17eb9681c29",
+            "label": "Override desktop -> mobiel navigatie breakpoint",
+            "name": "override-mob-navi-breakpoint",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b17ebda81c2a",
+            "label": "Desktop -> mobiel navigatie breakpoint",
+            "name": "mob-navi-breakpoint",
+            "type": "number",
+            "instructions": "Breedte (in px) van breakpoint van desktop navigatie naar mobiel navigatie",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b17eb9681c29",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 950,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b277a8acca76",
+            "label": "AOS settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b27b849f26e9",
+            "label": "AOS element",
+            "name": "aos-element",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "content": "<div class=\"content\">",
+                "none": "geen"
+            },
+            "default_value": [
+                "content"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b277ad9cca77",
+            "label": "AOS animatie",
+            "name": "aos-animation",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "fade": "fade",
+                "fade-up": "fade-up",
+                "fade-down": "fade-down",
+                "fade-left": "fade-left",
+                "fade-right": "fade-right",
+                "fade-up-right": "fade-up-right",
+                "fade-up-left": "fade-up-left",
+                "fade-down-right": "fade-down-right",
+                "fade-down-left": "fade-down-left",
+                "flip-up": "flip-up",
+                "flip-down": "flip-down",
+                "flip-left": "flip-left",
+                "flip-right": "flip-right",
+                "slide-up": "slide-up",
+                "slide-down": "slide-down",
+                "slide-left": "slide-left",
+                "slide-right": "slide-right",
+                "zoom-in": "zoom-in",
+                "zoom-in-up": "zoom-in-up",
+                "zoom-in-down": "zoom-in-down",
+                "zoom-in-left": "zoom-in-left",
+                "zoom-in-right": "zoom-in-right",
+                "zoom-out": "zoom-out",
+                "zoom-out-up": "zoom-out-up",
+                "zoom-out-down": "zoom-out-down",
+                "zoom-out-left": "zoom-out-left",
+                "zoom-out-right": "zoom-out-right"
+            },
+            "default_value": [
+                "fade"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b27ace64df1b",
+            "label": "AOS duration",
+            "name": "aos-duration",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "150": "150",
+                "200": "200",
+                "250": "250",
+                "300": "300",
+                "350": "350",
+                "400": "400",
+                "450": "450",
+                "500": "500",
+                "550": "550",
+                "600": "600",
+                "650": "650",
+                "700": "700",
+                "750": "750",
+                "800": "800",
+                "850": "850",
+                "900": "900",
+                "950": "950",
+                "1000": "1000",
+                "1100": "1100",
+                "1200": "1200",
+                "1300": "1300",
+                "1400": "1400",
+                "1500": "1500",
+                "1600": "1600"
+            },
+            "default_value": [
+                500
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b27ad4525942",
+            "label": "AOS easing",
+            "name": "aos-easing",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "linear": "linear",
+                "ease": "ease",
+                "ease-in": "ease-in",
+                "ease-out": "ease-out",
+                "ease-in-out": "ease-in-out",
+                "ease-in-back": "ease-in-back",
+                "ease-out-back": "ease-out-back",
+                "ease-in-out-back": "ease-in-out-back",
+                "ease-in-sine": "ease-in-sine",
+                "ease-out-sine": "ease-out-sine",
+                "ease-in-out-sine": "ease-in-out-sine",
+                "ease-in-quad": "ease-in-quad",
+                "ease-out-quad": "ease-out-quad",
+                "ease-in-out-quad": "ease-in-out-quad",
+                "ease-in-cubic": "ease-in-cubic",
+                "ease-out-cubic": "ease-out-cubic",
+                "ease-in-out-cubic": "ease-in-out-cubic",
+                "ease-in-quart": "ease-in-quart",
+                "ease-out-quart": "ease-out-quart",
+                "ease-in-out-quart": "ease-in-out-quart"
+            },
+            "default_value": [
+                "ease-in-out"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b27adc842ab4",
+            "label": "AOS offset",
+            "name": "aos-offset",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "0",
+                "20": "20",
+                "40": "40",
+                "60": "60",
+                "80": "80",
+                "100": "100",
+                "120": "120",
+                "140": "140",
+                "160": "160",
+                "180": "180",
+                "200": "200",
+                "220": "220",
+                "240": "240",
+                "260": "260",
+                "280": "280",
+                "300": "300",
+                "320": "320",
+                "340": "340",
+                "360": "360",
+                "380": "380",
+                "400": "400",
+                "420": "420",
+                "440": "440",
+                "460": "460",
+                "480": "480",
+                "500": "500"
+            },
+            "default_value": [
+                120
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b27ae6c42ab5",
+            "label": "AOS delay",
+            "name": "aos-delay",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "0",
+                "20": "20",
+                "40": "40",
+                "60": "60",
+                "80": "80",
+                "100": "100",
+                "120": "120",
+                "140": "140",
+                "160": "160",
+                "180": "180",
+                "200": "200",
+                "220": "220",
+                "240": "240",
+                "260": "260",
+                "280": "280",
+                "300": "300",
+                "320": "320",
+                "340": "340",
+                "360": "360",
+                "380": "380",
+                "400": "400",
+                "420": "420",
+                "440": "440",
+                "460": "460",
+                "480": "480",
+                "500": "500"
+            },
+            "default_value": [
+                0
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b17a55decf04",
+            "label": "Google",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b17a56becf05",
+            "label": "Google Analytics code",
+            "name": "google_analytics_code",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5b17a587ecf06",
+            "label": "Google Maps API Key",
+            "name": "google_maps_api_key",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b17a59decf07",
+            "label": "reCaptcha site key",
+            "name": "recaptcha_site_key",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b17a5aeecf08",
+            "label": "reCaptcha secret key",
+            "name": "recaptcha_secret_key",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_585a96ec532ad",
+            "label": "Modules",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_585a954bac9ee",
+            "label": "Occasions module",
+            "name": "module-occasions",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "horizontal",
+            "choices": {
+                "true": "Aan",
+                "false": "Uit"
+            },
+            "default_value": "",
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_585a95af75aca",
+            "label": "Nieuws module",
+            "name": "module-news",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "horizontal",
+            "choices": {
+                "true": "Aan",
+                "false": "Uit"
+            },
+            "default_value": "",
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_585a95bd75acb",
+            "label": "Vastgoed module",
+            "name": "module-real-estate",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "horizontal",
+            "choices": {
+                "true": "Aan",
+                "false": "Uit"
+            },
+            "default_value": "",
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b119cd12a8b1",
+            "label": "Afspraken module",
+            "name": "module-booking",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "true": "Aan",
+                "false": "Uit"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "false : Uit",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_585a9796d3c83",
+            "label": "Includes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_585a97b4d3c84",
+            "label": "PHP Header include",
+            "name": "dev-php-header-include",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5b1688ec6c2ce",
+            "label": "Klant gegevens",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b1688fe6c2cf",
+            "label": "Klantnummer",
+            "name": "client-number",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            },
+            {
+                "param": "current_user_role",
+                "operator": "==",
+                "value": "administrator"
+            }
+        ]
+    ],
+    "menu_order": 50,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1529344405
+}

@@ -1,0 +1,65 @@
+{
+    "key": "group_5b16786ee48ca",
+    "title": "Unieke punten",
+    "fields": [
+        {
+            "key": "field_5b1678c62faad",
+            "label": "Opsomming",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "3",
+                "class": "",
+                "id": ""
+            },
+            "message": "Je kunt hier een standaard opsomming bouwen die op de hele website beschikbaar is.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5b16787832dba",
+            "label": "Unieke punten",
+            "name": "global",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_56705c0f4b166",
+                "field_56705c0f4b169",
+                "field_56705c0f4b168",
+                "field_56c314f73990b"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-unieke-punten"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1528200323
+}

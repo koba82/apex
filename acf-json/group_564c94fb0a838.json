@@ -1,0 +1,3319 @@
+{
+    "key": "group_564c94fb0a838",
+    "title": "Pagina - Standaard",
+    "fields": [
+        {
+            "key": "field_564c950e3c3c6",
+            "label": "Pagina",
+            "name": "flex",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5a71b7fef8dce": {
+                    "key": "5a71b7fef8dce",
+                    "name": "flex-text",
+                    "label": "Tekst",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a71b7fef8dcf",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a71b7fef8dd0",
+                            "label": "Kop",
+                            "name": "flex-text-header",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": "h2"
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a71b7fef8dd1",
+                            "label": "Tekst",
+                            "name": "flex-text-block",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "very_simple",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5a74bef883108",
+                            "label": "Uitgelichte tekst",
+                            "name": "flex-text-spotlight",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "49",
+                                "class": "float",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no-spotlight": "Nee",
+                                "spotlight": "Ja"
+                            },
+                            "allow_null": 0,
+                            "default_value": "no-spotlight : Nee",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5b1a949f0d794",
+                            "label": "Kolommen",
+                            "name": "flex-text-column-select",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "49",
+                                "class": "float",
+                                "id": ""
+                            },
+                            "choices": {
+                                "single-column": "1 kolom",
+                                "double-column": "2 kolommen"
+                            },
+                            "allow_null": 0,
+                            "default_value": "no-spotlight : Nee",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5b1a95870d79a",
+                            "label": "Kolom 2",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5b1a949f0d794",
+                                        "operator": "==",
+                                        "value": "double-column"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<bold>Kolom 2<\/br>",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_5b1a952f0d797",
+                            "label": "Kop",
+                            "name": "flex-text-header-2",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5b1a949f0d794",
+                                        "operator": "==",
+                                        "value": "double-column"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": "h2"
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b1a955d0d798",
+                            "label": "Tekst",
+                            "name": "flex-text-block-2",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5b1a949f0d794",
+                                        "operator": "==",
+                                        "value": "double-column"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "very_simple",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5b1a95660d799",
+                            "label": "Uitgelichte tekst",
+                            "name": "flex-text-spotlight-2",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5b1a949f0d794",
+                                        "operator": "==",
+                                        "value": "double-column"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "49",
+                                "class": "float",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no-spotlight": "Nee",
+                                "spotlight": "Ja"
+                            },
+                            "allow_null": 0,
+                            "default_value": "no-spotlight : Nee",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5a71b7fef8dd2",
+                            "label": "Afbeelding toevoegen",
+                            "name": "flex-text-add-image",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5b1a949f0d794",
+                                        "operator": "==",
+                                        "value": "single-column"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "49",
+                                "class": "float",
+                                "id": ""
+                            },
+                            "choices": {
+                                "false": "Nee",
+                                "true": "Ja"
+                            },
+                            "allow_null": 0,
+                            "default_value": "false : Nee",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5a71b7fef8dd3",
+                            "label": "Afbeelding",
+                            "name": "flex-text-image",
+                            "type": "image",
+                            "instructions": "Voeg hier de afbeelding in",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5a71b7fef8dd2",
+                                        "operator": "==",
+                                        "value": "true"
+                                    },
+                                    {
+                                        "field": "field_5b1a949f0d794",
+                                        "operator": "==",
+                                        "value": "single-column"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": 4,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5a71b7fef8dd4",
+                            "label": "Plaats van afbeelding",
+                            "name": "flex-text-image-position",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5a71b7fef8dd2",
+                                        "operator": "==",
+                                        "value": "true"
+                                    },
+                                    {
+                                        "field": "field_5b1a949f0d794",
+                                        "operator": "==",
+                                        "value": "single-column"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "img-left": "<span class=\"inline-icon\">&#xf111;<\/span> Links van tekst",
+                                "img-right": "Rechts van tekst <span class=\"inline-icon\">&#xf112;<\/span>"
+                            },
+                            "allow_null": 0,
+                            "default_value": "img-left : <span class=\"inline-icon\"><\/span> Links van tekst",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5a71b7fef8dd5",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a71b817f8ddd",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5b104e2a7b57f",
+                                    "label": "Achtergrondkleur",
+                                    "name": "flex-bgc-select",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "geen": "<span class=\"color-selector\" style=\"background: #fffff\"> Geen <\/span>",
+                                        "pri-color": "<span class=\"color-selector\" style=\"background: #494158;\"> <\/span>",
+                                        "sec-color": "<span class=\"color-selector\" style=\"background: #2d2d2d;\"> <\/span>",
+                                        "ter-color": "<span class=\"color-selector\" style=\"background: #d16f00;\"> <\/span>"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "save_other_choice": 0,
+                                    "default_value": "",
+                                    "layout": "horizontal",
+                                    "return_format": "value"
+                                },
+                                {
+                                    "key": "field_5a71b7fef8dd7",
+                                    "label": "Gepubliceerd",
+                                    "name": "flex-publish",
+                                    "type": "true_false",
+                                    "instructions": "Zet het vinkje uit om dit blok offline te zetten. Dit blok is dan niet meer zichtbaar op de website, maar blijft wel zichtbaar aan de achterkant.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 1,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5a71b7fef8dd8",
+                                    "label": "Begindatum",
+                                    "name": "flex-start-date-option",
+                                    "type": "true_false",
+                                    "instructions": "Toon dit blok vanaf een bepaalde datum",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5a71b7fef8dd9",
+                                    "label": "Tonen vanaf:",
+                                    "name": "flex-start-date",
+                                    "type": "date_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5a71b7fef8dd8",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "d\/m\/Y",
+                                    "return_format": "Ymd",
+                                    "first_day": 1
+                                },
+                                {
+                                    "key": "field_5a71b7fef8dda",
+                                    "label": "Einddatum",
+                                    "name": "flex-end-date-option",
+                                    "type": "true_false",
+                                    "instructions": "Toon dit blok tot een bepaalde datum",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5a71b7fef8ddb",
+                                    "label": "Tonen tot:",
+                                    "name": "flex-end-date",
+                                    "type": "date_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5a71b7fef8dda",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "d\/m\/Y",
+                                    "return_format": "Ymd",
+                                    "first_day": 1
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5a71b7fef8ddc",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/tekst\" target=\"new_window\">\r\nMeer informatie over blok: Tekst\r\n<\/a>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "583d5393f4494": {
+                    "key": "583d5393f4494",
+                    "name": "flex-image",
+                    "label": "Afbeelding(en)",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_583d5393f4495",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5b153fffa6318",
+                            "label": "Kop",
+                            "name": "flex-title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b2a66597bd4c",
+                            "label": "Afbeelding(en)",
+                            "name": "flex-image-array",
+                            "type": "gallery",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": "",
+                            "max": "",
+                            "insert": "append",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_583d5393f4496",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a71c43644aae",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5a71c91b86161",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/afbeelding\" target=\"new_window\">\r\nMeer informatie over blok: Afbeelding(en)\r\n<\/a>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "583d53c5f449e": {
+                    "key": "583d53c5f449e",
+                    "name": "flex-table",
+                    "label": "Tabel",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_583d53c5f449f",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5b157ad5ef925",
+                            "label": "Kop",
+                            "name": "flex-title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_57a9995846eda",
+                            "label": "Tabel",
+                            "name": "flex-table-content",
+                            "type": "table",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "use_header": 0
+                        },
+                        {
+                            "key": "field_583d53c5f44a0",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a71c93e86162",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_583d53c5f44a7",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/tabel\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: tabel \r\n<\/a>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "583d53f5f44a8": {
+                    "key": "583d53f5f44a8",
+                    "name": "flex-gallery",
+                    "label": "Gallerij",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_583d53f5f44a9",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5b14318a074ab",
+                            "label": "Kop",
+                            "name": "flex-gallery-title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b1443da8fb95",
+                            "label": "Type gallerij",
+                            "name": "flex-gallery-type",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "slider": "Slider",
+                                "gallery": "Fotoalbum"
+                            },
+                            "allow_null": 0,
+                            "default_value": "slider : Slider",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_565e04869e9aa",
+                            "label": "Gallerij",
+                            "name": "flex-gallery-images",
+                            "type": "gallery",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 1,
+                            "max": 15,
+                            "insert": "append",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_583d53f5f44aa",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a71c95c86163",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_583d53f5f44b1",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/gallerij\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: gallerij \r\n<\/a>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "583d5489d95a8": {
+                    "key": "583d5489d95a8",
+                    "name": "flex-slider",
+                    "label": "Slider (Diavoorstelling)",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_583d5489d95a9",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_56dd8e73a49ba",
+                            "label": "Slider naam (Kop)",
+                            "name": "flex-slider-header",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_582de97088003",
+                            "label": "Type silder",
+                            "name": "flex-slider-type",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "text": "Tekst",
+                                "image": "Afbeelding"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5666e6526a0bc",
+                            "label": "Automatisch afspelen",
+                            "name": "slider-autoplay",
+                            "type": "true_false",
+                            "instructions": "Moet de slider automatisch starten?",
+                            "required": "",
+                            "conditional_logic": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Automatisch starten",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5666e837805b8",
+                            "label": "Timing",
+                            "name": "slider-interval",
+                            "type": "text",
+                            "instructions": "Dia interval (seconden)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 5,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_566695a31af86",
+                            "label": "Slides (Dia's)",
+                            "name": "flex-slider-slides",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_582de97088003",
+                                        "operator": "==",
+                                        "value": "text"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "5666d7b2a4739": {
+                                    "key": "5666d7b2a4739",
+                                    "name": "the-slides",
+                                    "label": "Dia",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5666d7d84bb5a",
+                                            "label": "Tekst 1",
+                                            "name": "the-slide-text",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "maxlength": "",
+                                            "rows": "",
+                                            "new_lines": "",
+                                            "readonly": 0,
+                                            "disabled": 0
+                                        },
+                                        {
+                                            "key": "field_5666d7f54bb5b",
+                                            "label": "Tekst 2",
+                                            "name": "the-slide-text2",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": "",
+                                            "readonly": 0,
+                                            "disabled": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "button_label": "Toevoegen...",
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "field_582df52988004",
+                            "label": "Afbeeldingen",
+                            "name": "flex-gallery-images",
+                            "type": "gallery",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_582de97088003",
+                                        "operator": "==",
+                                        "value": "image"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 1,
+                            "max": 5,
+                            "insert": "append",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_583d5489d95aa",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a71c97586164",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_583d5489d95b1",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/slider\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: slider \r\n<\/a>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "583d54ead95b2": {
+                    "key": "583d54ead95b2",
+                    "name": "flex-youtube",
+                    "label": "YouTube Video",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_583d54ead95b3",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_564cede570b4b",
+                            "label": "YouTube Video",
+                            "name": "flex-youtube-iframe",
+                            "type": "text",
+                            "instructions": "Plak hier de 'Insluiten' code van de YouTube video.",
+                            "required": "",
+                            "conditional_logic": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "<iframe>...<\/iframe>",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_583d54ead95b4",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": ""
+                        },
+                        {
+                            "key": "field_5a71c98e86165",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_583d54ead95bb",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/youtube\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: YouTube\r\n<\/a>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5a6f2d1cab7b3": {
+                    "key": "5a6f2d1cab7b3",
+                    "name": "flex-cta",
+                    "label": "Knop",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a6f2d1cab7b4",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5b157a2b010d3",
+                            "label": "Kop",
+                            "name": "flex-title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b1939f2e4112",
+                            "label": "Tekst",
+                            "name": "flex-text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "very_simple",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5a6f2d1cab7b5",
+                            "label": "Knop",
+                            "name": "flex-cta-object",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Knop toevoegen",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5a6f2d1cab7b6",
+                                    "label": "Icoon",
+                                    "name": "flex-cta-icon",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "-bor-bottom",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "-": "geen",
+                                        "xf101": "Aanpassen",
+                                        "xf109": "Anker",
+                                        "xf115": "Archief",
+                                        "xf116": "Grafiek",
+                                        "xf123": "Pijlen",
+                                        "xf125": "Pijlen horizontaal",
+                                        "xf126": "Pijlen vertikaal",
+                                        "xf127": "Asterisk",
+                                        "xf128": "Apestaartje",
+                                        "xf129": "Auto",
+                                        "xf12b": "Weegschaal",
+                                        "xf12c": "Verbod",
+                                        "xf12d": "Bank",
+                                        "xf12e": "Staafdiagram",
+                                        "xf12f": "Staafdiagram",
+                                        "xf130": "Streepjescode",
+                                        "xf131": "Menu",
+                                        "xf132": "Batterij leeg",
+                                        "xf133": "Batterij 1",
+                                        "xf134": "Batterij 2",
+                                        "xf135": "Batterij 3",
+                                        "xf136": "Batterij 4",
+                                        "xf137": "Batterij leeg",
+                                        "xf138": "Batterij vol",
+                                        "xf139": "Batterij halfvol",
+                                        "xf13a": "Batterij kwart",
+                                        "xf13b": "Batterij drie-kwart",
+                                        "xf13c": "Bed",
+                                        "xf13d": "Bier",
+                                        "xf140": "Bel",
+                                        "xf141": "Bel",
+                                        "xf142": "Bel uit",
+                                        "xf143": "Bel uit",
+                                        "xf144": "Fiets",
+                                        "xf145": "Verrekijker",
+                                        "xf146": "Verjaardagstaart",
+                                        "xf14c": "Bliksemschicht",
+                                        "xf14d": "Bom",
+                                        "xf14e": "Boek",
+                                        "xf14f": "Bladwijzer",
+                                        "xf150": "Bladwijzer",
+                                        "xf151": "Koffer",
+                                        "xf153": "Insect",
+                                        "xf154": "Gebouw",
+                                        "xf155": "Gebouw",
+                                        "xf156": "Luidspreker",
+                                        "xf157": "Roos",
+                                        "xf158": "Bus",
+                                        "xf15a": "Taxi",
+                                        "xf15b": "Rekenmachine",
+                                        "xf15c": "Kalender",
+                                        "xf15d": "Kalender check",
+                                        "xf15e": "Kalender min",
+                                        "xf15f": "Kalender",
+                                        "xf160": "Kalender plus",
+                                        "xf161": "Kalender verwijderen",
+                                        "xf162": "Camera",
+                                        "xf163": "Retro camera",
+                                        "xf164": "Auto",
+                                        "xf169": "Knop links",
+                                        "xf16a": "Knop rechts",
+                                        "xf16b": "Knop boven",
+                                        "xf16d": "Winkelwagen pijl",
+                                        "xf16e": "Winkelwagen plus",
+                                        "xf16f": "Credit Card",
+                                        "xf178": "Certificaat",
+                                        "xf17b": "Check",
+                                        "xf17c": "Check cirkel",
+                                        "xf17d": "Check cirkel",
+                                        "xf17e": "Check vierkant",
+                                        "xf17f": "Check vierkant",
+                                        "xf188": "Kind",
+                                        "xf18a": "Cirkel",
+                                        "xf18b": "Cirkel 2",
+                                        "xf18c": "Cirkel opening",
+                                        "xf18d": "Cirkel dun",
+                                        "xf18f": "Klok",
+                                        "xf190": "Kloon",
+                                        "xf191": "Sluiten",
+                                        "xf192": "Wolk (Cloud)",
+                                        "xf193": "Wolk (Cloud) downloaden",
+                                        "xf194": "Wolk (Cloud) uploaden",
+                                        "xf196": "Code",
+                                        "xf197": "Code fork",
+                                        "xf199": "Koffie",
+                                        "xf19a": "Tandwiel",
+                                        "xf19b": "Tandwielen",
+                                        "xf19d": "Reactie",
+                                        "xf19e": "Reactie 2",
+                                        "xf19f": "Reageren",
+                                        "xf1a0": "Reageren 2",
+                                        "xf1a1": "Reacties",
+                                        "xf1a2": "Reacties 2",
+                                        "xf1a3": "Kompas",
+                                        "xf1a8": "Copyright",
+                                        "xf1a9": "Creative Commons",
+                                        "xf1aa": "Credit Card",
+                                        "xf1ab": "Bijsnijden",
+                                        "xf1ac": "Vizier",
+                                        "xf1ae": "Blok",
+                                        "xf1af": "Blokken",
+                                        "xf1b1": "Mes en vork",
+                                        "xf1b2": "Dashboard",
+                                        "xf1b4": "Database",
+                                        "xf1b7": "Computer",
+                                        "xf1b9": "Diamant",
+                                        "xf1bc": "Punt",
+                                        "xf1bd": "Downloaden",
+                                        "xf1c1": "Bewerken",
+                                        "xf1c3": "Ellipsis horizontaal",
+                                        "xf1c4": "Ellipsis vertikaal",
+                                        "xf1c6": "Envelop",
+                                        "xf1c7": "Envelop 2",
+                                        "xf1c8": "Envelop vierkant",
+                                        "xf1c9": "Gum",
+                                        "xf1cc": "Wisselen",
+                                        "xf1cd": "Uitroepteken",
+                                        "xf1ce": "Uitroepteken cirkel",
+                                        "xf1cf": "Gevaar",
+                                        "xf1d2": "Externe link",
+                                        "xf1d3": "Externe link vierkant",
+                                        "xf1d4": "Oog",
+                                        "xf1d5": "Oog streep",
+                                        "xf1d6": "Pipet",
+                                        "xf1dc": "Fax",
+                                        "xf2e3": "RSS",
+                                        "xf1dd": "Vrouw",
+                                        "xf1de": "Straaljager",
+                                        "xf1e0": "Bestand - archief",
+                                        "xf1e1": "Bestand - audio",
+                                        "xf1e2": "Bestand - code",
+                                        "xf1e3": "Bestand - excel",
+                                        "xf1e4": "Bestand - afbeelding",
+                                        "xf1e5": "Bestand - video",
+                                        "xf1e7": "Bestand - PDF",
+                                        "xf1e8": "Bestand - foto",
+                                        "xf1e9": "Bestand - afbeelding",
+                                        "xf1ea": "Bestand - Powerpoint",
+                                        "xf1eb": "Bestand - audio",
+                                        "xf1ee": "Bestand - video",
+                                        "xf1ef": "Bestand - Word",
+                                        "xf1f0": "Bestand - ZIP",
+                                        "xf1f2": "Film",
+                                        "xf1f3": "Filter",
+                                        "xf1f4": "Vuur",
+                                        "xf1f5": "Brandblusser",
+                                        "xf1f7": "Vlag",
+                                        "xf1f8": "Finish vlag",
+                                        "xf1f9": "Vlag 2",
+                                        "xf1fa": "Flits",
+                                        "xf1fb": "Laboratorium",
+                                        "xf1fe": "Map",
+                                        "xf1ff": "Map 2",
+                                        "xf200": "Map open",
+                                        "xf201": "Map 2 open",
+                                        "xf207": "Frons",
+                                        "xf208": "Voetbal",
+                                        "xf209": "Gamepad",
+                                        "xf20a": "Hamer",
+                                        "xf20c": "Tandwiel",
+                                        "xf20d": "Tandwielen",
+                                        "xf212": "Kado",
+                                        "xf218": "Glas",
+                                        "xf219": "Wereldbol",
+                                        "xf21e": "Universiteit",
+                                        "xf220": "Groep",
+                                        "xf223": "Hand grijpen",
+                                        "xf224": "Hand grijpen",
+                                        "xf229": "Hand papier",
+                                        "xf22a": "Hand peace",
+                                        "xf22b": "Hand wijzen",
+                                        "xf22c": "Hand steen",
+                                        "xf22d": "Hand schaar",
+                                        "xf22e": "Hand Spock",
+                                        "xf22f": "Hand stop",
+                                        "xf230": "Harde schijf",
+                                        "xf232": "Koptelefoon",
+                                        "xf233": "Hart",
+                                        "xf234": "Hart open",
+                                        "xf235": "Hartritme",
+                                        "xf236": "Geschiedenis",
+                                        "xf237": "Home thuis",
+                                        "xf239": "Hotel",
+                                        "xf23a": "Zandloper",
+                                        "xf23b": "Zandloper 1",
+                                        "xf23c": "Zandloper 2",
+                                        "xf23d": "Zandloper 3",
+                                        "xf23e": "Zandloper einde",
+                                        "xf23f": "Zandloper half",
+                                        "xf240": "Zandloper open",
+                                        "xf241": "Zandloper begin",
+                                        "xf244": "Cursor",
+                                        "xf246": "Afbeelding",
+                                        "xf247": "Postvak in",
+                                        "xf249": "Industrie",
+                                        "xf24a": "Info",
+                                        "xf24b": "Info cirkel",
+                                        "xf24e": "Overheid",
+                                        "xf255": "Sleutel",
+                                        "xf256": "Toetsenbord",
+                                        "xf258": "Taal",
+                                        "xf259": "Laptop",
+                                        "xf25c": "Blad",
+                                        "xf25e": "Hamer rechter",
+                                        "xf25f": "Limoen",
+                                        "xf260": "Niveau omlaag",
+                                        "xf261": "Niveau omhoog",
+                                        "xf262": "Reddingsboei",
+                                        "xf263": "Reddingsboei",
+                                        "xf264": "Ondersteuning",
+                                        "xf265": "Reddingsboei",
+                                        "xf266": "Lamp open",
+                                        "xf267": "Lijngrafiek",
+                                        "xf270": "Navigatie pijl noord",
+                                        "xf271": "Slot",
+                                        "xf276": "Toverstaf",
+                                        "xf277": "Magneet",
+                                        "xf278": "Doorsturen",
+                                        "xf279": "Beantwoorden",
+                                        "xf27a": "Allen beantwoorden",
+                                        "xf27b": "Man",
+                                        "xf27c": "Kaart",
+                                        "xf27d": "Kaart pijl marker",
+                                        "xf27e": "Kaart open",
+                                        "xf27f": "Kaart speld",
+                                        "xf280": "Wegwijzer",
+                                        "xf28a": "Meh",
+                                        "xf28c": "Microfoon",
+                                        "xf28d": "Microfoon uit",
+                                        "xf28e": "Min",
+                                        "xf28f": "Min cirkel",
+                                        "xf290": "Min vierkant",
+                                        "xf291": "Min vierkant open",
+                                        "xf292": "Mobiel",
+                                        "xf293": "Mobiele telefoon",
+                                        "xf294": "Geld",
+                                        "xf295": "Maan open",
+                                        "xf296": "Universiteit",
+                                        "xf297": "Motorfiets",
+                                        "xf298": "Muis cursor",
+                                        "xf299": "Muziek",
+                                        "xf29a": "Navicon hamburger menu",
+                                        "xf29c": "Krant",
+                                        "xf29d": "Groeperen",
+                                        "xf29e": "Degroeperen",
+                                        "xf2a7": "Kwast",
+                                        "xf2a8": "Verzenden",
+                                        "xf2a9": "Verzenden open",
+                                        "xf2ae": "Voet kat hond",
+                                        "xf2b0": "Potlood",
+                                        "xf2b1": "Potlood vierkant",
+                                        "xf2b2": "Potlood vierkant open",
+                                        "xf2b3": "Telefoon",
+                                        "xf2b4": "Telefoon vierkant",
+                                        "xf2b5": "Foto",
+                                        "xf2b6": "Foto open",
+                                        "xf2b7": "Taartgrafiek",
+                                        "xf2bd": "Papieren vlieguig",
+                                        "xf2c1": "Stekker",
+                                        "xf2c2": "Plus",
+                                        "xf2c3": "Plus cirkel",
+                                        "xf2c4": "Plus vierkant",
+                                        "xf2c5": "Plus vierkant open",
+                                        "xf2c6": "Uitzetten",
+                                        "xf2c7": "Printen",
+                                        "xf2c8": "Puzzelstuk",
+                                        "xf2ca": "QR code",
+                                        "xf2cb": "Vraag",
+                                        "xf2cc": "Vraag cirkel",
+                                        "xf2cd": "Citaat links",
+                                        "xf2ce": "Citaat rechts",
+                                        "xf2d0": "Willekeurig",
+                                        "xf2d2": "Recycle",
+                                        "xf2d5": "Verversen",
+                                        "xf2d6": "Geregistreerd",
+                                        "xf342": "Vermenigvuldigen",
+                                        "xf2d8": "Rangschikken",
+                                        "xf2da": "Beantwoorden",
+                                        "xf2db": "Allen beantwoorden",
+                                        "xf2dc": "Retweet",
+                                        "xf2de": "Weg",
+                                        "xf2df": "Raket",
+                                        "xf2e4": "RSS",
+                                        "xf2eb": "Zoeken",
+                                        "xf2ec": "Zoeken min",
+                                        "xf2ed": "Zoeken plus",
+                                        "xf2ef": "Server",
+                                        "xf2f0": "Delen",
+                                        "xf2f1": "Delen alternatief",
+                                        "xf2f2": "Delen alternatief vierkant",
+                                        "xf2f3": "Delen vierkant",
+                                        "xf2f4": "Delen vierkant open",
+                                        "xf2f7": "Schild",
+                                        "xf2f8": "Schip",
+                                        "xf2fa": "Winkelwagen",
+                                        "xf2fb": "Inloggen",
+                                        "xf2fc": "Uitloggen",
+                                        "xf2fd": "Signaal",
+                                        "xf2ff": "Sitemap",
+                                        "xf303": "Sliders",
+                                        "xf305": "Lach open",
+                                        "xf306": "Ongesorteerd",
+                                        "xf307": "Sorteren A aflopend",
+                                        "xf308": "Sorteren A oplopend",
+                                        "xf309": "Sorteren 1 oplopend",
+                                        "xf30a": "Sorteren 1 aflopend",
+                                        "xf30b": "Sorteren omhoog",
+                                        "xf30c": "Sorteren omlaag",
+                                        "xf30d": "Sorteren num aflopend",
+                                        "xf30e": "Sorteren num oplopend",
+                                        "xf310": "Space shuttle",
+                                        "xf311": "Wachten",
+                                        "xf312": "Lepel",
+                                        "xf314": "Vierkant",
+                                        "xf315": "Vierkant open",
+                                        "xf318": "Ster",
+                                        "xf319": "Ster half",
+                                        "xf31a": "Ster half open",
+                                        "xf31b": "Ster open",
+                                        "xf321": "Post-it notitie",
+                                        "xf322": "Post-it notitie open",
+                                        "xf324": "Streetview",
+                                        "xf32a": "Koffer",
+                                        "xf32b": "Zon open",
+                                        "xf32e": "Tablet",
+                                        "xf32f": "Tachometer",
+                                        "xf330": "Label",
+                                        "xf331": "Labels",
+                                        "xf332": "Takenlijst",
+                                        "xf333": "Taxi",
+                                        "xf334": "TV",
+                                        "xf336": "Terminal",
+                                        "xf33c": "Speld",
+                                        "xf33d": "Duim naar beneden",
+                                        "xf33e": "Duim naar beneden open",
+                                        "xf33f": "Duim omhoog open",
+                                        "xf340": "Duim omhoog",
+                                        "xf341": "Ticket",
+                                        "xf343": "Vermenigvuldigen cirkel",
+                                        "xf344": "Vermenigvuldigen cirkel open",
+                                        "xf345": "Tint",
+                                        "xf168": "Toggle beneden",
+                                        "xf346": "Toggle off",
+                                        "xf347": "Toggle on",
+                                        "xf348": "Trademark",
+                                        "xf34c": "Afval",
+                                        "xf34d": "Afval open",
+                                        "xf34e": "Boom",
+                                        "xf351": "Troffee beker",
+                                        "xf352": "Truck",
+                                        "xf354": "Telefoon oud",
+                                        "xf35b": "Paraplu",
+                                        "xf35e": "Universiteit",
+                                        "xf360": "Openen",
+                                        "xf361": "Openen 2",
+                                        "xf362": "Uploaden",
+                                        "xf364": "Gebruiker",
+                                        "xf366": "Gebruiker toevoegen",
+                                        "xf367": "Gebruiker geheim",
+                                        "xf368": "Gebruiker vermenigvuldigen",
+                                        "xf369": "Gebruikers",
+                                        "xf36e": "Video camera",
+                                        "xf373": "Volume omlaag",
+                                        "xf374": "Volume uit",
+                                        "xf375": "Volume omhoog",
+                                        "xf376": "Waarschuwing",
+                                        "xf37b": "Rolstoel",
+                                        "xf37c": "WiFi",
+                                        "xf381": "Steeksleutel",
+                                        "xf225": "Hand open omlaag",
+                                        "xf226": "Hand open links",
+                                        "xf227": "Hand open rechts",
+                                        "xf228": "Hand open omhoog",
+                                        "xf108": "Ambulance",
+                                        "xf329": "Metro",
+                                        "xf349": "Trein",
+                                        "xf20e": "Gender neutraal",
+                                        "xf34a": "Transgender",
+                                        "xf281": "Mars 1",
+                                        "xf282": "Mars 2",
+                                        "xf283": "Mars 3",
+                                        "xf284": "Mars 4",
+                                        "xf285": "Mars 5",
+                                        "xf28b": "Mercurius",
+                                        "xf29b": "Onzijdig",
+                                        "xf34b": "Transgender 2",
+                                        "xf36a": "Venus",
+                                        "xf36b": "Venus 2",
+                                        "xf36c": "Venus Mars",
+                                        "xf1df": "Bestand",
+                                        "xf1e6": "Bestand open",
+                                        "xf1ec": "Bestand text",
+                                        "xf1ed": "Bestand text open",
+                                        "xf170": "CC Amex",
+                                        "xf171": "CC Diners Club",
+                                        "xf172": "CC Discover",
+                                        "xf173": "CC JCB",
+                                        "xf174": "CC Mastercard",
+                                        "xf175": "CC Paypal",
+                                        "xf176": "CC Stripe",
+                                        "xf177": "CC Visa",
+                                        "xf21d": "Google Wallet",
+                                        "xf2af": "PayPal",
+                                        "xf149": "Bitcoin",
+                                        "xf152": "BTC",
+                                        "xf195": "CNY",
+                                        "xf1bb": "Dollar",
+                                        "xf1ca": "Eur",
+                                        "xf1cb": "Euro",
+                                        "xf20b": "GBP",
+                                        "xf210": "GG",
+                                        "xf211": "GG cirkel",
+                                        "xf245": "ILS",
+                                        "xf24c": "INR",
+                                        "xf253": "JPY",
+                                        "xf257": "KRW",
+                                        "xf2dd": "RMB",
+                                        "xf2e2": "Roebel",
+                                        "xf2e5": "RUB",
+                                        "xf2e6": "Ruble",
+                                        "xf2e7": "Rupee",
+                                        "xf2f5": "Shekel",
+                                        "xf2f6": "Sheqel",
+                                        "xf353": "TRY",
+                                        "xf357": "Turkse lira",
+                                        "xf363": "USD",
+                                        "xf37f": "WON",
+                                        "xf38a": "YEN",
+                                        "xf103": "Centreren",
+                                        "xf104": "Uitlijnen blok",
+                                        "xf105": "Uitlijnen links",
+                                        "xf106": "Uitlijnen rechts",
+                                        "xf14b": "Vet",
+                                        "xf179": "Ketting",
+                                        "xf17a": "Gebroken ketting",
+                                        "xf18e": "Clipboard",
+                                        "xf19c": "Kolom",
+                                        "xf1a7": "Kopieren",
+                                        "xf1b0": "Knippen",
+                                        "xf1b5": "Uitspringen",
+                                        "xf1f1": "Bestanden open",
+                                        "xf1fd": "Floppy open",
+                                        "xf202": "Lettertype",
+                                        "xf231": "Kopieren",
+                                        "xf248": "Inspringen",
+                                        "xf251": "Schuingedrukt",
+                                        "xf268": "Link",
+                                        "xf26c": "Lijst",
+                                        "xf26d": "Lijst alt",
+                                        "xf26e": "Lijst genummerd",
+                                        "xf26f": "Lijst ongenummerd",
+                                        "xf2a5": "Outdentd",
+                                        "xf2aa": "Paperclip",
+                                        "xf2ab": "Paragraaf",
+                                        "xf2ac": "Plakken",
+                                        "xf2d9": "Herhalen",
+                                        "xf2e0": "Linksdraaiend",
+                                        "xf2e1": "Rechtsdraaiend",
+                                        "xf2e9": "Opslaan",
+                                        "xf2ea": "Schaar",
+                                        "xf325": "Doorhalen",
+                                        "xf328": "Subscript",
+                                        "xf32c": "Superscript",
+                                        "xf32d": "Tabel",
+                                        "xf337": "Teksthoogte",
+                                        "xf338": "Tekstbreedte",
+                                        "xf339": "TH",
+                                        "xf33a": "TH groot",
+                                        "xf33b": "TH lijst",
+                                        "xf35c": "Onderstrepen",
+                                        "xf35d": "Ongedaan maken",
+                                        "xf35f": "Ontkoppelen",
+                                        "xf10c": "Hoek dubbel omhoog",
+                                        "xf10d": "Hoek dubbel links",
+                                        "xf10e": "Hoek dubbel rechts",
+                                        "xf10f": "Hoek dubbel omlaag",
+                                        "xf110": "Hoek omlaag",
+                                        "xf111": "Hoek links",
+                                        "xf112": "Hoek rechts",
+                                        "xf113": "Hoek omhoog",
+                                        "xf117": "Pijl cirkel omlaag",
+                                        "xf118": "Pijl cirkel links",
+                                        "xf119": "Pijl cirkel open omlaag",
+                                        "xf11a": "Pijl cirkel open links",
+                                        "xf11b": "Pijl cirkel open rechts",
+                                        "xf11c": "Pijl cirkel open omhoog",
+                                        "xf11d": "Pijl cirkel rechts",
+                                        "xf11e": "Pijl cirkel omhoog",
+                                        "xf11f": "Pijl omlaag",
+                                        "xf120": "Pijl links",
+                                        "xf121": "Pijl rechts",
+                                        "xf122": "Pijl omhoog",
+                                        "xf124": "Pijl alt",
+                                        "xf165": "Gesloten pijl omlaag",
+                                        "xf166": "Gesloten pijl links",
+                                        "xf167": "Gesloten pijl rechts",
+                                        "xf16c": "Gesloten pijl omhoog",
+                                        "xf181": "Chevron cirkel links",
+                                        "xf182": "Chevron cirkel rechts",
+                                        "xf183": "Chevron cirkel omhoog",
+                                        "xf184": "Chevron omlaag",
+                                        "xf185": "Chevron links",
+                                        "xf186": "Chevron rechts",
+                                        "xf187": "Chevron omhoog",
+                                        "xf272": "Lange pijl omlaag",
+                                        "xf273": "Lange pijl links",
+                                        "xf274": "Lange pijl rechts",
+                                        "xf275": "Lange pijl omlaag",
+                                        "xf12a": "Achteruit",
+                                        "xf1a4": "Comprimeren",
+                                        "xf1c2": "Uitwerpen",
+                                        "xf1d0": "Vergroten",
+                                        "xf1da": "Snel terugspoelen",
+                                        "xf1db": "Snel vooruit spoelen",
+                                        "xf205": "Vooruit",
+                                        "xf2ad": "Pauze",
+                                        "xf2be": "Afspelen",
+                                        "xf2bf": "Afspelen cirkel",
+                                        "xf2c0": "Afspelen cirkel open",
+                                        "xf31e": "Stap terug",
+                                        "xf31f": "Stap vooruit",
+                                        "xf323": "Stop",
+                                        "xf38c": "YouTube afspelen",
+                                        "xf100": "500px",
+                                        "xf102": "ADN",
+                                        "xf107": "Amazon",
+                                        "xf10a": "Android",
+                                        "xf10b": "AngelList",
+                                        "xf114": "Apple",
+                                        "xf13e": "Behance",
+                                        "xf13f": "Behance vierkant",
+                                        "xf147": "Bitbucket",
+                                        "xf148": "Bitbucket vierkant",
+                                        "xf14a": "Black Tie",
+                                        "xf159": "Buysellads",
+                                        "xf189": "Chrome",
+                                        "xf198": "Codepen",
+                                        "xf1a5": "Connected devlop",
+                                        "xf1a6": "Contao",
+                                        "xf1ad": "CSS3",
+                                        "xf1b3": "DashCube",
+                                        "xf1b6": "Delicious",
+                                        "xf1b8": "DevianArt",
+                                        "xf1ba": "Digg",
+                                        "xf1be": "Dribble",
+                                        "xf1bf": "Dropbox",
+                                        "xf1c0": "Drupal",
+                                        "xf1c5": "GE",
+                                        "xf1d1": "ExpeditedSSL",
+                                        "xf1d7": "Facebook F",
+                                        "xf1d8": "Facebook officieel",
+                                        "xf1d9": "Facebook vierkant",
+                                        "xf1f6": "Firefox",
+                                        "xf1fc": "Flickr",
+                                        "xf203": "Fonticons",
+                                        "xf204": "Forumbee",
+                                        "xf206": "Foursquare",
+                                        "xf20f": "Get Pocket",
+                                        "xf213": "GIT",
+                                        "xf214": "GIt vierkant",
+                                        "xf215": "Github",
+                                        "xf216": "Github alt",
+                                        "xf217": "Github vierkant",
+                                        "xf21f": "Gratipay",
+                                        "xf21a": "Google",
+                                        "xf21b": "Google Plus",
+                                        "xf21c": "Google plus 2",
+                                        "xf222": "HackerNews",
+                                        "xf242": "Houzz",
+                                        "xf243": "HTML5",
+                                        "xf24d": "Instagram",
+                                        "xf24f": "IE",
+                                        "xf250": "IOXHOST",
+                                        "xf252": "Joomla",
+                                        "xf254": "JSFiddle",
+                                        "xf25a": "LastFM",
+                                        "xf25b": "LasfFM Vierkant",
+                                        "xf25d": "LeanPub",
+                                        "xf269": "LinkedIn",
+                                        "xf26a": "LinkedIn vierkant",
+                                        "xf26b": "Linux",
+                                        "xf286": "MaxCDN",
+                                        "xf287": "MeanPath",
+                                        "xf288": "Medium",
+                                        "xf29f": "Odnoklassniki",
+                                        "xf2a1": "OpenCart",
+                                        "xf2a2": "OpenID",
+                                        "xf2a3": "Opera",
+                                        "xf2a4": "Optin Monster",
+                                        "xf2a6": "Pagelines",
+                                        "xf2b8": "Pied Piper",
+                                        "xf2b9": "Pied Piper alt",
+                                        "xf2ba": "Pinterest",
+                                        "xf2bb": "Pinterest p",
+                                        "xf2bc": "Pinterest Vierkant",
+                                        "xf2c9": "QQ",
+                                        "xf2cf": "RA",
+                                        "xf2d1": "Rebel",
+                                        "xf2d3": "Reddit",
+                                        "xf2d4": "Reddit vierkant",
+                                        "xf2d7": "RenRen",
+                                        "xf2e8": "Safari",
+                                        "xf2ee": "Sellsy",
+                                        "xf2f9": "ShirtsInBulk",
+                                        "xf2fe": "Simplybuilt",
+                                        "xf300": "SkyAtlas",
+                                        "xf301": "Skype",
+                                        "xf302": "Slack",
+                                        "xf304": "Slideshare",
+                                        "xf30f": "Soundcloud",
+                                        "xf313": "Spotify",
+                                        "xf316": "Stack Exchange",
+                                        "xf317": "Stack Overflow",
+                                        "xf31c": "Steam",
+                                        "xf31d": "Steam vierkant",
+                                        "xf326": "StumbleUpon",
+                                        "xf327": "SumbleUpon cirkel",
+                                        "xf335": "Tencent Weibo",
+                                        "xf34f": "Trello",
+                                        "xf350": "Tripadvisor",
+                                        "xf355": "Tumblr",
+                                        "xf356": "Tumblr vierkant",
+                                        "xf358": "Twitch",
+                                        "xf359": "Twitter",
+                                        "xf35a": "Twitter vierkant",
+                                        "xf36d": "Viacoin",
+                                        "xf36f": "Vimeo",
+                                        "xf370": "Vimeo vierkant",
+                                        "xf371": "Vine",
+                                        "xf372": "VK",
+                                        "xf377": "Wechat",
+                                        "xf378": "Weibo",
+                                        "xf379": "Weixin",
+                                        "xf37a": "Whatsapp",
+                                        "xf37d": "Wikipedia W",
+                                        "xf37e": "Windows",
+                                        "xf380": "Wordpress",
+                                        "xf382": "Xing",
+                                        "xf383": "Xing vierkant",
+                                        "xf384": "Y-Combinator",
+                                        "xf386": "Yahoo",
+                                        "xf387": "YC",
+                                        "xf388": "YC Vierkant",
+                                        "xf389": "Yelp",
+                                        "xf38b": "Youtube",
+                                        "xf38d": "Youtube vierkant",
+                                        "xf221": "H Square",
+                                        "xf238": "Ziekenhuis open",
+                                        "xf289": "Verbanddoos",
+                                        "xf320": "Stethoscoop",
+                                        "xf365": "User MD"
+                                    },
+                                    "default_value": [
+                                        "-"
+                                    ],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 1,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5a6f2d1cab7b7",
+                                    "label": "Tekst",
+                                    "name": "flex-cta-text",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "-x-bor-left -bor-bottom",
+                                        "id": ""
+                                    },
+                                    "default_value": "Klik hier",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5b198199187e1",
+                                    "label": "Type",
+                                    "name": "flex-cta-type",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "-bor-top",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "none": "Geen link",
+                                        "internal": "Interne link",
+                                        "external": "Externe link",
+                                        "file": "Bestand"
+                                    },
+                                    "allow_null": 0,
+                                    "default_value": "none : Geen link",
+                                    "layout": "horizontal",
+                                    "return_format": "value"
+                                },
+                                {
+                                    "key": "field_5a6f2d1cab7bb",
+                                    "label": "Interne link",
+                                    "name": "flex-cta-link",
+                                    "type": "page_link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5b198199187e1",
+                                                "operator": "==",
+                                                "value": "internal"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "-x-bor-left",
+                                        "id": ""
+                                    },
+                                    "post_type": [],
+                                    "taxonomy": [],
+                                    "allow_null": 0,
+                                    "allow_archives": 1,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_5a6f2d1cab7bc",
+                                    "label": "Externe link",
+                                    "name": "flex-cta-external-link",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5b198199187e1",
+                                                "operator": "==",
+                                                "value": "external"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "-x-bor-left",
+                                        "id": ""
+                                    },
+                                    "default_value": "http:\/\/",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5a6f2d1cab7bd",
+                                    "label": "Bestand",
+                                    "name": "flex-cta-file",
+                                    "type": "file",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5b198199187e1",
+                                                "operator": "==",
+                                                "value": "file"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "-x-bor-left",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_size": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5a6f2d1cab7b8",
+                                    "label": "Afbeelding toevoegen?",
+                                    "name": "flex-cta-image-option",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "60",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5a6f2d1cab7b9",
+                                    "label": "Afbeelding",
+                                    "name": "flex-cta-image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5a6f2d1cab7b8",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": 40,
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5a6f2d1cab7be",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a71c9b986166",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5a6f2d1cab7c5",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/knop\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: knop \r\n<\/a>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "56705c0f4b165": {
+                    "key": "56705c0f4b165",
+                    "name": "flex-usp",
+                    "label": "Opsomming",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b0ff72937e12",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_56705c0f4b166",
+                            "label": "Kop",
+                            "name": "flex-usp-header",
+                            "type": "text",
+                            "instructions": "Koptekst",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_56705c0f4b169",
+                            "label": "Opsomming",
+                            "name": "flex-usp-list",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Punt toevoegen",
+                            "sub_fields": [
+                                {
+                                    "key": "field_56705cab4b16c",
+                                    "label": "Punt",
+                                    "name": "flex-usp-list-item",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_56705c0f4b168",
+                            "label": "Call to action",
+                            "name": "flex-usp-cta-text",
+                            "type": "text",
+                            "instructions": "Tekst van de Call to action knop",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Vraag vrijblijvend een offerte aan!",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56c314f73990b",
+                            "label": "Call to action link",
+                            "name": "flex-usp-cta-link",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [],
+                            "taxonomy": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "allow_archives": 1
+                        },
+                        {
+                            "key": "field_5b0ff66685df0",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5b0ff67185df1",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5b0ff69585df3",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/opsomming\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: Opsomming\r\n<\/a>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "581f5cdc46994": {
+                    "key": "581f5cdc46994",
+                    "name": "flex-maps",
+                    "label": "Google Maps",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5836decfccd0a",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_581f6727f6ac3",
+                            "label": "Adres",
+                            "name": "flex-maps-address",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5821eb3806b06",
+                            "label": "Breedte",
+                            "name": "flex-maps-width",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "full": "Volle breedte van de browser",
+                                "content": "Breedte van de inhoud"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 1,
+                            "return_format": "value",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5821eb8f06b07",
+                            "label": "Hoogte",
+                            "name": "flex-maps-height",
+                            "type": "number",
+                            "instructions": "Geef de hoogte van het Google Maps blok (in pixels, standaard is 450 pixels)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 450,
+                            "placeholder": 450,
+                            "prepend": "",
+                            "append": "",
+                            "min": 100,
+                            "max": 1000,
+                            "step": ""
+                        },
+                        {
+                            "key": "field_5821f18ab6a7e",
+                            "label": "Zoom niveau",
+                            "name": "flex-maps-zoom",
+                            "type": "select",
+                            "instructions": "Selecteer het zoom niveau waarop de kaart wordt geladen",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "8": "Land",
+                                "11": "Provincie",
+                                "14": "Stad",
+                                "16": "Wijk",
+                                "19": "Straat"
+                            },
+                            "default_value": [
+                                16
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5836debaccd09",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a71c9e886167",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5836df09ccd11",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/google-maps\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: Google Maps \r\n<\/a>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b193e0cb22d7": {
+                    "key": "5b193e0cb22d7",
+                    "name": "flex-child-pages",
+                    "label": "Paginaoverzicht",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b193e0cb22d8",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5b19432f81f22",
+                            "label": "Kop",
+                            "name": "flex-title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b19433b81f23",
+                            "label": "Tekst",
+                            "name": "flex-text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "very_simple",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5b193e0cb22dd",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5b193e0cb22de",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5b193e0cb22df",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/google-maps\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: Google Maps \r\n<\/a>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "58343c68d8133": {
+                    "key": "58343c68d8133",
+                    "name": "flex-form",
+                    "label": "Contactformulier",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_583589a91ba63",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5834818460216",
+                            "label": "Titel",
+                            "name": "flex-form-title",
+                            "type": "text",
+                            "instructions": "De titel van het contactformulier.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_58343c7cd8139",
+                            "label": "Velden",
+                            "name": "flex-form-fields",
+                            "type": "repeater",
+                            "instructions": "Hier kun je velden van het contactformulier toevoegen of verwijderen",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Nieuw veld",
+                            "sub_fields": [
+                                {
+                                    "key": "field_58343c8dd813a",
+                                    "label": "Naam",
+                                    "name": "flex-form-field-label",
+                                    "type": "text",
+                                    "instructions": "Geef een naam aan het veld. Deze naam komt voor of boven het veld te staan.",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_58343cb9d813b",
+                                    "label": "Type",
+                                    "name": "flex-form-field-type",
+                                    "type": "select",
+                                    "instructions": "Selecteer het type veld.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "text": "Tekst",
+                                        "textarea": "Tekstvak",
+                                        "checkbox": "Checkbox",
+                                        "email": "E-mail",
+                                        "tel": "Telefoonnummer",
+                                        "radio": "Radiobutton",
+                                        "select": "Drop-down lijst"
+                                    },
+                                    "default_value": [],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_583466a912014",
+                                    "label": "Verplicht?",
+                                    "name": "flex-form-field-required",
+                                    "type": "true_false",
+                                    "instructions": "Is het veld verplicht?",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Verplicht",
+                                    "default_value": 0,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5a20037a1cc35",
+                                    "label": "Drop-down lijst",
+                                    "name": "select-options",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_58343cb9d813b",
+                                                "operator": "==",
+                                                "value": "select"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "table",
+                                    "button_label": "Optie toevoegen",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5a20039a1cc36",
+                                            "label": "Optie",
+                                            "name": "select-option",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_58346740b31a5",
+                            "label": "Alternatief e-mail adres",
+                            "name": "flex-form-alt-email",
+                            "type": "email",
+                            "instructions": "Alternatief e-mail adres in waar het formulier naar toe gemaild wordt (Optioneel). Indien je dit veld leeg laat, wordt het standaard e-mail adres gebruikt dat is ingevoerd onder 'Configuratie'.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_583467a3b31a6",
+                            "label": "Alternatieve tekst 'Verzenden' knop",
+                            "name": "flex-form-alt-send",
+                            "type": "text",
+                            "instructions": "Vul hier eventueel een alternatieve tekst in voor de 'Verzenden' knop.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Verzenden",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_58594a0dd4c57",
+                            "label": "Bedank boodschap",
+                            "name": "flex-form-success-message",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Bedankt voor uw bericht. Wij nemen zo spoedig mogelijk contact met u op.",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_583589d91ba64",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a71ca0786168",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_58223188f0e04",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/contactformulier\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: contactformulier \r\n<\/a>",
+                            "new_lines": "",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "58ac48714e8c8": {
+                    "key": "58ac48714e8c8",
+                    "name": "flex-mod-occasions",
+                    "label": "Occasions overzicht",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_58ac48714e8c9",
+                            "label": "Blok inhoud",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_58ac48714e8ca",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a71ca2386169",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_58ac48714e8d1",
+                            "label": "Help",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/occasions-overzicht\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: Occasionsoverzicht \r\n<\/a>",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5702782efbc84": {
+                    "key": "5702782efbc84",
+                    "name": "flex-html",
+                    "label": "HTML",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a2be386c17ba",
+                            "label": "Geavanceerde functie",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "warning-message",
+                                "id": ""
+                            },
+                            "message": "Dit is een geavanceerde functie. Gebruik of wijzig deze functie of inhoud alleen als je zeker weet wat je doet. Voor meer informatie:<br> <a href=\"http:\/\/help.envisic.nl\/flex-items\/geavanceerde-functies\" target=\"new_window\"> Flex item: geavanceerde functies\r\n<\/a>",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_5702784afbc85",
+                            "label": "HTML Blok",
+                            "name": "flex-html-block",
+                            "type": "textarea",
+                            "instructions": "Voeg hier HTML-code in",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "57027c85434d4": {
+                    "key": "57027c85434d4",
+                    "name": "flex-php-include",
+                    "label": "PHP Include",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_57027c96434d5",
+                            "label": "PHP Include",
+                            "name": "flex-php-include-this",
+                            "type": "text",
+                            "instructions": "Geef hier de bestandsnaam van het PHP bestand (zonder .php).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5c6aaff01ca9c": {
+                    "key": "layout_5c6aaff01ca9c",
+                    "name": "flex-buffet-group",
+                    "label": "Buffetten",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c6ab0611caa0",
+                            "label": "Buffet",
+                            "name": "buffet",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Nieuw buffet",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5c6aaff01ca9d",
+                                    "label": "Naam",
+                                    "name": "buffet-name",
+                                    "type": "text",
+                                    "instructions": "Geef hier de bestandsnaam van het PHP bestand (zonder .php).",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5c6ab0181ca9e",
+                                    "label": "Buffet inhoud",
+                                    "name": "buffet-details",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "very_simple",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                },
+                                {
+                                    "key": "field_5c6ab0491ca9f",
+                                    "label": "Prijs",
+                                    "name": "buffet-price",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Nieuw blok toevoegen",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 6,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1550496017
+}

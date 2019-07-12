@@ -1,0 +1,227 @@
+{
+    "key": "group_566fd72180619",
+    "title": "Pagina-elementen",
+    "fields": [
+        {
+            "key": "field_57a9cfdd471ef",
+            "label": "Paginatitel",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_566fd7323da4f",
+            "label": "Paginatitel",
+            "name": "seo-title",
+            "type": "text",
+            "instructions": "<a class=\"backend-info-button\" href=\"http:\/\/help.envisic.nl\/onderwerpen\/pagina-eigenschappen\" target=\"new_window\">Help<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_57a9d46dd0c9e",
+            "label": "Koptekst (H1 Kop)",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_57a9d439d0c9d",
+            "label": "H1 Kop",
+            "name": "h1-text",
+            "type": "text",
+            "instructions": "<a class=\"backend-info-button\" href=\"http:\/\/help.envisic.nl\/onderwerpen\/pagina-eigenschappen\" target=\"new_window\">Help<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_57a9d01d5dc13",
+            "label": "Beschrijving",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_566fd8873da50",
+            "label": "Beschrijving",
+            "name": "seo-description",
+            "type": "textarea",
+            "instructions": "<a class=\"backend-info-button\" href=\"http:\/\/help.envisic.nl\/onderwerpen\/pagina-eigenschappen\" target=\"new_window\">Help<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 160,
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_57a9d409d0c9c",
+            "label": "Header afbeelding",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_57a9d396d0c9b",
+            "label": "Header afbeelding",
+            "name": "page-header-images",
+            "type": "gallery",
+            "instructions": "<a class=\"backend-info-button\" href=\"http:\/\/help.envisic.nl\/onderwerpen\/pagina-eigenschappen\" target=\"new_window\">Help<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": 5,
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_583d78aed7b65",
+            "label": "Opnemen in menu",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_583d78c8d7b66",
+            "label": "In welk menu moet deze pagina zichtbaar zijn?",
+            "name": "include-in-nav",
+            "type": "select",
+            "instructions": "<a class=\"backend-info-button\" href=\"http:\/\/help.envisic.nl\/onderwerpen\/pagina-eigenschappen\" target=\"new_window\">Help<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "include-in-main-nav": "Hoofdmenu",
+                "include-in-top-nav": "Secundair menu",
+                "exclude-from-nav": "Geen"
+            },
+            "default_value": [
+                "include-in-main-nav"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "Pagina elementen",
+    "modified": 1522262743
+}
