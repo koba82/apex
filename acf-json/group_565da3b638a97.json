@@ -503,6 +503,44 @@
             "mime_types": ""
         },
         {
+            "key": "field_5d39fc0d21935",
+            "label": "Alternatieve Fonts voor header - Google fonts CSS",
+            "name": "config-header-font-css",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d39fd1b21936",
+            "label": "Alternatieve Fonts voor body - Google fonts CSS",
+            "name": "config-text-font-css",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_58243de5a591e",
             "label": "Social Media",
             "name": "",
@@ -1652,5 +1690,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1548942144
+    "modified": 1564081460
 }

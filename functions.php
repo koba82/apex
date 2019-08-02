@@ -13,8 +13,8 @@
 	function apex_version( $arg ) {
 		
 		$apex_main_version = "0.8";
-		$apex_sub_version = ".11";
-		$apex_version_date = "12-7-2018";
+		$apex_sub_version = ".12";
+		$apex_version_date = "25-7-2019";
 		
 		if( $arg == 'main') :
 			return $apex_main_version;
@@ -140,10 +140,25 @@
 			// Create the variables with font style paths:
 			$selected_header_font = get_field('config-header-font', 'option' );
 			$selected_text_font = get_field('config-text-font', 'option' );
+
+			$selected_alternative_header_font = get_field('config-header-font-css', 'option');
+			$selected_alternative_text_font = get_field('config-text-font-css', 'option');
 			
-			wp_enqueue_style( 'google-fonts-header', 'https://fonts.googleapis.com/css?family=' . $selected_header_font['value'] . ':300,300i,400,400i,700i,700' , array(), false, 'all');
-			if($selected_header_font !== $selected_text_font) :
-				wp_enqueue_style( 'google-fonts-text', 'https://fonts.googleapis.com/css?family=' . $selected_text_font['value'] . ':300,300i,400,400i,700i,700' , array(), false, 'all');
+			if(!$selected_alternative_header_font) :
+				wp_enqueue_style( 'google-fonts-header', 'https://fonts.googleapis.com/css?family=' . $selected_header_font['value'] . ':300,300i,400,400i,700i,700' , array(), false, 'all');
+				if($selected_header_font !== $selected_text_font && !$selected_alternative_text_font) :
+					wp_enqueue_style( 'google-fonts-text', 'https://fonts.googleapis.com/css?family=' . $selected_text_font['value'] . ':300,300i,400,400i,700i,700' , array(), false, 'all');
+				elseif($selected_alternative_text_font) :
+					wp_enqueue_style( 'google-fonts-text', $selected_alternative_text_font,  array(), false, 'all');
+				endif;
+			else :
+				wp_enqueue_style( 'google-fonts-header', $selected_alternative_header_font,  array(), false, 'all');
+				
+				if($selected_alternative_text_font) :
+					wp_enqueue_style( 'google-font-text', $selected_alternative_text_font,  array(), false, 'all');
+				else :
+					wp_enqueue_style( 'google-fonts-text', 'https://fonts.googleapis.com/css?family=' . $selected_text_font['value'] . ':300,300i,400,400i,700i,700' , array(), false, 'all');
+				endif;
 			endif;
 		}
 	  add_action( 'wp_enqueue_scripts', 'theme_enqueue_google_fonts' );

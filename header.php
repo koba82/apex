@@ -73,6 +73,23 @@
 			<?php if( $text_font['value'] ) : ?> --text-font: <?php echo str_replace("+"," ",$text_font['value']); ?>, sans-serif;<?php endif; ?>
 			<?php if( $header_font['value'] ) : ?> --header-font: <?php echo str_replace("+"," ",$header_font['value']); ?>, sans-serif;<?php endif; ?>
 			
+			<?php if(get_field('config-header-font-css', 'option')) :
+				$header_font = get_field('config-header-font-css', 'option');
+				$font_name = explode('css?family=', $header_font);
+				$font_name = $font_name[1];
+				$font_name = str_replace('+', ' ', $font_name);
+				echo '--header-font: "' . $font_name . '"';
+			endif;
+			?>
+
+			<?php if(get_field('config-text-font-css', 'option')) :
+				$header_font = get_field('config-header-font-css', 'option');
+				$font_name = explode('css?family=', $header_font);
+				$font_name = $font_name[1];
+				$font_name = str_replace('+', ' ', $font_name);
+				echo '--text-font: "' . $font_name . '"';
+			endif;
+			?>
 			
 		}
 		
