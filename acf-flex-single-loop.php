@@ -549,7 +549,7 @@
 				</div>
 				
 				
-				<?
+				<?php
 				if($usp_cta_link) :	?>
 					<div class="flex-usp-button-wrap">
 						<a href="<?php echo $usp_cta_link; ?>" <?php if($open_new_window): ?>target="newwindow" <?php endif; ?>class="button flex-usp-button">
