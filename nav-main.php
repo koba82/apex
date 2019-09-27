@@ -3,7 +3,8 @@
 //First create an array of posts that have set "include-in-main-nav" set to true	
 $nav_post_select = array(
 	'post_type'  => 'page',
-	'meta_value'   => 'include-in-main-nav'
+	'meta_value'   => 'include-in-main-nav',
+	'posts_per_page' => -1
 );
 
 $nav_post_query = new WP_Query( $nav_post_select );
@@ -27,16 +28,12 @@ $nav_post_array = array();
 	    endwhile;
 	wp_reset_postdata();    
 	   
-	endif; 
+	endif;
 
 //Now create the menu with the posts
 wp_nav_menu( array( 	'theme_location' => 'primary', 
-							'include' => $nav_post_array,
+							'include' =>	$nav_post_array,
 							'menu_class' => 'nav-wrap',
 							
 					) 
 			); 
-
-
-
-
