@@ -216,7 +216,7 @@ main {
     display: flex;
     margin: 0px;
     transform: translate3d(-2rem, 0px, 0);
-    text-align: center;
+    text-align: left;
 }
 
 .nav-main ul.children li:hover a {
