@@ -13,8 +13,8 @@
 	function apex_version( $arg ) {
 		
 		$apex_main_version = "0.8";
-		$apex_sub_version = ".12";
-		$apex_version_date = "25-7-2019";
+		$apex_sub_version = ".13";
+		$apex_version_date = "13-10-2019";
 		
 		if( $arg == 'main') :
 			return $apex_main_version;
@@ -106,62 +106,15 @@
 //**********************************************************************************************************************
 //	Load stylesheets
 //**********************************************************************************************************************
- 
-	//Load third party stylesheets
-	if ( ! function_exists( 'theme_enqueue_third_party_styles' ) ) {
-		function theme_enqueue_third_party_styles() {
-			wp_enqueue_style( 'reset', get_template_directory_uri() .'/css/reset.css', array(), false, 'all');
-			wp_enqueue_style( 'flickity',  get_template_directory_uri() .'/css/flickity.css', array(), false, 'all' );
-			wp_enqueue_style( 'simplelightbox',  get_template_directory_uri() .'/css/simplelightbox.css', array(), false, 'all' );
-			wp_enqueue_style( 'aos',  get_template_directory_uri() .'/css/aos.css', array(), false, 'all' );
-		}
-		add_action( 'wp_enqueue_scripts', 'theme_enqueue_third_party_styles' );
-	};
-	
-	//Load main stylesheet
-	if ( ! function_exists( 'theme_enqueue_styles' ) ) {
-		function theme_enqueue_styles() {
-			wp_enqueue_style( 'main',  get_template_directory_uri() .'/style.css', array(), false, 'all' );
-		}
-		add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
-	};
-	
+
 	// Load module stylesheets
 	if ( ! function_exists( 'theme_enqueue_module_styles' ) ) {
 		function theme_enqueue_module_styles() {
-			wp_enqueue_style( 'module-real-estate', get_template_directory_uri() .'/modules/module-real-estate/module-real-estate.css', array(), false, 'all');
-		}
-		add_action( 'wp_enqueue_scripts', 'theme_enqueue_module_styles' );
-	};
-	
-	// Get selected fonts from options page and load them
-	if ( ! function_exists( 'theme_enqueue_google_fonts' ) ) {
-		function theme_enqueue_google_fonts() {
-			// Create the variables with font style paths:
-			$selected_header_font = get_field('config-header-font', 'option' );
-			$selected_text_font = get_field('config-text-font', 'option' );
-
-			$selected_alternative_header_font = get_field('config-header-font-css', 'option');
-			$selected_alternative_text_font = get_field('config-text-font-css', 'option');
-			
-			if(!$selected_alternative_header_font) :
-				wp_enqueue_style( 'google-fonts-header', 'https://fonts.googleapis.com/css?family=' . $selected_header_font['value'] . ':300,300i,400,400i,700i,700' , array(), false, 'all');
-				if($selected_header_font !== $selected_text_font && !$selected_alternative_text_font) :
-					wp_enqueue_style( 'google-fonts-text', 'https://fonts.googleapis.com/css?family=' . $selected_text_font['value'] . ':300,300i,400,400i,700i,700' , array(), false, 'all');
-				elseif($selected_alternative_text_font) :
-					wp_enqueue_style( 'google-fonts-text', $selected_alternative_text_font,  array(), false, 'all');
-				endif;
-			else :
-				wp_enqueue_style( 'google-fonts-header', $selected_alternative_header_font,  array(), false, 'all');
-				
-				if($selected_alternative_text_font) :
-					wp_enqueue_style( 'google-font-text', $selected_alternative_text_font,  array(), false, 'all');
-				else :
-					wp_enqueue_style( 'google-fonts-text', 'https://fonts.googleapis.com/css?family=' . $selected_text_font['value'] . ':300,300i,400,400i,700i,700' , array(), false, 'all');
-				endif;
+			if(get_sub_field('module-real-estate', 'option') == "true" ) : 
+				wp_enqueue_style( 'module-real-estate', get_template_directory_uri() .'/modules/module-real-estate/module-real-estate.css', array(), false, 'all');
 			endif;
 		}
-	  add_action( 'wp_enqueue_scripts', 'theme_enqueue_google_fonts' );
+		add_action( 'wp_enqueue_scripts', 'theme_enqueue_module_styles' );
 	};
 	
 	// Load Google Fonts for backend display
@@ -191,34 +144,59 @@
 		}
 	  add_action( 'admin_enqueue_scripts', 'enqueue_goolge_fonts_backend' );
 	};
+
+	//Remove Gutenberg block styles
+	add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+	function wps_deregister_styles() {
+		wp_dequeue_style( 'wp-block-library' );
+	}
+	$start = microtime(true);
+
+	if ( ! function_exists( 'bundle_css' ) ) {
+		function bundle_css() {
 	
-	// Load Apex Theme stylesheet
-	if ( ! function_exists( 'theme_enqueue_apex_theme_style' ) ) {
-		function theme_enqueue_apex_theme_style() {
-			$theme_style_sheet = get_field('config-theme', 'option');
-			if( $theme_style_sheet != 'apex-alpha' ):
-				wp_enqueue_style( 'theme-stylesheet', get_template_directory_uri() . '/' . $theme_style_sheet, array(), false, 'all');
-			endif; 
-		}
-		add_action( 'wp_enqueue_scripts', 'theme_enqueue_apex_theme_style' );
+			$theme_sub_style_sheet = get_field('config-theme', 'option');
+			$template_uri = get_template_directory_uri();
+
+			//Bundle CSS files
+			$cssFiles = array(
+				'/css/aos.css',
+				'/css/flickity.css',
+				'/css/reset.css',
+				'/css/simplelightbox.css',
+				'/css/style.css',
+				'/css/' . $theme_sub_style_sheet,
+				'/css/override.css'
+			);
+			
+			$buffer = "";
+			foreach ($cssFiles as $cssFile) {
+				$buffer .= file_get_contents($template_uri . $cssFile);
+			}
+			// Remove comments
+			//$buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
+			// Remove space after colons
+			//$buffer = str_replace(': ', ':', $buffer);
+			// Remove whitespace
+			//$buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
+			$file = get_template_directory() . '/bundled-min.css';
+			file_put_contents($file, $buffer ) or print_r(error_get_last()); 
+
+
+			wp_enqueue_style( 'bundled-css', get_template_directory_uri() .'/bundled-min.css', array(), false, 'all');
+			
+		};
+	add_action('wp_enqueue_scripts', 'bundle_css', 10);
 	};
 	
-
-
-	// Check for override.css file and load it
-	
-	if( file_exists( get_template_directory() . "/override.css" ) ) :
-		function enqueue_override_css() {
-			wp_enqueue_style( 'override-css', get_template_directory_uri() .'/override.css', array(), false, 'all');	
+	$GLOBALS['time_elapsed_secs'] = microtime(true) - $start;
+	//Load bundled stylesheet
+	if ( ! function_exists( 'theme_enqueue_bundled_styles' ) ) {
+		function theme_enqueue_bundled_styles() {
+			wp_enqueue_style( 'bundled-css', get_template_directory_uri() .'/bundled-min.css', array(), false, 'all');
 		}
-		add_action( 'wp_enqueue_scripts', 'enqueue_override_css' );
-
-	endif;	
-
-	
-	
-	
-	
+		add_action( 'wp_enqueue_scripts', 'theme_enqueue_bundled_styles' );
+	};
 	
 	
 //**********************************************************************************************************************
@@ -228,12 +206,13 @@
 	// Check if child theme has not already added stylesheets
 	if ( ! function_exists( 'theme_enqueue_third_party_javascript' ) ) {
 		function theme_enqueue_third_party_javascript() {
-			wp_enqueue_script( 'jQuery', '//code.jquery.com/jquery-1.11.3.min.js', array(), false, false );
+			//wp_enqueue_script( 'bundled-js', get_template_directory_uri() . '/js/bundle.js', array(), false, false );
 			wp_enqueue_script( 'reCaptcha', 'https://www.google.com/recaptcha/api.js', array(), false, false );
-			wp_enqueue_script( 'flickety-js', get_template_directory_uri() . '/js/flickity.pkgd.js', array(), false, false );
-			wp_enqueue_script( 'simplelightbox-js', get_template_directory_uri() . '/js/simple-lightbox.js', array(), false, false );
-			wp_enqueue_script( 'aos-js', get_template_directory_uri() . '/js/aos.js', array(), false, false );
-			wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.js' , array('jQuery'), false, false );
+			//wp_enqueue_script( 'jQuery', '//code.jquery.com/jquery-1.11.3.min.js', array(), false, false );
+			//wp_enqueue_script( 'flickety-js', get_template_directory_uri() . '/js/flickity.pkgd.js', array(), false, false );
+			//wp_enqueue_script( 'simplelightbox-js', get_template_directory_uri() . '/js/simple-lightbox.js', array(), false, false );
+			//wp_enqueue_script( 'aos-js', get_template_directory_uri() . '/js/aos.js', array(), false, false );
+			//wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.js' , array('jQuery'), false, false );
 		}
 	  add_action( 'wp_enqueue_scripts', 'theme_enqueue_third_party_javascript' );
 	};
@@ -660,124 +639,98 @@
 	add_action( 'post_submitbox_misc_actions', 'custom_button' );
 
 	function custom_button(){
-			$html  = '<div id="major-publishing-actions" style="overflow:hidden">';
-			$html .= '<div id="publishing-action">';
-			$html .= '<div class="button-grey more-publishing-options" >Meer opties</div>';
-			$html .= '</div>';
-			$html .= '</div>';
-			echo $html;
+		$html  = '<div id="major-publishing-actions" style="overflow:hidden">';
+		$html .= '<div id="publishing-action">';
+		$html .= '<div class="button-grey more-publishing-options" >Meer opties</div>';
+		$html .= '</div>';
+		$html .= '</div>';
+		echo $html;
 	}
-	
-	
-	
 	
 //**********************************************************************************************************************
 //	Duplicate post/page
 //**********************************************************************************************************************
 
-
 	function rd_duplicate_post_as_draft(){
-	  global $wpdb;
-	  if (! ( isset( $_GET['post']) || isset( $_POST['post'])  || ( isset($_REQUEST['action']) && 'rd_duplicate_post_as_draft' == $_REQUEST['action'] ) ) ) {
-		wp_die('No post to duplicate has been supplied!');
-	  }
+		global $wpdb;
+		if (! ( isset( $_GET['post']) || isset( $_POST['post'])  || ( isset($_REQUEST['action']) && 'rd_duplicate_post_as_draft' == $_REQUEST['action'] ) ) ) {
+			wp_die('No post to duplicate has been supplied!');
+		}
+
+		// Nonce verification
+		if ( !isset( $_GET['duplicate_nonce'] ) || !wp_verify_nonce( $_GET['duplicate_nonce'], basename( __FILE__ ) ) )
+			return;
 	 
-	  /*
-	   * Nonce verification
-	   */
-	  if ( !isset( $_GET['duplicate_nonce'] ) || !wp_verify_nonce( $_GET['duplicate_nonce'], basename( __FILE__ ) ) )
-		return;
+		//get the original post id
+		$post_id = (isset($_GET['post']) ? absint( $_GET['post'] ) : absint( $_POST['post'] ) );
+
+		//and all the original post data then
+		$post = get_post( $post_id );
+		
+		//if you don't want current user to be the new post author, then change next couple of lines to this: $new_post_author = $post->post_author;
+		$current_user = wp_get_current_user();
+		$new_post_author = $current_user->ID;
+		
+		//if post data exists, create the post duplicate
+		if (isset( $post ) && $post != null) {
 	 
-	  /*
-	   * get the original post id
-	   */
-	  $post_id = (isset($_GET['post']) ? absint( $_GET['post'] ) : absint( $_POST['post'] ) );
-	  /*
-	   * and all the original post data then
-	   */
-	  $post = get_post( $post_id );
-	 
-	  /*
-	   * if you don't want current user to be the new post author,
-	   * then change next couple of lines to this: $new_post_author = $post->post_author;
-	   */
-	  $current_user = wp_get_current_user();
-	  $new_post_author = $current_user->ID;
-	 
-	  /*
-	   * if post data exists, create the post duplicate
-	   */
-	  if (isset( $post ) && $post != null) {
-	 
-		/*
-		 * new post data array
-		 */
+		//new post data array
 		$args = array(
-		  'comment_status' => $post->comment_status,
-		  'ping_status'    => $post->ping_status,
-		  'post_author'    => $new_post_author,
-		  'post_content'   => $post->post_content,
-		  'post_excerpt'   => $post->post_excerpt,
-		  'post_name'      => $post->post_name,
-		  'post_parent'    => $post->post_parent,
-		  'post_password'  => $post->post_password,
-		  'post_status'    => 'draft',
-		  'post_title'     => $post->post_title,
-		  'post_type'      => $post->post_type,
-		  'to_ping'        => $post->to_ping,
-		  'menu_order'     => $post->menu_order
+			'comment_status' => $post->comment_status,
+			'ping_status'    => $post->ping_status,
+			'post_author'    => $new_post_author,
+			'post_content'   => $post->post_content,
+			'post_excerpt'   => $post->post_excerpt,
+			'post_name'      => $post->post_name,
+			'post_parent'    => $post->post_parent,
+			'post_password'  => $post->post_password,
+			'post_status'    => 'draft',
+			'post_title'     => $post->post_title,
+			'post_type'      => $post->post_type,
+			'to_ping'        => $post->to_ping,
+			'menu_order'     => $post->menu_order
 		);
 	 
-		/*
-		 * insert the post by wp_insert_post() function
-		 */
+		//insert the post by wp_insert_post() function
 		$new_post_id = wp_insert_post( $args );
 	 
-		/*
-		 * get all current post terms ad set them to the new post draft
-		 */
+		//get all current post terms ad set them to the new post draft
 		$taxonomies = get_object_taxonomies($post->post_type); // returns array of taxonomy names for post type, ex array("category", "post_tag");
 		foreach ($taxonomies as $taxonomy) {
-		  $post_terms = wp_get_object_terms($post_id, $taxonomy, array('fields' => 'slugs'));
-		  wp_set_object_terms($new_post_id, $post_terms, $taxonomy, false);
+			$post_terms = wp_get_object_terms($post_id, $taxonomy, array('fields' => 'slugs'));
+			wp_set_object_terms($new_post_id, $post_terms, $taxonomy, false);
 		}
 	 
-		/*
-		 * duplicate all post meta just in two SQL queries
-		 */
+		//duplicate all post meta just in two SQL queries
 		$post_meta_infos = $wpdb->get_results("SELECT meta_key, meta_value FROM $wpdb->postmeta WHERE post_id=$post_id");
 		if (count($post_meta_infos)!=0) {
-		  $sql_query = "INSERT INTO $wpdb->postmeta (post_id, meta_key, meta_value) ";
-		  foreach ($post_meta_infos as $meta_info) {
-			$meta_key = $meta_info->meta_key;
-			if( $meta_key == '_wp_old_slug' ) continue;
-			$meta_value = addslashes($meta_info->meta_value);
-			$sql_query_sel[]= "SELECT $new_post_id, '$meta_key', '$meta_value'";
-		  }
-		  $sql_query.= implode(" UNION ALL ", $sql_query_sel);
-		  $wpdb->query($sql_query);
+			$sql_query = "INSERT INTO $wpdb->postmeta (post_id, meta_key, meta_value) ";
+			foreach ($post_meta_infos as $meta_info) {
+				$meta_key = $meta_info->meta_key;
+				if( $meta_key == '_wp_old_slug' ) continue;
+				$meta_value = addslashes($meta_info->meta_value);
+				$sql_query_sel[]= "SELECT $new_post_id, '$meta_key', '$meta_value'";
+			}
+			$sql_query.= implode(" UNION ALL ", $sql_query_sel);
+			$wpdb->query($sql_query);
 		}
 	 
 	 
-		/*
-		 * finally, redirect to the edit post screen for the new draft
-		 */
-		wp_redirect( admin_url( 'post.php?action=edit&post=' . $new_post_id ) );
-		exit;
-	  } else {
-		wp_die('Post creation failed, could not find original post: ' . $post_id);
-	  }
+			//finally, redirect to the edit post screen for the new draft
+			wp_redirect( admin_url( 'post.php?action=edit&post=' . $new_post_id ) );
+			exit;
+		} else {
+			wp_die('Post creation failed, could not find original post: ' . $post_id);
+		}
 	}
 	add_action( 'admin_action_rd_duplicate_post_as_draft', 'rd_duplicate_post_as_draft' );
 	 
-	/*
-	 * Add the duplicate link to action list for post_row_actions
-	 */
+	//Add the duplicate link to action list for post_row_actions
 	function rd_duplicate_post_link( $actions, $post ) {
-	  if (current_user_can('edit_posts')) {
-		$actions['duplicate'] = '<a href="' . wp_nonce_url('admin.php?action=rd_duplicate_post_as_draft&post=' . $post->ID, basename(__FILE__), 'duplicate_nonce' ) . '" title="Duplicate this item" rel="permalink">Dupliceren</a>';
-	  }
-	  return $actions;
+		if (current_user_can('edit_posts')) {
+			$actions['duplicate'] = '<a href="' . wp_nonce_url('admin.php?action=rd_duplicate_post_as_draft&post=' . $post->ID, basename(__FILE__), 'duplicate_nonce' ) . '" title="Duplicate this item" rel="permalink">Dupliceren</a>';
+		}
+		return $actions;
 	}
 	 
 	add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
@@ -829,44 +782,42 @@
 		
 		//Flex image
 		if( get_row_layout() == 'flex-image' ) {
-		  $image_object = get_sub_field('flex-image-array');
-		  $text = (count($image_object) == 1 ) ? 'Bevat 1 afbeelding' : 'Bevat ' . count($image_object) . ' afbeeldingen';
-		  $title .= ' <span>' . $text . '</span>';
+			$image_object = get_sub_field('flex-image-array');
+			$text = (count($image_object) == 1 ) ? 'Bevat 1 afbeelding' : 'Bevat ' . count($image_object) . ' afbeeldingen';
+			$title .= ' <span>' . $text . '</span>';
 		};
 			
 		//Flex gallery
 		if( get_row_layout() == 'flex-gallery' ) {
-		  
-		  $gallery_images = get_sub_field('flex-gallery-images');
-		  $title .= ' <span>Bevat ' . count($gallery_images) . ' afbeeldingen.</span>';
+			$gallery_images = get_sub_field('flex-gallery-images');
+			$title .= ' <span>Bevat ' . count($gallery_images) . ' afbeeldingen.</span>';
 		};
 		
 		//Flex CTA
 		if( get_row_layout() == 'flex-cta' ) {
 		  
-		  $flex_buttons = get_sub_field('flex-cta-object');
-		  $n_o_b = count($flex_buttons);
+			$flex_buttons = get_sub_field('flex-cta-object');
+			$n_o_b = count($flex_buttons);
 		
-			  if($n_o_b > 1 ) {
-				$buttons = 'Bevat ' . count($flex_buttons) . ' knoppen: ';
-			  } elseif ($n_o_b == 1 ) {
-				$buttons = 'Bevat ' . count($flex_buttons) . ' knop: ';
-			  } else {
-				$buttons = 'Bevat geen knoppen.';
-			  };
+				if($n_o_b > 1 ) {
+					$buttons = 'Bevat ' . count($flex_buttons) . ' knoppen: ';
+				} elseif ($n_o_b == 1 ) {
+					$buttons = 'Bevat ' . count($flex_buttons) . ' knop: ';
+				} else {
+					$buttons = 'Bevat geen knoppen.';
+				};
 	
-		  $button_names = '';
+			$button_names = '';
 		  
-			  if($flex_buttons) {
-				foreach( $flex_buttons as $flex_button ):
-				  $button_names .= '"' . $flex_button['flex-cta-text'] . '", ';
-				endforeach;
-			  };
+				if($flex_buttons) :
+					foreach( $flex_buttons as $flex_button ):
+						$button_names .= '"' . $flex_button['flex-cta-text'] . '", ';
+					endforeach;
+				endif;
 			  
-		  if (substr($button_names, -1) == ',')
-			{
+			if (substr($button_names, -1) == ',') :
 				$button_names = substr($str, 0, -1);
-			};
+			endif;
 			
 		  $buttons = $buttons . '<i>' . $button_names . '</i>';
 		  $title .= ' <span>' . $buttons . '</span>';
@@ -996,17 +947,6 @@
 	}
 		
 	add_action('init', 'add_custom_post_type_verhuur');
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	//Add class to body if module is active
 	function module_body_classes( $classes ) {
@@ -1280,7 +1220,11 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 	};
 
 
+//**********************************************************************************************************************
+//	Enable GZIP
+//**********************************************************************************************************************
 
+	ob_start("ob_gzhandler");
 
 
 ?>

@@ -36,9 +36,7 @@
 		echo '<meta name="description" content="' . $seo_description . '">';
 	endif;
 	?>
-	
-<!--	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>-->
+
 	
 	<meta property="og:url"           content="<?php global $wp; $current_url = home_url( add_query_arg( array(), $wp->request ) ); echo $current_url; ?>" />
 	<meta property="og:type"          content="website" />
@@ -50,77 +48,10 @@
 	{"@context":"http:\/\/schema.org","@type":"WebSite","url":"<?php echo site_url(); ?>","name":"<?php bloginfo( 'name' ); ?>","potentialAction":{"@type":"SearchAction","target":"<?php echo site_url(); ?>?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
 
 	<?php wp_head(); ?>
-		
-		<?php
-		$colors = get_field('config-colors', 'option');
-		$header_font = get_field('config-header-font', 'option');
-		$text_font = get_field('config-text-font', 'option');
-		?>
-		
-		<style>
-		:root {
-			<?php if( $colors['pri-color'] ) : ?> --pri-color: <?=$colors['pri-color']; ?>; <?php endif; ?>
-			<?php if( $colors['sec-color'] ) : ?> --sec-color: <?=$colors['sec-color']; ?>; <?php endif; ?>
-			<?php if( $colors['ter-color'] ) : ?> --ter-color: <?=$colors['ter-color']; ?>; <?php endif; ?>
-			<?php if( $colors['h-color'] ) : ?> --h-color: <?=$colors['h-color']; ?>; <?php endif; ?>
-			<?php if( $colors['text-color'] ) : ?> --text-color: <?=$colors['text-color']; ?>; <?php endif; ?>
-			
-			
-			<?php if( $colors['pri-color'] ) : ?> --pri-con-color: <?=( check_contrast($colors['pri-color'], '#FFFFFF') ) ? '#FFF' : '#444'; ?>;<?php endif; ?>
-			<?php if( $colors['sec-color'] ) : ?> --sec-con-color: <?=( check_contrast($colors['sec-color'], '#FFFFFF') ) ? '#FFF' : '#444'; ?>;<?php endif; ?>
-			<?php if( $colors['ter-color'] ) : ?> --ter-con-color: <?=( check_contrast($colors['ter-color'], '#FFFFFF') ) ? '#FFF' : '#444'; ?>;<?php endif; ?>
-			
-			<?php if( $text_font['value'] ) : ?> --text-font: <?php echo str_replace("+"," ",$text_font['value']); ?>, sans-serif;<?php endif; ?>
-			<?php if( $header_font['value'] ) : ?> --header-font: <?php echo str_replace("+"," ",$header_font['value']); ?>, sans-serif;<?php endif; ?>
-			
-			<?php if(get_field('config-header-font-css', 'option')) :
-				$header_font = get_field('config-header-font-css', 'option');
-				$font_name = explode('css?family=', $header_font);
-				$font_name = $font_name[1];
-				$font_name = str_replace('+', ' ', $font_name);
-				echo '--header-font: "' . $font_name . '"';
-			endif;
-			?>
+	
+	<?php get_template_part('header-css'); ?>
+	<script type='text/javascript' async src="<?php echo get_template_directory_uri() . '/js/bundle.js'; ?>"></script> 
 
-			<?php if(get_field('config-text-font-css', 'option')) :
-				$header_font = get_field('config-header-font-css', 'option');
-				$font_name = explode('css?family=', $header_font);
-				$font_name = $font_name[1];
-				$font_name = str_replace('+', ' ', $font_name);
-				echo '--text-font: "' . $font_name . '"';
-			endif;
-			?>
-			
-		}
-		
-		<?php if( get_field( 'override-header-height', 'option' ) ) : ?>
-			@media screen and (min-width: 950px) {
-			
-				:root {
-					--header-height: <?php the_field('dev-header-height', 'option'); ?>;
-				}
-			}
-		<?php endif; ?>
-		
-		<?php
-			//Override desktop -> mobile navigation breakpoint
-			$mobNavBreakpoint = ( get_field('override-mob-navi-breakpoint', 'option') ) ? get_field('mob-navi-breakpoint', 'option') : 950;
-			
-			if( get_Field('override-mob-navi-breakpoint', 'option') ) : ?>
-			
-				@media screen and (max-width: <?php the_field('mob-navi-breakpoint', 'option'); ?>px) {
-				
-					.nav-main, .nav-top {
-						display:none;
-					}
-					
-					.nav-mobile, .nav-trigger {
-						display: block;
-					}
-				}
-			<?php endif; ?>
-		
-	</style>
 </head>
 
 <body itemscope="itemscope" itemtype="http://schema.org/WebPage" class="nav-closed">

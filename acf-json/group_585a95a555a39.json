@@ -32,17 +32,17 @@
                 "id": ""
             },
             "choices": {
-                "apex-alpha": "Apex Alpha",
+                "apex-alpha.css": "Apex Alpha",
                 "apex-charlie.css": "Apex Charlie",
                 "apex-lima.css": "Apex Lima",
                 "apex-sierra.css": "Apex Sierra"
             },
             "allow_null": 0,
             "other_choice": 0,
-            "save_other_choice": 0,
             "default_value": "",
             "layout": "vertical",
-            "return_format": "value"
+            "return_format": "value",
+            "save_other_choice": 0
         },
         {
             "key": "field_595ceb21adb88",
@@ -787,7 +787,6 @@
     "instruction_placement": "label",
     "hide_on_screen": [
         "excerpt",
-        "custom_fields",
         "discussion",
         "comments",
         "revisions",
@@ -800,5 +799,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1529344405
+    "modified": 1570970288
 }

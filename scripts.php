@@ -43,25 +43,6 @@
 			
 			$( "body" ).toggleClass( "nav-open" , "nav-closed" );
 			$( "body" ).toggleClass( "nav-closed" , "nav-open" );
-/*
-			if ($(".nav-mobile ul").hasClass("expanded")) {
-					$(".nav-mobile ul.expanded").removeClass("expanded").slideUp(50);
-					$(this).removeClass("open");
-					$(this).addClass("closed");
-					$(".nav-mobile").addClass("closed");
-					$(".nav-mobile").removeClass("open");
-					
-		
-			} else {
-					$(".nav-mobile ul").addClass("expanded").slideDown(100);
-					$("ul.children").removeClass("expanded");
-					$(this).addClass("open");
-					$(this).removeClass("closed");
-					$(".nav-mobile").addClass("open");
-					$(".nav-mobile").removeClass("closed");
-				
-			}
-*/
 		});
 	});
 	
