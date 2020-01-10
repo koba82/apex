@@ -150,7 +150,9 @@
 	function wps_deregister_styles() {
 		wp_dequeue_style( 'wp-block-library' );
 	}
-	$start = microtime(true);
+
+	//Start timer to measure time it took the server to bundle the CSS
+	//$start = microtime(true);
 
 	if ( ! function_exists( 'bundle_css' ) ) {
 		function bundle_css() {
@@ -189,7 +191,9 @@
 	add_action('wp_enqueue_scripts', 'bundle_css', 10);
 	};
 	
-	$GLOBALS['time_elapsed_secs'] = microtime(true) - $start;
+	//Stop the timer - measure time it took the server to bundle the CSS
+	//$GLOBALS['time_elapsed_secs'] = microtime(true) - $start;
+
 	//Load bundled stylesheet
 	if ( ! function_exists( 'theme_enqueue_bundled_styles' ) ) {
 		function theme_enqueue_bundled_styles() {
@@ -234,7 +238,6 @@
 		}
 	  add_action( 'admin_enqueue_scripts', 'enqueue_admin_javascript' );
 	};
-
 
 	
 //**********************************************************************************************************************
@@ -735,7 +738,6 @@
 	 
 	add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
 	add_filter( 'page_row_actions', 'rd_duplicate_post_link', 10, 2 );
-
 
 	
 //**********************************************************************************************************************

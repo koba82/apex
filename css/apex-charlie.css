@@ -480,6 +480,12 @@ ul.children > li:nth-of-type(5) > a {
 	padding: 3rem;
 }
 
+.flex-paragraph.no-spotlight {
+	max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .has-large-buttons .flex-cta {
     margin: 0px;
 }
