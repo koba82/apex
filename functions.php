@@ -12,9 +12,9 @@
 	
 	function apex_version( $arg ) {
 		
-		$apex_main_version = "0.8";
-		$apex_sub_version = ".13";
-		$apex_version_date = "13-10-2019";
+		$apex_main_version = "0.9";
+		$apex_sub_version = ".0";
+		$apex_version_date = "17-1-2020";
 		
 		if( $arg == 'main') :
 			return $apex_main_version;
