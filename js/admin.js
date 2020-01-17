@@ -1,6 +1,5 @@
 	jQuery(document).ready(function() {
 		jQuery(".more-publishing-options").click(function() { 
-			console.log("click");
 			jQuery(".misc-pub-section").toggleClass("misc-pub-section-open"); 
 		});
 	});

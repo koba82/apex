@@ -71,27 +71,10 @@
 				</div>
 				
 				<script>
-				$(document).ready(function() {
-					$('a[data-lightbox-id="<?php echo $id; ?>"]').simpleLightbox();
-					$('.slider-<?=$id; ?>').flickity({
-						cellAlign: 'left',
-						contain: false,
-						percentPosition: false,
-						freeScroll: true,
-						wrapAround: false,
-						autoPlay: false,
-						pageDots: false,
-						prevNextButtons: true,
-						groupCells: 3,
-						arrowShape: { 
-							x0: 10,
-							x1: 60, y1: 50,
-							x2: 60, y2: 50,
-							x3: 60
-							  }
+					window.addEventListener('load', function () {
+						$('a[data-lightbox-id="<?php echo $id; ?>"]').simpleLightbox();
 					});
 
-				});
 				</script>
 			</section>
 
@@ -148,7 +131,7 @@
 			</div>
 			
 			<script>
-				$(document).ready(function() {
+				window.addEventListener('load', function () {
 					
 					jQuery("a[data-lightbox-id=<? echo $id; ?>] > img").each(function() {
 						let imageHeight = $(this).height();
@@ -160,23 +143,7 @@
 					});
 					
 					$('a[data-lightbox-id="<?php echo $id; ?>"]').simpleLightbox();
-					$('.slider-<?=$id; ?>').flickity({
-						cellAlign: 'left',
-						contain: false,
-						percentPosition: false,
-						freeScroll: true,
-						wrapAround: false,
-						autoPlay: false,
-						pageDots: false,
-						prevNextButtons: true,
-						groupCells: 3,
-						arrowShape: { 
-							x0: 10,
-							x1: 60, y1: 50,
-							x2: 60, y2: 50,
-							x3: 60
-							  }
-					});
+
 				});
 			</script>
 		</section>
@@ -247,9 +214,13 @@
 				</div>
 			</div>
 			<script>
-				$(document).ready(function() {
+				window.addEventListener('load', function () {
+
 					$('a[data-lightbox-id="<?php echo $id; ?>"]').simpleLightbox();
-					$('.slider-<?=$id; ?>').flickity({
+
+					var elem<?=$id; ?> = document.querySelector('.slider-<?=$id; ?>');
+					var flkty<?=$id; ?> = new Flickity( elem<?=$id; ?>, {
+						// options
 						cellAlign: 'left',
 						contain: false,
 						percentPosition: false,
@@ -264,7 +235,7 @@
 							x1: 60, y1: 50,
 							x2: 60, y2: 50,
 							x3: 60
-							  }
+						}
 					});
 				});
 			</script>
@@ -370,12 +341,13 @@
 			
 			
 		<script>
-			
-			$(document).ready(function() {
+			window.addEventListener('load', function () {
 
 				growToTallestElement('.flex-slider-<?=$slider_id; ?> .flex-slide-content','.flex-slider-<?=$slider_id; ?> .flickity-slider');
-				
-				$('.flex-slider-<?=$slider_id; ?>').flickity({
+
+				var elem<?=$id; ?> = document.querySelector('.flex-slider-<?php echo $slider_id; ?>');
+				var flkty<?=$id; ?> = new Flickity( elem<?=$id; ?>, {
+					// options
 					cellAlign: 'center',
 					contain: true,
 					freeScroll: false,
@@ -388,13 +360,10 @@
 						x1: 60, y1: 50,
 						x2: 60, y2: 50,
 						x3: 60
-					      }
+					}
 				});
-			
-				$(document).ready(function() {
-					$('a[data-lightbox-id="<?php echo $id; ?>"]').simpleLightbox();
-				});
-			
+				
+				$('a[data-lightbox-id="<?php echo $id; ?>"]').simpleLightbox();
 			});
 		</script>
 			
@@ -871,7 +840,7 @@
 		 ?>
 		 
 		 <script>
-			 $(document).ready(function() {
+			 window.addEventListener('load', function () {
 				 $(".flex-form-close-button").click(function() {
 					 $(".flex-form-success-wrap").removeClass('flex-form-success-show');
 				 });

@@ -478,31 +478,6 @@
             "return_format": "array"
         },
         {
-            "key": "field_56c4909cab1aa",
-            "label": "Standaard header afbeelding",
-            "name": "header-images",
-            "type": "gallery",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "min": "",
-            "max": 5,
-            "insert": "append",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": 8,
-            "mime_types": ""
-        },
-        {
             "key": "field_5d39fc0d21935",
             "label": "Alternatieve Fonts voor header - Google fonts CSS",
             "name": "config-header-font-css",
@@ -539,6 +514,31 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_56c4909cab1aa",
+            "label": "Standaard header afbeelding",
+            "name": "header-images",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": 5,
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 8,
+            "mime_types": ""
         },
         {
             "key": "field_58243de5a591e",
@@ -1690,5 +1690,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1564081460
+    "modified": 1569678527
 }
