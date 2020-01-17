@@ -1,4 +1,3 @@
-	
 <script>
 //Touch drop down menu
 	$('li.page_item_has_children').on("touchstart", function (e) {  
@@ -35,10 +34,13 @@
 
 
 //Mobile navigation trigger
+	
 	$(document).ready(function(){
+		//var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+		
 		$(".nav-mobile").html($(".nav-wrap").html());
 		$(".nav-mobile").append($(".nav-top").html());
-		
+
 		$(".nav-trigger").click(function(){
 			
 			$( "body" ).toggleClass( "nav-open" , "nav-closed" );
@@ -82,10 +84,3 @@
     });
 	
 </script>
-	
-	<?php 
-		$google_analytics_code = get_field('google_analytics_code', 'option');
-		if($google_analytics_code):
-			echo $google_analytics_code;
-		endif;
-	?>

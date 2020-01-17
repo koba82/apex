@@ -261,30 +261,6 @@
 	    }
 		add_custom_image_sizes();
 	}
-
-//**********************************************************************************************************************
-//	Delete heavey original images
-//**********************************************************************************************************************
-
-
-	add_filter('wp_generate_attachment_metadata', 'delete_large_image_originals');
-	
-	function delete_large_image_originals($metadata)
-	{
-		$upload_dir = wp_upload_dir();
-		$full_image_path = trailingslashit($upload_dir['basedir']) . $metadata['file'];
-		
-		$size = filesize( $full_image_path );
-		$ext = pathinfo($full_image_path, PATHINFO_EXTENSION);
-	
-		if( ( $ext == 'jpg' || $ext == 'png' ) && $size > 1000000 ) :
-			$deleted = unlink($full_image_path);
-		endif;
-	
-		return $metadata;
-	}
-
-
 	
 //**********************************************************************************************************************
 //	Front-end image customisation

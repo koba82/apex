@@ -16,6 +16,12 @@
 <!--<![endif]-->
 
 <head>
+	<?php 
+		$google_analytics_code = get_field('google_analytics_code', 'option');
+		if($google_analytics_code):
+			echo $google_analytics_code;
+		endif;
+	?>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />

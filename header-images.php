@@ -55,21 +55,25 @@
 	endif; ?>									
 
 <script>
-	$('.slider-<?=$id; ?>').flickity({
+	window.addEventListener('load', function () {
+		var elem<?=$id; ?> = document.querySelector('.slider-<?=$id; ?>');
+		var flkty<?=$id; ?> = new Flickity( elem<?=$id; ?>, {
+		// options
 		cellAlign: 'center',
-		contain: true,
-		percentPosition: false,
-		freeScroll: false,
-		wrapAround: true,
-		autoPlay: 4000,
-		pageDots: false,
-		prevNextButtons: false,
-		arrowShape: { 
-			x0: 10,
-			x1: 60, y1: 50,
-			x2: 60, y2: 50,
-			x3: 60
-		      }
+			contain: true,
+			percentPosition: false,
+			freeScroll: false,
+			wrapAround: true,
+			autoPlay: 4000,
+			pageDots: false,
+			prevNextButtons: false,
+			arrowShape: { 
+				x0: 10,
+				x1: 60, y1: 50,
+				x2: 60, y2: 50,
+				x3: 60
+				}
+		});
 	});
 </script>
 <?php endif; ?>
