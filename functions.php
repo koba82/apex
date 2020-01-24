@@ -895,36 +895,7 @@
 	
 	//Register options CPT on init
 	add_action('init', 'add_cpt_from_option_page');
-	
 
-//**********************************************************************************************************************
-//	Add custom post VERHUUR
-//**********************************************************************************************************************
-			
-			
-	function add_custom_post_type_verhuur() {
-			
-			
-		$verhuur_args = array(
-			'labels' => array('name' => __( 'Verhuur' ),
-					'singular_name' => __( 'Verhuuritem' ),
-					'add_new' => __( 'Verhuuritem toevoegen' ),
-					'add_new_item' => __( 'Verhuuritem toevoegen' ),
-					'edit_item' => __( 'Verhuuritem bewerken' ),
-					'new_item' => __( 'Verhuuritem toevoegen' ),
-					),
-			'public' => true,
-			'has_archive' => true,
-			'supports' => array('title', 'editor', 'thumbnail'),
-			'menu_icon' => __('dashicons-admin-home'),
-			'rewrite' => array('slug' => __( 'aanbod'))
-		);
-			
-		register_post_type('verhuur', $verhuur_args);
-			
-	}
-		
-	add_action('init', 'add_custom_post_type_verhuur');
 
 	//Add class to body if module is active
 	function module_body_classes( $classes ) {
