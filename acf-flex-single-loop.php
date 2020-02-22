@@ -14,7 +14,7 @@
 		if(get_sub_field('flex-text-add-image') == 'false') : ?>
 			<section class="content-wrap c-flex-text <?=$has_bgc; ?>">
 				<div class="content">
-					<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+					<div class="content-animation">
 						<div class="flex-paragraph <?php the_sub_field('flex-text-spotlight'); ?>">
 						
 							<?php
@@ -37,7 +37,7 @@
 			 
 			<section class="content-wrap c-flex-text <?=$has_bgc; ?>" >
 				<div class="content <?php the_sub_field('flex-text-image-position'); ?>" >
-					<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+					<div class="content-animation">
 						<div class="flex-text-image-column <?php the_sub_field('flex-text-spotlight'); ?> text-col" >
 							<div class="flex-paragraph">	
 							<?php
@@ -97,7 +97,7 @@
 		
 		<section class="content-wrap c-flex-image <?=$has_bgc; ?>" >
 			<div class="content" >
-				<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+				<div class="content-animation">
 					<?php if(get_sub_field('flex-title')) : ?>
 						<h2><?php the_sub_field('flex-title'); ?></h2>
 					<?php endif; ?>
@@ -164,7 +164,7 @@
 
 		<section class="content-wrap c-flex-gallery <?=$has_bgc; ?>" >
 			<div class="content" >
-				<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+				<div class="content-animation">
 					<?php
 					
 					if( get_sub_field('flex-gallery-title') ) :
@@ -266,7 +266,7 @@
 		
 			<section class="content-wrap c-flex-slider <?=$has_bgc; ?>" >
 				<div class="content" >
-					<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+					<div class="content-animation">
 					<?php if(get_sub_field('flex-slider-header')) : ?>
 						<h2><?php the_sub_field('flex-slider-header'); ?></h2>
 					<?php endif; ?>
@@ -300,7 +300,7 @@
 
 			<section class="content-wrap c-flex-image-slider <?=$has_bgc; ?>" >
 				<div class="content" >
-					<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+					<div class="content-animation">
 					<?php if(get_sub_field('flex-slider-header')) : ?>
 						<h2><?php the_sub_field('flex-slider-header'); ?></h2>
 					<?php endif; ?>
@@ -381,7 +381,7 @@
 	
 	<section class="content-wrap c-flex-youtube <?=$has_bgc; ?>" >
 		<div class="content">
-			<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+			<div class="content-animation">
 				<div class="flex-youtube-wrapper">
 					<?php the_sub_field('flex-youtube-iframe'); ?>
 				</div>
@@ -418,7 +418,7 @@
 		
 		<section class="content-wrap c-flex-cta <?=$has_bgc; ?> <?php echo ($xl_but) ? 'has-large-buttons' : ''; ?>" >
 			<div class="content" >
-				<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+				<div class="content-animation">
 					
 					<?php if(get_sub_field('flex-title')) : ?>
 						<h2><?php the_sub_field('flex-title'); ?></h2>
@@ -499,7 +499,7 @@
 	
 	<section class="content-wrap c-flex-usp <?=$has_bgc; ?>" >
 		<div class="content">
-			<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+			<div class="content-animation">
 				<div class="usp-content-wrap">
 					<div class="usp-header">
 						<h2><?php echo $usp_header; ?></h2>
@@ -562,7 +562,7 @@
 	
 	<section class="content-wrap c-flex-table <?=$has_bgc; ?>" >
 		<div class="content">
-			<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+			<div class="content-animation">
 				
 				<?php if(get_sub_field('flex-title')) : ?>
 					<h2><?php the_sub_field('flex-title'); ?></h2>
@@ -618,7 +618,7 @@
 	
 	<section class="content-wrap c-flex-child-pages <?=$has_bgc; ?>" >
 		<div class="content" >
-			<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+			<div class="content-animation">
 			
 				<?php if(get_sub_field('flex-title')) : ?>
 					<h2><?php the_sub_field('flex-title'); ?></h2>
@@ -670,7 +670,7 @@
 		
 			<section class="content-wrap c-flex-form <?=$has_bgc; ?>" id="form-id" >
 				<div class="content">
-					<div class="content-animation" <?php if ( get_field('aos-element', 'option') == 'content' ) : echo 'data-aos="' . get_field('aos-animation', 'option') . '"'; endif; ?>>
+					<div class="content-animation">
 						<div class="flex-form-wrap">
 							<h2><?php the_sub_field('flex-form-title'); ?></h2>
 							<form id="form-<?=$form_id;?>" method="post" action="<?php echo the_permalink(); ?>#form-id">
