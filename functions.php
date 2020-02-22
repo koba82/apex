@@ -162,7 +162,6 @@
 
 			//Bundle CSS files
 			$cssFiles = array(
-				'/css/aos.css',
 				'/css/flickity.css',
 				'/css/reset.css',
 				'/css/simplelightbox.css',
