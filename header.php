@@ -22,6 +22,20 @@
 			echo $google_analytics_code;
 		endif;
 	?>
+
+	<?php if( get_field('no-index') || get_field('no-follow') ) :
+
+	if( get_field('no-index') && get_field('no-follow') ): 
+		echo '<meta name="robots" content="noindex,nofollow"/>';
+	elseif(get_field('no-index') ): 
+		echo '<meta name="robots" content="noindex,follow"/>';
+	else :
+		echo '<meta name="robots" content="index,nofollow"/>';
+	endif;
+
+	endif;
+	?>
+
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
