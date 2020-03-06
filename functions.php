@@ -154,7 +154,9 @@
 	//Start timer to measure time it took the server to bundle the CSS
 	//$start = microtime(true);
 
-	if ( ! function_exists( 'bundle_css' ) ) {
+	$developer_mode = get_field('dev-mode', 'option');
+
+	if ( ! function_exists( 'bundle_css' ) && $developer_mode ) {
 		function bundle_css() {
 	
 			$theme_sub_style_sheet = get_field('config-theme', 'option');
@@ -162,6 +164,7 @@
 
 			//Bundle CSS files
 			$cssFiles = array(
+				'/css/aos.css',
 				'/css/flickity.css',
 				'/css/reset.css',
 				'/css/simplelightbox.css',
@@ -175,11 +178,11 @@
 				$buffer .= file_get_contents($template_uri . $cssFile);
 			}
 			// Remove comments
-			//$buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
+			$buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
 			// Remove space after colons
-			//$buffer = str_replace(': ', ':', $buffer);
+			$buffer = str_replace(': ', ':', $buffer);
 			// Remove whitespace
-			//$buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
+			$buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
 			$file = get_template_directory() . '/bundled-min.css';
 			file_put_contents($file, $buffer ) or print_r(error_get_last()); 
 
@@ -194,12 +197,14 @@
 	//$GLOBALS['time_elapsed_secs'] = microtime(true) - $start;
 
 	//Load bundled stylesheet
-	if ( ! function_exists( 'theme_enqueue_bundled_styles' ) ) {
+	
+	if ( ! function_exists( 'theme_enqueue_bundled_styles' ) && !$developer_mode ) {
 		function theme_enqueue_bundled_styles() {
 			wp_enqueue_style( 'bundled-css', get_template_directory_uri() .'/bundled-min.css', array(), false, 'all');
 		}
 		add_action( 'wp_enqueue_scripts', 'theme_enqueue_bundled_styles' );
 	};
+
 	
 	
 //**********************************************************************************************************************

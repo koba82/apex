@@ -45,6 +45,25 @@
             "return_format": "value"
         },
         {
+            "key": "field_5e514f522bd39",
+            "label": "Ontwikkelmodus",
+            "name": "dev-mode",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_595ceb21adb88",
             "label": "Thema instellingen",
             "name": "",
@@ -508,5 +527,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1582385458
+    "modified": 1583497233
 }
