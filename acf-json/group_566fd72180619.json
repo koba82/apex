@@ -3,40 +3,8 @@
     "title": "Pagina-elementen",
     "fields": [
         {
-            "key": "field_57a9cfdd471ef",
-            "label": "Paginatitel",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_57a9d46dd0c9e",
-            "label": "Koptekst (H1 Kop)",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
             "key": "field_57a9d01d5dc13",
-            "label": "SEO",
+            "label": "Zoekmachineoptimalisatie",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -245,5 +213,5 @@
     ],
     "active": 1,
     "description": "Pagina elementen",
-    "modified": 1583498497
+    "modified": 1583498836
 }
