@@ -29,7 +29,18 @@ get_header(); ?>
 
 <?php get_template_part('acf-flex-content-loop'); ?>
 
+<?php if ( WPEX_WOOCOMMERCE_ACTIVE ) : ?>
 
+	<?php do_shortcode('aws_search_form'); ?>
+
+	<section class="content-wrap woo-content-wrap">
+		<div class="content woo-content">
+			<div class="content-animation">	
+			</div>
+		</div>	
+	</section>
+
+<?php endif; ?>
 
 </main>
 <?php

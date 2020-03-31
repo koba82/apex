@@ -24,13 +24,14 @@
             "name": "seo-title",
             "type": "text",
             "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
+            "required": false,
+            "conditional_logic": false,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
+            "0": false,
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -43,13 +44,14 @@
             "name": "h1-text",
             "type": "text",
             "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
+            "required": false,
+            "conditional_logic": false,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
+            "0": false,
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -62,13 +64,14 @@
             "name": "seo-description",
             "type": "text",
             "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
+            "required": false,
+            "conditional_logic": false,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
+            "0": false,
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -135,13 +138,14 @@
             "name": "page-header-images",
             "type": "text",
             "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
+            "required": false,
+            "conditional_logic": false,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
+            "0": false,
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -168,7 +172,7 @@
             "key": "field_583d78c8d7b66",
             "label": "In welk menu moet deze pagina zichtbaar zijn?",
             "name": "include-in-nav",
-            "type": "text",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -177,11 +181,20 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "choices": {
+                "include-in-main-nav": "Hoofdmenu",
+                "include-in-top-nav": "Topmenu",
+                "no-menu": "geen"
+            },
+            "default_value": [
+                "include-in-main-nav"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -213,5 +226,5 @@
     ],
     "active": 1,
     "description": "Pagina elementen",
-    "modified": 1583498836
+    "modified": 1585238387
 }

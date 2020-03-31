@@ -1772,7 +1772,7 @@ input[type=radio], input[type=checkbox] {
 }
 
 #wpbody {
-	margin-top: 30px;
+	margin-top: 24px;
     margin-left: 30px;
 }
 
@@ -1987,7 +1987,7 @@ ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu>li.current>a.current:a
 	display: none;
 }
 
-.update-nag, #footer-thankyou, #screen-options-link-wrap, #contextual-help-link, #contextual-help-link-wrap, #footer-upgrade, #collapse-menu {
+.update-nag, #footer-thankyou, #contextual-help-link, #contextual-help-link-wrap, #footer-upgrade, #collapse-menu {
 	display:none;
 }
 

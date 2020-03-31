@@ -159,33 +159,35 @@
 	if ( ! function_exists( 'bundle_css' ) && $developer_mode ) {
 		function bundle_css() {
 	
-			$theme_sub_style_sheet = get_field('config-theme', 'option');
-			$template_uri = get_template_directory_uri();
+			//$theme_sub_style_sheet = get_field('config-theme', 'option');
+			//$template_uri = get_template_directory_uri();
 
 			//Bundle CSS files
-			$cssFiles = array(
-				'/css/aos.css',
-				'/css/flickity.css',
-				'/css/reset.css',
-				'/css/simplelightbox.css',
-				'/css/style.css',
-				'/css/' . $theme_sub_style_sheet,
-				'/css/override.css'
-			);
+			//$cssFiles = array(
+			//	'/css/aos.css',
+			//	'/css/flickity.css',
+			//	'/css/reset.css',
+			//	'/css/simplelightbox.css',
+			//	'/css/style.css',
+			//	'/css/' . $theme_sub_style_sheet,
+			//	'/css/override.css'
+			//);
 			
-			$buffer = "";
-			foreach ($cssFiles as $cssFile) {
-				$buffer .= file_get_contents($template_uri . $cssFile);
-			}
+			//$buffer = "";
+			//foreach ($cssFiles as $cssFile) {
+			//	$buffer .= file_get_contents($template_uri . $cssFile);
+			//}
 			// Remove comments
-			$buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
+			//$buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
 			// Remove space after colons
-			$buffer = str_replace(': ', ':', $buffer);
+			//$buffer = str_replace(': ', ':', $buffer);
 			// Remove whitespace
-			$buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
-			$file = get_template_directory() . '/bundled-min.css';
-			file_put_contents($file, $buffer ) or print_r(error_get_last()); 
+			//$buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
+			//$file = get_template_directory() . '/bundled-min.css';
+			//file_put_contents($file, $buffer ) or print_r(error_get_last()); 
 
+
+			
 
 			wp_enqueue_style( 'bundled-css', get_template_directory_uri() .'/bundled-min.css', array(), false, 'all');
 			
@@ -198,13 +200,21 @@
 
 	//Load bundled stylesheet
 	
-	if ( ! function_exists( 'theme_enqueue_bundled_styles' ) && !$developer_mode ) {
-		function theme_enqueue_bundled_styles() {
-			wp_enqueue_style( 'bundled-css', get_template_directory_uri() .'/bundled-min.css', array(), false, 'all');
-		}
-		add_action( 'wp_enqueue_scripts', 'theme_enqueue_bundled_styles' );
-	};
+	if ( ! function_exists( 'theme_enqueue_bundled_styles_non_dev' ) && !$developer_mode ) {
+		function theme_enqueue_bundled_styles_non_dev() {
 
+			$theme_sub_style_sheet = get_field('config-theme', 'option');
+
+			wp_enqueue_style( 'aos', get_template_directory_uri() .'/css/aos.css', array(), false, 'all');
+			wp_enqueue_style( 'flickity', get_template_directory_uri() .'/css/flickity.css', array(), false, 'all');
+			wp_enqueue_style( 'reset', get_template_directory_uri() .'/css/reset.css', array(), false, 'all');
+			wp_enqueue_style( 'style', get_template_directory_uri() .'/css/style.css', array(), false, 'all');
+			wp_enqueue_style( 'sub-theme-style', get_template_directory_uri() .'/css/' . $theme_sub_style_sheet, array(), false, 'all');
+			wp_enqueue_style( 'override', get_template_directory_uri() .'/css/override.css', array(), false, 'all');
+			//wp_enqueue_style( 'bundled-css', get_template_directory_uri() .'/bundled-min.css', array(), false, 'all');
+		}
+		add_action( 'wp_enqueue_scripts', 'theme_enqueue_bundled_styles_non_dev' );
+	};
 	
 	
 //**********************************************************************************************************************
@@ -1178,6 +1188,81 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 //**********************************************************************************************************************
 
 	ob_start("ob_gzhandler");
+
+
+//**********************************************************************************************************************
+//	WooSupport
+//**********************************************************************************************************************
+
+	// Add new constant that returns true if WooCommerce is active
+	define( 'WPEX_WOOCOMMERCE_ACTIVE', class_exists( 'WooCommerce' ) );
+	
+	// Checking if WooCommerce is active
+	if ( WPEX_WOOCOMMERCE_ACTIVE ) {
+		
+		add_action( 'after_setup_theme', function() {
+			add_theme_support( 'woocommerce' );
+		} );
+		
+		add_filter( 'woocommerce_show_page_title', '__return_false' );
+		
+		add_theme_support( 'wc-product-gallery-slider' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+			
+		remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+		
+		
+		remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+		
+		
+		add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
+		add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+		
+		function my_theme_wrapper_start() {
+		    echo '<div id="woo-content">';
+		}
+		
+		function my_theme_wrapper_end() {
+		    echo '</div>';
+		}
+	
+	}
+
+
+//**********************************************************************************************************************
+//	Adding Menus & adding menu option in backend top level menu
+//**********************************************************************************************************************
+
+	//Register menu locations
+	function apex_custom_menus() {
+		register_nav_menus(
+		  array(
+			'main-nav' => __( 'Hoofdnavigatie' ),
+			'top-nav' => __( 'Topnavigatie' ),
+			'footer-nav' => __( 'Footernavigatie')
+		  )
+		);
+	}
+	add_action( 'init', 'apex_custom_menus' );
+
+	//Add custom link to Menu's in backend
+	add_action( 'admin_menu', 'linked_url' );
+    function linked_url() {
+  		add_menu_page( 'linked_url', 'Menustructuur', 'read', 'my_slug', '', 'dashicons-text', 1 );
+    }
+
+    add_action( 'admin_menu' , 'linkedurl_function' );
+		function linkedurl_function() {
+		global $menu;
+		$menu[1][2] = get_admin_url() . "/nav-menus.php";
+	}
+		
+	//Allow editors to edit menu
+	$role_object = get_role( 'editor' );
+	$role_object->add_cap( 'edit_theme_options' );
 
 
 ?>
