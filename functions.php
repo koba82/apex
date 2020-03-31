@@ -151,71 +151,36 @@
 		wp_dequeue_style( 'wp-block-library' );
 	}
 
-	//Start timer to measure time it took the server to bundle the CSS
-	//$start = microtime(true);
+//**********************************************************************************************************************
+//	Load stylesheets (bundled or developer mode)
+//**********************************************************************************************************************
 
-	$developer_mode = get_field('dev-mode', 'option');
+	if ( !function_exists( 'theme_enqueue_styles' )) :
 
-	if ( ! function_exists( 'bundle_css' ) && $developer_mode ) {
-		function bundle_css() {
-	
-			//$theme_sub_style_sheet = get_field('config-theme', 'option');
-			//$template_uri = get_template_directory_uri();
+		function theme_enqueue_styles() {
 
-			//Bundle CSS files
-			//$cssFiles = array(
-			//	'/css/aos.css',
-			//	'/css/flickity.css',
-			//	'/css/reset.css',
-			//	'/css/simplelightbox.css',
-			//	'/css/style.css',
-			//	'/css/' . $theme_sub_style_sheet,
-			//	'/css/override.css'
-			//);
+			$developer_mode = get_field('dev-mode', 'option');
+
+			if($developer_mode) :
+
+				$theme_sub_style_sheet = get_field('config-theme', 'option');
+				wp_enqueue_style( 'aos', get_template_directory_uri() .'/css/aos.css', array(), false, 'all');
+				wp_enqueue_style( 'flickity', get_template_directory_uri() .'/css/flickity.css', array(), false, 'all');
+				wp_enqueue_style( 'reset', get_template_directory_uri() .'/css/reset.css', array(), false, 'all');
+				wp_enqueue_style( 'style', get_template_directory_uri() .'/css/style.css', array(), false, 'all');
+				wp_enqueue_style( 'sub-theme-style', get_template_directory_uri() .'/css/' . $theme_sub_style_sheet, array(), false, 'all');
+				wp_enqueue_style( 'override', get_template_directory_uri() .'/css/override.css', array(), false, 'all');
+
+			else : 
+
+				wp_enqueue_style( 'bundled-css', get_template_directory_uri() .'/bundled-min.css', array(), false, 'all');
 			
-			//$buffer = "";
-			//foreach ($cssFiles as $cssFile) {
-			//	$buffer .= file_get_contents($template_uri . $cssFile);
-			//}
-			// Remove comments
-			//$buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
-			// Remove space after colons
-			//$buffer = str_replace(': ', ':', $buffer);
-			// Remove whitespace
-			//$buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
-			//$file = get_template_directory() . '/bundled-min.css';
-			//file_put_contents($file, $buffer ) or print_r(error_get_last()); 
-
-
-			
-
-			wp_enqueue_style( 'bundled-css', get_template_directory_uri() .'/bundled-min.css', array(), false, 'all');
-			
+			endif;
 		};
-	add_action('wp_enqueue_scripts', 'bundle_css', 10);
-	};
-	
-	//Stop the timer - measure time it took the server to bundle the CSS
-	//$GLOBALS['time_elapsed_secs'] = microtime(true) - $start;
 
-	//Load bundled stylesheet
-	
-	if ( ! function_exists( 'theme_enqueue_bundled_styles_non_dev' ) && !$developer_mode ) {
-		function theme_enqueue_bundled_styles_non_dev() {
+		add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-			$theme_sub_style_sheet = get_field('config-theme', 'option');
-
-			wp_enqueue_style( 'aos', get_template_directory_uri() .'/css/aos.css', array(), false, 'all');
-			wp_enqueue_style( 'flickity', get_template_directory_uri() .'/css/flickity.css', array(), false, 'all');
-			wp_enqueue_style( 'reset', get_template_directory_uri() .'/css/reset.css', array(), false, 'all');
-			wp_enqueue_style( 'style', get_template_directory_uri() .'/css/style.css', array(), false, 'all');
-			wp_enqueue_style( 'sub-theme-style', get_template_directory_uri() .'/css/' . $theme_sub_style_sheet, array(), false, 'all');
-			wp_enqueue_style( 'override', get_template_directory_uri() .'/css/override.css', array(), false, 'all');
-			//wp_enqueue_style( 'bundled-css', get_template_directory_uri() .'/bundled-min.css', array(), false, 'all');
-		}
-		add_action( 'wp_enqueue_scripts', 'theme_enqueue_bundled_styles_non_dev' );
-	};
-	
+	endif;
 	
 //**********************************************************************************************************************
 //	Load JavaScript
@@ -1199,7 +1164,14 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 	
 	// Checking if WooCommerce is active
 	if ( WPEX_WOOCOMMERCE_ACTIVE ) {
-		
+	
+		//Add class to admin body if WooCommerce is active
+		function woo_body_class( $classes ) {
+			$classes .= ' woo-com-active'; 
+			return $classes;
+		};
+		add_filter( 'admin_body_class', 'woo_body_class' );
+
 		add_action( 'after_setup_theme', function() {
 			add_theme_support( 'woocommerce' );
 		} );

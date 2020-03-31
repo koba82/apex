@@ -729,10 +729,6 @@
 		--red: rgb(202,74,31);
 }
 
-html {
-
-}
-
 body {
 	font-family: 'MainFont' !important;
 	font-weight: normal;
@@ -807,17 +803,11 @@ input:focus, select:focus {
 	border: 1px solid white;
 }
 
-.acf-icon:before {
-}
-
 .acf-icon.small {
     width: 22px;
     height: 22px;
     line-height: 18px;
     font-size: 22px;
-    -moz-transition: all 0.1s ease-in-out; /* Firefox 4 */
-	-webkit-transition: all 0.1s ease-in-out; /* Safari and Chrome */
-	-o-transition: all 0.1s ease-in-out; /* Opera */
 }
 
 .acf-flexible-content .layout .acf-fc-show-on-hover {
@@ -1024,10 +1014,6 @@ li.active .acf-tab-button {
     background: rgba(245,245,245,1) !important;
 }
 
-.acf-flexible-content .layout .acf-fc-layout-handle:hover span{
-
-}
-
 .acf-flexible-content .layout {
     border: 2px rgba(0,0,0,0) solid !important;
 }
@@ -1096,20 +1082,6 @@ li.active .acf-tab-button {
 
 
 /* Help box -------------------------------------------------------------------------*/
-
-div[data-type="message"] {
-/*        padding-top: 0px !important;
-        padding-bottom: 0px !important;*/
-}
-
-div[data-type="message"]:before {
-/*	border: 1px solid rgba(220,255,220,1) !important;
-	border-right: 1px solid white !important;*/
-}
-
-div[data-type="message"] label {
-/*	margin-top: 8px !important;*/
-}
 
 .acf-field[data-type="message"] .acf-input a {
         margin: 0 3px;
@@ -1434,6 +1406,15 @@ a.acf-button.button.button-primary:before {
     display: none;
 }
 
+.acf-fc-popup a[data-layout="flex-woo-elements"] {
+	display: none;
+}
+
+.woo-com-active .acf-fc-popup a[data-layout="flex-woo-elements"] {
+	display: block;
+}
+
+
 .role-administrator .acf-fc-popup a[data-layout="flex-php-include"] {
 	display: block;
 }
@@ -1462,11 +1443,6 @@ a.acf-button.button.button-primary:before {
 label[for="acf-field_564c950e3c3c6"], label[for="acf-field_564c950e3c3c601"] {
 	font-size: 22px !important;
 	font-weight: normal !important;
-}
-
-
-.acf-field-flexible-content {
-/*     border: 1px #ddd solid !important; */
 }
 
 /* Configuratie pagina ----------------------------------------------------------------------------*/
@@ -2080,31 +2056,6 @@ div#save-action > input {
     display: block;
 }
 
-#misc-publishing-actions label[for=post_status]:before {
-/*	content: "\f173";
-	top: -1px;
-    display: block;
-    font-size: 40px;
-    color: #ccc;
-    margin-bottom: 10px;*/
-}
-
-#post-body #timestamp:before {
-/*    content: "\f145";
-    top: -1px;
-    display: block;
-    font-size: 40px;
-    color: #ccc;*/
-}
-
-#post-body .misc-pub-revisions:before {
-/*    content: "\f321";
-    top: -1px;
-    display: block;
-    font-size: 40px;
-    color: #ccc;*/
-}
-
 #wpadminbar * {
 	font: 400 18px/32px "MainFonts",sans-serif;
 }
@@ -2125,10 +2076,6 @@ div#save-action > input {
 
 #adminmenu a.menu-top {
     line-height: 15px;
-}
-
-.ab-sub-wrapper {
-/* 	display: none !important; */
 }
 
 .inline-icon {

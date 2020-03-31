@@ -65,6 +65,23 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_5e834e305dd6c",
+            "label": "Bundel CSS",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<form method=\"post\" action=\"<?php echo esc_url( home_url() ); ?>\">\r\n    <input name=\"bundle-css\" id=\"bundle-css\" type=\"hidden\" value=\"true\" \/>\r\n    <input type=\"submit\" id=\"accept-button\" value=\"Bundle CSS\" \/>\r\n    <?php wp_nonce_field( 'bundle_all_css', 'bundle_all_css_nonce' ); ?>\r\n<\/form>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_595ceb21adb88",
             "label": "Thema instellingen",
             "name": "",
@@ -528,5 +545,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1585239071
+    "modified": 1585679320
 }

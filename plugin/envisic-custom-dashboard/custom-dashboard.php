@@ -111,6 +111,54 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 					</div>
 				<?php endif; ?>
 		</div>
+		
+		<?php if( current_user_can('administrator') ) {  ?>
+
+			<hr>
+
+			<div class="about-text">
+				<h3>Developer</h3>
+				<form method="post">
+					<input name="bundle-css" id="bundle-css" type="hidden" value="true" />
+					<input type="submit" id="submit-bundle" value="Bundle CSS" />
+				</form>
+				<?php 
+
+				if(isset($_POST['bundle-css'] ) ){
+
+					$theme_sub_style_sheet = get_field('config-theme', 'option');
+					$template_uri = get_template_directory_uri();
+
+					//Bundle CSS files
+					$cssFiles = array(
+						'/css/aos.css',
+						'/css/flickity.css',
+						'/css/reset.css',
+						'/css/simplelightbox.css',
+						'/css/style.css',
+						'/css/' . $theme_sub_style_sheet,
+						'/css/override.css'
+					);
+						
+					$buffer = "";
+					foreach ($cssFiles as $cssFile) {
+						$buffer .= file_get_contents($template_uri . $cssFile);
+					}
+					//Remove comments
+					$buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
+					//Remove space after colons
+					$buffer = str_replace(': ', ':', $buffer);
+					//Remove whitespace
+					$buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
+					$file = get_template_directory() . '/bundled-min.css';
+					file_put_contents($file, $buffer ) or print_r(error_get_last()); 
+
+				};
+
+				?>
+			</div>
+		
+			<?php }; ?>
 
 </div>
 
