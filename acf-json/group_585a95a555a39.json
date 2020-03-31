@@ -35,14 +35,15 @@
                 "apex-alpha": "Apex Alpha",
                 "apex-charlie.css": "Apex Charlie",
                 "apex-lima.css": "Apex Lima",
-                "apex-sierra.css": "Apex Sierra"
+                "apex-sierra.css": "Apex Sierra",
+                "apex-woocommerce.css": "Apex Woo Commerce"
             },
             "allow_null": 0,
             "other_choice": 0,
-            "save_other_choice": 0,
             "default_value": "",
             "layout": "vertical",
-            "return_format": "value"
+            "return_format": "value",
+            "save_other_choice": 0
         },
         {
             "key": "field_5e514f522bd39",
@@ -527,5 +528,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1583497233
+    "modified": 1585239071
 }

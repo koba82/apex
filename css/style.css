@@ -1916,13 +1916,9 @@ form input:hover[type=submit] {
 }
 
 .footer-logo img {
-	max-width: 100%;
+	max-width: 250px;
 	max-height: 100%;
 	width: auto;
-}
-
-.footer-naw {
-	
 }
 
 .footer-open-hours-block {
@@ -1950,10 +1946,6 @@ a.footer-link:hover {
 .main-column {
 	width: 100%;
 	float: left;
-}
-
-.grid {
-
 }
 
 .grid:after {

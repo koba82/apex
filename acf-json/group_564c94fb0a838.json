@@ -377,9 +377,9 @@
                                     },
                                     "choices": {
                                         "geen": "<span class=\"color-selector\" style=\"background: #fffff\"> Geen <\/span>",
-                                        "pri-color": "<span class=\"color-selector\" style=\"background: #494158;\"> <\/span>",
-                                        "sec-color": "<span class=\"color-selector\" style=\"background: #2d2d2d;\"> <\/span>",
-                                        "ter-color": "<span class=\"color-selector\" style=\"background: #d16f00;\"> <\/span>"
+                                        "pri-color": "<span class=\"color-selector\" style=\"background: ;\"> <\/span>",
+                                        "sec-color": "<span class=\"color-selector\" style=\"background: ;\"> <\/span>",
+                                        "ter-color": "<span class=\"color-selector\" style=\"background: ;\"> <\/span>"
                                     },
                                     "allow_null": 0,
                                     "other_choice": 0,
@@ -501,18 +501,261 @@
                             "key": "field_5a71b7fef8ddc",
                             "label": "Help",
                             "name": "",
-                            "type": "message",
+                            "type": "text",
                             "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
+                            "required": false,
+                            "conditional_logic": false,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/tekst\" target=\"new_window\">\r\nMeer informatie over blok: Tekst\r\n<\/a>",
-                            "new_lines": "",
-                            "esc_html": 0
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5a71c91b86161",
+                            "label": "Help",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_583d53c5f44a7",
+                            "label": "Help",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_583d53f5f44b1",
+                            "label": "Help",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_583d5489d95b1",
+                            "label": "Help",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_583d54ead95bb",
+                            "label": "Help",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5a6f2d1cab7c5",
+                            "label": "Help",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5b0ff69585df3",
+                            "label": "Help",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5836df09ccd11",
+                            "label": "Help",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5b193e0cb22df",
+                            "label": "Help",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_58223188f0e04",
+                            "label": "Help",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_58ac48714e8d1",
+                            "label": "Help",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5a2be386c17ba",
+                            "label": "Geavanceerde functie",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": false,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         }
                     ],
                     "min": "",
@@ -582,7 +825,9 @@
                             "max_width": "",
                             "max_height": "",
                             "max_size": "",
-                            "mime_types": ""
+                            "mime_types": "",
+                            "return_format": "array",
+                            "preview_size": "medium"
                         },
                         {
                             "key": "field_583d5393f4496",
@@ -620,23 +865,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_5a71c91b86161",
-                            "label": "Help",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/afbeelding\" target=\"new_window\">\r\nMeer informatie over blok: Afbeelding(en)\r\n<\/a>",
-                            "new_lines": "",
-                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -734,23 +962,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_583d53c5f44a7",
-                            "label": "Help",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/tabel\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: tabel \r\n<\/a>",
-                            "new_lines": "",
-                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -842,7 +1053,9 @@
                             "max_width": "",
                             "max_height": "",
                             "max_size": "",
-                            "mime_types": ""
+                            "mime_types": "",
+                            "return_format": "array",
+                            "preview_size": "medium"
                         },
                         {
                             "key": "field_583d53f5f44aa",
@@ -880,23 +1093,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_583d53f5f44b1",
-                            "label": "Help",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/gallerij\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: gallerij \r\n<\/a>",
-                            "new_lines": "",
-                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -1115,7 +1311,9 @@
                             "max_width": "",
                             "max_height": "",
                             "max_size": "",
-                            "mime_types": ""
+                            "mime_types": "",
+                            "return_format": "array",
+                            "preview_size": "medium"
                         },
                         {
                             "key": "field_583d5489d95aa",
@@ -1153,23 +1351,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_583d5489d95b1",
-                            "label": "Help",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/slider\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: slider \r\n<\/a>",
-                            "new_lines": "",
-                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -1252,23 +1433,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_583d54ead95bb",
-                            "label": "Help",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/youtube\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: YouTube\r\n<\/a>",
-                            "new_lines": "",
-                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -2240,23 +2404,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_5a6f2d1cab7c5",
-                            "label": "Help",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/knop\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: knop \r\n<\/a>",
-                            "new_lines": "",
-                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -2419,23 +2566,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_5b0ff69585df3",
-                            "label": "Help",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/opsomming\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: Opsomming\r\n<\/a>",
-                            "new_lines": "",
-                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -2594,23 +2724,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_5836df09ccd11",
-                            "label": "Help",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/google-maps\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: Google Maps \r\n<\/a>",
-                            "new_lines": "",
-                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -2712,23 +2825,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_5b193e0cb22df",
-                            "label": "Help",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/google-maps\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: Google Maps \r\n<\/a>",
-                            "new_lines": "",
-                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -3004,12 +3100,22 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e7cd1abb390a": {
+                    "key": "layout_5e7cd1abb390a",
+                    "name": "flex-woo-elements",
+                    "label": "WooCommerce elementen",
+                    "display": "row",
+                    "sub_fields": [
                         {
-                            "key": "field_58223188f0e04",
-                            "label": "Help",
+                            "key": "field_5e7cd1abb390b",
+                            "label": "Blok inhoud",
                             "name": "",
-                            "type": "message",
+                            "type": "tab",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -3018,9 +3124,72 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/contactformulier\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: contactformulier \r\n<\/a>",
-                            "new_lines": "",
-                            "esc_html": 0
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5e7cd1cab390e",
+                            "label": "WooCommerce element",
+                            "name": "elements",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "[woocommerce_cart]": "Winkelwagen",
+                                "[woocommerce_checkout]": "Checkout",
+                                "[woocommerce_order_tracking]": "Order tracking",
+                                "[woocommerce_my_account]": "Account pagina"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5e7cd1abb390c",
+                            "label": "Opties & Help",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5e7cd1abb390d",
+                            "label": "Opties",
+                            "name": "flex-options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5a71b817f8ddd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         }
                     ],
                     "min": "",
@@ -3084,23 +3253,6 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
-                        },
-                        {
-                            "key": "field_58ac48714e8d1",
-                            "label": "Help",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "<a href=\"http:\/\/help.envisic.nl\/blokken\/occasions-overzicht\" target=\"new_window\">\r\nKlik hier voor hulp en meer informatie over blok: Occasionsoverzicht \r\n<\/a>",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -3112,23 +3264,6 @@
                     "label": "HTML",
                     "display": "row",
                     "sub_fields": [
-                        {
-                            "key": "field_5a2be386c17ba",
-                            "label": "Geavanceerde functie",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "warning-message",
-                                "id": ""
-                            },
-                            "message": "Dit is een geavanceerde functie. Gebruik of wijzig deze functie of inhoud alleen als je zeker weet wat je doet. Voor meer informatie:<br> <a href=\"http:\/\/help.envisic.nl\/flex-items\/geavanceerde-functies\" target=\"new_window\"> Flex item: geavanceerde functies\r\n<\/a>",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
-                        },
                         {
                             "key": "field_5702784afbc85",
                             "label": "HTML Blok",
@@ -3184,94 +3319,6 @@
                     ],
                     "min": "",
                     "max": ""
-                },
-                "layout_5c6aaff01ca9c": {
-                    "key": "layout_5c6aaff01ca9c",
-                    "name": "flex-buffet-group",
-                    "label": "Buffetten",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_5c6ab0611caa0",
-                            "label": "Buffet",
-                            "name": "buffet",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "",
-                            "min": 0,
-                            "max": 0,
-                            "layout": "table",
-                            "button_label": "Nieuw buffet",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5c6aaff01ca9d",
-                                    "label": "Naam",
-                                    "name": "buffet-name",
-                                    "type": "text",
-                                    "instructions": "Geef hier de bestandsnaam van het PHP bestand (zonder .php).",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5c6ab0181ca9e",
-                                    "label": "Buffet inhoud",
-                                    "name": "buffet-details",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "tabs": "all",
-                                    "toolbar": "very_simple",
-                                    "media_upload": 1,
-                                    "delay": 0
-                                },
-                                {
-                                    "key": "field_5c6ab0491ca9f",
-                                    "label": "Prijs",
-                                    "name": "buffet-price",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
                 }
             },
             "button_label": "Nieuw blok toevoegen",
@@ -3315,5 +3362,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1550496017
+    "modified": 1585238694
 }

@@ -31,6 +31,12 @@
 		
 		
 			<?php
+
+
+			wp_nav_menu( array( 
+				'theme_location' => 'main-nav', 
+				'container_class' => 'nav-wrap' ) ); 
+
 			//Footer link block
 			// check if the repeater field has rows of data
 			if( have_rows('config-footer-link-block', 'option') ): ?>
