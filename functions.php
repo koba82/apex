@@ -1237,4 +1237,38 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 	$role_object->add_cap( 'edit_theme_options' );
 
 
+//**********************************************************************************************************************
+//	SMTP Mail option
+//**********************************************************************************************************************
+
+	function send_smtp_email( $phpmailer ) {
+
+		$smtpHost = get_field('smtp-server', 'option');
+		$smtpPort = get_field('smtp-port', 'option');
+		$smtpUser = get_field('smtp-user', 'option');
+		$smtpPass = get_field('smtp-pass', 'option');
+		
+		$fromName = 'Bericht van ' . get_bloginfo('name');
+		$replyToEmail = 'mailer@envisichosting.nl';
+		$replyToName = get_bloginfo('name');
+
+		$phpmailer->isSMTP();
+		$phpmailer->Host       	= $smtpHost;
+		$phpmailer->Port       	= $smtpPort;
+		//$phpmailer->SMTPSecure 	= 'tls';
+		$phpmailer->SMTPAuth   	= true;
+		$phpmailer->Username   	= $smtpUser;
+		$phpmailer->Password  	= $smtpPass;
+		$phpmailer->From       	= 'mailer@envisichosting.nl';
+		$phpmailer->FromName   	= $fromName;
+		$phpmailer->addReplyTo($replyToEmail, $replyToName);
+
+	}
+
+	function set_my_mail_content_type() {
+		return "text/html";
+	}	
+
+
+
 ?>
