@@ -46,30 +46,31 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 				
 				if ($_SERVER['REQUEST_METHOD'] == 'POST') :	
 					//Get mailto from the flex item, if not set we get the mailto from options page
-					$email_to = 'info@envisic.nl';
-					
-					$reply_to = $email_to;	
+					$email_to = 'info@envisic.nl';	
 					
 					$subject = 'Supportvraag van' . get_field('config-name', 'option');
+
+					//Convert body array to text and add the permalink of the current page
+					$replyEmail = get_field('config-naw', 'option');		
+					$body = $_POST['support-text-field'] . '<br /><br />';
+					$body .= 'Klantnummer: ' . $_POST['client-number'] . '<br />';
+					$body .= 'E-mail adres: ' . $replyEmail['email'];
+				
+					function send_my_mail($email_to, $subject, $body) {
+
+						//Send the mail
+						add_filter( 'wp_mail_content_type','set_my_mail_content_type' );
+						add_action( 'phpmailer_init', 'send_smtp_email' );
 					
-					//Convert body array to text and add the permalink of the current page		
-					$body = $_POST['support-text-field'] . '\r\n';
-					$body .= 'Klantnummer: ' . $_POST['client-number'];
+						wp_mail( $email_to, $subject, $body);
+
+						remove_filter( 'wp_mail_content_type','set_my_mail_content_type' );
+						remove_action( 'phpmailer_init', 'send_smtp_email' );
 					
-					//Create mail header
-					$organisation_naw = get_field('config-naw', 'option');
-					$organisation_name = $organisation_naw['name'];
-					$organisation_mail = $organisation_naw['email'];
-					
-					$headers = 'From: ' . $organisation_name . ' <'. $organisation_mail . '>' . "\r\n" . 'Reply-To: ' . $organisation_mail . "\r\n";
-					$headers .= "Organization: " . $organisation_name . "\r\n";
-					$headers .= "MIME-Version: 1.0\r\n";
-					$headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
-					$headers .= "X-Priority: 3\r\n";
-					$headers .= "X-Mailer: PHP". phpversion() ."\r\n"; 
-	
+					}
+					send_my_mail($email_to, $subject, $body);
+
 					//Send the mail
-					wp_mail($email_to, $subject, $body, $headers);
 					$emailSent = true;
 					
 					echo '<bold>Je bericht is verstuurd.</bold>';

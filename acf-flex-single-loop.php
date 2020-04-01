@@ -668,12 +668,12 @@
 		//Create some variables
 		$field_counter = 1; $field_type = array(); $field_label = array(); $body = array(); $form_id = rand (9999, 99999); ?>
 		
-			<section class="content-wrap c-flex-form <?=$has_bgc; ?>" id="form-id" >
+			<section class="content-wrap c-flex-form <?=$has_bgc; ?>" id="form-id-<?=$form_id;?>" >
 				<div class="content">
 					<div class="content-animation">
 						<div class="flex-form-wrap">
 							<h2><?php the_sub_field('flex-form-title'); ?></h2>
-							<form id="form-<?=$form_id;?>" method="post" action="<?php echo the_permalink(); ?>#form-id">
+							<form id="form-<?=$form_id;?>" method="post" action="<?php echo the_permalink(); ?>#form-id-<?=$form_id;?>">
 							
 							<?php
 							if ( have_rows( 'flex-form-fields' ) ) :
@@ -716,6 +716,13 @@
 											<textarea id="field-<?=$field_counter;?>" name="field-<?=$field_counter;?>" <?=$req_field;?> rows="4"></textarea>
 										</div>
 									<?php
+
+										//Add current field type to field_type array
+										$field_type[$field_counter] = get_sub_field('flex-form-field-type');
+
+										//Add current label to field_label array
+										$field_label[$field_counter] = get_sub_field('flex-form-field-label');
+
 										$field_counter++ ;
 									
 									else : ?>
@@ -783,7 +790,7 @@
 				$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret_key."&response=".$captcha."&remoteip=".$ip);
 				$responseKeys = json_decode($response,true);
 				
-				// Error message: if captcha response is not success
+				//Error message: if captcha response is not success
 				if(intval($responseKeys["success"]) !== 1) :
 					echo '<div class="flex-form-success-wrap flex-form-success-show">
 						<div class="flex-form-success">
@@ -793,47 +800,50 @@
 						</div>
 					</div>';
 				
-				// If captach response is success, we construct the mail
+				//If captach response is success, we construct the mail
 				else :
-				
+					
 					//Get mailto from the flex item, if not set we get the mailto from options page
 					$email_to = (get_sub_field('flex-form-alt-email')) ? get_sub_field('flex-form-alt-email') : get_field('config-email', 'option');
-					
+
 					$reply_to = $email_to;
+					$body;
 					$body_item = array();
 					
 					//Loop through all fields and store the label + user input in body array
 					for ($i = 1; $i <= $field_counter; $i++) {
 						
-					    $body_item[$i] = $_POST['field-' . $i];
-					    $body[$i] = $field_label[$i] . ' :' . $body_item[$i];
-					    
-						$reply_to = ($field_type[$i] == 'email') ? $body_item[$i] : $email_to;
+						$body_item[$i] = $_POST['field-' . $i];
+						$body[$i] = $field_label[$i] . ' :' . $body_item[$i];
+						
+							$reply_to = ($field_type[$i] == 'email') ? $body_item[$i] : $email_to;
 					}	
 					
 					$subject = 'E-mail van website:' . get_field('config-name', 'option');
 					
 					//Convert body array to text and add the permalink of the current page		
-					$body = implode("\r",$body) . "\r\r Verzonden vanaf:" . get_permalink();
-					
-					//Create mail header
-					$organisation_naw = get_field('config-naw', 'option');
-					$organisation_name = $organisation_naw['name'];
-					$organisation_mail = $organisation_naw['email'];
-					
-					$headers = 'From: ' . $organisation_name . ' <'. $organisation_mail . '>' . "\r\n" . 'Reply-To: ' . $organisation_mail . "\r\n";
-					$headers .= "Organization: " . $organisation_name . "\r\n";
-					$headers .= "MIME-Version: 1.0\r\n";
-					$headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
-					$headers .= "X-Priority: 3\r\n";
-					$headers .= "X-Mailer: PHP". phpversion() ."\r\n"; 
+					$body = implode("<br />",$body) . "<br /><br /> Verzonden vanaf:" . get_permalink();
 
-					//Send the mail
-					wp_mail($email_to, $subject, $body, $headers);
+					function send_my_mail($email_to, $subject, $body) {
+
+						//Send the mail
+						add_filter( 'wp_mail_content_type','set_my_mail_content_type' );
+						add_action( 'phpmailer_init', 'send_smtp_email' );
+					
+						wp_mail( $email_to, $subject, $body);
+
+						remove_filter( 'wp_mail_content_type','set_my_mail_content_type' );
+						remove_action( 'phpmailer_init', 'send_smtp_email' );
+					
+					}
+					send_my_mail($email_to, $subject, $body);
+
 					$emailSent = true;
 					
 					//Show success message
 					echo '<div class="flex-form-success-wrap flex-form-success-show"><div class="flex-form-success"><div class="flex-form-success-icon" data-icon="&#xf17f;"></div><h2>' . get_sub_field('flex-form-success-message') . '</h2><div class="flex-form-close-button">Sluiten</div></div></div>';
+				
+				// Recaptcha if/else
 				endif;
 			endif;
 			
