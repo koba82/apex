@@ -612,13 +612,13 @@ footer {
     display: flex;
 }
 
-.nav-main ul.children {
+.nav-main ul.sub-menu {
     position: absolute;
     display: none;
     flex-direction: column;
 }
 
-.nav-main ul li:hover > ul.children {
+.nav-main ul li:hover > ul.sub-menu  {
     display: flex;
 }
 
@@ -896,7 +896,7 @@ ul.children li a {
 	height: auto;
 }
 
-.nav-mobile ul {
+.nav-mobile ul:not(.sub-menu){
 	width: 100%;
 	text-align: center;
 	position: relative;

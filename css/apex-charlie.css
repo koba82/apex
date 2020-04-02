@@ -319,12 +319,12 @@ footer {
 	display: none;
 }
 
-.nav-main ul.children {
+.nav-main ul.sub-menu  {
     position: absolute;
     display: flex;
 }
 
-.nav-main ul.children > li > a {
+.nav-main ul.sub-menu  > li > a {
 	transition: all .4s ease-in-out;
 	background: rgba(0,0,0,0.0);
     box-shadow: 0px 0px 70px 70px rgba(0,0,0,0.0);
@@ -333,7 +333,7 @@ footer {
 	transition: all .3s ease-in-out;
 }
 
-.nav-main ul li:hover > ul.children > li > a {
+.nav-main ul li:hover > ul.sub-menu  > li > a {
     background: rgba(0,0,0,0.10);
 	opacity: 1;
     box-shadow: 0px 0px 70px 70px rgba(0,0,0,0.10);
@@ -358,27 +358,27 @@ footer {
 	color: rgba(255,255,255,0.8);
 }
 
-ul.children > li:nth-of-type(0) > a {
+ul.sub-menu  > li:nth-of-type(0) > a {
 	transition-delay: .05s;
 }
 
-ul.children > li:nth-of-type(1) > a {
+ul.sub-menu  > li:nth-of-type(1) > a {
 	transition-delay: .1s;
 }
 
-ul.children > li:nth-of-type(2) > a {
+ul.sub-menu  > li:nth-of-type(2) > a {
 	transition-delay: .15s;
 }
 
-ul.children > li:nth-of-type(3) > a {
+ul.sub-menu  > li:nth-of-type(3) > a {
 	transition-delay: .2s;
 }
 
-ul.children > li:nth-of-type(4) > a {
+ul.sub-menu  > li:nth-of-type(4) > a {
 	transition-delay: .25s;
 }
 
-ul.children > li:nth-of-type(5) > a {
+ul.sub-menu  > li:nth-of-type(5) > a {
 	transition-delay: .30s;
 }
 
