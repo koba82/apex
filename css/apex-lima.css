@@ -175,11 +175,11 @@ main {
 	padding-top: 20px;
 }
 
-.nav-main ul:not(.children) {
+.nav-main ul:not(.sub-menu ) {
     margin-top: 20px;
 }
 
-.nav-main ul:not(.children) > li > a {
+.nav-main ul:not(.sub-menu ) > li > a {
     display: block;
     position: relative;
     color: var(--pri-color);
@@ -192,7 +192,7 @@ main {
     transition: all 0.4s cubic-bezier(0,0,0,1);
 }
 
-.nav-main ul:not(.children) > li > a:after {
+.nav-main ul:not(.sub-menu ) > li > a:after {
     content: '';
     display: block;
     position: absolute;
@@ -203,11 +203,11 @@ main {
     transition: all 0.4s cubic-bezier(0,0,0,1);
 }
 
-.nav-main ul:not(.children) > li:hover > a:after {
+.nav-main ul:not(.sub-menu ) > li:hover > a:after {
     width: 100%;
 }
 
-.nav-main ul.children a {
+.nav-main ul.sub-menu  a {
     box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
     padding-left: 3rem;
     padding-right: 3rem;
@@ -219,7 +219,7 @@ main {
     text-align: left;
 }
 
-.nav-main ul.children li:hover a {
+.nav-main ul.sub-menu  li:hover a {
     background:rgb(225,225,225);
 }	
 
