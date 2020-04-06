@@ -85,15 +85,6 @@ function fireScripts() {
 			})
 			
 		};
-		
-	//Initialize aos.js (animate on scroll)
-		AOS.init({
-		offset: <?php if ( get_field('aos-offset', 'option') ) : the_field('aos-offset', 'option'); else : echo '240'; endif; ?>,
-		duration: <?php if ( get_field('aos-duration', 'option') ) : the_field('aos-duration', 'option'); else : echo '400'; endif; ?>,
-		easing: '<?php if ( get_field('aos-easing', 'option') ) : the_field('aos-easing', 'option'); else : echo 'ease-out'; endif; ?>',
-		delay: <?php if ( get_field('aos-delay', 'option') ) : the_field('aos-delay', 'option'); else : echo '0'; endif; ?>,
-		once: true
-		});
 
 }
 </script>

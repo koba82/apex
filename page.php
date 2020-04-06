@@ -43,9 +43,6 @@ get_header(); ?>
 <?php endif; ?>
 
 </main>
-<?php
-// echo getcwd() . '\wp-content\themes\apex-0.8\bundled-min.css' . "\n";
-// the_field('config-theme', 'option');
-//  echo$GLOBALS['time_elapsed_secs']; ?>
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

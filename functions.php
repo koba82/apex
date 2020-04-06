@@ -48,7 +48,6 @@
 	    return $path;
 	    
 	}
- 
 
 	// 2. customize ACF dir
 	add_filter('acf/settings/dir', 'my_acf_settings_dir');
@@ -189,13 +188,7 @@
 	// Check if child theme has not already added stylesheets
 	if ( ! function_exists( 'theme_enqueue_third_party_javascript' ) ) {
 		function theme_enqueue_third_party_javascript() {
-			//wp_enqueue_script( 'bundled-js', get_template_directory_uri() . '/js/bundle.js', array(), false, false );
 			wp_enqueue_script( 'reCaptcha', 'https://www.google.com/recaptcha/api.js', array(), false, false );
-			//wp_enqueue_script( 'jQuery', '//code.jquery.com/jquery-1.11.3.min.js', array(), false, false );
-			//wp_enqueue_script( 'flickety-js', get_template_directory_uri() . '/js/flickity.pkgd.js', array(), false, false );
-			//wp_enqueue_script( 'simplelightbox-js', get_template_directory_uri() . '/js/simple-lightbox.js', array(), false, false );
-			//wp_enqueue_script( 'aos-js', get_template_directory_uri() . '/js/aos.js', array(), false, false );
-			//wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.js' , array('jQuery'), false, false );
 		}
 	  add_action( 'wp_enqueue_scripts', 'theme_enqueue_third_party_javascript' );
 	};
