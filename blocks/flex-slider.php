@@ -62,7 +62,7 @@ elseif(get_sub_field('flex-slider-type') == 'image' ) { ?>
                             <div class="flex-slider-slide">
                             
                                 <img src="<?=$gallery_single_image['sizes']['main-image-size']; ?>" alt="<?=$gallery_single_image['alt']; ?>" />
-                                <a href="<?=$gallery_single_image['sizes']['main-image-size']; ?>" data-lightbox-id="<? echo $id; ?>">
+                                <a href="<?=$gallery_single_image['sizes']['main-image-size']; ?>" data-lightbox-id="<?php echo $id; ?>">
                                     <div class="content-image-overlay">	
                                         <div class="content-image-enlarge-icon">
                                             <div class="icon-plus"></div>

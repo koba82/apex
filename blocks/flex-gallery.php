@@ -21,7 +21,7 @@ $gallery_type = get_sub_field('flex-gallery-type'); ?>
                 <?php
                     foreach( $gallery_images as $img ): ?>
                         <div class="flex-gallery-image">
-                            <a class="content-image" href="<?php echo $img['sizes']['main-image-size']; ?>" data-lightbox-id="<? echo $id; ?>">
+                            <a class="content-image" href="<?php echo $img['sizes']['main-image-size']; ?>" data-lightbox-id="<?php echo $id; ?>">
                                 <img src="<?php echo $img['sizes']['front-end-thumb']; ?>" alt="<?php echo $img['alt']; ?>" />
                                 <div class="content-image-overlay"></div>
                             </a>
@@ -37,7 +37,7 @@ $gallery_type = get_sub_field('flex-gallery-type'); ?>
                 <?php
                     foreach( $gallery_images as $img ): ?>
                         <div class="flex-gallery-image content-image-wrap">
-                            <a href="<?php echo $img['sizes']['main-image-size']; ?>" data-lightbox-id="<? echo $id; ?>" class="content-image">
+                            <a href="<?php echo $img['sizes']['main-image-size']; ?>" data-lightbox-id="<?php echo $id; ?>" class="content-image">
                                 <img src="<?php echo $img['sizes']['front-end-thumb']; ?>" alt="<?php echo $img['alt']; ?>" />
                                 <div class="content-image-overlay">	
                                     <div class="content-image-enlarge-icon">

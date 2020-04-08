@@ -45,7 +45,7 @@ if(get_sub_field('flex-text-add-image') == 'true' ) :
                 
                 <div class="flex-text-image-column image-col">							
                     <div class="content-image-wrap">
-                        <a href="<?php echo $image['sizes']['main-image-size']; ?>" data-lightbox-id="<? echo $id; ?>" class="content-image"> 
+                        <a href="<?php echo $image['sizes']['main-image-size']; ?>" data-lightbox-id="<?php echo $id; ?>" class="content-image"> 
                             <img src="<?=$image['sizes']['main-image-size'];?>" alt="<?=$image['alt'];?>" />
                             <div class="img-as-background" style="background: url(<?=$image['sizes']['main-image-size'];?>); background-position: center center; background-size: cover;"></div>
                             <div class="content-image-overlay">	
