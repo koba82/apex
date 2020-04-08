@@ -1142,6 +1142,24 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 
 
 //**********************************************************************************************************************
+//	Enable background color
+//**********************************************************************************************************************
+
+	function getBackgroundColor( $flex_options = NULL ) {
+
+		if($flex_options == NULL) :
+			$flex_options = get_sub_field('flex-options');
+		endif;
+		
+		$has_bgc = ( $flex_options['flex-bgc-select'] == 'geen' ) ? 'no-bgc' : 'bgc ' . $flex_options['flex-bgc-select'];
+
+		echo $has_bgc;
+
+	} 
+
+
+
+//**********************************************************************************************************************
 //	Enable GZIP
 //**********************************************************************************************************************
 
