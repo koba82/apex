@@ -1234,14 +1234,14 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 	//Add custom link to Menu's in backend
 	add_action( 'admin_menu', 'linked_url' );
     function linked_url() {
-  		add_menu_page( 'linked_url', 'Menustructuur', 'read', 'my_slug', '', 'dashicons-text', 1 );
+  		add_menu_page( 'linked_url', 'Menustructuur', 'read', 'nav-menus.php', '', 'dashicons-menu', 12 );
     }
 
-    add_action( 'admin_menu' , 'linkedurl_function' );
-		function linkedurl_function() {
-		global $menu;
-		$menu[1][2] = get_admin_url() . "/nav-menus.php";
-	}
+    // add_action( 'admin_menu' , 'linkedurl_function' );
+	// 	function linkedurl_function() {
+	// 	global $menu;
+	// 	$menu[11][1] = get_admin_url() . "nav-menus.php";
+	// }
 		
 	//Allow editors to edit menu
 	$role_object = get_role( 'editor' );
