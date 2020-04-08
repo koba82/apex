@@ -14,7 +14,7 @@ $image_array = get_sub_field('flex-image-array');
                     <?php if($image_array) :
                         foreach($image_array as $single_image) : ?>
                             <div class="content-image-wrap">
-                                <a href="<?=$single_image['sizes']['main-image-size']; ?>" data-lightbox-id="<? echo $id; ?>" class="content-image" style="background: url(<?=$single_image['sizes']['main-image-size']; ?>); background-size: cover; background-position: center center;" title="<?=$single_image['alt']; ?>"> 
+                                <a href="<?=$single_image['sizes']['main-image-size']; ?>" data-lightbox-id="<?php echo $id; ?>" class="content-image" style="background: url(<?=$single_image['sizes']['main-image-size']; ?>); background-size: cover; background-position: center center;" title="<?=$single_image['alt']; ?>"> 
                                     <img src="<?=$single_image['sizes']['main-image-size']; ?>" alt="<?=$single_image['alt']; ?>" />
                                     <div class="content-image-overlay">	
                                         <div class="content-image-enlarge-icon">
@@ -42,7 +42,7 @@ $image_array = get_sub_field('flex-image-array');
         <script>
             window.addEventListener('load', function () {
                 
-                jQuery("a[data-lightbox-id=<? echo $id; ?>] > img").each(function() {
+                jQuery("a[data-lightbox-id=<?php echo $id; ?>] > img").each(function() {
                     let imageHeight = $(this).height();
                     let imageWidth = $(this).width();
                     
