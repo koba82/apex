@@ -41,7 +41,9 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "return_format": "array",
+            "preview_size": "medium"
         },
         {
             "key": "field_583197e80df46",
@@ -364,11 +366,11 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "real-estate"
+                "value": "post"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 11,
     "position": "normal",
     "style": "seamless",
     "label_placement": "top",
@@ -376,7 +378,6 @@
     "hide_on_screen": [
         "the_content",
         "excerpt",
-        "custom_fields",
         "discussion",
         "comments",
         "revisions",
@@ -390,5 +391,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1522262740
+    "modified": 1586356552
 }

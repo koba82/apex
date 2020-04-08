@@ -83,7 +83,8 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "insert": "append"
+            "insert": "append",
+            "return_format": "array"
         },
         {
             "key": "field_56e67ad2a2ee5",
@@ -119,7 +120,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 9,
     "position": "normal",
     "style": "seamless",
     "label_placement": "top",
@@ -127,7 +128,6 @@
     "hide_on_screen": [
         "the_content",
         "excerpt",
-        "custom_fields",
         "discussion",
         "comments",
         "revisions",
@@ -141,5 +141,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1522262741
+    "modified": 1586356571
 }
