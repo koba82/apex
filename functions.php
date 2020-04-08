@@ -165,6 +165,7 @@
 				$theme_sub_style_sheet = get_field('config-theme', 'option');
 				wp_enqueue_style( 'aos', get_template_directory_uri() .'/css/aos.css', array(), false, 'all');
 				wp_enqueue_style( 'flickity', get_template_directory_uri() .'/css/flickity.css', array(), false, 'all');
+				wp_enqueue_style( 'simple-lightbox', get_template_directory_uri() .'/css/simplelightbox.css', array(), false, 'all');
 				wp_enqueue_style( 'reset', get_template_directory_uri() .'/css/reset.css', array(), false, 'all');
 				wp_enqueue_style( 'style', get_template_directory_uri() .'/css/style.css', array(), false, 'all');
 				wp_enqueue_style( 'sub-theme-style', get_template_directory_uri() .'/css/' . $theme_sub_style_sheet, array(), false, 'all');
@@ -1279,6 +1280,28 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 	function set_my_mail_content_type() {
 		return "text/html";
 	}	
+
+//**********************************************************************************************************************
+//	Static content CPT
+//**********************************************************************************************************************
+
+	$static_content_cpt = array(
+		'labels' => array('name' => __( 'Algemene inhoud' ),
+				'singular_name' => __( 'Algemene inhoud' ),
+				'add_new' => __( 'Algemene inhoud toevoegen' ),
+				'add_new_item' => __( 'Algemene inhoud toevoegen' ),
+				'edit_item' => __( 'Algemene inhoud bewerken' ),
+				'new_item' => __( 'Algemene inhoud toevoegen' ),
+				),
+		'public' => true,
+		'has_archive' => false,
+		'supports' => array('title', 'editor', 'thumbnail'),
+		'menu_icon' => __('dashicons-format-aside'),
+		'rewrite' => array('slug' => __( 'static-content'))
+	);
+		
+	register_post_type('static-content', $static_content_cpt); 
+	
 
 
 
