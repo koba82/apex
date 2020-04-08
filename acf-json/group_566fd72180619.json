@@ -151,50 +151,6 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_583d78aed7b65",
-            "label": "Opnemen in menu",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_583d78c8d7b66",
-            "label": "In welk menu moet deze pagina zichtbaar zijn?",
-            "name": "include-in-nav",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "include-in-main-nav": "Hoofdmenu",
-                "include-in-top-nav": "Topmenu",
-                "no-menu": "geen"
-            },
-            "default_value": [
-                "include-in-main-nav"
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
         }
     ],
     "location": [
@@ -226,5 +182,5 @@
     ],
     "active": 1,
     "description": "Pagina elementen",
-    "modified": 1585238387
+    "modified": 1586340883
 }
