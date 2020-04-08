@@ -719,7 +719,7 @@
 } */
 
 :root {
-		--pri-col: rgb(68, 71, 101);
+		--pri-col: rgb(47, 47, 60);
         --pri-col-lighter: rgb(88, 91, 121);
 		--sec-col: rgb(214, 216, 218);
 		--grey-back: rgb(235,237,239);
@@ -1597,9 +1597,9 @@ input[type=radio], input[type=checkbox] {
 }
 
 .wp-core-ui .button-primary {
-	background: rgb(68, 71, 101);
+	background: var(--pri-col);
     text-shadow: none;
-    border: 1px rgb(68, 71, 101) solid;
+    border: 1px var(--pri-col) solid;
     box-shadow: none;
     font-weight: bold;
 }
@@ -1835,7 +1835,7 @@ input[type=radio], input[type=checkbox] {
 
 
 #adminmenuback {
-	background: rgb(68, 71, 101);
+	background: var(--pri-col);
     /*url(img/eenvoudigonline-menu-logo.svg);*/
 	background-position: 0px 95vh;
 	background-repeat: no-repeat;

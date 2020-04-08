@@ -333,7 +333,7 @@
                         },
                         {
                             "key": "field_5a71b7fef8dd5",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -377,9 +377,9 @@
                                     },
                                     "choices": {
                                         "geen": "<span class=\"color-selector\" style=\"background: #fffff\"> Geen <\/span>",
-                                        "pri-color": "<span class=\"color-selector\" style=\"background: ;\"> <\/span>",
-                                        "sec-color": "<span class=\"color-selector\" style=\"background: ;\"> <\/span>",
-                                        "ter-color": "<span class=\"color-selector\" style=\"background: ;\"> <\/span>"
+                                        "pri-color": "<span class=\"color-selector\" style=\"background: #e2005e;\"> <\/span>",
+                                        "sec-color": "<span class=\"color-selector\" style=\"background: #cea535;\"> <\/span>",
+                                        "ter-color": "<span class=\"color-selector\" style=\"background: #e2005e;\"> <\/span>"
                                     },
                                     "allow_null": 0,
                                     "other_choice": 0,
@@ -498,246 +498,6 @@
                             ]
                         },
                         {
-                            "key": "field_5a71b7fef8ddc",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_5a71c91b86161",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_583d53c5f44a7",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_583d53f5f44b1",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_583d5489d95b1",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_583d54ead95bb",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_5a6f2d1cab7c5",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_5b0ff69585df3",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_5836df09ccd11",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_5b193e0cb22df",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_58223188f0e04",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_58ac48714e8d1",
-                            "label": "Help",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "0": false,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
                             "key": "field_5a2be386c17ba",
                             "label": "Geavanceerde functie",
                             "name": "",
@@ -831,7 +591,7 @@
                         },
                         {
                             "key": "field_583d5393f4496",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -928,12 +688,12 @@
                         },
                         {
                             "key": "field_583d53c5f44a0",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": "",
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -1059,7 +819,7 @@
                         },
                         {
                             "key": "field_583d53f5f44aa",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -1317,7 +1077,7 @@
                         },
                         {
                             "key": "field_583d5489d95aa",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -1399,19 +1159,19 @@
                         },
                         {
                             "key": "field_583d54ead95b4",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": "",
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
                             "placement": "top",
-                            "endpoint": ""
+                            "endpoint": 0
                         },
                         {
                             "key": "field_5a71c98e86165",
@@ -2370,7 +2130,7 @@
                         },
                         {
                             "key": "field_5a6f2d1cab7be",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -2532,7 +2292,7 @@
                         },
                         {
                             "key": "field_5b0ff66685df0",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -2690,7 +2450,7 @@
                         },
                         {
                             "key": "field_5836debaccd09",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -2791,7 +2551,7 @@
                         },
                         {
                             "key": "field_5b193e0cb22dd",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -3066,7 +2826,7 @@
                         },
                         {
                             "key": "field_583589d91ba64",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -3156,7 +2916,7 @@
                         },
                         {
                             "key": "field_5e7cd1abb390c",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -3219,7 +2979,7 @@
                         },
                         {
                             "key": "field_58ac48714e8ca",
-                            "label": "Opties & Help",
+                            "label": "Opties",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -3362,5 +3122,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1585238694
+    "modified": 1586339980
 }
