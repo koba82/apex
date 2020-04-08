@@ -1300,7 +1300,7 @@ a.acf-button.button.button-primary:before {
 }
 
 .acf-fc-popup a:before {
-	font-family: 'IconsFont';
+	font-family: 'dashicons';
 	font-size: 40px;
 	height:35px;
 	display: block;
@@ -1315,70 +1315,74 @@ a.acf-button.button.button-primary:before {
 }
 
 .acf-fc-popup a[data-layout="flex-text"]:before {
-	content: "\f105";
+	content: "\f206";
 }
 
 .acf-fc-popup a[data-layout="flex-image"]:before {
-	content: "\f246";
+	content: "\f128";
 }
 
 .acf-fc-popup a[data-layout="flex-youtube"]:before {
-	content: "\f2c0";
+	content: "\f236";
 }
 
 .acf-fc-popup a[data-layout="flex-text-image"]:before {
-	content: "\f246";
+	content: "\f497";
 }
 
 .acf-fc-popup a[data-layout="flex-gallery"]:before {
-	content: "\f190";
+	content: "\f161";
 }
 
 .acf-fc-popup a[data-layout="flex-cta"]:before {
-	content: "\f315";
+	content: "\f103";
 }
 
 .acf-fc-popup a[data-layout="flex-slider"]:before {
-	content: "\f2be";
+	content: "\f181";
 }
 
 .acf-fc-popup a[data-layout="flex-image-slider"]:before {
-	content: "\f2be";
+	content: "\f181";
 }
 
 .acf-fc-popup a[data-layout="flex-html"]:before {
-	content: "\f196";
+	content: "\f499";
 }
 
 .acf-fc-popup a[data-layout="flex-usp"]:before {
-	content: "\f26d";
+	content: "\f203";
 }
 
 .acf-fc-popup a[data-layout="flex-form"]:before {
-	content: "\f19d";
+	content: "\f101";
 }
 
 .acf-fc-popup a[data-layout="flex-php-include"]:before {
-	content: "\f196";
+	content: "\f499";
 }
 .acf-fc-popup a[data-layout="flex-table"]:before {
-	content: "\f32d";
+	content: "\f535";
 }
 
 .acf-fc-popup a[data-layout="flex-maps"]:before {
-	content: "\f27d";
+	content: "\f319";
 }
 
 .acf-fc-popup a[data-layout="flex-mod-occasions"]:before {
-	content: "\f129"
+	content: "\f164";
 }
 
 .acf-fc-popup a[data-layout="the-slides"]:before {
-	content: "\f315"
+	content: "\f315";
 }
 
 .acf-fc-popup a[data-layout="flex-child-pages"]:before {
-	content: "\f26c"
+	content: "\f325";
+}
+
+.acf-fc-popup a[data-layout="flex-woo-elements"]:before {
+	content: "\f174";
 }
 
 .acf-fc-popup a:hover {
