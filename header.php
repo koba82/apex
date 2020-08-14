@@ -25,13 +25,13 @@
 
 	<?php if( get_field('no-index') || get_field('no-follow') ) :
 
-	if( get_field('no-index') && get_field('no-follow') || get_post_type() == 'static-content'): 
-		echo '<meta name="robots" content="noindex,nofollow"/>';
-	elseif(get_field('no-index') ): 
-		echo '<meta name="robots" content="noindex,follow"/>';
-	else :
-		echo '<meta name="robots" content="index,nofollow"/>';
-	endif;
+        if( get_field('no-index') && get_field('no-follow') || get_post_type() == 'static-content'):
+            echo '<meta name="robots" content="noindex,nofollow"/>';
+        elseif(get_field('no-index') ):
+            echo '<meta name="robots" content="noindex,follow"/>';
+        else :
+            echo '<meta name="robots" content="index,nofollow"/>';
+        endif;
 
 	endif;
 	?>
