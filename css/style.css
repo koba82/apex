@@ -1023,8 +1023,6 @@ div#primary-menu > ul > li:last-of-type a {
 
 .spotlight {
 	position: relative;
-	font-family: var(--header-font);
-	font-style: italic;
 	opacity: 0.9;
 	width: 70%;
 	margin: 0 auto;
