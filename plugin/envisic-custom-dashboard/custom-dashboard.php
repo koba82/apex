@@ -25,7 +25,8 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 		<div class="column">
             <h1>Hallo <?php global $current_user; wp_get_current_user(); echo $current_user->user_nicename; ?></h1>
 		</div>
-		
+
+
 		<div class="column">
 			<h2>Wil je een vraag stellen?</h2>
 			Dat kan natuurlijk. Stel je vraag in onderstaand formulier, klik op 'Versturen' en je krijgt zo snel mogelijk antwoord!
