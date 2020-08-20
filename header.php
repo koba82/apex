@@ -68,8 +68,7 @@
 	{"@context":"http:\/\/schema.org","@type":"WebSite","url":"<?php echo site_url(); ?>","name":"<?php bloginfo( 'name' ); ?>","potentialAction":{"@type":"SearchAction","target":"<?php echo site_url(); ?>?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
 
 	<?php wp_head(); ?>
-	
-	<?php get_template_part('header-css'); ?>
+
 	<script type='text/javascript' async src="<?php echo get_template_directory_uri() . '/js/bundle.js'; ?>"></script> 
 
 </head>
