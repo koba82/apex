@@ -16,21 +16,14 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 	</div>
 <div class="wrap envisic-dashboard-wrap">
 
-	<h1>Hallo <?php $user_info = get_userdata(1); echo $user_info->first_name; ?>,</h1>
-	
-	<div class="about-text">
-		Welkom op je website! Natuurlijk hopen we dat je veel plezier (en goede zaken ;-) ) beleeft aan je website.
-	</div>
+
 	
 	<hr>
 	
 	<div class="column-wrap">
 	
 		<div class="column">
-			<h2>Hulp nodig?</h2>
-			Op de uitgebreide help site vind je alle informatie die je nodig bent om je site te beheren:<br>
-			<a href="http://help.envisic.nl" class="button-primary" target="_new">help.envisic.nl</a>
-		
+            <h1>Hallo <?php global $current_user; wp_get_current_user(); echo $current_user->user_nicename; ?></h1>
 		</div>
 		
 		<div class="column">
