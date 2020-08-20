@@ -729,6 +729,10 @@
 		--red: rgb(250, 71, 98);
 }
 
+html.wp-toolbar {
+    padding-top: 57px;
+}
+
 body {
 	font-family: 'MainFont' !important;
 	font-weight: normal;
@@ -1746,7 +1750,7 @@ input[type=radio], input[type=checkbox] {
 }
 
 #wpcontent {
-	margin-left: 200px !important;
+	margin-left: 213px !important;
 }
 
 #wpbody {
@@ -2089,23 +2093,7 @@ div#save-action > input {
 
 .dashicons,
 .dashicons-before:before {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    line-height: 1;
-    text-decoration: inherit;
-    font-weight: 100;
-    font-style: normal;
-    vertical-align: top;
-    text-align: center;
-    -webkit-transition: none;
-    transition: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     color: var(--pri-col) !important;
-    font-size: 24px !important;
-    margin: 0 0px 0 -12px !important;
-    
 }
 
 /* Custom dashboard stuff */
