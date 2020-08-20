@@ -132,6 +132,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 						'/css/simplelightbox.css',
 						'/css/style.css',
 						'/css/' . $theme_sub_style_sheet,
+						'/css/config.css',
 						'/css/override.css'
 					);
 						
