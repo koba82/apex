@@ -69,22 +69,6 @@ function fireScripts() {
 			});
 			
 		})
-		
-	//Set height of elements to height of tallest element
-
-		let growToTallestElement = function(sourceElements, targetElement) {
-			
-			let elHeight = 0;
-			
-			$(sourceElements).each(function() {
-				if ( $(this).height() > elHeight ) {
-					elHeight = $(this).height();
-				}
-			
-			$(targetElement).css("height", elHeight);
-			})
-			
-		};
 
 }
 </script>
