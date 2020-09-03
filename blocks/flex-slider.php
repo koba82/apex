@@ -37,7 +37,6 @@ if(get_sub_field('flex-slider-type') == 'text') { ?>
                 </div>
             </div>
         </div>
-    </section>
 
     <?php } 
     
@@ -76,8 +75,7 @@ elseif(get_sub_field('flex-slider-type') == 'image' ) { ?>
                 </div>
             </div>	
         </div>
-    </section>	
-            
+
     <?php }
     
     //Text and image slider
@@ -113,3 +111,6 @@ elseif(get_sub_field('flex-slider-type') == 'image' ) { ?>
         $('a[data-lightbox-id="<?php echo $id; ?>"]').simpleLightbox();
     });
 </script>
+
+
+</section>

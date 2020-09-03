@@ -1241,6 +1241,9 @@ a.content-image, a[data-lightbox-id="*"] {
 	width: 250px;
 	height: 250px;
 	padding: 0;
+}
+
+.flex-gallery .flex-gallery-image {
 	border-right: 1px white solid;
 }
 
