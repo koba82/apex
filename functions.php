@@ -12,10 +12,10 @@
 	
 	function apex_version( $arg ) {
 		
-		$apex_main_version = "0.9";
-		$apex_sub_version = ".0";
-		$apex_version_date = "17-1-2020";
-		
+		$apex_main_version = ".9";
+		$apex_sub_version = ".99";
+		$apex_version_date = "7-10-2020";
+
 		if( $arg == 'main') :
 			return $apex_main_version;
 		elseif( $arg == 'sub' ) :
@@ -24,12 +24,12 @@
 			return $apex_version_date;
 		endif;
 	}
-	
-	
+
+
 //**********************************************************************************************************************
 //	Use classic editor instead of Gutenberg
 //**********************************************************************************************************************
-	
+
 		add_filter('use_block_editor_for_post', '__return_false');
 
 //**********************************************************************************************************************
@@ -38,34 +38,34 @@
 
 	// 1. customize ACF path
 	add_filter('acf/settings/path', 'my_acf_settings_path');
-	 
+
 	function my_acf_settings_path( $path ) {
-	 
+
 	    // update path
 	    $path = get_template_directory_uri() . '/plugin/advanced-custom-fields-pro/';
-	    
+
 	    // return
 	    return $path;
-	    
+
 	}
 
 	// 2. customize ACF dir
 	add_filter('acf/settings/dir', 'my_acf_settings_dir');
-	 
+
 	function my_acf_settings_dir( $dir ) {
-	 
+
 	    // update path
 	    $dir = get_template_directory_uri() . '/plugin/advanced-custom-fields-pro/';
-	    
+
 	    // return
 	    return $dir;
-	    
+
 	}
 
 	// 4. Include ACF
 	include_once( get_template_directory() . '/plugin/advanced-custom-fields-pro/acf.php' );
-	
-	
+
+
 //**********************************************************************************************************************
 //	Include other plugins
 //**********************************************************************************************************************
@@ -78,7 +78,7 @@
 //**********************************************************************************************************************
 
 	function disable_wp_emojicons() {
-	
+
 		remove_action( 'admin_print_styles', 'print_emoji_styles' );
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
@@ -86,13 +86,13 @@
 		remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 		remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
 		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-	
+
 
 		add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 	}
-	
+
 	add_action( 'init', 'disable_wp_emojicons' );
-	
+
 	function disable_emojicons_tinymce( $plugins ) {
 		if ( is_array( $plugins ) ) {
 			return array_diff( $plugins, array( 'wpemoji' ) );
@@ -101,7 +101,7 @@
 		}
 	}
 
-	
+
 //**********************************************************************************************************************
 //	Load stylesheets
 //**********************************************************************************************************************
@@ -109,13 +109,13 @@
 	// Load module stylesheets
 	if ( ! function_exists( 'theme_enqueue_module_styles' ) ) {
 		function theme_enqueue_module_styles() {
-			if(get_sub_field('module-real-estate', 'option') == "true" ) : 
+			if(get_sub_field('module-real-estate', 'option') == "true" ) :
 				wp_enqueue_style( 'module-real-estate', get_template_directory_uri() .'/modules/module-real-estate/module-real-estate.css', array(), false, 'all');
 			endif;
 		}
 		add_action( 'wp_enqueue_scripts', 'theme_enqueue_module_styles' );
 	};
-	
+
 	// Load Google Fonts for backend display
 	if ( ! function_exists( 'enqueue_goolge_fonts_backend' ) ) {
 		function enqueue_goolge_fonts_backend() {
@@ -163,39 +163,26 @@
 			if($developer_mode) :
 
 				$theme_sub_style_sheet = get_field('config-theme', 'option');
-				wp_enqueue_style( 'aos', get_template_directory_uri() .'/css/aos.css', array(), false, 'all');
-				wp_enqueue_style( 'flickity', get_template_directory_uri() .'/css/flickity.css', array(), false, 'all');
-				wp_enqueue_style( 'simple-lightbox', get_template_directory_uri() .'/css/simplelightbox.css', array(), false, 'all');
-				wp_enqueue_style( 'reset', get_template_directory_uri() .'/css/reset.css', array(), false, 'all');
+				wp_enqueue_style( 'pre-base', get_template_directory_uri() .'/css/includes/pre-base.css', array(), false, 'all');
+				wp_enqueue_style( 'flickity', get_template_directory_uri() .'/css/includes/vendor/flickity.css', array(), false, 'all');
+				wp_enqueue_style( 'simple-lightbox', get_template_directory_uri() .'/css/includes/vendor/simplelightbox.css', array(), false, 'all');
 				wp_enqueue_style( 'style', get_template_directory_uri() .'/css/style.css', array(), false, 'all');
-				wp_enqueue_style( 'sub-theme-style', get_template_directory_uri() .'/css/' . $theme_sub_style_sheet, array(), false, 'all');
+				wp_enqueue_style( 'sub-theme-style', get_template_directory_uri() .'/css/themes/' . $theme_sub_style_sheet, array(), false, 'all');
 				wp_enqueue_style( 'override', get_template_directory_uri() .'/css/override.css', array(), false, 'all');
                 wp_enqueue_style( 'config', get_template_directory_uri() .'/css/config.css', array(), false, 'all');
 
 			else :
 
 				wp_enqueue_style( 'bundled-css', get_template_directory_uri() .'/bundled-min.css', array(), false, 'all');
-			
+
 			endif;
 		};
 
 		add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
 	endif;
-	
-//**********************************************************************************************************************
-//	Load JavaScript
-//**********************************************************************************************************************
-	
-	// Check if child theme has not already added stylesheets
-	if ( ! function_exists( 'theme_enqueue_third_party_javascript' ) ) {
-		function theme_enqueue_third_party_javascript() {
-			wp_enqueue_script( 'reCaptcha', 'https://www.google.com/recaptcha/api.js', array(), false, false );
-		}
-	  add_action( 'wp_enqueue_scripts', 'theme_enqueue_third_party_javascript' );
-	};
 
-	
+
 //**********************************************************************************************************************
 //	Load admin style & javascript
 //**********************************************************************************************************************
@@ -205,7 +192,7 @@
 	}
 	add_action('admin_enqueue_scripts', 'apex_theme_style');
 	add_action('login_enqueue_scripts', 'apex_theme_style');
-	
+
 	if ( ! function_exists( 'enqueue_admin_javascript' ) ) {
 		function enqueue_admin_javascript() {
 			wp_enqueue_script( 'admin-js', get_template_directory_uri() . '/js/admin.js', array(), false, false );
@@ -213,18 +200,23 @@
 	  add_action( 'admin_enqueue_scripts', 'enqueue_admin_javascript' );
 	};
 
-	
+
 //**********************************************************************************************************************
 //	Custom image sizes
-//**********************************************************************************************************************	
+//**********************************************************************************************************************
 
 	if ( ! function_exists( 'add_custom_image_sizes' ) ) {
 	    function add_custom_image_sizes() {
 			add_image_size( 'image-gallery-thumbnail-size', 250, 250, true );
-			add_image_size( 'main-image-size', 1300, 1000 );
+			add_image_size( 'main-image-size', 1300, 975 );
+            add_image_size( 'image-1066', 1066, 800 );
+            add_image_size( 'image-800', 800, 600 );
+            add_image_size( 'image-560', 560, 420 );
+            add_image_size( 'image-400', 400, 300 );
+            add_image_size( 'image-320', 320, 240 );
 			add_image_size( 'front-end-thumb', 550, 550, true );
 			add_image_size( 'back-end-thumb', 30, 30, true );
-			
+
 			// Header/Hero image sizes
 			add_image_size( 'hero-2500', 2500, 1260, true );
 			add_image_size( 'hero-1980', 1980, 1080, true );
@@ -235,7 +227,7 @@
 	    }
 		add_custom_image_sizes();
 	}
-	
+
 //**********************************************************************************************************************
 //	Front-end image customisation
 //**********************************************************************************************************************
@@ -248,7 +240,7 @@
 			}
 	}
 	add_action('admin_init', 'wpb_imagelink_setup', 10);
-	
+
 	// Add SVG support (or rather remove SVG restriction)
 	function custom_upload_mimes ( $existing_mimes=array() ) {
 
@@ -257,8 +249,8 @@
 
 	// call the modified list of extensions
 	return $existing_mimes;
-}	
-	
+}
+
 //**********************************************************************************************************************
 //	ACF options page
 //**********************************************************************************************************************
@@ -271,7 +263,7 @@
 			'capability'	=> 'edit_posts',
 			'redirect'		=> false
 		));
-		
+
 		//acf_add_options_sub_page(array(
 		//	'page_title' 	=> 'Contactformulier',
 		//	'menu_title'	=> 'Contactformulier',
@@ -285,7 +277,7 @@
 		//));
 	}
 
-	
+
 //**********************************************************************************************************************
 //	Remove menu's, widgets, links etc from admin
 //**********************************************************************************************************************
@@ -301,7 +293,7 @@
 		}
 		add_action( 'admin_menu', 'remove_menus' );
 	};
-	
+
 	//Remove tools menu only if current user is not administrator
 	if( ! current_user_can('administrator') ) {
 		function remove_tools_menu() {
@@ -309,7 +301,7 @@
 		};
 		add_action( 'admin_menu', 'remove_tools_menu' );
 	}
-	
+
 
 	//Remove dashboard widgets
 	if( ! function_exists( 'remove_dashboard_meta' ) ) {
@@ -325,8 +317,8 @@
 			  remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
 			  remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
 			  remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
-		  } 
-	  add_action( 'admin_init', 'remove_dashboard_meta' ); 
+		  }
+	  add_action( 'admin_init', 'remove_dashboard_meta' );
 	};
 
 	//Remove columns from posts/pages overview page (Page table)
@@ -337,7 +329,7 @@
 		unset($columns['cb']);		//Checkbox
 		return $columns;
 	}
-  
+
 	function custom_column_init() {
 		add_filter( 'manage_posts_columns' , 'my_manage_columns' );
 		add_filter( 'manage_pages_columns' , 'my_manage_columns' );
@@ -368,7 +360,7 @@
 		add_filter( 'editable_roles', array(&$this, 'editable_roles'));
 		add_filter( 'map_meta_cap', array(&$this, 'map_meta_cap'),10,4);
 	}
-	
+
 	// remove 'Administrator' from the list of roles if the current user is not an admin
 	function editable_roles( $roles ){
 		if( isset( $roles['administrator'] ) && !current_user_can('administrator') ){
@@ -376,7 +368,7 @@
 	}
 	return $roles;
 	}
-	
+
 	// don't allow users to edit or delete unless they are an admin
 	function map_meta_cap( $caps, $cap, $user_id, $args ){
 		switch( $cap ){
@@ -416,16 +408,16 @@
 	// Customize admin menu bar items
 	function mytheme_admin_bar_render() {
 		global $wp_admin_bar;
-		
+
 		// Remove an existing link using its $id
 		$wp_admin_bar->remove_menu('updates');
 		$wp_admin_bar->remove_menu('comments');
 		$wp_admin_bar->remove_menu('new-content');
 		$wp_admin_bar->remove_node( 'wp-logo');
-	
+
 		// Add a new top level menu link
 		// Here we add a customer support URL link
-	       
+
 		//$customerSupportURL = 'http://help.eenvoudigonline.nl/';
 		//$wp_admin_bar->add_menu( array(
 		//'parent' => false,
@@ -433,7 +425,7 @@
 		//'title' => __('Hulp nodig? Klik hier'),
 		//'href' => $customerSupportURL
 		//));
-	
+
 		// Add a new sub-menu to the link above
 		$contactUsURL = 'http://www.envisic.nl/';
 		$wp_admin_bar->add_menu(array(
@@ -449,14 +441,14 @@
 
 //**********************************************************************************************************************
 //	Create sitemap
-//**********************************************************************************************************************     
+//**********************************************************************************************************************
 
-	add_action( "save_post", "eg_create_sitemap" );   
+	add_action( "save_post", "eg_create_sitemap" );
 	function eg_create_sitemap() {
-	    if ( str_replace( '-', '', get_option( 'gmt_offset' ) ) < 10 ) { 
-		$tempo = '-0' . str_replace( '-', '', get_option( 'gmt_offset' ) ); 
-	    } else { 
-		$tempo = get_option( 'gmt_offset' ); 
+	    if ( str_replace( '-', '', get_option( 'gmt_offset' ) ) < 10 ) {
+		$tempo = '-0' . str_replace( '-', '', get_option( 'gmt_offset' ) );
+	    } else {
+		$tempo = get_option( 'gmt_offset' );
 	    }
 	    if( strlen( $tempo ) == 3 ) { $tempo = $tempo . ':00'; }
 	    $postsForSitemap = get_posts( array(
@@ -465,7 +457,7 @@
 		'post_type'   => array( 'post', 'page' ),
 		'order'       => 'DESC'
 	    ) );
-	    $sitemap .= '<?xml version="1.0" encoding="UTF-8"?>' . '<?xml-stylesheet type="text/xsl" href="' . 
+	    $sitemap .= '<?xml version="1.0" encoding="UTF-8"?>' . '<?xml-stylesheet type="text/xsl" href="' .
 		esc_url( home_url( '/' ) ) . 'sitemap.xsl"?>';
 	    $sitemap .= "\n" . '<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 	    $sitemap .= "\t" . '<url>' . "\n" .
@@ -493,35 +485,35 @@
 //**********************************************************************************************************************
 //	Custom WYSIWYG toolbar
 //**********************************************************************************************************************
-	
+
 	if( ! function_exists( 'custom_toolbars' ) ) {
-		add_filter( 'acf/fields/wysiwyg/toolbars' , 'custom_toolbars'  ); 
+		add_filter( 'acf/fields/wysiwyg/toolbars' , 'custom_toolbars'  );
 		function custom_toolbars( $toolbars ) {
 			// Uncomment to view format of $toolbars
 			// echo '< pre >'; print_r($toolbars); echo '< /pre >'; die;
-			
+
 			// Add a new toolbar called "Very Simple"
 			// - this toolbar has only 1 row of buttons
 			$toolbars['Very Simple' ] = array();
 			$toolbars['Very Simple' ][1] = array('bold' , 'italic' , 'link', 'unlink', 'bullist', 'numlist', 'charmap', 'undo' );
 			$toolbars['Table' ] = array();
 			$toolbars['Table' ][1] = array('bold' , 'italic' , 'link', 'unlink', 'wp_more' );
-			
+
 			// Edit the "Full" toolbar and remove 'code'
 			// - delet from array code from http://stackoverflow.com/questions/7225070/php-array-delete-by-value-not-key
 			if( ($key = array_search('code' , $toolbars['Full' ][2])) !== false ) {
 				unset( $toolbars['Full' ][2][$key] );
 			}
-			
+
 			// remove the 'Basic' toolbar completely
 			unset( $toolbars['Basic' ] );
-			
+
 			// return $toolbars - IMPORTANT!
 			return $toolbars;
 		}
 	};
 
-	
+
 //**********************************************************************************************************************
 //	Remove toolbar from top of page when logged in
 //**********************************************************************************************************************
@@ -530,11 +522,11 @@
 		remove_action('wp_head', '_admin_bar_bump_cb');
 	}
 	add_action('get_header', 'remove_admin_login_header');
-	
+
 //**********************************************************************************************************************
 //	Admin page customisation
 //**********************************************************************************************************************
-	
+
 	//Rename 'Default Template', or 'Standaard template' in Dutch, to custom title
 	function filter_function_name( $label, $context ) {
 	  return __( 'Selecteer paginatype', 'meta-box' );
@@ -561,7 +553,7 @@
 		return home_url();
 	}
 	add_filter( 'login_headerurl', 'my_login_logo_url' );
-	
+
 	function my_login_logo_url_title() {
 	    return 'Envisic Print + Web';
 	}
@@ -578,10 +570,10 @@
 
 	// Add role class to body
 	function add_role_to_body($classes) {
-		
+
 		global $current_user;
 		$user_role = array_shift($current_user->roles);
-		
+
 		$classes .= 'role-'. $user_role;
 		return $classes;
 	}
@@ -599,7 +591,7 @@
 		$html .= '</div>';
 		echo $html;
 	}
-	
+
 //**********************************************************************************************************************
 //	Duplicate post/page
 //**********************************************************************************************************************
@@ -613,20 +605,20 @@
 		// Nonce verification
 		if ( !isset( $_GET['duplicate_nonce'] ) || !wp_verify_nonce( $_GET['duplicate_nonce'], basename( __FILE__ ) ) )
 			return;
-	 
+
 		//get the original post id
 		$post_id = (isset($_GET['post']) ? absint( $_GET['post'] ) : absint( $_POST['post'] ) );
 
 		//and all the original post data then
 		$post = get_post( $post_id );
-		
+
 		//if you don't want current user to be the new post author, then change next couple of lines to this: $new_post_author = $post->post_author;
 		$current_user = wp_get_current_user();
 		$new_post_author = $current_user->ID;
-		
+
 		//if post data exists, create the post duplicate
 		if (isset( $post ) && $post != null) {
-	 
+
 		//new post data array
 		$args = array(
 			'comment_status' => $post->comment_status,
@@ -643,17 +635,17 @@
 			'to_ping'        => $post->to_ping,
 			'menu_order'     => $post->menu_order
 		);
-	 
+
 		//insert the post by wp_insert_post() function
 		$new_post_id = wp_insert_post( $args );
-	 
+
 		//get all current post terms ad set them to the new post draft
 		$taxonomies = get_object_taxonomies($post->post_type); // returns array of taxonomy names for post type, ex array("category", "post_tag");
 		foreach ($taxonomies as $taxonomy) {
 			$post_terms = wp_get_object_terms($post_id, $taxonomy, array('fields' => 'slugs'));
 			wp_set_object_terms($new_post_id, $post_terms, $taxonomy, false);
 		}
-	 
+
 		//duplicate all post meta just in two SQL queries
 		$post_meta_infos = $wpdb->get_results("SELECT meta_key, meta_value FROM $wpdb->postmeta WHERE post_id=$post_id");
 		if (count($post_meta_infos)!=0) {
@@ -667,8 +659,8 @@
 			$sql_query.= implode(" UNION ALL ", $sql_query_sel);
 			$wpdb->query($sql_query);
 		}
-	 
-	 
+
+
 			//finally, redirect to the edit post screen for the new draft
 			wp_redirect( admin_url( 'post.php?action=edit&post=' . $new_post_id ) );
 			exit;
@@ -677,7 +669,7 @@
 		}
 	}
 	add_action( 'admin_action_rd_duplicate_post_as_draft', 'rd_duplicate_post_as_draft' );
-	 
+
 	//Add the duplicate link to action list for post_row_actions
 	function rd_duplicate_post_link( $actions, $post ) {
 		if (current_user_can('edit_posts')) {
@@ -685,96 +677,100 @@
 		}
 		return $actions;
 	}
-	 
+
 	add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
 	add_filter( 'page_row_actions', 'rd_duplicate_post_link', 10, 2 );
 
-	
+
 //**********************************************************************************************************************
 //	Custom names in ACF flexible content layout handle
 //**********************************************************************************************************************
 
+    function display_header_for_handle($header_text_field) {
+        $header = '';
+        if($header_text_field['content-header']) :
+             $header = '<span class="name-span"><i>"' . $header_text_field['content-header'] . '"</i></span>';
+        endif;
+
+        return $header;
+    }
+
 	function my_acf_flexible_content_layout_title( $title, $field, $layout, $i ) {
-		
+
 		//Wrap default ACF in span class
 		$title = '<span class="flex-layout-type">' . $title . '</span>';
-		
+
 		//Flex text
 		if($text = get_sub_field('flex-text-header')) {
 			$title .= ' <span><i>"' . $text . '"</i></span>';
 		};
-		
+
 		//Flex slider
 		if($text = get_sub_field('flex-slider-header')) {
 			$title .= ' <span><i>"' . $text . '"</i></span>';
 		};
-		
-		//Flex USP
-		if($text = get_sub_field('flex-usp-header')) {
-			$title .= ' <span><i>"' . $text . '"</i></span>';
-		};
-		
+
 		//Flex form
 		if($text = get_sub_field('flex-form-title')) {
 			$title .= ' <span><i>"' . $text . '"</i></span>';
 		};
-		
+
 		//Flex Google maps
 		if($text = get_sub_field('flex-maps-address')) {
 			$title .= ' <span>' . $text . '</span>';
 		};
-		
+
 		//Flex table
 		if( get_row_layout() == 'flex-table' ) {
-			$text = get_sub_field('flex-title');
-			if($text) {
-				$title .= ' <span>' . $text . '</span>';
-			}
+            $title.= display_header_for_handle(get_sub_field('content-header-text'));
 		};
-		
+
+		if( get_row_layout() == 'flex-usp') {
+		    $title .= display_header_for_handle(get_sub_field('content-header-text')) . '<span>Bevat ' . count(get_sub_field("flex-usp-list")) . ' punt(en)</span>';
+        }
+
+
 		//Flex image
 		if( get_row_layout() == 'flex-image' ) {
 			$image_object = get_sub_field('flex-image-array');
 			$text = (count($image_object) == 1 ) ? 'Bevat 1 afbeelding' : 'Bevat ' . count($image_object) . ' afbeeldingen';
-			$title .= ' <span>' . $text . '</span>';
+			$title .= display_header_for_handle(get_sub_field('content-header-text')) . '<span>' . $text . '</span>';
 		};
-			
+
 		//Flex gallery
 		if( get_row_layout() == 'flex-gallery' ) {
 			$gallery_images = get_sub_field('flex-gallery-images');
 			$title .= ' <span>Bevat ' . count($gallery_images) . ' afbeeldingen.</span>';
 		};
-		
+
+        //Flex algemene inhoud
+        if( get_row_layout() == 'flex-static-content' ) {
+            $static = get_sub_field('content');
+            $title .= ' <span>Toont de inhoud van <a class="handle-button" href="post.php?post=' . $static . '&action=edit"> ' . get_the_title($static) . '</a>.</span>';
+        };
+
 		//Flex CTA
 		if( get_row_layout() == 'flex-cta' ) {
-		  
-			$flex_buttons = get_sub_field('flex-cta-object');
-			$n_o_b = count($flex_buttons);
-		
+
+		    $title.= display_header_for_handle(get_sub_field('content-header-text'));
+
+			$n_o_b = count(get_sub_field('card'));
+
 				if($n_o_b > 1 ) {
-					$buttons = 'Bevat ' . count($flex_buttons) . ' knoppen: ';
+                    $title.= '<span>Bevat ' . $n_o_b . ' cards.</span>';
 				} elseif ($n_o_b == 1 ) {
-					$buttons = 'Bevat ' . count($flex_buttons) . ' knop: ';
+                    $title.= '<span>Bevat ' . $n_o_b . ' card.</span>';
 				} else {
-					$buttons = 'Bevat geen knoppen.';
+                    $title.= '<span>Bevat geen cards.</span>';
 				};
-	
-			$button_names = '';
-		  
-				if($flex_buttons) :
-					foreach( $flex_buttons as $flex_button ):
-						$button_names .= '"' . $flex_button['flex-cta-text'] . '", ';
-					endforeach;
-				endif;
-			  
-			if (substr($button_names, -1) == ',') :
-				$button_names = substr($str, 0, -1);
-			endif;
-			
-		  $buttons = $buttons . '<i>' . $button_names . '</i>';
-		  $title .= ' <span>' . $buttons . '</span>';
+
 		};
-		
+
+		if(get_row_layout() == 'flex-button' ) {
+            $title.= display_header_for_handle(get_sub_field('content-header-text'));
+            $title.= '<span>Bevat ' . count(get_sub_field('flex-cta-object')) . ' knop(pen)<span>';
+        }
+
 		return $title;
 	}
 
@@ -788,14 +784,14 @@
 	//Add the custom post types from the options page
 	function add_cpt_from_option_page() {
 		function codex_custom_init() {
-			
-			//First get the true or false values from the options page	
+
+			//First get the true or false values from the options page
 			$mod_occ = get_field('module-occasions', 'option' );
 			$mod_new = get_field('module-news', 'option' );
 			$mod_res = get_field('module-real-estate', 'option');
 			$mod_boo = get_field('module-booking', 'option');
-				
-			//Occasions CPT 			
+
+			//Occasions CPT
 			$mod_occ_args = array(
 				'labels' => array('name' => __( 'Occasions' ),
 						'singular_name' => __( 'Occasion' ),
@@ -809,7 +805,7 @@
 				'supports' => array('title', 'editor', 'thumbnail'),
 				'menu_icon' => __('dashicons-exerpt-view')
 			);
-					
+
 			//News CPT
 			$mod_new_args = array(
 				'labels' => array('name' => __( 'Nieuws' ),
@@ -824,7 +820,7 @@
 				'supports' => array('title', 'editor', 'thumbnail'),
 				'menu_icon' => __('dashicons-media-document')
 			);
-					
+
 			//Real estate CPT
 			$mod_res_args = array(
 				'labels' => array('name' => __( 'Vastgoed' ),
@@ -840,7 +836,7 @@
 				'menu_icon' => __('dashicons-admin-home'),
 				'rewrite' => array('slug' => __( 'aanbod'))
 			);
-			
+
 			//Afspraken module CPT
 			$mod_boo_args = array(
 				'labels' => array('name' => __( 'Afspraken' ),
@@ -856,17 +852,17 @@
 				'menu_icon' => __('dashicons-admin-home'),
 				'rewrite' => array('slug' => __( 'aanbod'))
 			);
-				
+
 			//Register the CPT's if option page values == true
 			if($mod_occ == 'true' ) : register_post_type('occasions', $mod_occ_args); endif;
 			if($mod_new == 'true' ) : register_post_type('news', $mod_new_args); endif;
 			if($mod_res == 'true' ) : register_post_type('real-estate', $mod_res_args); endif;
 			if($mod_boo == 'true' ) : register_post_type('booking', $mod_boo_args); endif;
 		};
-			
+
 		codex_custom_init();
 	};
-	
+
 	//Register options CPT on init
 	add_action('init', 'add_cpt_from_option_page');
 
@@ -877,12 +873,12 @@
 		$mod_new = get_field('module-news', 'option' );
 		$mod_res = get_field('module-real-estate', 'option');
 		$mod_boo = get_field('module-booking', 'option');
-		
+
 		if($mod_occ == 'true') { $classes .= ' occ-active'; };
 		if($mod_new == 'true') { $classes .= ' new-active'; };
 		if($mod_res == 'true') { $classes .= ' res-active'; };
 		if($mod_boo == 'true') { $classes .= ' boo-active'; };
-	
+
 	    return $classes;
 	};
 
@@ -891,16 +887,16 @@
 
 // ************************
 //
-// CUSTOM PAGE ATTRIBUTES
+// Custom page attributes
 //
 // ************************
 
 //First remove the default page attributes meta box
-function my_remove_pageparentdiv() {
+function lets_remove_pageparentdiv() {
 		remove_meta_box( 'pageparentdiv', 'page', 'normal' );
 }
-add_action( 'admin_menu', 'my_remove_pageparentdiv' );
-		
+add_action( 'admin_menu', 'lets_remove_pageparentdiv' );
+
 //Then copy the page attributes meta box from wp-admin/includes/meta-boxes.php and alter the name of the function from page_attributes_meta_box to page_attributes_custom_meta_box
 //and edit as requiered
 
@@ -917,16 +913,6 @@ function page_attributes_custom_meta_box($post) {
 			'echo'             => 0,
 		);
 
-		/**
-		 * Filter the arguments used to generate a Pages drop-down element.
-		 *
-		 * @since 3.3.0
-		 *
-		 * @see wp_dropdown_pages()
-		 *
-		 * @param array   $dropdown_args Array of arguments used to generate the pages drop-down.
-		 * @param WP_Post $post          The current WP_Post object.
-		 */
 		$dropdown_args = apply_filters( 'page_attributes_dropdown_pages_args', $dropdown_args, $post );
 		$pages = wp_dropdown_pages( $dropdown_args );
 		if ( ! empty($pages) ) {
@@ -942,47 +928,29 @@ function page_attributes_custom_meta_box($post) {
 		?>
 
 <p><strong>Pagina type:</strong><?php
-	/**
-	 * Fires immediately after the heading inside the 'Template' section
-	 * of the 'Page Attributes' meta box.
-	 *
-	 * @since 4.4.0
-	 *
-	 * @param string  $template The template used for the current post.
-	 * @param WP_Post $post     The current post.
-	 */
 	do_action( 'page_attributes_meta_box_template', $template, $post );
 ?></p>
 <label class="screen-reader-text" for="page_template">Pagina type</label><select name="page_template" id="page_template">
 <?php
-/**
- * Filter the title of the default page template displayed in the drop-down.
- *
- * @since 4.1.0
- *
- * @param string $label   The display value for the default page template title.
- * @param string $context Where the option label is displayed. Possible values
- *                        include 'meta-box' or 'quick-edit'.
- */
+
 $default_title = apply_filters( 'default_page_template_title',  __( 'Default Template' ), 'meta-box' );
 ?>
-<option value="page.php">Standaardpagina</option>
 <?php page_template_dropdown($template); ?>
 </select>
 <?php
 	} ?>
 <p><strong>Volgorde</strong></p>
 <p><label class="screen-reader-text" for="menu_order"><?php _e('Order') ?></label><input name="menu_order" type="text" size="4" id="menu_order" value="<?php echo esc_attr($post->menu_order) ?>" /></p>
-<?php if ( 'page' == $post->post_type && get_current_screen()->get_help_tabs() ) { ?>
-<p>Hulp nodig?</p>
+
 <?php
-	}
-}		
+
+}
 
 add_action('add_meta_boxes','add_post_template_metabox');
 function add_post_template_metabox() {
     add_meta_box('postparentdiv', __('Pagina eigenschappen'), 'page_attributes_custom_meta_box', 'page', 'side', 'core');
 }
+
 
 //Function to quickly display NAW
 function naw($item) {
@@ -997,7 +965,7 @@ function get_naw($item) {
 
 function check_contrast($pri, $txt) {
 		$min_contrast = 35;
-		
+
 		list($pr, $pg, $pb) = sscanf($pri, "#%02x%02x%02x");
 		list($tr, $tg, $tb) = sscanf($txt, "#%02x%02x%02x");
 		$rgb = [$pr, $pg, $pb, $tr, $tg, $tb];
@@ -1007,7 +975,7 @@ function check_contrast($pri, $txt) {
 		$col1 = 0.3 * $lum['0'] + 0.59 * $lum['1'] + 0.11 * $lum['2'];
 		$col2 = 0.3 * $lum['3'] + 0.59 * $lum['4'] + 0.11 * $lum['5'];
 		$contrast = ($col1 > $col2) ? $col1 - $col2 : $col2 - $col1;
-		
+
 		if($contrast >= $min_contrast ) :
 			//echo "<div style='margin: 20px; z-index: 10000; width: 100%;'><div style='width: 100px; height: 30px; display: inline-block; border: 1px solid black; background: " . $pri . ";'>" . $pri . "</div> ->
 		//Contrast: " . ceil($lval) . " -> <div style='width: 100px; height: 30px; display: inline-block; border: 1px solid black; background: " . $txt . ";'>" . $txt . "</div></div>";
@@ -1019,19 +987,37 @@ function check_contrast($pri, $txt) {
 		endif;
 }
 
+function check_high_luminance($pri) {
+
+    list($pr, $pg, $pb) = sscanf($pri, "#%02x%02x%02x");
+
+    if($pr > 190 && $pg > 190 && $pb > 190) :
+        return true;
+    else :
+        return false;
+    endif;
+}
+
+function hex_to_seperate_rgb($pri) {
+
+    list($pr, $pg, $pb) = sscanf($pri, "#%02x%02x%02x");
+
+    return [$pr, $pg, $pb];
+}
+
 function add_color_tint($base, $tint) {
-	
+
 		list($r, $g, $b) = sscanf($base, "#%02x%02x%02x");
 		$tint = 1 - ($tint / 100);
-		
+
 		$r = ($r * $tint <= 255) ? $r * $tint : 255;
 		$g = $g * $tint;
 		$b = $b * $tint;
-		
+
 		$r = dechex($r);
 		$g = dechex($g);
 		$b = dechex($b);
-		
+
 		return "#" . $r . $g . $b;
 }
 
@@ -1074,62 +1060,76 @@ function acf_load_color_field_choices( $color_select ) {
     // reset choices
     $color_select['choices'] = array();
 	$colors = get_field('config-colors', 'option');
-    
+
 	$color_select['choices'][ 'geen' ] = '<span class="color-selector" style="background: #fffff"> Geen </span>';
     $color_select['choices'][ 'pri-color' ] = '<span class="color-selector" style="background: ' . $colors['pri-color'] . ';"> </span>';
 	$color_select['choices'][ 'sec-color' ] = '<span class="color-selector" style="background: ' . $colors['sec-color'] . ';"> </span>';
 	$color_select['choices'][ 'ter-color' ] = '<span class="color-selector" style="background: ' . $colors['ter-color'] . ';"> </span>';
 
+
+    //Add additional colors from config menu to stylesheet
+    if($colors['additional-colors']) :
+        $add_col_count = 1;
+        foreach($colors['additional-colors'] as $value) :
+            $hex = $value['add-color'];
+            $name = 'additional-color-' . $add_col_count;
+            $color_select['choices'][ $name ] = '<span class="color-selector" style="background: ' . $hex . ';"> </span>';
+            $add_col_count++;
+        endforeach;
+    endif;
+
+
     // return the field
     return $color_select;
-    
+
 }
 
 add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices');
+add_filter('acf/load_field/name=flex-card-bgc-select', 'acf_load_color_field_choices');
 
 //**********************************************************************************************************************
 //	Function to check if a flex item should be shown based on 'Publiceren' option, 'Startdatum' option and 'Einddatum'option
 //**********************************************************************************************************************
 
 	function validateFlexItem($flex_options) {
-	
+
 		$flex_show = true;
 		$flex_publish = $flex_options['flex-publish'];
 		$flex_expire = $flex_options['flex-end-date-option'];
 		$flex_valid = $flex_options['flex-start-date-option'];
-		
+
 		//Before checking dates, see if post is published at all
 		if($flex_publish) {
-			
+
 			//If either of dates are set
 			if($flex_expire or $flex_valid) {
-				
+
 				//Get current date
 				$current_date = date('Ymd');
-				
+
 				//If both start and end date are set
 				if($flex_expire && $flex_valid) {
 					$flex_expire_date = $flex_options['flex-end-date'];
 					$flex_valid_date = $flex_options['flex-start-date'];
-					
+
 					if( ( $current_date > $flex_expire_date) or ( $current_date < $flex_valid_date ) ) {
 						$flex_show = false;
-					}		
+					}
 				}
-				
+
 				//If start date is set
 				if($flex_valid && !$flex_expire) {
 					$flex_valid_date = $flex_options['flex-start-date'];
-					
+
 					if($current_date < $flex_valid_date) {
 						$flex_show = false;
 					}
 				}
-				
+
 				//If end date is set
 				if($flex_expire && !$flex_valid) {
 					$flex_expire_date = $flex_options['flex-end-date'];
-					
+
 					if($current_date >= $flex_expire_date) {
 						$flex_show = false;
 					}
@@ -1138,7 +1138,7 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 		} else {
 			$flex_show = false;
 		}
-		
+
 		return $flex_show;
 	};
 
@@ -1147,19 +1147,17 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 //	Enable background color
 //**********************************************************************************************************************
 
-	function getBackgroundColor( $flex_options = NULL ) {
+	function getBackgroundColor($flex_options = NULL ) {
 
-		if($flex_options == NULL) :
-			$flex_options = get_sub_field('flex-options');
-		endif;
-		
-		$has_bgc = ( $flex_options['flex-bgc-select'] == 'geen' ) ? 'no-bgc' : 'bgc ' . $flex_options['flex-bgc-select'];
+		$flex_options ??= get_sub_field('flex-options');
+
+        $value = ($flex_options['flex-bgc-select']) ? $flex_options['flex-bgc-select'] : $flex_options;
+
+		$has_bgc = ( $value == 'geen' ) ? 'no-bgc' : 'bgc ' . $value;
 
 		echo $has_bgc;
 
-	} 
-
-
+	}
 
 //**********************************************************************************************************************
 //	Enable GZIP
@@ -1174,13 +1172,13 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 
 	// Add new constant that returns true if WooCommerce is active
 	define( 'WPEX_WOOCOMMERCE_ACTIVE', class_exists( 'WooCommerce' ) );
-	
+
 	// Checking if WooCommerce is active
 	if ( WPEX_WOOCOMMERCE_ACTIVE ) {
-	
+
 		//Add class to admin body if WooCommerce is active
 		function woo_body_class( $classes ) {
-			$classes .= ' woo-com-active'; 
+			$classes .= ' woo-com-active';
 			return $classes;
 		};
 		add_filter( 'admin_body_class', 'woo_body_class' );
@@ -1188,32 +1186,32 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 		add_action( 'after_setup_theme', function() {
 			add_theme_support( 'woocommerce' );
 		} );
-		
+
 		add_filter( 'woocommerce_show_page_title', '__return_false' );
-		
+
 		add_theme_support( 'wc-product-gallery-slider' );
 		add_theme_support( 'wc-product-gallery-zoom' );
 		add_theme_support( 'wc-product-gallery-lightbox' );
-			
+
 		remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-		
-		
+
+
 		remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-		
-		
+
+
 		add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
 		add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
-		
+
 		function my_theme_wrapper_start() {
 		    echo '<div id="woo-content">';
 		}
-		
+
 		function my_theme_wrapper_end() {
 		    echo '</div>';
 		}
-	
+
 	}
 
 
@@ -1244,7 +1242,7 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 	// 	global $menu;
 	// 	$menu[11][1] = get_admin_url() . "nav-menus.php";
 	// }
-		
+
 	//Allow editors to edit menu
 	$role_object = get_role( 'editor' );
 	$role_object->add_cap( 'edit_theme_options' );
@@ -1260,7 +1258,7 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 		$smtpPort = get_field('smtp-port', 'option');
 		$smtpUser = get_field('smtp-user', 'option');
 		$smtpPass = get_field('smtp-pass', 'option');
-		
+
 		$fromName = 'Bericht van ' . get_bloginfo('name');
 		$replyToEmail = 'mailer@envisichosting.nl';
 		$replyToName = get_bloginfo('name');
@@ -1280,7 +1278,7 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 
 	function set_my_mail_content_type() {
 		return "text/html";
-	}	
+	}
 
 //**********************************************************************************************************************
 //	Static content CPT
@@ -1296,12 +1294,14 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 				),
 		'public' => true,
 		'has_archive' => false,
-		'supports' => array('title', 'editor', 'thumbnail'),
+		'show_in_nav_menus' => false,
+		'supports' => array('title', 'editor'),
 		'menu_icon' => __('dashicons-format-aside'),
 		'rewrite' => array('slug' => __( 'static-content'))
 	);
-		
+
 	register_post_type('static-content', $static_content_cpt);
+
 
 //**********************************************************************************************************************
 //	Generate config CSS on backend 'Configuratie' update
@@ -1323,20 +1323,51 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 
                 $custom_style.= " :root {\n";
 
-                //Loop through the color settings and add them to CSS if they are set
-                foreach($colors as $key => $value) {
-                    if($value) {
-                        $custom_style.= "--" . $key . ": " . $value . ";\n";
-                    }
-                };
+                //Generate separate RGB values for each color
+                foreach($colors as $key => $value) :
+                    if($value && $key !== 'additional-colors') :
+                        $rgb = hex_to_seperate_rgb($value);
+                        $custom_style.= "--" . $key . "-r: " . $rgb[0] . ";\n";
+                        $custom_style.= "--" . $key . "-g: " . $rgb[1] . ";\n";
+                        $custom_style.= "--" . $key . "-b: " . $rgb[2] . ";\n";
+                    endif;
+                endforeach;
+
+                //Add additional colors from config menu to stylesheet
+                if($colors['additional-colors']) :
+                    $i = 1;
+                    foreach($colors['additional-colors'] as $value) :
+                        $hex = $value['add-color'];
+                        $rgb = hex_to_seperate_rgb($hex);
+                        $custom_style.= "--additional-color-" . $i . "-r: " . $rgb[0] . ";\n";
+                        $custom_style.= "--additional-color-" . $i . "-g: " . $rgb[1] . ";\n";
+                        $custom_style.= "--additional-color-" . $i . "-b: " . $rgb[2] . ";\n";
+                        $custom_style.= "--additional-rgb-" . $i . ": var(--additional-color-" . $i . "-r), var(--additional-color-" . $i . "-g), var(--additional-color-" . $i . "-b);\n";
+                        $custom_style.= "--additional-" . $i . ": rgb(var(--additional-rgb-" . $i . ")); \n";
+
+                        if(check_high_luminance($hex)) :
+                            $custom_style.= "--additional-" . $i . "-con: var(--pri-color) ;\n";
+                        else :
+                            $con = check_contrast($hex, '#FFFFFF') ? '#FFF' : '#444';
+                            $custom_style.= "--additional-" . $i . "-con: " . $con . ";\n";
+                        endif;
+
+                        $i++;
+                    endforeach;
+                endif;
 
                 //Set and add the contrast colors
-                foreach($colors as $key => $value) {
-                    if($key == 'pri-color' || 'sec-color' || 'ter-color' && $value) {
-                        $con = check_contrast($value, '#FFFFFF') ? '#FFF' : '#444';
-                        $custom_style.= "--" . $key . "-con: " . $con . ";\n";
-                    }
-                };
+                foreach($colors as $key => $value) :
+                    if($key == 'pri-color' || 'sec-color' || 'ter-color' && $value) :
+
+                        if(check_high_luminance($value)) :
+                            $custom_style.= "--" . $key . "-con: var(--pri-color) ;\n";
+                        else :
+                            $con = check_contrast($value, '#FFFFFF') ? '#FFF' : '#444';
+                            $custom_style.= "--" . $key . "-con: " . $con . ";\n";
+                        endif;
+                    endif;
+                endforeach;
 
                 //Check for header fonts and alternative header fonts and add them to inline style
                 if($alt_header_font) :
@@ -1352,6 +1383,20 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
 
                 $custom_style.= "}\n";
 
+                if($colors['additional-colors']) :
+                    $i = 1;
+                    foreach($colors['additional-colors'] as $value) :
+
+                        $custom_style.= ".bgc.additional-color-" . $i . " { \n ";
+                        $custom_style.= "--bgc: var(--additional-". $i . "); \n ";
+                        $custom_style.= "--con-color: var(--additional-" . $i . "-con); \n ";
+                        $custom_style.= "color: var(--additional-" . $i . "-con); \n ";
+                        $custom_style.= "background: var(--bgc); \n";
+                        $custom_style.= "}\n";
+                    $i++;
+                    endforeach;
+                endif;
+
                 //Set header height option
                 if( get_field( 'override-header-height', 'option' ) ) :
                     $custom_style.= "@media screen and (min-width: 950px) { :root { --header-height:" . get_field('dev-header-height', 'option') . "}} \n";
@@ -1363,7 +1408,9 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
                     $custom_style.= "@media screen and (max-width:" . get_field('mob-navi-breakpoint', 'option') . "px) {.nav-main, .nav-top { display:none; } .nav-mobile, .nav-trigger { display: block;}} \n";
                 endif;
 
-
+                if( get_field('theme-setting-use-hamburger') ) :
+                    $custom_style.= '.nav-trigger, .nav-mobile { display:block }' ;
+                endif;
 
                 // Add the font CSS:
                 $selected_header_font = get_field('config-header-font', 'option' );
@@ -1401,6 +1448,213 @@ add_filter('acf/load_field/name=flex-bgc-select', 'acf_load_color_field_choices'
     }
     add_action('acf/save_post', 'generate_config_css', 20);
 
+//**********************************************************************************************************************
+//	Hide usernames in
+//**********************************************************************************************************************
+
+    function redirect_to_home_if_author_parameter() {
+
+        $is_author_set = get_query_var( 'author', '' );
+        if ( $is_author_set != '' && !is_admin()) {
+            wp_redirect( home_url(), 301 );
+            exit;
+        }
+    }
+    add_action( 'template_redirect', 'redirect_to_home_if_author_parameter' );
+
+//**********************************************************************************************************************
+//	Icons
+//**********************************************************************************************************************
+
+    function display_icon($icon_name) {
+
+        include locate_template('icons/icons.php');
+
+        $iconHTML = '';
+
+        if(array_key_exists($icon_name, $icons)) :
+
+            $iconHTML = $icons[$icon_name];
+
+        endif;
+
+        return $iconHTML;
+    };
+
+    //Load icons in fields
+
+    function acf_load_icon_field_choices( $icon_select ) {
+        // reset choices
+        $icon_select['choices'] = array();
+        include locate_template('icons/icon-names.php');
+
+        foreach($icon_names as $name) :
+            $icon_select['choices'][$name] = $name;
+        endforeach;
+
+        // return the field
+        return $icon_select;
+
+    }
+
+    add_filter('acf/load_field/name=icon-select', 'acf_load_icon_field_choices');
+    add_filter('acf/load_field/name=icon-select-2', 'acf_load_icon_field_choices');
+
+//**********************************************************************************************************************
+//	Nav Menu Walker
+//**********************************************************************************************************************
+
+
+    class Walker_Nav_Menu_Apex extends Walker_Nav_Menu {
+
+        public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+            if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+                $t = '';
+                $n = '';
+            } else {
+                $t = "\t";
+                $n = "\n";
+            }
+            // Check for icon
+            $icon = (display_icon(get_field('icon-select', $item->object_id ))) ? '<span class="icon-wrap nav-icon">' . display_icon(get_field('icon-select', $item->object_id )) . '</span>' : false;
+            $icon_name = ($icon) ? get_field('icon-select', $item->object_id) : '';
+
+            $indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
+            $classes   = empty( $item->classes ) ? array() : (array) $item->classes;
+            //$classes[] = 'menu-item-' . $item->ID;
+            $classes[] = 'post-id-' . $item->object_id;
+
+            $classes[] = ($icon) ? 'has-icon has-icon-' . $icon_name : 'has-no-icon';
+
+
+
+            /**
+             * Filters the arguments for a single nav menu item.
+             *
+             * @since 4.4.0
+             *
+             * @param stdClass $args  An object of wp_nav_menu() arguments.
+             * @param WP_Post  $item  Menu item data object.
+             * @param int      $depth Depth of menu item. Used for padding.
+             */
+            $args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+
+            /**
+             * Filters the CSS classes applied to a menu item's list item element.
+             *
+             * @since 3.0.0
+             * @since 4.1.0 The `$depth` parameter was added.
+             *
+             * @param string[] $classes Array of the CSS classes that are applied to the menu item's `<li>` element.
+             * @param WP_Post  $item    The current menu item.
+             * @param stdClass $args    An object of wp_nav_menu() arguments.
+             * @param int      $depth   Depth of menu item. Used for padding.
+             */
+            $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
+            $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+            /**
+             * Filters the ID applied to a menu item's list item element.
+             *
+             * @since 3.0.1
+             * @since 4.1.0 The `$depth` parameter was added.
+             *
+             * @param string   $menu_id The ID that is applied to the menu item's `<li>` element.
+             * @param WP_Post  $item    The current menu item.
+             * @param stdClass $args    An object of wp_nav_menu() arguments.
+             * @param int      $depth   Depth of menu item. Used for padding.
+             */
+            //$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
+            //$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+
+            //$output .= $indent . '<li' . $id . $class_names . '>';
+            $output .= $indent . '<li' . $class_names . '>';
+
+            $atts           = array();
+            $atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+            $atts['target'] = ! empty( $item->target ) ? $item->target : '';
+            if ( '_blank' === $item->target && empty( $item->xfn ) ) {
+                $atts['rel'] = 'noopener noreferrer';
+            } else {
+                $atts['rel'] = $item->xfn;
+            }
+            $atts['href']         = ! empty( $item->url ) ? $item->url : '';
+            $atts['aria-current'] = $item->current ? 'page' : '';
+
+            /**
+             * Filters the HTML attributes applied to a menu item's anchor element.
+             *
+             * @since 3.6.0
+             * @since 4.1.0 The `$depth` parameter was added.
+             *
+             * @param array $atts {
+             *     The HTML attributes applied to the menu item's `<a>` element, empty strings are ignored.
+             *
+             *     @type string $title        Title attribute.
+             *     @type string $target       Target attribute.
+             *     @type string $rel          The rel attribute.
+             *     @type string $href         The href attribute.
+             *     @type string $aria_current The aria-current attribute.
+             * }
+             * @param WP_Post  $item  The current menu item.
+             * @param stdClass $args  An object of wp_nav_menu() arguments.
+             * @param int      $depth Depth of menu item. Used for padding.
+             */
+            $atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
+
+            $attributes = '';
+            foreach ( $atts as $attr => $value ) {
+                if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
+                    $value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+                    $attributes .= ' ' . $attr . '="' . $value . '"';
+                }
+            }
+
+            /** This filter is documented in wp-includes/post-template.php */
+            $title = apply_filters( 'the_title', $item->title, $item->ID );
+
+            /**
+             * Filters a menu item's title.
+             *
+             * @since 4.4.0
+             *
+             * @param string   $title The menu item's title.
+             * @param WP_Post  $item  The current menu item.
+             * @param stdClass $args  An object of wp_nav_menu() arguments.
+             * @param int      $depth Depth of menu item. Used for padding.
+             */
+            $title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
+
+            $item_output  = $args->before;
+            $item_output .= '<a' . $attributes . '>';
+            $item_output .= ($icon) ? $icon : '';
+            $item_output .= '<span class="menu-item-text">';
+            $item_output .= $args->link_before . $title . $args->link_after;
+            $item_output .= '</span>';
+            $item_output .= '</a>';
+            $item_output .= $args->after;
+
+            /**
+             * Filters a menu item's starting output.
+             *
+             * The menu item's starting output only includes `$args->before`, the opening `<a>`,
+             * the menu item's title, the closing `</a>`, and `$args->after`. Currently, there is
+             * no filter for modifying the opening and closing `<li>` for a menu item.
+             *
+             * @since 3.0.0
+             *
+             * @param string   $item_output The menu item's starting HTML output.
+             * @param WP_Post  $item        Menu item data object.
+             * @param int      $depth       Depth of menu item. Used for padding.
+             * @param stdClass $args        An object of wp_nav_menu() arguments.
+             */
+
+
+            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+        }
+
+
+    }
 
 
 ?>

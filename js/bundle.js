@@ -45,3 +45,24 @@ let growToTallestElement = function(sourceElements, targetElement) {
         $(targetElement).css("height", elHeight);
     })
 };
+
+//Dynamically load recaptcha JS
+
+let recaptchaLoaded = false;
+
+function loadRecaptcha(element, percentage) {
+    if($(element).length > 0)  {
+        $(element).each( function() {
+            var h = $(window).height();
+            var s = $(document).scrollTop();
+            var e = $(this).offset().top;
+            var x = h + s;
+            var a = h * percentage;
+
+            if (x > e + a && recaptchaLoaded == false) {
+                $.getScript("https://www.google.com/recaptcha/api.js");
+                recaptchaLoaded = true;
+            }
+        });
+    }
+}

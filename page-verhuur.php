@@ -7,24 +7,19 @@
 get_header(); ?>
 
 
-	
-<?php
-	//Determine what H1 text we will use. First comes custom H1 field called 'H1 Kop', then 'Paginatitel', then Wordpress page title.
-	if (get_field('h1-text')) {
-		$h1_text = get_field('h1-text');
-	} elseif (get_field('seo-title')) {
-		$h1_text = get_field('seo-title');
-	} else {
-		$h1_text = get_the_title();
-	};
-?>	
-	
 
-	
-	
-<div class="content-wrap h1-headline">
-	<h1 itemprop="headline"><?=$h1_text; ?></h1>
-</div>
+<?php
+//Determine what H1 text we will use. First comes custom H1 field called 'H1 Kop', then 'Paginatitel', then Wordpress page title.
+if (get_field('h1-text')) {
+    $args[0] = get_field('h1-text');
+} elseif (get_field('seo-title')) {
+    $args[0] = get_field('seo-title');
+} else {
+    $args[0] = get_the_title();
+};
+?>
+
+<?php get_template_part('/blocks/block-h1', 'h1-headline', $args) ?>
 
 <main>
 

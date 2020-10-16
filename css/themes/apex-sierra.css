@@ -309,7 +309,7 @@ section.ter-color:before {
  ======= Flex stuff
  =========================================================================================*/
 
-.spotlight:before {
+.spotlight .flex-paragraph:before {
     width: 200px;
     height: 200px;
     border-radius: 100px;
@@ -319,7 +319,7 @@ section.ter-color:before {
     left: 80px;
 }
 
-.spotlight:after {
+.spotlight .flex-paragraph:after {
     width: 150px;
     height: 150px;
     border-radius: 100px;
@@ -329,7 +329,7 @@ section.ter-color:before {
     left: 240px;
 }
 
-.spotlight {
+.spotlight .flex-paragraph {
     font-family: var(--text-font);
     font-style: normal;
 }
@@ -520,7 +520,7 @@ a.content-image:hover {
     box-shadow: var(--box-shadow);
 }
 
-.c-flex-slider .flex-slider {
+.block-slider .flex-slider {
     background-color: transparent;
     background-image: url(img/arcering-dik.png);
     border-radius: 20px;
@@ -545,7 +545,7 @@ a.content-image:hover {
 	opacity: 0.1;
 }
 
-.c-google-maps.bgc {
+.block-maps.bgc {
     overflow: hidden;
     background: none;
 }
@@ -784,14 +784,14 @@ footer, footer a.footer-link, footer a, footer a:hover, footer-content {
 		top: 15px;
 	}
 	
-    .spotlight:before {
+    .spotlight .flex-paragraph:before {
         width: 110px;
         height: 110px;
         top: 100px;
         left: 60px;
     }
     
-    .spotlight:after {
+    .spotlight .flex-paragraph:after {
         width: 150px;
         height: 150px;
         top: 160px;

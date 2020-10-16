@@ -50,8 +50,8 @@ function fireScripts() {
 		$(document).ready(function(){
 			//var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 			
-			$(".nav-mobile").html($(".nav-wrap").html());
-			$(".nav-mobile").append($(".nav-top").html());
+			//$(".nav-mobile").html($(".nav-wrap").html());
+			//$(".nav-mobile").append($(".nav-top").html());
 
 			$(".nav-trigger").click(function(){
 				

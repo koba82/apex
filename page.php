@@ -4,43 +4,37 @@
  */
 
 get_header(); ?>
-
-
 	
 <?php
 	//Determine what H1 text we will use. First comes custom H1 field called 'H1 Kop', then 'Paginatitel', then Wordpress page title.
 	if (get_field('h1-text')) {
-		$h1_text = get_field('h1-text');
+		$args[0] = get_field('h1-text');
 	} elseif (get_field('seo-title')) {
-		$h1_text = get_field('seo-title');
+        $args[0] = get_field('seo-title');
 	} else {
-		$h1_text = get_the_title();
+        $args[0] = get_the_title();
 	};
-?>	
-	
+?>
 
-	
-	
-<div class="content-wrap h1-headline">
-	<h1 itemprop="headline"><?=$h1_text; ?></h1>
-</div>
+<?php get_template_part('/blocks/block-h1', 'h1-headline', $args) ?>
 
 <main>
 
-<?php get_template_part('acf-flex-content-loop'); ?>
+    <?php
+    get_template_part('acf-flex-content-loop');
 
-<?php if ( WPEX_WOOCOMMERCE_ACTIVE ) : ?>
+    if ( WPEX_WOOCOMMERCE_ACTIVE ) :
 
-	<?php do_shortcode('aws_search_form'); ?>
+        do_shortcode('aws_search_form'); ?>
 
-	<section class="content-wrap woo-content-wrap">
-		<div class="content woo-content">
-			<div class="content-animation">	
-			</div>
-		</div>	
-	</section>
+        <section class="content-wrap woo-content-wrap">
+            <div class="content woo-content">
+            </div>
+        </section>
 
-<?php endif; ?>
+    <?php
+    endif; ?>
+
 
 </main>
 

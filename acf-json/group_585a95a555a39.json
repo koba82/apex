@@ -32,8 +32,9 @@
                 "id": ""
             },
             "choices": {
-                "apex-alpha": "Apex Alpha",
+                "apex-alpha.css": "Apex Alpha",
                 "apex-charlie.css": "Apex Charlie",
+                "apex-hotel.css": "Apex Hotel",
                 "apex-lima.css": "Apex Lima",
                 "apex-sierra.css": "Apex Sierra",
                 "apex-woocommerce.css": "Apex Woo Commerce"
@@ -635,7 +636,7 @@
         "tags",
         "send-trackbacks"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1585751029
+    "modified": 1600759693
 }
