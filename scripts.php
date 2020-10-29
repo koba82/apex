@@ -46,15 +46,8 @@ function fireScripts() {
 
 
 	//Mobile navigation trigger
-		
 		$(document).ready(function(){
-			//var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-			
-			//$(".nav-mobile").html($(".nav-wrap").html());
-			//$(".nav-mobile").append($(".nav-top").html());
-
 			$(".nav-trigger").click(function(){
-				
 				$( "body" ).toggleClass( "nav-open" , "nav-closed" );
 				$( "body" ).toggleClass( "nav-closed" , "nav-open" );
 			});
@@ -69,6 +62,20 @@ function fireScripts() {
 			});
 			
 		})
+
+    //Menu hover for touch
+    jQuery('.nav-main li.menu-item-has-children').on('touchstart', function (e) {
+        'use strict'; //satisfy code inspectors
+        let link = jQuery(this);
+        if (link.hasClass('touch-hover')) {
+            return true;
+        } else {
+            link.addClass('touch-hover');
+            //$('a.taphover').not(this).removeClass('hover');
+            e.preventDefault();
+            return false; //extra, and to make sure the function has consistent return points
+        }
+    });
 
 }
 </script>

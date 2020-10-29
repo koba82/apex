@@ -9,6 +9,10 @@
     $use_mob_nav_class = ($use_mob_nav) ? 'use-mob-nav' : '';
     $seo_title = get_field('seo-title');
     $seo_description = get_field('seo-description');
+    $header_font = get_field('config-header-font', 'option');
+    $text_font = get_field('config-text-font', 'option');
+    $alt_header_font = get_field('config-header-font-css', 'option');
+    $alt_text_font = get_field('config-text-font-css', 'option');
 
     $index_follow = '<meta name="robots" content="';
     if ($page_properties['no-index'] || $page_properties['no-follow']) :
@@ -21,6 +25,8 @@
         endif;
     endif;
 
+    $h_font_class = ($alt_header_font) ? "header-font-" . str_replace("+", "-", $alt_header_font) : "header-font-" . str_replace("+", "-", ($header_font['value']));
+    $t_font_class = ($alt_text_font) ? "text-font-" . str_replace("+", "-", $alt_text_font) : "text-font-" . str_replace("+", "-", ($text_font['value']));
 
 ?>
 
@@ -44,22 +50,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>
-        <?php
-        $page_title = '';
-        if($seo_title):
-            $page_title = $seo_title;
-        else:
-            $page_title = bloginfo('name')	 . ' | ' .  wp_title('');
-        endif;
-        echo $page_title; ?>
+        <?php echo ($page_properties['seo-title']) ? $page_properties['seo-title'] : bloginfo('name') . ' | ' .  wp_title(''); ?>
     </title>
     <?php
     if($seo_description):
         echo '<meta name="description" content="' . $seo_description . '">';
     endif;
     ?>
-
-
     <meta property="og:url"           content="<?php global $wp; $current_url = home_url( add_query_arg( array(), $wp->request ) ); echo $current_url; ?>" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="<?=$page_title; ?>" />
@@ -75,7 +72,7 @@
 
 </head>
 
-<body itemscope="itemscope" itemtype="http://schema.org/WebPage" class="nav-closed <?=$use_mob_nav_class;?>">
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage" class="nav-closed <?=$use_mob_nav_class;?> <?=$t_font_class;?> <?=$h_font_class;?>">
 <div class="size-check"></div>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T299PHR"

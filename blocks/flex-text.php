@@ -55,6 +55,13 @@ if(get_sub_field('flex-text-add-image') == 'true' ) :
     <section class="content-wrap block-text <?php getBackgroundColor(); ?> <?php the_sub_field('flex-text-spotlight'); ?>" >
         <div class="content <?php the_sub_field('flex-text-image-position'); ?>" >
             <div class="flex-text-image-column text-col" >
+
+                <?php if (get_sub_field('icon-select') !== '-') : ?>
+
+                    <div class="icon-wrap medium"><?php echo display_icon(get_sub_field('icon-select')); ?></div>
+
+                <?php endif; ?>
+
                 <div class="flex-paragraph">
                     <?php
                     if(get_sub_field('flex-text-header')): ?>

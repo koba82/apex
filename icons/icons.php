@@ -725,6 +725,12 @@ $icons = array(
     <path d="M6 7h11a2 2 0 0 1 2 2v.5a.5 .5 0 0 0 .5 .5a.5 .5 0 0 1 .5 .5v3a.5 .5 0 0 1 -.5 .5a.5 .5 0 0 0 -.5 .5v.5a2 2 0 0 1 -2 2h-11a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2" />
 </svg>',
 
+    'bbq' => '<svg xmlns="http://www.w3.org/2000/svg"  id="bbq" class="icon icon-tabler icon-tabler-bbq" width="100%" height="100%" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M19.11,9A7.14,7.14,0,1,1,4.83,9Z"/>
+<path d="M8,12.88a5.53,5.53,0,0,1-1.41-2.35"/><line x1="9.66" y1="15.69" x2="6.31" y2="23.11"/><line x1="14.44" y1="15.69" x2="16.33" y2="19.88"/><line x1="14.99" y1="21.76" x2="6.91" y2="21.76"/>
+<circle cx="16.92" cy="21.61" r="1.73"/><line x1="4.83" y1="10.02" x2="3.52" y2="10.02"/>
+<path d="M12.09.65a2.81,2.81,0,0,0,0,4,2,2,0,0,1,.59,1.42,2,2,0,0,1-.59,1.43"/><path d="M9.15,2.14a2.2,2.2,0,0,0,0,3.12,1.58,1.58,0,0,1,.46,1.11,1.61,1.61,0,0,1-.46,1.12"/>
+<path d="M15,2.14a2.22,2.22,0,0,0,0,3.12,1.54,1.54,0,0,1,.46,1.11A1.56,1.56,0,0,1,15,7.49"/></svg>',
+
     'bed' => '<svg xmlns="http://www.w3.org/2000/svg"  id="bed" class="icon icon-tabler icon-tabler-bed" width="100%" height="100%" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 
     <path d="M3 7v11m0 -4h18m0 4v-8a2 2 0 0 0 -2 -2h-8v6" />
@@ -4098,6 +4104,9 @@ $icons = array(
     <path d="M16 20h2a2 2 0 0 0 2 -2v-2" />
 </svg>',
 
+    'meat' => '<svg xmlns="http://www.w3.org/2000/svg"  id="meat" class="icon icon-tabler icon-tabler-meat" width="100%" height="100%" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="16.79" cy="7.22" rx="4.16" ry="7.63" transform="translate(-0.19 13.98) rotate(-45)"/><path d="M11.39,1.83C5.6,7.62,3.33,14.72,6.3,17.7s10.09.7,15.88-5.09"/><path d="M5.56,16.67,4.22,18a.86.86,0,0,1-.89.21A1.61,1.61,0,0,0,1.41,19a1.58,1.58,0,0,0,0,1.52,1.6,1.6,0,0,0,.86.75.86.86,0,0,1,.51.51,1.46,1.46,0,0,0,.56.73,1.61,1.61,0,0,0,2.49-1.76.91.91,0,0,1,.25-.87l1.37-1.37"/><ellipse cx="16.79" cy="7.22" rx="1.06" ry="4.45" transform="translate(-0.19 13.98) rotate(-45)"/></svg>',
+
     'medal' => '<svg xmlns="http://www.w3.org/2000/svg"  id="medal" class="icon icon-tabler icon-tabler-medal" width="100%" height="100%" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 
     <path d="M12 4v3m-4 -3v6m8 -6v6" />
@@ -6377,8 +6386,586 @@ $icons = array(
     <line x1="7" y1="10" x2="13" y2="10" />
     <line x1="10" y1="7" x2="10" y2="13" />
     <line x1="21" y1="21" x2="15" y2="15" />
-</svg>'
+</svg>',
+
+    'fnd-360' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-360" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="360" d="M42 9.5A1.5 1.5 0 0040.5 8h-10A1.5 1.5 0 0029 9.5v10a1.5 1.5 0 003 0v-7a14 14 0 11-8-2.5V7a17 17 0 1010.92 4h5.58A1.5 1.5 0 0042 9.5z"/>
+        </svg>',
+
+    'fnd-add-house' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-add-house" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path fill-rule="evenodd" d="M24 43v-3h11V22.84l3 3.33V41.5c0 .83-.67 1.5-1.5 1.5H24zm18.33-18.5a1.5 1.5 0 01-2.23 2.01L38 24.17l-3-3.33L24 8.62 13 20.84l-3 3.33-2.1 2.34a1.5 1.5 0 01-2.23-2.01l17.2-19.12c.04-.03.08-.04.1-.07.05-.04.1-.06.13-.1.12-.08.24-.16.37-.21l.18-.05c.12-.02.24-.05.37-.05.08 0 .16.02.24.04.1.02.2.03.3.07.1.04.19.1.28.17.07.04.14.09.2.15.02.02.06.03.08.06L42.33 24.5zm-21.83 9a1.5 1.5 0 010 3h-4v4a1.5 1.5 0 01-3 0v-4h-4a1.5 1.5 0 010-3h4v-4a1.5 1.5 0 013 0v4h4z"/>
+        </svg>',
+
+    'fnd-address' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-address" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 32v-6H5.8c-1 0-1.8-.89-1.8-2 0-1.1.8-2 1.8-2H7v-6H5.8c-1 0-1.8-.89-1.8-2 0-1.1.8-2 1.8-2H7V7.5C7 6.67 7.67 6 8.5 6h20.9l-3.06 3H10v3h1.2c1 0 1.8.89 1.8 2 0 1.1-.8 2-1.8 2H10v6h1.2c1 0 1.8.89 1.8 2 0 1.1-.8 2-1.8 2H10v6h1.2c1 0 1.8.89 1.8 2 0 1.1-.8 2-1.8 2H10v3h26V21.77l3-2.93V40.5c0 .83-.67 1.5-1.5 1.5h-29A1.5 1.5 0 017 40.5V36H5.8c-1 0-1.8-.89-1.8-2 0-1.1.8-2 1.8-2H7zm34.57-21.57a1.5 1.5 0 010 2.12l-17 17c-.05.05-.12.07-.17.1a1.48 1.48 0 01-.66.3c-.12.01-.23.03-.35.02H18.5a1.5 1.5 0 01-1.5-1.5v-5c0-.53.27-.99.68-1.25L34.46 5.44c.29-.3.67-.44 1.06-.44.28 0 .55.1.8.26.08.06.18.1.26.18l4.95 4.95.01.02c.01 0 .02 0 .03.02zM22.9 26.97L34.4 15.48l-2.87-2.86L20 24.14v2.83h2.9zm13.6-13.6l1.89-1.88-2.87-2.87-1.88 1.88 2.87 2.86z"/>
+        </svg>',
+
+    'fnd-alert' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-alert" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g data-name="Alert v3"><path d="M24 7a9 9 0 019 9v5.62a3 3 0 001.5 2.6A9 9 0 0139 32a8.66 8.66 0 01-.06 1H9.06A8.66 8.66 0 019 32a9 9 0 014.5-7.79 3 3 0 001.5-2.6V16a9 9 0 019-9m0-3a12 12 0 00-12 12v5.62A11.94 11.94 0 006.7 36h34.6A11.94 11.94 0 0036 21.62V16A12 12 0 0024 4zM24 41a3 3 0 01-2.82-2h-3.09a6 6 0 0011.82 0h-3.09A3 3 0 0124 41z"/></g>
+        </svg>',
+
+    'fnd-arrow-backward' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-backward" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Arrow Backward" d="M36.5 22.5H15.13l8-8A1.5 1.5 0 1021 12.34L10.47 22.91v.06a1.5 1.5 0 00-.27.41v.08a1.48 1.48 0 00-.1.5 1.48 1.48 0 00.1.5v.08a1.51 1.51 0 00.27.41v.06L21 35.66a1.5 1.5 0 002.12-2.12l-8-8H36.5a1.5 1.5 0 100-3z"/>
+        </svg>',
+
+    'fnd-arrow-down-circle' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-down-circle" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Arrow Down" d="M24 4a20 20 0 1020 20A20 20 0 0024 4zm11.66 17L25.09 31.53a1.52 1.52 0 01-2.13 0L12.34 21a1.5 1.5 0 012.12-2.12L24 28.37l9.54-9.54A1.5 1.5 0 0135.66 21z"/>
+        </svg>',
+
+    'fnd-arrow-down' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-down" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Arrow Down" d="M35.66 18.83a1.5 1.5 0 00-2.12 0L24 28.37l-9.54-9.54A1.5 1.5 0 0012.34 21l10.57 10.53a1.52 1.52 0 002.13 0L35.66 21a1.5 1.5 0 000-2.17z"/>
+        </svg>',
+
+    'fnd-arrow-downward' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-downward" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Arrow Downward" d="M35.66 24.83a1.5 1.5 0 00-2.12 0l-8 8V11.5a1.5 1.5 0 00-3 0v21.37l-8-8a1.5 1.5 0 10-2.2 2.13l10.57 10.53h.06a1.5 1.5 0 00.41.27h.08a1.48 1.48 0 00.5.1 1.48 1.48 0 00.5-.1h.08a1.51 1.51 0 00.46-.2h.06L35.66 27a1.5 1.5 0 000-2.17z"/>
+        </svg>',
+
+    'fnd-arrow-forward' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-forward" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M37.9 24.52A1.48 1.48 0 0038 24a1.48 1.48 0 00-.1-.5v-.08a1.51 1.51 0 00-.3-.42v-.06L27 12.34a1.5 1.5 0 10-2.12 2.12l8 8H11.5a1.5 1.5 0 000 3h21.37l-8 8a1.5 1.5 0 002.13 2.2l10.53-10.57v-.06a1.51 1.51 0 00.27-.41z"/>
+        </svg>',
+
+    'fnd-arrow-left-circle' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-left-circle" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Arrow Left" d="M24 4a20 20 0 1020 20A20 20 0 0024 4zm5.17 29.54A1.5 1.5 0 0127 35.66L16.47 25.09a1.52 1.52 0 010-2.13L27 12.34a1.5 1.5 0 012.12 2.12L19.63 24z"/>
+        </svg>',
+
+    'fnd-arrow-left' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-left" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Arrow Left" d="M19.63 24l9.54-9.54A1.5 1.5 0 0027 12.34L16.47 22.91a1.52 1.52 0 000 2.13L27 35.66a1.5 1.5 0 002.12-2.12z"/>
+        </svg>',
+
+    'fnd-arrow-right-circle' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-right-circle" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Arrow Right" d="M24 4a20 20 0 1020 20A20 20 0 0024 4zm7.56 21.07L21 35.66a1.5 1.5 0 01-2.12-2.12L28.37 24l-9.54-9.54A1.5 1.5 0 0121 12.34l10.53 10.57a1.52 1.52 0 010 2.13z"/>
+        </svg>',
+
+    'fnd-arrow-right' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-right" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Arrow Right" d="M31.56 22.93L21 12.34a1.5 1.5 0 00-2.12 2.12L28.37 24l-9.54 9.54A1.5 1.5 0 0021 35.66l10.53-10.57a1.52 1.52 0 000-2.13z"/>
+        </svg>',
+
+    'fnd-arrow-up-circle' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-up-circle" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Arrow Up" d="M24 4a20 20 0 1020 20A20 20 0 0024 4zm11.66 25.17a1.5 1.5 0 01-2.12 0L24 19.63l-9.54 9.54a1.5 1.5 0 01-2.12 0 1.5 1.5 0 010-2.12l10.57-10.58a1.52 1.52 0 012.13 0L35.66 27a1.5 1.5 0 010 2.17z"/>
+        </svg>',
+
+    'fnd-arrow-up' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-up" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Arrow Up" d="M35.66 27L25.09 16.47a1.52 1.52 0 00-2.13 0L12.34 27a1.5 1.5 0 000 2.12 1.5 1.5 0 002.12 0L24 19.63l9.54 9.54a1.5 1.5 0 002.12 0 1.5 1.5 0 000-2.17z"/>
+        </svg>',
+
+    'fnd-arrow-upward' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-arrow-upward" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Arrow Upward" d="M35.66 21L25.09 10.47h-.06a1.5 1.5 0 00-.41-.27h-.08A1.48 1.48 0 0024 10a1.48 1.48 0 00-.5.1h-.08a1.51 1.51 0 00-.41.27h-.06L12.34 21a1.5 1.5 0 102.12 2.12l8-8V36.5a1.5 1.5 0 003 0V15.13l8 8a1.5 1.5 0 102.2-2.13z"/>
+        </svg>',
+
+    'fnd-avatar' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-avatar" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 9a8 8 0 108 8 8 8 0 00-8-8zm0 13a5 5 0 115-5 5 5 0 01-5 5z"/><path d="M24 3a21 21 0 1021 21A21 21 0 0024 3zm-9 36.56V35c0-2.45 2.12-4.48 4.91-4.91A7.16 7.16 0 0121 30h6a7.16 7.16 0 011.09.09C30.88 30.52 33 32.55 33 35v4.56a17.85 17.85 0 01-18 0zm21-2.19V34.5a1.48 1.48 0 00-.06-.4c-.5-4-4.31-7.1-8.94-7.1h-6c-4.63 0-8.44 3.11-8.94 7.1a1.48 1.48 0 00-.06.4v2.88a18 18 0 1124 0z"/>
+        </svg>',
+
+    'fnd-bike' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-bike" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13.88 12.42h4a1.5 1.5 0 000-3h-4a1.5 1.5 0 000 3zM37 21a8.88 8.88 0 00-2.38.33l-5.15-11A1.51 1.51 0 0028 9.42h-4a1.5 1.5 0 000 3h3.16l1.16 2.49H17.09a.76.76 0 00-.21 0 1.49 1.49 0 00-1 .82l-2.62 5.57A8.86 8.86 0 0011 21a9 9 0 108.86 10.51h4.1l.19-.07a1 1 0 00.19-.12c.06 0 .12-.1.18-.15l.15-.2.07-.11 5.37-11.52 1.61 3.45A9 9 0 1037 21zm-13.44 5.47l-4-8.56h8zm-6.36-6.53l4 8.57h-1.33a9 9 0 00-3.87-6zm-.39 8.57h-3.6l1.5-3.22a6.08 6.08 0 012.1 3.22zM11 36a6 6 0 111-11.92l-2.47 5.3a1.5 1.5 0 00.73 2 1.32 1.32 0 00.43.12h6.11A6 6 0 0111 36zm26 0a6 6 0 01-3.81-10.63l2.44 5.22a1.5 1.5 0 102.72-1.27l-2.44-5.22A5.68 5.68 0 0137 24a6 6 0 010 12z"/>
+        </svg>',
+
+    'fnd-box-stack' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-box-stack" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path fill-rule="evenodd" d="M32 26h-5v14h14V26h-5v6h-4v-6zm-22-3V9H9V6h22v3h-1v14h12.5c.83 0 1.5.67 1.5 1.5v17c0 .83-.67 1.5-1.5 1.5h-37A1.5 1.5 0 014 41.5v-17c0-.83.67-1.5 1.5-1.5H10zm3 0h14V9H13v14zM7 40h17V26H7v14zm10-28h6v3h-6v-3zM7 34h17v3H7v-3z"/>
+        </svg>',
+
+    'fnd-building' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-building" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42.5 28.51v-18A1.5 1.5 0 0041 9H24a1.49 1.49 0 00-1.38.92 1.4 1.4 0 00-.12.58V18h-7a1.5 1.5 0 00-1.38.92 1.4 1.4 0 00-.12.58V27H7a1.5 1.5 0 00-1.38.92 1.4 1.4 0 00-.12.58v9A1.5 1.5 0 007 39h34a1.5 1.5 0 001.5-1.5zM8.5 30h14v6h-14zm31-9v6H34v-6zM24 21h7v6H17v-6zm1.52 9h14v6h-14zm0-18h14v6h-14z"/>
+        </svg>',
+
+    'fnd-bus' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-bus" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M36 3H12a5 5 0 00-5 5v28a5 5 0 002 4v4.5a1.5 1.5 0 001.5 1.5h3a1.5 1.5 0 001.5-1.5V41h18v3.5a1.5 1.5 0 001.5 1.5h3a1.5 1.5 0 001.5-1.5V40a5 5 0 002-4V8a5 5 0 00-5-5zM10 25V8a2 2 0 012-2h24a2 2 0 012 2v17zm2 13a2 2 0 01-2-2v-8h28v8a2 2 0 01-2 2H12z"/><path d="M14 31a2 2 0 102 2 2 2 0 00-2-2zM34 31a2 2 0 102 2 2 2 0 00-2-2zM27.5 31.5h-7a1.5 1.5 0 000 3h7a1.5 1.5 0 000-3zM4.5 7A1.5 1.5 0 003 8.5v7a1.5 1.5 0 003 0v-7A1.5 1.5 0 004.5 7zM43.5 7A1.5 1.5 0 0042 8.5v7a1.5 1.5 0 003 0v-7A1.5 1.5 0 0043.5 7z"/>
+        </svg>',
+
+    'fnd-cadastral-map' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-cadastral-map" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M43 5.5A1.5 1.5 0 0041.5 4h-35A1.5 1.5 0 005 5.5v37A1.5 1.5 0 006.5 44h35a1.5 1.5 0 001.5-1.5zm-35 9h13v5a1.5 1.5 0 001.5 1.5H30v20H8zm25 5a1.5 1.5 0 00-1.5-1.5H24v-5a1.5 1.5 0 00-1.5-1.5H8V7h32v34h-7z"/>
+        </svg>',
+
+    'fnd-calculator' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-calculator" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="16" cy="22" r="2"/><circle cx="24" cy="22" r="2"/><circle cx="32" cy="22" r="2"/><circle cx="16" cy="29" r="2"/><circle cx="24" cy="29" r="2"/><circle cx="32" cy="29" r="2"/><circle cx="16" cy="36" r="2"/><circle cx="24" cy="36" r="2"/><circle cx="32" cy="36" r="2"/><rect x="14" y="9" width="20" height="8" rx="1" ry="1"/><path d="M36 6a1 1 0 011 1v34a1 1 0 01-1 1H12a1 1 0 01-1-1V7a1 1 0 011-1h24m0-3H12a4 4 0 00-4 4v34a4 4 0 004 4h24a4 4 0 004-4V7a4 4 0 00-4-4z"/>
+        </svg>',
+
+    'fnd-calendar' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-calendar" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42 38.41V12.5a1.5 1.5 0 00-1.5-1.5h-7V9.5a1.5 1.5 0 00-3 0V11h-13V9.5a1.5 1.5 0 00-3 0V11h-7A1.5 1.5 0 006 12.5v26A1.5 1.5 0 007.5 40h33a1.5 1.5 0 001.5-1.5v-.09zM16 17a1.5 1.5 0 001.5-1.5V14h13v1.5a1.5 1.5 0 003 0V14H39v23H9V14h5.5v1.5A1.5 1.5 0 0016 17z"/><circle cx="16" cy="23" r="2"/><circle cx="16" cy="31" r="2"/><circle cx="24.01" cy="23" r="2"/><circle cx="24.01" cy="31" r="2"/><circle cx="32" cy="23" r="2"/><circle cx="32" cy="31" r="2"/>
+        </svg>',
+
+    'fnd-car' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-car" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M28.5 24.5h-9a1.5 1.5 0 000 3h9a1.5 1.5 0 000-3z"/><circle cx="12" cy="26" r="2.5"/><circle cx="35.96" cy="26" r="2.5"/><path d="M45.9 18.14l-2.66.16-1.73.1-.19-.81a21.42 21.42 0 00-3-6.31l-.56-.81a5.39 5.39 0 00-.51-.67 4.94 4.94 0 00-2-1.34 4.88 4.88 0 00-1.38-.32h-2.34Q27.73 8 23.69 8q-3.69 0-7.28.07H14.26a4.9 4.9 0 00-1.58.34 5 5 0 00-2 1.35l-.5.66-.55.79a21.5 21.5 0 00-3 6.36l-.19.81-1.73-.1c-.88 0-1.78-.09-2.65-.15a1.5 1.5 0 10-.2 3l2.33.14c-.05.42-.09.84-.12 1.27C4 23.38 4 24.18 4 25v.58a30.2 30.2 0 00.93 6.9l.06.21v5.81A1.5 1.5 0 006.5 40h3a1.5 1.5 0 001.5-1.5v-2.74h1l3.31.1Q19.54 36 24 36t8.69-.11c1.11 0 2.19-.06 3.27-.1H37v2.71a1.5 1.5 0 001.5 1.5h3a1.5 1.5 0 001.5-1.5v-6a.64.64 0 010-.07 30.2 30.2 0 00.93-6.9v-.58c0-.82 0-1.62-.11-2.42 0-.44-.08-.88-.13-1.31l2.34-.14a1.51 1.51 0 001.4-1.6 1.49 1.49 0 00-1.53-1.34zm-33.19-6.05l.31-.41a2 2 0 011.26-.56h.24c1.44 0 2.92-.06 4.45-.08s3.1 0 4.72 0h5.34l4.32.08h.59a1.94 1.94 0 011 .54l.31.41A20.45 20.45 0 0137.6 16c.25.56.45 1.12.64 1.69l.22.82a334.38 334.38 0 01-28.92.03c.07-.27.13-.55.22-.82A16.26 16.26 0 0110.4 16a20.45 20.45 0 012.31-3.91zM36 32.8h-.61a362.88 362.88 0 01-22.7 0h-1.65l-2-.08h-.85A25.38 25.38 0 017.48 30c0-.17-.07-.34-.1-.51A27.38 27.38 0 017 25.41V25c0-.87 0-1.74.13-2.59 0-.31.07-.62.11-.93l1.8.07q7.08.32 14.65.32c5.26 0 10.36-.12 15.27-.34l1.8-.08c0 .32.08.64.11 1 .08.85.13 1.72.13 2.59v.41a27.38 27.38 0 01-.37 4.08c0 .17-.07.34-.1.51a25.81 25.81 0 01-.63 2.63h-.85l-2 .08z"/>
+        </svg>',
+
+    'fnd-certificate' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-certificate" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M39.18 39.48l-4.83-11.65a14.67 14.67 0 01-2.46 1.9l3.94 9.51-5.54 2.3-4-9.73a11.75 11.75 0 01-1.33.14c-.31 0-.62.05-.93.05s-.62 0-.93-.05a11.75 11.75 0 01-1.33-.14l-4 9.73-5.54-2.3 3.94-9.51a14.67 14.67 0 01-2.46-1.9L8.82 39.48a1.5 1.5 0 00.81 2l8.37 3.4a1.4 1.4 0 00.29.09h.28a1.26 1.26 0 00.38-.06h.09a2.07 2.07 0 00.34-.15 1.75 1.75 0 00.29-.26l.06-.07a2 2 0 00.21-.35L24 34.19l4.09 9.88a2 2 0 00.21.35l.06.07a1.75 1.75 0 00.29.26 1.47 1.47 0 00.34.15h.09a1.26 1.26 0 00.38.06h.28a1.4 1.4 0 00.29-.09l8.32-3.44a1.5 1.5 0 00.83-1.95z"/><path d="M16.49 28.8a13.79 13.79 0 005.64 2.06c.18 0 .34.06.52.07.44 0 .89.07 1.35.07s.91 0 1.35-.07c.18 0 .34-.05.52-.07a13.79 13.79 0 005.64-2.06A14.31 14.31 0 0034 26.85a14 14 0 10-19.9 0 14.31 14.31 0 002.39 1.95zM13 17a11 11 0 0122 0 10.89 10.89 0 01-2.34 6.75 10.84 10.84 0 01-5.95 3.9 11.42 11.42 0 01-2 .32h-1.34a11.42 11.42 0 01-2-.32 10.84 10.84 0 01-5.95-3.9A10.89 10.89 0 0113 17z"/>
+        </svg>',
+
+    'fnd-check' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-check" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M41 12.9a1.5 1.5 0 00-2.12 0L18 33.76l-8.13-8.13a1.5 1.5 0 00-2.12 2.12l9.19 9.19a1.5 1.5 0 002.12 0L41 15a1.5 1.5 0 000-2.1z"/>
+        </svg>',
+
+    'fnd-checklist' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-checklist" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18.5 15.5A1.5 1.5 0 0117 14c0-.82.67-1.5 1.5-1.5h22c.82 0 1.5.68 1.5 1.5 0 .83-.68 1.5-1.5 1.5h-22zm-6 7c.83 0 1.5.68 1.5 1.5s-.67 1.5-1.5 1.5h-5A1.5 1.5 0 016 24c0-.82.67-1.5 1.5-1.5h5zm6 3A1.5 1.5 0 0117 24c0-.82.67-1.5 1.5-1.5h22c.82 0 1.5.68 1.5 1.5 0 .83-.68 1.5-1.5 1.5h-22zm-6 7c.83 0 1.5.68 1.5 1.5 0 .83-.67 1.5-1.5 1.5h-5A1.5 1.5 0 016 34c0-.82.67-1.5 1.5-1.5h5zm28 0c.82 0 1.5.68 1.5 1.5 0 .83-.68 1.5-1.5 1.5h-22A1.5 1.5 0 0117 34c0-.82.67-1.5 1.5-1.5h22zM9 12.88l2.94-2.94a1.5 1.5 0 012.12 2.12l-4 4a1.5 1.5 0 01-2.12 0l-2-2a1.5 1.5 0 012.12-2.12l.94.94z"/>
+        </svg>',
+
+    'fnd-clock' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-clock" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 4a20 20 0 1020 20A20 20 0 0024 4zm0 37a17 17 0 1117-17 17 17 0 01-17 17z"/><path d="M32.24 29.19L25 25V13.5a1.5 1.5 0 00-3 0v12.46a1.47 1.47 0 000 .21v.06a1.49 1.49 0 00.72 1l8 4.56a1.52 1.52 0 002.07-.55 1.49 1.49 0 00-.55-2.05z"/>
+        </svg>',
+
+    'fnd-close-circle' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-close-circle" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Close Cricle" d="M24 4a20 20 0 1020 20A20 20 0 0024 4zm10.25 28.13a1.5 1.5 0 11-2.12 2.12L24 26.12l-8.13 8.13a1.5 1.5 0 11-2.12-2.12L21.88 24l-8.13-8.13a1.5 1.5 0 012.12-2.12L24 21.88l8.13-8.13a1.5 1.5 0 012.12 2.12L26.12 24z"/>
+        </svg>',
+
+    'fnd-close' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-close" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M26.12 24l10.61-10.61a1.5 1.5 0 000-2.12 1.5 1.5 0 00-2.12 0L24 21.88 13.39 11.27a1.5 1.5 0 10-2.12 2.12L21.88 24 11.27 34.61a1.5 1.5 0 102.12 2.12L24 26.12l10.61 10.61a1.5 1.5 0 002.12 0 1.5 1.5 0 000-2.12z"/>
+        </svg>',
+
+    'fnd-comment' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-comment" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M40.5 7h-33A1.5 1.5 0 006 8.5v23a1.49 1.49 0 000 .34v.1a1.48 1.48 0 00.09.22l.05.1a1.49 1.49 0 00.14.19l.06.08a1.49 1.49 0 00.6.38h.09a1.49 1.49 0 00.4.06H12v6.5a1.5 1.5 0 00.11.55 1.49 1.49 0 00.82.82 1.46 1.46 0 001.09 0 1.49 1.49 0 00.49-.33L22.12 33H40.5a1.5 1.5 0 001.5-1.5v-23A1.5 1.5 0 0040.5 7zM20.88 30l-3 3L15 35.88V30H9V10h30v20H20.88z"/><circle cx="16" cy="20" r="2"/><circle cx="32" cy="20" r="2"/><circle cx="24" cy="20" r="2"/>
+        </svg>',
+
+    'fnd-complex' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-complex" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M40.5 3h-33a1.5 1.5 0 000 3H8v37.5A1.5 1.5 0 009.5 45h29a1.5 1.5 0 001.5-1.5V6h.5a1.5 1.5 0 000-3zm-18 33h3v6h-3zM37 42h-8.5v-7.5A1.5 1.5 0 0027 33h-6a1.5 1.5 0 00-1.5 1.5V42H11V6h26z"/><path d="M14 9h9v3h-9zM25 9h9v3h-9zM14 15h9v3h-9zM25 15h9v3h-9zM14 21h9v3h-9zM25 21h9v3h-9zM14 27h9v3h-9zM25 27h9v3h-9z"/>
+        </svg>',
+
+    'fnd-content-platform' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-content-platform" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M44 21.16A16 16 0 0028.84 6a1.5 1.5 0 00-.34 0h-23A1.5 1.5 0 004 7.5v19a1.49 1.49 0 000 .34A16 16 0 0020 42h22.5a1.5 1.5 0 001.5-1.5v-19a1.49 1.49 0 000-.34zM20 39A13 13 0 017 26V9h21a13 13 0 0113 13v17H20z"/><path d="M32.13 33H15.87A1.72 1.72 0 0114 31.5a1.72 1.72 0 011.87-1.5h16.26A1.72 1.72 0 0134 31.5a1.72 1.72 0 01-1.87 1.5zM32.76 18H15.24A1.39 1.39 0 0114 16.5a1.39 1.39 0 011.24-1.5h17.52A1.39 1.39 0 0134 16.5a1.39 1.39 0 01-1.24 1.5zM32.76 25.5H15.24a1.52 1.52 0 010-3h17.52a1.52 1.52 0 010 3z"/>
+        </svg>',
+
+    'fnd-crown' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-crown" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M40 10.5a5.49 5.49 0 00-4.8 8.18l-3 3-4.05-6.08a5.5 5.5 0 10-8.36 0l-4.05 6.08-3-3a5.5 5.5 0 10-5.71 2.74l1.48 12.75A1.5 1.5 0 0010 35.5h28a1.5 1.5 0 001.49-1.33l1.42-12.75A5.5 5.5 0 0040 10.5zm1.27 7.64A2.54 2.54 0 0137.5 16a2.5 2.5 0 113.77 2.14zM21.5 12a2.5 2.5 0 015 0 2.47 2.47 0 01-.15.82 2.49 2.49 0 01-4.7 0 2.47 2.47 0 01-.15-.82zm-16 4a2.5 2.5 0 115 0 2.47 2.47 0 010 .34 2.5 2.5 0 01-5-.34zm31.16 16.5H11.34l-1.27-11.41a5.48 5.48 0 00.6-.29l4.26 4.26a1.5 1.5 0 002.31-.23l5.07-7.6a5.46 5.46 0 003.37 0l5.07 7.6a1.5 1.5 0 002.31.23l4.26-4.26a5.45 5.45 0 00.6.29zM38 38.5H10a1.5 1.5 0 100 3h28a1.5 1.5 0 000-3z"/>
+        </svg>',
+
+    'fnd-daycare' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-daycare" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 35a5 5 0 105 5 5 5 0 00-5-5zm0 7a2 2 0 112-2 2 2 0 01-2 2zM32 35a5 5 0 105 5 5 5 0 00-5-5zm0 7a2 2 0 112-2 2 2 0 01-2 2zM43 22.25v-.17a17 17 0 00-17-17 1.5 1.5 0 00-1.5 1.5V22H10v-1a6 6 0 00-6-6H2.5a1.5 1.5 0 000 3H4a3 3 0 013 3V28a6 6 0 006 6h24a5.7 5.7 0 001.25-.15 5.57 5.57 0 00.73-.19A6 6 0 0043 28v-.67-3.6-.07zM40 22H27.5V8.17A14 14 0 0140 22zm-2.76 9H13a3 3 0 01-1.86-.66 3.08 3.08 0 01-1-1.34 2.93 2.93 0 01-.14-1v-3h30v3a2.93 2.93 0 01-.18 1 3 3 0 01-2.59 2z"/>
+        </svg>',
+
+    'fnd-delete' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-delete" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Close Cricle" d="M24 4a20 20 0 1020 20A20 20 0 0024 4zm10.25 28.13a1.5 1.5 0 11-2.12 2.12L24 26.12l-8.13 8.13a1.5 1.5 0 11-2.12-2.12L21.88 24l-8.13-8.13a1.5 1.5 0 012.12-2.12L24 21.88l8.13-8.13a1.5 1.5 0 012.12 2.12L26.12 24z"/>
+        </svg>',
+
+    'fnd-dice' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-dice" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M10 19h13a5 5 0 015 5v13a5 5 0 01-5 5H10a5 5 0 01-5-5V24a5 5 0 015-5zm0 3a2 2 0 00-2 2v13c0 1.1.9 2 2 2h13a2 2 0 002-2V24a2 2 0 00-2-2H10zm2 6a2 2 0 110-4 2 2 0 010 4zm0 9a2 2 0 110-4 2 2 0 010 4zm9-9a2 2 0 110-4 2 2 0 010 4zm0 9a2 2 0 110-4 2 2 0 010 4zm10-12h6a2 2 0 002-2V11a2 2 0 00-2-2H25a2 2 0 00-2 2v5h-3v-5a5 5 0 015-5h12a5 5 0 015 5v12a5 5 0 01-5 5h-6v-3zm0-6a2 2 0 110-4 2 2 0 010 4zm4.5 4.5a2 2 0 110-4 2 2 0 010 4zm-9-9a2 2 0 110-4 2 2 0 010 4z"/>
+        </svg>',
+
+    'fnd-document' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-document" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M38.9 15.21a1.46 1.46 0 00-.37-.73l-9.75-9.75A1.49 1.49 0 0027.5 4h-17A1.5 1.5 0 009 5.5v37a1.5 1.5 0 001.5 1.5h27a1.5 1.5 0 001.5-1.5V15.73a1.49 1.49 0 00-.1-.52zM12 7h14.81L36 16.19V41H12z"/><path d="M31.48 33.5h-15a1.5 1.5 0 000 3h15a1.5 1.5 0 000-3zM31.5 26.5h-15a1.5 1.5 0 100 3h15a1.5 1.5 0 000-3zM16.5 22.5h15a1.5 1.5 0 000-3h-15a1.5 1.5 0 100 3z"/>
+        </svg>',
+
+    'fnd-door' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-door" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M40.5 39H36V7.5A1.5 1.5 0 0034.5 6h-21A1.5 1.5 0 0012 7.5V39H7.5a1.5 1.5 0 000 3h33a1.5 1.5 0 000-3zM15 9h18v30H15z"/><path d="M19.29 19a1.5 1.5 0 00-1.5 1.5v7a1.5 1.5 0 003 0v-7a1.5 1.5 0 00-1.5-1.5z"/>
+        </svg>',
+
+    'fnd-download' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-download" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M39.9 15.21a1.46 1.46 0 00-.37-.73l-9.75-9.75A1.49 1.49 0 0028.5 4h-15A1.5 1.5 0 0012 5.5v23.38L7.08 24A1.5 1.5 0 005 26.08l7.48 7.48a1.5 1.5 0 00.49.33 1.49 1.49 0 00.55.11 1.49 1.49 0 00.55-.11 1.5 1.5 0 00.49-.32L22 26.08A1.5 1.5 0 0022 24a1.5 1.5 0 00-2.12 0L15 28.88V7h12.81L37 16.19V41H15v-1.5a1.5 1.5 0 00-3 0v3a1.5 1.5 0 001.5 1.5h25a1.5 1.5 0 001.5-1.5V15.73a1.49 1.49 0 00-.1-.52z"/>
+        </svg>',
+
+    'fnd-error' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-error" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="22.5" y="13" width="3" height="17" rx="1.5" ry="1.5" transform="rotate(-180 24 21.5)"/><rect x="22.5" y="32" width="3" height="3" rx="1.5" ry="1.5" transform="rotate(-180 24 33.5)"/><path d="M44 16.78a1.46 1.46 0 00-.17-1 1.49 1.49 0 00-.19-.29v-.05l-11-11a1.5 1.5 0 00-.49-.33A1.49 1.49 0 0031.5 4h-15a1.49 1.49 0 00-.55.11 1.5 1.5 0 00-.49.33l-11 11a1.49 1.49 0 00-.2.3 1.46 1.46 0 00-.16 1v14.52a1.47 1.47 0 00.39 1.3l11 11a1.47 1.47 0 001.29.39h14.49a1.47 1.47 0 001.29-.39l11-11a1.47 1.47 0 00.39-1.3zM30.92 41H17.08L7 30.92v-13.8L17.12 7h13.76L41 17.12v13.8z"/>
+        </svg>',
+
+    'fnd-exit' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-exit" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M28.5 13a1.5 1.5 0 01-1.5-1.5V9H9v30h18v-2.5a1.5 1.5 0 013 0v4c0 .83-.67 1.5-1.5 1.5h-21A1.5 1.5 0 016 40.5v-33C6 6.67 6.67 6 7.5 6h21c.83 0 1.5.67 1.5 1.5v4c0 .83-.67 1.5-1.5 1.5zm9.63 9.5l-4.7-4.69a1.5 1.5 0 012.13-2.12l7.5 7.5a1.5 1.5 0 01-.04 2.16l-7.5 7a1.5 1.5 0 01-2.04-2.2l4.98-4.65H20.5a1.5 1.5 0 010-3h17.63z"/>
+        </svg>',
+
+    'fnd-external' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-external" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M39 10.55A1.5 1.5 0 0037.55 9h-11a1.5 1.5 0 000 3h7.38L21 24.92A1.51 1.51 0 0021 27a1.5 1.5 0 002.12 0L36 14.17v7.38a1.5 1.5 0 103 0v-11z"/><path d="M35.55 27a1.51 1.51 0 00-1.5 1.5V36H12V14h7.5a1.5 1.5 0 000-3h-9A1.5 1.5 0 009 12.55v25a1.5 1.5 0 001.5 1.5h25a1.51 1.51 0 001.5-1.5v-9A1.51 1.51 0 0035.55 27z"/>
+        </svg>',
+
+    'fnd-facebook' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-facebook" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 17.08h-4.23v6.84H19V44h8V23.83h5.62l.6-6.75H27v-3.85c0-1.59.32-2.22 1.86-2.22h4.36V4h-5.57c-6 0-8.7 2.64-8.7 7.69z"/>
+        </svg>',
+
+    'fnd-ferry' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-ferry" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7.81 34.5h.2a13 13 0 012.81-.22L8.55 23.32l14-2.94v19a6.41 6.41 0 003-.24V20.38l14 2.94-2.37 10.89a15.32 15.32 0 012.79.34l.2.05L43 21l-5-1v-8a4.09 4.09 0 00-.14-1A4 4 0 0035 8.14 4.09 4.09 0 0034 8h-8.5V5.5a1.5 1.5 0 00-3 0V8H14a4.09 4.09 0 00-1 .14A4 4 0 0010.14 11a4.09 4.09 0 00-.14 1v8l-5 1zM13 15.86V12a1 1 0 011-1h20a1 1 0 011 1v7.32L24 17l-11 2.32z"/><path d="M45.3 38.13a19.42 19.42 0 00-5.13-2.05L40 36a15.32 15.32 0 00-2.79-.34h-.2a11.1 11.1 0 00-7.44 2.58c-.53.44-1 .82-1.54 1.16a9.79 9.79 0 01-2.5 1.23 6.41 6.41 0 01-3 .24A8.89 8.89 0 0119 39.41c-.5-.34-1-.72-1.54-1.16A10.7 10.7 0 0011 35.72h-.21a13 13 0 00-2.79.22h-.2a14.42 14.42 0 00-5.18 2.21 1.5 1.5 0 001.74 2.44 11.2 11.2 0 012.38-1.22 10.55 10.55 0 011.87-.54 8.59 8.59 0 013.05-.09 7.49 7.49 0 012.06.63 8 8 0 011.81 1.15 18.6 18.6 0 002.75 1.92 10.88 10.88 0 004.21 1.46 8.39 8.39 0 001 .06 9.09 9.09 0 002-.23 11.79 11.79 0 003.22-1.29 19.07 19.07 0 002.74-1.92 7.74 7.74 0 011.87-1.15 8.38 8.38 0 013-.69 11.33 11.33 0 013 .28 11.76 11.76 0 011.48.41 15.62 15.62 0 012.88 1.27 1.5 1.5 0 001.59-2.55z"/>
+        </svg>',
+
+    'fnd-filter' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-filter" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M43.86 6.12s0-.09.05-.14a1.46 1.46 0 000-.14v-.13a1.47 1.47 0 000-.16v-.09a1.51 1.51 0 000-.15 1.48 1.48 0 000-.14v-.13l-.06-.14-.07-.12-.09-.13-.09-.1-.12-.12-.06-.06-.15-.09-.11-.06-.16-.14h-.13L42.7 4H5.16L5 4.08l-.15.06-.11.06-.15.09-.06.06-.12.12-.09.1-.09.13-.07.12L4.1 5v.27a1.51 1.51 0 000 .16v.09c0 .03 0 0 0 0a1.53 1.53 0 000 .16v.13a1.48 1.48 0 000 .14s0 .09.05.14l.07.12.08.13L18.5 24.9V42.56a1.5 1.5 0 000 .21 1.49 1.49 0 002.65.61l8-10.42a1.48 1.48 0 00.28-.67 1.51 1.51 0 000-.17v-7.21l14.26-18.5.08-.14zM26.81 23.48a1.49 1.49 0 00-.19.34 1.49 1.49 0 00-.07.21v7.48l-5 6.52V24.42a1.48 1.48 0 00-.07-.42 1.82 1.82 0 00-.25-.51L8.54 7h30.92z"/>
+        </svg>',
+
+    'fnd-filters' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-filters" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7.5 15.5h5a1.5 1.5 0 000-3h-5a1.5 1.5 0 000 3zM18.5 15.5h22a1.5 1.5 0 000-3h-22a1.5 1.5 0 000 3zM12.5 22.5h-5a1.5 1.5 0 000 3h5a1.5 1.5 0 000-3zM18.5 25.5h22a1.5 1.5 0 000-3h-22a1.5 1.5 0 000 3zM12.5 32.5h-5a1.5 1.5 0 000 3h5a1.5 1.5 0 000-3zM40.5 32.5h-22a1.5 1.5 0 100 3h22a1.5 1.5 0 000-3z"/>
+        </svg>',
+
+    'fnd-floorplan' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-floorplan" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42 7.5A1.5 1.5 0 0040.5 6h-33A1.5 1.5 0 006 7.5v33A1.5 1.5 0 007.5 42H18v-3H9V9h30v30h-7.76L20.8 28.56l-2.12 2.12L30 42h10.5a1.5 1.5 0 001.5-1.5v-33z"/>
+        </svg>',
+
+    'fnd-for-sale' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-for-sale" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path fill-rule="evenodd" d="M26 36v7h2.5c.83 0 1.5.67 1.5 1.5s-.68 1.5-1.5 1.5h-9a1.5 1.5 0 01-1.5-1.5c0-.83.68-1.5 1.5-1.5H22v-7h-9a3 3 0 01-3-3V9a3 3 0 013-3h9V4a2 2 0 114 0v2h9a3 3 0 013 3v24a3 3 0 01-3 3h-9zm9-27H13v24h22V9zm-19 7.5c0-.83.67-1.5 1.5-1.5h13c.83 0 1.5.67 1.5 1.5v3c0 .83-.67 1.5-1.5 1.5h-13a1.5 1.5 0 01-1.5-1.5v-3z"/>
+        </svg>',
+
+    'fnd-founded' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-founded" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 4a1.5 1.5 0 00-1.5 1.5v9a1.5 1.5 0 003 0v-9A1.5 1.5 0 0024 4zM24 32a1.5 1.5 0 00-1.5 1.5v9a1.5 1.5 0 003 0v-9A1.5 1.5 0 0024 32zM33.19 16.93l5-4.95A1.5 1.5 0 0036 9.86l-5 5a1.5 1.5 0 102.12 2.12zM14.81 31.07l-5 5A1.5 1.5 0 0012 38.14l4.95-5a1.5 1.5 0 10-2.12-2.12zM42.5 22.5h-9a1.5 1.5 0 000 3h9a1.5 1.5 0 000-3zM16 24a1.5 1.5 0 00-1.5-1.5h-9a1.5 1.5 0 000 3h9A1.5 1.5 0 0016 24zM33.19 31.07a1.5 1.5 0 10-2.12 2.12l5 5A1.5 1.5 0 0038.14 36zM12 9.86A1.5 1.5 0 009.86 12l5 4.95a1.5 1.5 0 102.12-2.12z"/>
+        </svg>',
+
+    'fnd-fullscreen-exit' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-fullscreen-exit" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M41.56 6.44a1.5 1.5 0 00-2.12 0L29 16.88V11.5a1.5 1.5 0 00-3 0v9a1.49 1.49 0 00.11.56 1.5 1.5 0 00.82.82 1.49 1.49 0 00.55.11h9a1.5 1.5 0 000-3h-5.36L41.56 8.56a1.5 1.5 0 000-2.12zM22 27.5a1.49 1.49 0 00-.11-.55 1.5 1.5 0 00-.8-.81 1.49 1.49 0 00-.59-.14h-9a1.5 1.5 0 000 3h5.38L6.44 39.44a1.5 1.5 0 002.12 2.12L19 31.12v5.38a1.5 1.5 0 001.5 1.5 1.5 1.5 0 001.5-1.5v-9z"/>
+        </svg>',
+
+    'fnd-fullscreen' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-fullscreen" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42 7.5a1.49 1.49 0 00-.11-.5 1.5 1.5 0 00-.82-.82A1.49 1.49 0 0040.5 6h-9a1.5 1.5 0 000 3h5.38L26.44 19.44a1.5 1.5 0 002.12 2.12L39 11.12v5.38a1.5 1.5 0 003 0v-9zM19.44 26.44L9 36.88V31.5A1.5 1.5 0 007.5 30 1.5 1.5 0 006 31.5v9a1.49 1.49 0 00.11.56 1.48 1.48 0 00.82.82 1.49 1.49 0 00.57.12h9a1.5 1.5 0 000-3h-5.38l10.44-10.44a1.5 1.5 0 00-2.12-2.12z"/>
+        </svg>',
+
+    'fnd-garage' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-garage" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M43.7 20.46L24.86 7.27a1 1 0 00-.23-.13l-.21-.07h-.74l-.21.07a1 1 0 00-.23.13L4.3 20.46A1.5 1.5 0 106 22.92l18-12.59 18 12.59a1.5 1.5 0 101.72-2.46z"/><path d="M37 38h-2V22.5a1.4 1.4 0 00-.12-.58A1.5 1.5 0 0033.5 21h-19a1.5 1.5 0 00-1.5 1.5V38h-2V20.44l-3 2.1v17A1.5 1.5 0 009.5 41h5a1.5 1.5 0 001.5-1.5V36h16v3.5a1.5 1.5 0 001.5 1.5h5a1.5 1.5 0 001.5-1.5v-17l-3-2.1zM16 24h16v3H16zm0 9v-3h16v3z"/>
+        </svg>',
+
+    'fnd-handshake' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-handshake" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path fill="none" d="M0 0h48v48H0z"/><path d="M34.67 38.79a4.55 4.55 0 00.86-1.26 4.35 4.35 0 00.47-1.69 4.35 4.35 0 001.69-.43 4.28 4.28 0 001.26-.86 4.82 4.82 0 00.87-1.26 4.5 4.5 0 00-.55-4.73l6-6a1.5 1.5 0 00-2.13-2.12l-6 6-3.88-3.88-6.72-6.72-1.42-1.42.35-.35a1.5 1.5 0 00-2.12-2.12l-.35.35-.71.71-.7.71-.2.19-.51.51-.41.41-.27.27-1.8 1.8a1.5 1.5 0 01-2.12-2.12l1.8-1.8.45-.45.09-.09.1-.1.51-.51 1.61-1.61.71-.71.7-.7 1.06-1.06a1.44 1.44 0 01.42-.29 1.48 1.48 0 011.7.29l2.57 2.4 1 1.06a1.49 1.49 0 002.12 0l1.06-1.06.36-.35a1.51 1.51 0 000-2.09 1.49 1.49 0 00-2.08 0l-.39.29-2.47-2.45a4.7 4.7 0 00-3-1.29h-.47a4.54 4.54 0 00-1.69.43 4.41 4.41 0 00-1.26.86l-1.01 1.06L18.76 8 17.7 7a1.5 1.5 0 00-2.11 2.12l1.06 1.06-2.48 2.48a4.47 4.47 0 00-.86 5.1 4.28 4.28 0 00.85 1.24 4.66 4.66 0 001.26.87 4.49 4.49 0 005.1-.87L23 16.51l1.41 1.42 6.73 6.72 2.66 2.67 1.2 1.22 1.76 1.76a1.46 1.46 0 01.29.41 1.49 1.49 0 01-2 2 1.62 1.62 0 01-.42-.28l-1.73-1.77-1.22-1.22-2-2a1.5 1.5 0 00-2.08 2.16l2 2 1.22 1.22 1.77 1.77a1.57 1.57 0 01.28.41 1.48 1.48 0 01-2 2 1.42 1.42 0 01-.41-.28l-1.8-1.82-1.22-1.22-2-2a1.49 1.49 0 00-2.12 0 1.51 1.51 0 000 2.12l2 2 1.22 1.2 1.76 1.77a1.62 1.62 0 01.28.42 1.49 1.49 0 01-2 2 1.28 1.28 0 01-.41-.29l-1.78-1.77-1.22-1.22-.9-.9-.82-.82A4.51 4.51 0 0021 34a4.22 4.22 0 00-.86-1.26 4.4 4.4 0 00-1.25-.87l.54-.55a4.29 4.29 0 00.63-.79 4.54 4.54 0 00.46-3.78A4.47 4.47 0 0019.46 25a4.28 4.28 0 00-1.77-1.07 4.82 4.82 0 00-1.64-.23 4.5 4.5 0 00-3 1.3l-1.41 1.41L5 19.7a1.5 1.5 0 10-2.12 2.12l6.71 6.72-1.8 1.77a4.49 4.49 0 00-.86 5.1 4.25 4.25 0 00.87 1.26A4.64 4.64 0 0010.74 38a4.59 4.59 0 00.43 1.7 4.32 4.32 0 002.12 2.12 4.59 4.59 0 001.7.43 4.64 4.64 0 001.29 2.94 4.13 4.13 0 001.26.87 4.49 4.49 0 005.1-.86l1.79-1.79a4.52 4.52 0 004.73.54 4.4 4.4 0 001.26-.95 4.21 4.21 0 00.87-1.25 4.4 4.4 0 00.43-1.7 4.4 4.4 0 001.69-.43 4.55 4.55 0 001.26-.83zm-18.74-8.13l-1.57 1.57-.55.55-.71.71-1.1 1.06a1.5 1.5 0 01-2.12-2.12l1.78-1.77.54-.55 1.58-1.57 1.41-1.42a1.51 1.51 0 012.12 0 1.49 1.49 0 010 2.12zm1.41 7.07l-1.06 1.06a1.5 1.5 0 11-2.12-2.12l1.06-1.06.71-.71a1.5 1.5 0 112.12 2.1zM20.53 43a1.5 1.5 0 01-2.12-2.12l1.77-1.77 2.12 2.12z"/>
+        </svg>',
+
+    'fnd-heart-filled' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-heart-filled" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 44.26a1.5 1.5 0 01-.55-.11l-.65-.25a32.13 32.13 0 01-8-5.15 38.24 38.24 0 01-9.12-11A28.26 28.26 0 013.43 22a24.69 24.69 0 01-.87-6.49A11.76 11.76 0 0120.23 5.35 12.12 12.12 0 0124 8.85a12.12 12.12 0 013.77-3.5 11.77 11.77 0 0117.67 10.19 25.21 25.21 0 01-.86 6.46 28.42 28.42 0 01-2.27 5.71 38.1 38.1 0 01-9.12 11 31.83 31.83 0 01-8 5.15l-.65.25a1.5 1.5 0 01-.54.15z"/>
+        </svg>',
+
+    'fnd-heart-semi-filled' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-heart-semi-filled" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 44.26a1.5 1.5 0 01-.55-.11l-.65-.25a32.13 32.13 0 01-8-5.15 38.24 38.24 0 01-9.12-11A28.26 28.26 0 013.43 22a24.69 24.69 0 01-.87-6.49A11.76 11.76 0 0120.23 5.35 12.12 12.12 0 0124 8.85a12.12 12.12 0 013.77-3.5 11.77 11.77 0 0117.67 10.19 25.21 25.21 0 01-.86 6.46 28.42 28.42 0 01-2.27 5.71 38.1 38.1 0 01-9.12 11 31.83 31.83 0 01-8 5.15l-.65.25a1.5 1.5 0 01-.54.15z" opacity=".2"/><path fill="#fff" d="M24 44.26a1.5 1.5 0 01-.55-.11l-.65-.25a32.13 32.13 0 01-8-5.15 38.24 38.24 0 01-9.12-11A28.26 28.26 0 013.43 22a24.69 24.69 0 01-.87-6.49A11.76 11.76 0 0120.23 5.35 12.12 12.12 0 0124 8.85a12.12 12.12 0 013.77-3.5 11.77 11.77 0 0117.67 10.19 25.21 25.21 0 01-.86 6.46 28.42 28.42 0 01-2.27 5.71 38.1 38.1 0 01-9.12 11 31.83 31.83 0 01-8 5.15l-.65.25a1.5 1.5 0 01-.54.15zm-9.67-37.5a8.79 8.79 0 00-8.77 8.78 21.8 21.8 0 00.76 5.71 25.32 25.32 0 002 5.09 35 35 0 008.4 10.11 29.67 29.67 0 007.15 4.65h.22a29.67 29.67 0 007.15-4.65 34.83 34.83 0 008.39-10.11 25.22 25.22 0 002-5.1 21.79 21.79 0 00.76-5.7A8.75 8.75 0 0029.29 8a8.88 8.88 0 00-3.14 3.1l-.26.46-.51 1.16a1.5 1.5 0 01-1.37.91 1.51 1.51 0 01-1.38-.9l-.51-1.16-.27-.47A8.88 8.88 0 0018.71 8a8.63 8.63 0 00-4.38-1.24z"/>
+        </svg>',
+
+    'fnd-heart' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-heart" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 44.25a1.5 1.5 0 01-.55-.11l-.65-.25a32.13 32.13 0 01-8-5.15 38.1 38.1 0 01-9.12-11A28.26 28.26 0 013.43 22a24.69 24.69 0 01-.87-6.49A11.76 11.76 0 0120.23 5.34 12.12 12.12 0 0124 8.84a12 12 0 013.77-3.5 11.77 11.77 0 0117.67 10.19 24.8 24.8 0 01-.87 6.47 27.8 27.8 0 01-2.26 5.71 38 38 0 01-9.12 11 31.83 31.83 0 01-8 5.15l-.66.26a1.66 1.66 0 01-.53.13zm-.11-3.16h.22a29.67 29.67 0 007.15-4.65 35 35 0 008.39-10.11 25.22 25.22 0 002-5.1 21.79 21.79 0 00.76-5.7 8.75 8.75 0 00-13.13-7.59A8.93 8.93 0 0026.15 11l-.26.46-.51 1.16a1.5 1.5 0 01-1.37.91 1.51 1.51 0 01-1.38-.9l-.51-1.16-.27-.47a8.8 8.8 0 00-3.14-3.1 8.63 8.63 0 00-4.38-1.19 8.79 8.79 0 00-8.77 8.78 21.67 21.67 0 00.76 5.7 24.82 24.82 0 002 5.1 35 35 0 008.4 10.11 29.79 29.79 0 007.15 4.65z"/>
+        </svg>',
+
+    'fnd-house-image' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-house-image" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g data-name="Object in Beeld"><path d="M33 36H15V21.77l-3 3.33v12.4a1.5 1.5 0 001.5 1.5h21a1.5 1.5 0 001.5-1.5V25l-3-3.33z"/><path d="M39.05 25.22a1.5 1.5 0 00.11-2.12L36 19.56l-2.08-2.32-8.81-9.74s0-.05-.06-.08a1.42 1.42 0 00-.23-.13 1.47 1.47 0 00-.21-.13 1.44 1.44 0 00-.3-.07 1 1 0 00-.53 0 1.44 1.44 0 00-.3.07 1.47 1.47 0 00-.21.13 1.42 1.42 0 00-.23.13s0 .05-.06.08l-8.8 9.77L12 19.62 8.84 23.1a1.5 1.5 0 102.23 2l.9-1 3-3.33 9-10 9 10L36 24l1 1.07a1.5 1.5 0 002.12.11zM8.5 42H5v-3.5a1.5 1.5 0 00-3 0v5A1.5 1.5 0 003.5 45h5a1.5 1.5 0 100-3zM3.5 11A1.5 1.5 0 005 9.5V6h3.5a1.5 1.5 0 000-3h-5A1.5 1.5 0 002 4.5v5A1.5 1.5 0 003.5 11zM44.5 37a1.5 1.5 0 00-1.5 1.5V42h-3.5a1.5 1.5 0 000 3h5a1.5 1.5 0 001.5-1.5v-5a1.5 1.5 0 00-1.5-1.5zM44.5 3h-5a1.5 1.5 0 000 3H43v3.5a1.5 1.5 0 003 0v-5A1.5 1.5 0 0044.5 3z"/></g>
+        </svg>',
+
+    'fnd-house' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-house" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M34.81 36.88h-22V19.72l-3 3.28v15.38a1.5 1.5 0 001.5 1.5h25a1.5 1.5 0 001.5-1.5V23l-3-3.33z"/><path d="M42.14 20.38L24.93 1.26l-.08-.06a1.45 1.45 0 00-.2-.15 1.5 1.5 0 00-.28-.17 2.64 2.64 0 00-.54-.11 1.5 1.5 0 00-.36.05h-.18a1.5 1.5 0 00-.37.22l-.12.09s-.07 0-.1.07L5.48 20.37a1.5 1.5 0 102.23 2L9.81 20l3-3.33 11-12.22 11 12.22 3 3.33 2.11 2.34a1.5 1.5 0 002.23-2z"/>
+        </svg>',
+
+    'fnd-houses' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-houses" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M46.5 26.5c.6.6.5 1.6-.1 2.1-.6.6-1.5.5-2.1-.1l-11.5-13 .8-.9c.1-.1.2-.1.3-.2.1 0 .1-.1.2-.1.1-.1.2-.1.3-.1h.6c.1 0 .2.1.3.1.1 0 .1.1.2.1.1.1.2.1.3.2l10.7 11.9zm-5.8-1l3 3.3v7.8c0 .8-.7 1.5-1.5 1.5h-5.3v-3h3.8v-9.6zm-29.8 9.6v3H5.6c-.8 0-1.5-.7-1.5-1.5v-7.8l3-3.3v9.6h3.8zm4.2-19.6l-11.5 13c-.5.6-1.5.7-2.1.1-.6-.5-.7-1.5-.1-2.1l10.7-11.9c.1-.1.2-.1.3-.2.1 0 .1-.1.2-.1.1-.1.2-.1.3-.1h.6c.1 0 .2.1.3.1.1 0 .1.1.2.1.1.1.2.1.3.2l.8.9zm17.3 6.8l3 3.3v13c0 .8-.7 1.5-1.5 1.5h-20c-.8 0-1.5-.7-1.5-1.5v-13l3-3.3v14.8h17V22.3zm6 1.2c.6.6.5 1.6-.1 2.1-.6.6-1.5.5-2.1-.1L23.9 11.8 11.4 25.5c-.5.6-1.5.7-2.1.1-.6-.5-.7-1.5-.1-2.1L22.6 8.6c0-.1.1-.1.1-.1.1-.1.1-.2.2-.2.1-.1.2-.2.3-.2.1-.1.2-.1.3-.1h.6c.1.1.2.1.3.1.1.1.2.1.3.2l.2.2c0 .1.1.1.1.1l13.4 14.9z"/>
+        </svg>',
+
+    'fnd-images' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-images" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M40.5 14h-29a1.5 1.5 0 00-1.5 1.5v25a1.5 1.5 0 001.5 1.5h29a1.5 1.5 0 001.5-1.5v-25a1.5 1.5 0 00-1.5-1.5zM13 17h26v22H13z"/><path d="M7 11h26v1h3V9.5A1.5 1.5 0 0034.5 8h-29A1.5 1.5 0 004 9.5v25A1.5 1.5 0 005.5 36H8v-3H7z"/>
+        </svg>',
+
+    'fnd-info' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-info" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="22.5" y="18" width="3" height="17" rx="1.5" ry="1.5"/><path d="M24 16a1.5 1.5 0 000-3 1.5 1.5 0 000 3z"/><path d="M24 4a20 20 0 1020 20A20 20 0 0024 4zm0 37a17 17 0 1117-17 17 17 0 01-17 17z"/>
+        </svg>',
+
+    'fnd-infospot' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-infospot" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="22.5" y="18" width="3" height="17" rx="1.5" ry="1.5"/><path d="M24 16a1.5 1.5 0 000-3 1.5 1.5 0 000 3z"/>
+        </svg>',
+
+    'fnd-instagram' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-instagram" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 7.61c5.34 0 6 0 8.08.12 5.42.25 8 2.82 8.2 8.2.1 2.11.11 2.74.11 8.08s0 6-.11 8.08c-.25 5.37-2.77 8-8.2 8.2-2.11.1-2.74.12-8.08.12s-6 0-8.08-.12c-5.43-.25-8-2.83-8.2-8.2C7.62 30 7.6 29.34 7.6 24s0-6 .12-8.08c.25-5.38 2.77-8 8.2-8.2 2.08-.09 2.74-.11 8.08-.11zM24 4c-5.43 0-6.11 0-8.24.12-7.27.33-11.31 4.36-11.64 11.63C4 17.89 4 18.57 4 24s0 6.11.12 8.25c.33 7.26 4.36 11.3 11.63 11.63 2.13.1 2.81.12 8.25.12s6.11 0 8.25-.12c7.26-.33 11.3-4.36 11.63-11.63.12-2.14.12-2.82.12-8.25s0-6.11-.12-8.24c-.33-7.26-4.36-11.3-11.63-11.64C30.11 4 29.43 4 24 4zm0 9.73A10.27 10.27 0 1034.27 24 10.27 10.27 0 0024 13.73zm0 16.94A6.67 6.67 0 1130.67 24 6.67 6.67 0 0124 30.67zm10.68-19.74a2.4 2.4 0 102.4 2.4 2.4 2.4 0 00-2.4-2.4z"/>
+        </svg>',
+
+    'fnd-international' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-international" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M44.56 19.73a21 21 0 00-16.3-16.29A20.59 20.59 0 0024 3a20.59 20.59 0 00-4.26.44 21 21 0 00-16.31 16.3A21.3 21.3 0 003 24a21.3 21.3 0 00.43 4.26 21 21 0 0016.31 16.31A21.3 21.3 0 0024 45a21.3 21.3 0 004.26-.43 21 21 0 0016.31-16.31A21.3 21.3 0 0045 24a20.76 20.76 0 00-.44-4.27zm-9.2 11.38A38.38 38.38 0 0036 25.5h6c0 .52-.11 1-.2 1.55a15.09 15.09 0 01-6.44 4.06zM6.28 27.05c-.09-.51-.16-1-.2-1.55H12a38.38 38.38 0 00.61 5.61 15.09 15.09 0 01-6.33-4.06zm6.36-10.16A38.38 38.38 0 0012 22.5H6.08c0-.52.11-1 .2-1.55a15.09 15.09 0 016.36-4.06zM41.72 21c.09.51.16 1 .2 1.55H36a38.38 38.38 0 00-.61-5.61A15.09 15.09 0 0141.72 21zM33 22.5h-7.5V15a34.35 34.35 0 016.59.87A34.35 34.35 0 0133 22.5zm-10.46 0H15a34.35 34.35 0 01.87-6.59A34.35 34.35 0 0122.5 15zm-7.54 3h7.5V33a34.35 34.35 0 01-6.59-.87A34.35 34.35 0 0115 25.5zm10.46 0H33a34.35 34.35 0 01-.87 6.59 34.35 34.35 0 01-6.63.91zM40 15.76a25.8 25.8 0 00-5.44-2.3A25.8 25.8 0 0032.24 8 18 18 0 0140 15.76zm-8.87-3.12A38.38 38.38 0 0025.5 12V6.08c.52 0 1 .11 1.55.2a15.09 15.09 0 014.06 6.36zM22.5 6.08V12a38.38 38.38 0 00-5.61.61A15.09 15.09 0 0121 6.28c.46-.09 1-.16 1.5-.2zM15.76 8a25.8 25.8 0 00-2.3 5.44A25.58 25.58 0 008 15.76 18 18 0 0115.76 8zM8 32.24a25.89 25.89 0 005.45 2.3A25.58 25.58 0 0015.76 40 18 18 0 018 32.24zm8.88 3.12a38.38 38.38 0 005.62.64v6c-.52 0-1-.11-1.55-.2a15.09 15.09 0 01-4.06-6.44zm8.61 6.56V36a38.38 38.38 0 005.61-.61 15.09 15.09 0 01-4.06 6.36c-.5.06-1.04.13-1.54.17zM32.24 40a25.58 25.58 0 002.3-5.44A25.8 25.8 0 0040 32.24 18 18 0 0132.24 40z"/>
+        </svg>',
+
+    'fnd-investor' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-investor" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17.88 30l-3 3L12 35.88V30H6V10h30v2a15.07 15.07 0 013 .3V8.5A1.5 1.5 0 0037.5 7h-33A1.5 1.5 0 003 8.5v23a1.49 1.49 0 000 .34v.1a1.48 1.48 0 00.09.22l.05.1a1.49 1.49 0 00.14.19l.06.08a1.49 1.49 0 00.6.38h.09a1.49 1.49 0 00.4.06H9v6.5a1.5 1.5 0 00.11.55 1.49 1.49 0 00.82.82 1.46 1.46 0 001.09 0 1.49 1.49 0 00.49-.33L19.12 33h3.14a14.87 14.87 0 01-1-3z"/><path d="M37 34a7 7 0 01-5.74-3h6.24a1.5 1.5 0 000-3h-7.42a6.3 6.3 0 010-2h7.42a1.5 1.5 0 000-3h-6.24a7 7 0 0110.32-1.28l.92-3.07A10 10 0 0027.84 23H26.5a1.5 1.5 0 000 3h.5c0 .33-.05.66-.05 1s0 .67.05 1h-.5a1.5 1.5 0 000 3h1.34a10 10 0 0014.66 4.34l-.92-3.07A7 7 0 0137 34z"/>
+        </svg>',
+
+    'fnd-key' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-key" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 6a10 10 0 00-8 15.92L8.51 37.36a1.5 1.5 0 002.12 2.12L13.15 37l3.23 3.23a1.5 1.5 0 002.12 0 1.5 1.5 0 000-2.12l-3.23-3.23 1.41-1.41 1.82 1.82a1.5 1.5 0 102.12-2.12l-1.82-1.82L26.08 24A10 10 0 1032 6zm0 17a7 7 0 117-7 7 7 0 01-7 7z"/>
+        </svg>',
+
+    'fnd-link' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-link" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M34 14h-8v3h8a7 7 0 010 14h-8v3h8a10 10 0 000-20zM14 31a7 7 0 010-14h8v-3h-8a10 10 0 000 20h8v-3h-8z"/><path d="M16 22.5h16v3H16z"/>
+        </svg>',
+
+    'fnd-linkedin' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-linkedin" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.8 17.33h8.25V44H4.8z"/><ellipse cx="8.89" cy="8.92" rx="4.88" ry="4.92"/><path d="M34.29 16.52a9.3 9.3 0 00-8 4.4v-3.59h-7.95V44h7.92V30c0-3.75 1.73-6 5-6 3 0 4.49 2.14 4.49 6v14H44V27.12c0-7.12-4.06-10.6-9.71-10.6z"/>
+        </svg>',
+
+    'fnd-list-your-home' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-list-your-home" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path id="XMLID_131_" class="st0" d="M35.3 57.5h-2.8v-50c0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4v50z"/><path id="XMLID_130_" class="st0" d="M46.7 45.8H21.1c-2.3 0-4.2-1.9-4.2-4.2V13.7c0-2.3 1.9-4.2 4.2-4.2h25.6c2.3 0 4.2 1.9 4.2 4.2v27.9c0 2.3-1.9 4.2-4.2 4.2z"/><path id="XMLID_129_" class="st0" d="M21.1 44.8c-1.8 0-3.2-1.4-3.2-3.2V13.7c0-1.8 1.4-3.2 3.2-3.2h25.6c1.8 0 3.2 1.4 3.2 3.2v27.9c0 1.8-1.4 3.2-3.2 3.2H21.1z"/><path id="XMLID_128_" class="st1" d="M21.1 43.8c-1.2 0-2.2-1-2.2-2.2V13.7c0-1.2 1-2.2 2.2-2.2h25.6c1.2 0 2.2 1 2.2 2.2v27.9c0 1.2-1 2.2-2.2 2.2H21.1z"/><path id="XMLID_127_" d="M46.7 11.5H21.1c-1.2 0-2.2 1-2.2 2.2v19.9h30V13.7c0-1.2-1-2.2-2.2-2.2z" /><path id="XMLID_126_" class="st3" d="M46.7 11.5H21.1c-1.2 0-2.2 1-2.2 2.2v5.6c0-1.2 1-2.2 2.2-2.2h25.6c1.2 0 2.2 1 2.2 2.2v-5.6c0-1.2-1-2.2-2.2-2.2z"/><g id="XMLID_107_"><path id="XMLID_124_" class="st1" d="M30.2 21.1v-4.7h-1.7V15h5v1.4h-1.7v4.7h-1.6z"/><path id="XMLID_122_" class="st1" d="M34.3 21.1V15h4.5v1.4h-2.9v.9h2.8v1.4h-2.8v1h2.9v1.4h-4.5z"/><path id="XMLID_120_" class="st1" d="M25.1 29.8l-1.6-2.3-.4.5v1.8h-1.6v-6.1h1.6v2.5l1.9-2.5h1.9l-2.4 2.8 2.5 3.2h-1.9z"/><path id="XMLID_117_" class="st1" d="M26.8 26.7c0-1.9 1.4-3.1 3.3-3.1s3.3 1.3 3.3 3.1c0 1.9-1.4 3.1-3.3 3.1s-3.3-1.2-3.3-3.1zm4.9 0c0-1-.6-1.8-1.7-1.8-1 0-1.7.8-1.7 1.8s.6 1.8 1.7 1.8 1.7-.8 1.7-1.8z"/><path id="XMLID_111_" class="st1" d="M33.8 26.7c0-1.9 1.4-3.1 3.3-3.1s3.3 1.3 3.3 3.1c0 1.9-1.4 3.1-3.3 3.1a3 3 0 01-3.3-3.1zm4.9 0c0-1-.6-1.8-1.7-1.8-1 0-1.7.8-1.7 1.8s.6 1.8 1.7 1.8 1.7-.8 1.7-1.8z"/><path id="XMLID_108_" class="st1" d="M41.1 29.8v-6.1h3c1.4 0 2.1.9 2.1 2s-.7 2-2.1 2h-1.5v2h-1.5zm3.6-4.1c0-.4-.3-.7-.7-.7h-1.3v1.3H44c.4 0 .7-.2.7-.6z"/></g><path id="XMLID_106_" class="st3" d="M39 37.8H28.9c-.5 0-.8-.4-.8-.8 0-.5.4-.8.8-.8H39c.5 0 .8.4.8.8 0 .5-.4.8-.8.8z"/><path id="XMLID_105_" class="st3" d="M37.2 40.8h-6.6c-.5 0-.8-.4-.8-.8 0-.5.4-.8.8-.8h6.6c.5 0 .8.4.8.8 0 .5-.3.8-.8.8z"/><g id="XMLID_102_"><path id="XMLID_104_" class="st4" d="M34.3 17.1h1.5v-.7h2.9V15h-4.4z"/><path id="XMLID_103_" class="st4" d="M31.8 17.1v-.7h1.7V15h-5v1.4h1.7v.7z"/></g><path d="M48.8 58.1c-5.1 0-9.3-5.4-14.8-5.4s-10.1 5.4-14.8 5.4h29.6z" fill="#c0ce06"/>
+        </svg>',
+
+    'fnd-list' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-list" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="22" y="35" width="10.52" height="3" rx="1.5" ry="1.5"/><rect x="22" y="27" width="22" height="3" rx="1.5" ry="1.5"/><rect x="22" y="18" width="10.52" height="3" rx="1.5" ry="1.5"/><rect x="22" y="10" width="22" height="3" rx="1.5" ry="1.5"/><path d="M17.5 9h-12A1.5 1.5 0 004 10.5v10A1.5 1.5 0 005.5 22h12a1.5 1.5 0 001.5-1.5v-10A1.5 1.5 0 0017.5 9zM16 19H7v-7h9zM17.5 26h-12A1.5 1.5 0 004 27.5v10A1.5 1.5 0 005.5 39h12a1.5 1.5 0 001.5-1.5v-10a1.5 1.5 0 00-1.5-1.5zM16 36H7v-7h9z"/>
+        </svg>',
+
+    'fnd-location-pin' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-location-pin" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 43.69a1.51 1.51 0 01-1.1-.48c-.52-.56-12.73-13.86-12.73-24.88a13.83 13.83 0 0127.66 0c0 11-12.21 24.32-12.73 24.88a1.51 1.51 0 01-1.1.48zM24 7.5a10.84 10.84 0 00-10.83 10.83c0 8 7.88 18.09 10.83 21.58 3-3.49 10.83-13.54 10.83-21.58A10.84 10.84 0 0024 7.5z"/><path d="M24 15a3 3 0 11-3 3 3 3 0 013-3m0-3a6 6 0 106 6 6 6 0 00-6-6z"/>
+        </svg>',
+
+    'fnd-location' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-location" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M38.5 41h-29a1.5 1.5 0 000 3h29a1.5 1.5 0 100-3zM23.47 37.78a.71.71 0 00.94 0c.79-.76 11.79-11.44 11.79-21.45a12.33 12.33 0 10-24.65 0C11.67 26.52 22.69 37 23.47 37.78zM24 7a9.34 9.34 0 019.33 9.33c0 6.24-5.61 13.53-9.33 17.46-3.72-3.93-9.32-11.2-9.32-17.46A9.34 9.34 0 0124 7z"/><path d="M30 16a6 6 0 10-6 6 6 6 0 006-6zm-9 0a3 3 0 113 3 3 3 0 01-3-3z"/>
+        </svg>',
+
+    'fnd-lock' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-lock" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M40 19.51A1.5 1.5 0 0038.5 18H34v-4a10 10 0 10-20 0v4H9.5A1.5 1.5 0 008 19.5v23A1.5 1.5 0 009.5 44h29a1.5 1.5 0 001.5-1.5zm-23-5.58A7 7 0 0131 14v4H17v-4.07zM34 21h3v20H11V21h23z"/>
+        </svg>',
+
+    'fnd-magazine' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-magazine" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M10 38.07l7.7-11.85a1.5 1.5 0 012.47-.08l3.86 5.19 3-3.37a1.5 1.5 0 012.3.08L38 39.35V8H10v30.07zM11.67 41h23.81l-7.42-9.69-2.2 2.48 1.16 1.55a1.5 1.5 0 01-2.4 1.8l-5.57-7.48L11.67 41zM9.55 5h28.9C39.85 5 41 6.59 41 8.55v31.9c0 1.96-1.14 3.55-2.55 3.55H9.55C8.15 44 7 42.41 7 40.45V8.55C7 6.59 8.14 5 9.55 5zm4.95 8h19a1.5 1.5 0 010 3h-19a1.5 1.5 0 010-3zm0 6h5a1.5 1.5 0 010 3h-5a1.5 1.5 0 010-3zM33 26a3 3 0 110-6 3 3 0 010 6z"/>
+        </svg>',
+
+    'fnd-mail' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-mail" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42.5 10h-37A1.5 1.5 0 004 11.5v25A1.5 1.5 0 005.5 38h37a1.5 1.5 0 001.5-1.5v-25a1.5 1.5 0 00-1.5-1.5zM23.12 26.22a1.5 1.5 0 001.76 0L41 14.57V35H7V14.57zM9.95 13h28.1L24 23.15z"/>
+        </svg>',
+
+    'fnd-makelaar' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-makelaar" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M35.93 31.07c-.46-3.33-3.34-6-7.13-6.83h-.19a1.5 1.5 0 00-1 .26 1.49 1.49 0 00-.55.71l-.1.27-.59 1.52L24 33.52 21.63 27l-.56-1.54-.1-.27a1.49 1.49 0 00-.55-.71 1.5 1.5 0 00-1-.26h-.19c-3.78.8-6.67 3.5-7.13 6.83a1.48 1.48 0 00-.07.43v8a1.5 1.5 0 003 0V32c0-2 1.48-3.66 3.62-4.48l4 10.9v.06l.06.13.08.13.09.12.09.1.13.11.09.07.16.09H24.71l.16-.09.09-.07.13-.11.09-.1.09-.12.08-.13.06-.13v-.06l4-10.9C31.52 28.34 33 30 33 32v7.5a1.5 1.5 0 003 0v-8a1.48 1.48 0 00-.07-.43zM24 22a8 8 0 10-8-8 8 8 0 008 8zm0-13a5 5 0 11-5 5 5 5 0 015-5z"/>
+        </svg>',
+
+    'fnd-megafono' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-megafono" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M31.5 7.75a1.49 1.49 0 00-.77.22L9.21 18H4.5A1.5 1.5 0 003 19.5v9A1.5 1.5 0 004.5 30h4.71l1.29.6a6 6 0 0010.87 5.07l9.41 4.39a1.48 1.48 0 00.7.18 1.5 1.5 0 001.5-1.5V9.25a1.5 1.5 0 00-1.48-1.5zM16 36a3 3 0 01-2.78-4.13l5.41 2.53A3 3 0 0116 36zm2-5.2l-1.6-.8-4-1.85-2.25-1a1.49 1.49 0 00-.61-.15H6v-6h3.54a1.49 1.49 0 00.64-.14L30 11.62v24.76l-8-3.74zM41.37 31.51H37.5a1.5 1.5 0 000 3h3.87a1.5 1.5 0 000-3zM37.5 16.51h3.87a1.5 1.5 0 000-3H37.5a1.5 1.5 0 000 3zM43.5 22.51h-6a1.5 1.5 0 100 3h6a1.5 1.5 0 100-3z"/>
+        </svg>',
+
+    'fnd-menu' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-menu" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path d="M7.5 12.5h30a1.5 1.5 0 010 3h-30a1.5 1.5 0 010-3zm0 10h33a1.5 1.5 0 010 3h-33a1.5 1.5 0 010-3zm0 10h22a1.5 1.5 0 010 3h-22a1.5 1.5 0 010-3z" fill-rule="nonzero"/>
+        </svg>',
+
+    'fnd-metro' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-metro" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M37 9.5a1.5 1.5 0 00-.92-1.38A1.4 1.4 0 0035.5 8h-23a1.51 1.51 0 00-1.06.44A1.53 1.53 0 0011 9.5v15a1.5 1.5 0 001.5 1.5h23a1.5 1.5 0 001.5-1.5zM14 11h20v12H14z"/><path d="M41.11 5.86A6 6 0 0036 3H12a6 6 0 00-6 6v23.1a5.9 5.9 0 00.89 3 6 6 0 001.44 1.61A5.92 5.92 0 0012 38h24a6 6 0 006-6V9a6 6 0 00-.89-3.14zM39 14.19V32a3 3 0 01-3 3H12a3 3 0 01-3-3V9a3 3 0 013-3h24a3 3 0 013 3z"/><path d="M16.5 29h-3a1.5 1.5 0 000 3h3a1.5 1.5 0 000-3zM34.5 29h-3a1.5 1.5 0 000 3h3a1.5 1.5 0 000-3zM31.31 39l2.8 6h3.31l-2.8-6h-3.31zM10.58 45h3.31l2.8-6h-3.31l-2.8 6z"/>
+        </svg>',
+
+    'fnd-minus-circle-inverted' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-minus-circle-inverted" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g data-name="Minus Circle"><path d="M24 7A17 17 0 117 24 17 17 0 0124 7m0-3a20 20 0 1020 20A20 20 0 0024 4z"/><path d="M34.71 22.5H13.29a1.52 1.52 0 000 3h21.42a1.52 1.52 0 000-3z"/></g>
+        </svg>',
+
+    'fnd-minus' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-minus" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M36.5 22.5h-25a1.5 1.5 0 000 3h25a1.5 1.5 0 000-3z"/>
+        </svg>',
+
+    'fnd-mortgage' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-mortgage" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <g><path d="M42.33 24.5a1.5 1.5 0 01-2.23 2.01L38 24.17l-3-3.33L24 8.63 13 20.84l-3 3.33-2.1 2.34a1.5 1.5 0 01-2.23-2.01L22.88 5.38l.1-.07.12-.1c.12-.08.24-.16.37-.21l.19-.05c.11-.02.23-.05.36-.05.08 0 .16.02.24.04.1.02.2.03.3.07.1.04.19.1.28.17.07.04.14.09.2.15.02.02.06.03.08.06L42.33 24.5zM35 40V22.84l3 3.33V41.5c0 .83-.67 1.5-1.5 1.5h-25a1.5 1.5 0 01-1.5-1.5V26.17l3-3.33V40h22z"/><path d="M25.23 31.48c-1.63 0-3.07-.8-3.94-2.03h4.28c.56 0 1.03-.46 1.03-1.01 0-.56-.47-1.02-1.03-1.02h-5.09a4.58 4.58 0 010-1.35h5.09c.56 0 1.03-.45 1.03-1 0-.56-.47-1.02-1.03-1.02h-4.28a4.82 4.82 0 017.08-.86l.63-2.07a6.9 6.9 0 00-10.05 2.93h-.92c-.57 0-1.03.46-1.03 1.01 0 .56.46 1.02 1.03 1.02h.38a6.66 6.66 0 000 1.35h-.38c-.57 0-1.03.45-1.03 1 0 .56.46 1.02 1.03 1.02h.92A6.86 6.86 0 0029 32.38l-.63-2.07a4.81 4.81 0 01-3.14 1.17z"/></g>
+        </svg>',
+
+    'fnd-move' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-move" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M45.9 24.52A1.48 1.48 0 0046 24a1.48 1.48 0 00-.1-.5v-.08a1.51 1.51 0 00-.3-.42v-.06L35 12.34a1.5 1.5 0 00-2.12 2.12l8 8H7.13l8-8A1.5 1.5 0 0013 12.34L2.47 22.91v.06a1.5 1.5 0 00-.27.41v.08A1.48 1.48 0 002 24a1.48 1.48 0 00.1.5v.08a1.51 1.51 0 00.3.42v.06L13 35.66a1.5 1.5 0 002.12-2.12l-8-8h33.75l-8 8A1.5 1.5 0 0035 35.66l10.53-10.57v-.06a1.51 1.51 0 00.27-.41z"/>
+        </svg>',
+
+    'fnd-navigate' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-navigate" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M37.9 14.52A1.48 1.48 0 0038 14a1.48 1.48 0 00-.1-.5v-.08a1.5 1.5 0 00-.3-.42v-.06L27 2.34a1.5 1.5 0 00-2.12 2.12l8 8H24.5A14.52 14.52 0 0010 27v17.5a1.5 1.5 0 103 0V27.07 27a11.51 11.51 0 0111.5-11.5h8.38l-8 8A1.5 1.5 0 0027 25.66l10.53-10.57v-.06a1.51 1.51 0 00.27-.41z"/>
+        </svg>',
+
+    'fnd-new-house' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-new-house" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g fill-rule="evenodd"><path d="M24 41.5c0-.83.67-1.5 1.5-1.5H35V23l3 3.33V41.5c0 .83-.67 1.5-1.5 1.5h-11a1.5 1.5 0 01-1.5-1.5zm18.05-16.9a1.5 1.5 0 01-2.23 2l-2.1-2.33-3-3.33-11-12.22-11 12.22-3 3.33-2.1 2.33a1.5 1.5 0 01-2.23-2l17.2-19.12c.04-.03.08-.04.1-.07l.13-.1c.12-.08.24-.16.37-.21.06-.03.12-.03.18-.05.12-.03.24-.05.36-.05.09 0 .17.02.25.03.1.02.2.04.3.08.1.04.18.1.28.16l.2.15c.02.03.05.04.08.06L42.05 24.6z"/><path fill-rule="nonzero" d="M10.06 33.94a1.5 1.5 0 00-2.12 2.12l5 5a1.5 1.5 0 002.12 0l10-10a1.5 1.5 0 00-2.12-2.12L14 37.88l-3.94-3.94z"/></g>
+        </svg>',
+
+    'fnd-newspaper' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-newspaper" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M7 7h34a3 3 0 013 3v27a3 3 0 01-3 3H7a3 3 0 01-3-3V10a3 3 0 013-3zm0 3v27h34V10H7zm4.5 3h12c.83 0 1.5.67 1.5 1.5v6c0 .83-.67 1.5-1.5 1.5h-12a1.5 1.5 0 01-1.5-1.5v-6c0-.83.67-1.5 1.5-1.5zm18 0h7a1.5 1.5 0 010 3h-7a1.5 1.5 0 010-3zm0 6h7a1.5 1.5 0 010 3h-7a1.5 1.5 0 010-3zm-18 6h25a1.5 1.5 0 010 3h-25a1.5 1.5 0 010-3zm0 6h25a1.5 1.5 0 010 3h-25a1.5 1.5 0 010-3z"/>
+        </svg>',
+
+    'fnd-not-found-error' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-not-found-error" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42.5 7h-37A1.5 1.5 0 004 8.47v26.97A1.5 1.5 0 005.51 37h10.34l-3.41 3.41a1.41 1.41 0 00-.09.13 1.49 1.49 0 00-.18.27 1.45 1.45 0 00-.08.18 1.49 1.49 0 00-.09.45A1.5 1.5 0 0013.5 43h21a1.49 1.49 0 00.54-.1 1.5 1.5 0 00.49-.32 1.5 1.5 0 00.32-.49 1.49 1.49 0 00.15-.59 1.49 1.49 0 00-.11-.55 1.5 1.5 0 00-.33-.49L32.12 37H42.5a1.5 1.5 0 001.5-1.5v-27A1.5 1.5 0 0042.5 7zM7 34V10h34v24zm23.87 6H17.1l2.77-2.77A1.43 1.43 0 0020 37h7.86z"/><path d="M19.5 21.94a1.5 1.5 0 001.5-1.5v-3a1.5 1.5 0 10-3 0v3a1.5 1.5 0 001.5 1.5zM28.5 21.94a1.5 1.5 0 001.5-1.5v-3a1.5 1.5 0 10-3 0v3a1.5 1.5 0 001.5 1.5zM30.67 26.66a14.24 14.24 0 00-13.32 0 1.5 1.5 0 101.32 2.69 11.27 11.27 0 0110.68 0 1.5 1.5 0 101.33-2.69z"/>
+        </svg>',
+
+    'fnd-not-found-house' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-not-found-house" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M35 40H13V22.84l-3 3.33V41.5a1.5 1.5 0 001.5 1.5h25a1.5 1.5 0 001.5-1.5V26.17l-3-3.33z"/><path d="M42.33 24.5L25.12 5.39 25 5.33a1.45 1.45 0 00-.2-.15 1.5 1.5 0 00-.24-.18 2.64 2.64 0 00-.56-.1 1.5 1.5 0 00-.36.05h-.18a1.5 1.5 0 00-.37.22l-.09.14s-.07 0-.1.07L5.67 24.5a1.5 1.5 0 102.23 2l2.1-2.33 3-3.33L24 8.62l11 12.22 3 3.33 2.11 2.34a1.5 1.5 0 002.23-2z"/><path d="M21 26.44v-3a1.5 1.5 0 00-3 0v3a1.5 1.5 0 003 0zM30 26.44v-3a1.5 1.5 0 00-3 0v3a1.5 1.5 0 003 0zM16.65 34.66a1.5 1.5 0 002 .69 11.27 11.27 0 0110.68 0 1.5 1.5 0 101.33-2.69 14.24 14.24 0 00-13.32 0 1.5 1.5 0 00-.69 2z"/>
+        </svg>',
+
+    'fnd-not-found-page' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-not-found-page" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M39 15.5a1.5 1.5 0 00-.7-1.26l-9.5-9.5A1.49 1.49 0 0027.52 4h-17A1.5 1.5 0 009 5.5v37a1.5 1.5 0 001.5 1.5h27a1.5 1.5 0 001.5-1.5zM12 7h14.82L36 16.18V41H12z"/><path d="M19.5 25.94a1.5 1.5 0 001.5-1.5v-3a1.5 1.5 0 00-3 0v3a1.5 1.5 0 001.5 1.5zM28.5 25.94a1.5 1.5 0 001.5-1.5v-3a1.5 1.5 0 00-3 0v3a1.5 1.5 0 001.5 1.5zM30.67 30.66a14.24 14.24 0 00-13.32 0 1.5 1.5 0 101.32 2.69 11.27 11.27 0 0110.68 0 1.5 1.5 0 101.33-2.69z"/>
+        </svg>',
+
+    'fnd-not-found-property' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-not-found-property" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42.5 15H29V7.5A1.5 1.5 0 0027.24 6l-22 3.88A1.5 1.5 0 004 11.38V40h40V16.5a1.5 1.5 0 00-1.5-1.5zM19 37h-5v-8h5zm7 0h-4v-9.5a1.5 1.5 0 00-1.5-1.5h-8a1.5 1.5 0 00-1.5 1.5V37H7V12.64l19-3.35zm15 0H29V18h12z" data-name="Business property not found"/>
+        </svg>',
+
+    'fnd-not-found' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-not-found" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Not Found" d="M39.15 11l2.48-2.48L43.12 7A1.5 1.5 0 1041 4.91L37.91 8H5.5A1.5 1.5 0 004 9.5v28.17l3-3V11h27.91l-26 26-2 2-.9.9-.1.1-1 1a1.5 1.5 0 002.12 2.12L10.15 40H40.5a1.5 1.5 0 001.5-1.5V12.4l-3 3V37H13.15L39 11.15z"/>
+        </svg>',
+
+    'fnd-notes' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-notes" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M40.5 38h-33a1.5 1.5 0 000 3h33a1.5 1.5 0 100-3zM16.5 31h4.89a1.47 1.47 0 00.35 0h.11a1.45 1.45 0 00.39-.16l.16-.1a1.4 1.4 0 00.16-.1l17-17a1.51 1.51 0 000-2.12l-4.97-5.06a1.42 1.42 0 00-.27-.18 1.43 1.43 0 00-1.86.18L15.68 23.25A1.5 1.5 0 0015 24.5v5a1.5 1.5 0 001.5 1.5zm13-17.35l2.87 2.87L20.9 28H18v-2.83zm4-4l2.87 2.87-1.88 1.88-2.87-2.87z"/>
+        </svg>',
+
+    'fnd-office' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-office" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42.5 15H29V7.5A1.5 1.5 0 0027.24 6l-22 3.88A1.5 1.5 0 004 11.38V40h40V16.5a1.5 1.5 0 00-1.5-1.5zM19 37h-5v-8h5zm7 0h-4v-9.5a1.5 1.5 0 00-1.5-1.5h-8a1.5 1.5 0 00-1.5 1.5V37H7V12.64l19-3.35zm15 0H29V18h12z" data-name="Business property not found"/>
+        </svg>',
+
+    'fnd-online' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-online" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="24" cy="24" r="8"/>
+        </svg>',
+
+    'fnd-open-house-package' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-open-house-package" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g data-name="OHD Promotie Pakket"><path d="M42.5 9.5h-5v-5a1.5 1.5 0 10-3 0v5h-5a1.5 1.5 0 000 3h5v5a1.5 1.5 0 003 0v-5h5a1.5 1.5 0 000-3zM29 40h-2.76l-7.61-7.61-2.12 2.12L25 43h5.47A1.5 1.5 0 0032 41.5V29l-3-3.33zM11 25.77L8 29.1v12.4A1.5 1.5 0 009.47 43H15v-3h-4z"/><path d="M32 23.56l-2.08-2.32-8.81-9.74s0-.05-.06-.08a1.42 1.42 0 00-.23-.13 1.47 1.47 0 00-.21-.13 1.44 1.44 0 00-.3-.07 1 1 0 00-.53 0 1.44 1.44 0 00-.3.07 1.47 1.47 0 00-.21.13 1.42 1.42 0 00-.23.13s0 .05-.06.08l-8.8 9.77L8 23.62 4.84 27.1a1.5 1.5 0 102.23 2l.9-1 3-3.33 9-10 9 10L32 28l1 1.07a1.5 1.5 0 002.12.11 1.5 1.5 0 00.11-2.12z"/></g>
+        </svg>',
+
+    'fnd-overview' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-overview" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.5 26h-15A1.5 1.5 0 004 27.48v13A1.5 1.5 0 005.5 42h15a1.5 1.5 0 001.5-1.5v-13a1.5 1.5 0 00-1.5-1.5zM7 29h12v10H7zM42.5 26h-15a1.5 1.5 0 00-1.5 1.5v13a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5v-13a1.5 1.5 0 00-1.5-1.5zM29 29h12v10H29zM20.5 5.93h-15A1.5 1.5 0 004 7.44v13A1.5 1.5 0 005.5 22h15a1.5 1.5 0 001.5-1.5v-13a1.5 1.5 0 00-1.5-1.57zM7 8.94h12V19H7zM42.5 6h-15A1.5 1.5 0 0026 7.47v13A1.5 1.5 0 0027.5 22h15a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0042.5 6zM29 9h12v10H29z"/>
+        </svg>',
+
+    'fnd-pencil' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-pencil" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M14.94 41.55l26.52-26.99a1.5 1.5 0 00-.01-2.11l-5.38-5.38a1.5 1.5 0 00-2.13.01L7.43 34.06A1.5 1.5 0 007 35.11v5.37c0 .83.67 1.5 1.5 1.5l5.37.02c.4 0 .79-.16 1.07-.45zM31 14l3.5 3.5L13 39l-3-.02V36l21-22zm4-4l3.5 3.5-2 2L33 12l2-2z"/>
+        </svg>',
+
+    'fnd-phone' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-phone" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42 40.88V31.2l-10-2-3.63 2.1c-5.78-3-8.54-5.77-11.6-11.54L19 16 17 6H7.11a1 1 0 00-1 1C6 7.86 6 8.72 6 9.58A32.42 32.42 0 0038.42 42c.87 0 1.72 0 2.57-.12a1 1 0 001-1zM39 38v1h-.58A29.45 29.45 0 019 9.58V9h5.53l1.29 6.46-1.64 2.76a3 3 0 00-.07 2.94C17.44 27.42 20.68 30.65 27 34a3 3 0 002.9-.06l2.65-1.53L39 33.66z"/>
+        </svg>',
+
+    'fnd-piggy' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-piggy" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M6 24.15a7.5 7.5 0 01.88-13.5A1.5 1.5 0 118 13.42a4.5 4.5 0 00-1.62 7.25C8.14 13.82 15.7 8.66 24.75 8.66c1.43 0 2.82.13 4.16.37a12.47 12.47 0 0111.38-2.6l-1.87 6.98a15.39 15.39 0 013.38 4.04h.45A3.75 3.75 0 0146 21.2v7.57a3.75 3.75 0 01-3.75 3.75h-2.27c-.87.98-1.88 1.86-3.01 2.64l.57 2.14c.54 2-.65 4.06-2.65 4.6l-3.62.97c-2 .53-4.06-.65-4.6-2.65l-.39-1.47a23.62 23.62 0 01-8.31-.96l-1.23 2.13a3.75 3.75 0 01-5.13 1.37l-3.24-1.87a3.75 3.75 0 01-1.38-5.12l1.65-2.85A12.92 12.92 0 016 24.15zm24.87-12.84l-1.09.93-1.4-.26a20.22 20.22 0 00-3.63-.32C15.93 11.66 9 17.23 9 23.73c0 2.1.7 4.12 2.05 5.93l1.17 1.58L9.6 35.8c-.2.35-.08.81.28 1.02l3.24 1.88c.36.2.82.08 1.03-.28l2.43-4.21 2.3.71a19.78 19.78 0 007.22.84l2.45-.16 1.03 3.84c.11.4.52.64.92.53l3.62-.97c.4-.1.64-.52.53-.92l-1.12-4.18 1.74-1.2c.94-.65 1.77-1.38 2.49-2.18l.89-1h3.61c.41 0 .75-.33.75-.75V21.2a.75.75 0 00-.75-.75h-2.2l-.86-1.51a12.4 12.4 0 00-2.72-3.25l-1.44-1.23 1.46-5.45a9.5 9.5 0 00-5.62 2.3zM34 22a2 2 0 110-4 2 2 0 010 4z"/>
+        </svg>',
+
+    'fnd-pin' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-pin" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path id="a" d="M23.47 41.78c.27.24.67.24.94 0 .79-.76 11.79-11.44 11.79-21.45a12.33 12.33 0 10-24.65 0C11.67 30.52 22.69 41 23.47 41.78zM24 11a9.34 9.34 0 019.33 9.33c0 6.24-5.61 13.53-9.33 17.46-3.72-3.93-9.32-11.2-9.32-17.46A9.34 9.34 0 0124 11zm6 9a6 6 0 10-12 0 6 6 0 0012 0zm-9 0a3 3 0 116 0 3 3 0 01-6 0z"/>
+        </svg>',
+
+    'fnd-pinterest' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-pinterest" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24.94 4C14 4 8.52 11.83 8.52 18.35c0 4 1.5 7.47 4.71 8.78a.79.79 0 001.15-.58l.47-1.84a1.12 1.12 0 00-.33-1.28 6.63 6.63 0 01-1.52-4.5 10.88 10.88 0 0111.31-11c6.17 0 9.56 3.77 9.56 8.8 0 6.62-2.93 12.22-7.28 12.22A3.56 3.56 0 0123 24.52c.69-2.91 2-6.05 2-8.15 0-1.88-1-3.45-3.1-3.45-2.46 0-4.43 2.54-4.43 5.95a8.84 8.84 0 00.73 3.64L15.23 35a25.77 25.77 0 00-.07 8.73.31.31 0 00.55.13 24.52 24.52 0 004.15-7.52c.28-1 1.62-6.32 1.62-6.32.8 1.52 3.13 2.86 5.61 2.86 7.39 0 12.4-6.73 12.4-15.75C39.48 10.35 33.71 4 24.94 4z"/>
+        </svg>',
+
+    'fnd-plus' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-plus" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M36.5 22.5h-11v-11A1.5 1.5 0 0024 10a1.5 1.5 0 00-1.5 1.5v11h-11a1.5 1.5 0 000 3h11v11A1.5 1.5 0 0024 38a1.5 1.5 0 001.5-1.5v-11h11a1.5 1.5 0 000-3z"/>
+        </svg>',
+
+    'fnd-printer' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-printer" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42.5 16H36V7.5A1.5 1.5 0 0034.5 6h-21A1.5 1.5 0 0012 7.5V16H5.5A1.5 1.5 0 004 17.5v15A1.5 1.5 0 005.5 34H12v6.5a1.5 1.5 0 001.5 1.5h21a1.5 1.5 0 001.5-1.5V34h6.5a1.5 1.5 0 001.5-1.5v-15a1.5 1.5 0 00-1.5-1.5zM15 9h18v7H15zm18 19v11H15V28zm2.34-2.74a1.49 1.49 0 00-.84-.26h-21a1.5 1.5 0 00-1.5 1.5V31H7V19h34v12h-5v-4.5a1.5 1.5 0 00-.66-1.24z"/><circle cx="38.5" cy="21.5" r="1.5"/>
+        </svg>',
+
+    'fnd-promolabel' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-promolabel" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 11a5 5 0 105 5 5 5 0 00-5-5zm0 7a2 2 0 112-2 2 2 0 01-2 2z"/><path d="M44.41 26.47a1.49 1.49 0 00-.33-.51L23.57 5.45A1.49 1.49 0 0022.5 5h-15A1.5 1.5 0 006 6.5v15.13a1.49 1.49 0 00.08.39 1.43 1.43 0 00.05.15 1.5 1.5 0 00.25.38v.06L27 43.09a1.5 1.5 0 002.12 0v-.07s.08 0 .11-.07L44.09 28.1a1.5 1.5 0 00.32-1.63zM28 39.92l-19-19V8h12.88l19 19z"/>
+        </svg>',
+
+    'fnd-refresh' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-refresh" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M38 24a14.09 14.09 0 11-2.55-8H28.5a1.5 1.5 0 100 3h10a1.5 1.5 0 001.5-1.5v-10a1.5 1.5 0 00-3 0v5.58A17 17 0 1041 24z"/>
+        </svg>',
+
+    'fnd-robot' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-robot" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 8.5A17.5 17.5 0 1041.5 26 17.52 17.52 0 0024 8.5zm0 32A14.5 14.5 0 1138.5 26 14.52 14.52 0 0124 40.5z"/><path d="M19.5 26.94a1.5 1.5 0 001.5-1.5v-3a1.5 1.5 0 00-3 0v3a1.5 1.5 0 001.5 1.5zM28.5 26.94a1.5 1.5 0 001.5-1.5v-3a1.5 1.5 0 00-3 0v3a1.5 1.5 0 001.5 1.5zM29.34 31.65a11.27 11.27 0 01-10.68 0 1.5 1.5 0 00-1.33 2.69A14.86 14.86 0 0024 36a15.06 15.06 0 006.68-1.65 1.5 1.5 0 10-1.32-2.69zM5 30.5v-9h1.07a18.34 18.34 0 011-3H3.5A1.5 1.5 0 002 20v12a1.5 1.5 0 001.5 1.5h3.6a18.36 18.36 0 01-1-3zM44.5 18.5h-3.6a18.36 18.36 0 011 3H43v9h-1.07a18.34 18.34 0 01-1 3h3.6A1.5 1.5 0 0046 32V20a1.5 1.5 0 00-1.5-1.5zM25.5 7.58V5.5a1.5 1.5 0 00-3 0v2.08c.5 0 1-.08 1.5-.08s1 .04 1.5.08z"/>
+        </svg>',
+
+    'fnd-school' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-school" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M41.5 26H38V15a7 7 0 00-3-5.72A7 7 0 0031 8V6a3.75 3.75 0 00-.15-1A4 4 0 0027 2h-6a4 4 0 00-3.84 3A3.59 3.59 0 0017 6v2a7 7 0 00-4 1.27A7.08 7.08 0 0011.28 11 6.93 6.93 0 0010 14.91V26H6.5A1.5 1.5 0 005 27.5v14A1.5 1.5 0 006.5 43H10v.5a1.5 1.5 0 001.5 1.5h25a1.5 1.5 0 001.5-1.5V43h3.5a1.5 1.5 0 001.5-1.5v-14a1.5 1.5 0 00-1.5-1.5zM10 40H8V29h2zM20 6a1 1 0 011-1h6a1 1 0 011 1v2h-8zm15 36H13V27h2.5v1.5a1.5 1.5 0 003 0V27H35zm0-21.26V24H13v-9a4 4 0 014-4h14a4 4 0 014 4zM40 40h-2V29h2z"/>
+        </svg>',
+
+    'fnd-search' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-search" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M39.86 37.73l-9.48-9.48a13.14 13.14 0 10-2.12 2.12l9.48 9.48a1.5 1.5 0 102.12-2.12zm-19.75-7.5a10.11 10.11 0 1110.12-10.12 10.12 10.12 0 01-10.12 10.12z"/>
+        </svg>',
+
+    'fnd-share' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-share" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M36 31.3a6 6 0 00-4.81 2.42l-13.51-7.8a5.92 5.92 0 00.08-3.58l13.7-7.91a6 6 0 10-1.33-2.69l-13.89 8a6 6 0 10-.2 8.68l14 8.09A6 6 0 1036 31.3zm0-23.78a3 3 0 11-3 3 3 3 0 013-3zM12 27a3 3 0 113-3 3 3 0 01-3 3zm24 13.3a3 3 0 113-3 3 3 0 01-3 3z"/>
+        </svg>',
+
+    'fnd-shield' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-shield" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M37.95 11.23c-4.27 0-6.75-.45-6.75-4.7 0-.84-.7-1.53-1.55-1.53h-11.3c-.86 0-1.55.69-1.55 1.54 0 4.24-2.48 4.7-6.75 4.7-.86 0-1.55.68-1.55 1.53V23c0 9.18 14 19.29 14.6 19.71a1.56 1.56 0 001.8 0c.6-.43 14.6-10.53 14.6-19.71V12.77c0-.85-.7-1.54-1.55-1.54zM36.4 23c0 5.85-8.25 13.36-12.4 16.54C19.84 36.37 11.6 28.86 11.6 23v-8.8c4.74-.68 7.5-1.41 8.19-6.12h8.42c.68 4.7 3.45 5.44 8.19 6.12V23z"/>
+        </svg>',
+
+    'fnd-smartphone' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-smartphone" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M36.95 6.49A5 5 0 0032 2H16a5 5 0 00-5 5v34.45l.15.87A5 5 0 0016 46h16a5 5 0 005-4.55V7c0-.17-.02-.34-.05-.51zM34 7v33.93l-.14.79A2 2 0 0132 43H16a2 2 0 01-1.86-1.28l-.14-.79V7c0-1.1.9-2 2-2h16a2 2 0 012 2zM21.5 7a1.5 1.5 0 000 3h5a1.5 1.5 0 000-3h-5zM24 41a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/>
+        </svg>',
+
+    'fnd-sofa' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-sofa" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M33 42H15v1.5c0 .83-.67 1.5-1.5 1.5h-6A1.5 1.5 0 016 43.5V33.2a6 6 0 014.39-11.04l-.83-9.65A6 6 0 0115.54 6h16.92a6 6 0 015.98 6.51l-.83 9.65A6.02 6.02 0 0145 28a6 6 0 01-3 5.2v10.3c0 .83-.67 1.5-1.5 1.5h-6a1.5 1.5 0 01-1.5-1.5V42zm-18-3h18v-6H15v6zm0-11v2h18v-2c0-1.46.53-2.83 1.44-3.9l1.01-11.84A3 3 0 0032.46 9H15.54a3 3 0 00-3 3.26l1.02 11.84A5.99 5.99 0 0115 28zM9 42h3V28a3 3 0 10-4.5 2.6l1.5.87V42zm27 0h3V31.47l1.5-.87A3 3 0 1036 28v14z"/>
+        </svg>',
+
+    'fnd-sold' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-sold" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path fill-rule="evenodd" d="M26 36h9a3 3 0 003-3V9a3 3 0 00-3-3h-9V4a2 2 0 10-4 0v2h-9a3 3 0 00-3 3v24a3 3 0 003 3h9v7h-2.5c-.82 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5h9c.82 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5H26v-7zM13 22V9h22v3L13 22zm0 11v-3l22-10v13H13z"/>
+        </svg>',
+
+    'fnd-sort' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-sort" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="6" y="12.5" width="36" height="3" rx="1.5" ry="1.5"/><rect x="6" y="22.5" width="24" height="3" rx="1.5" ry="1.5"/><rect x="6" y="32.5" width="12" height="3" rx="1.5" ry="1.5"/>
+        </svg>',
+
+    'fnd-stairs' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-stairs" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42 14h-9a1.5 1.5 0 00-1.5 1.5V23H24a1.5 1.5 0 00-1.5 1.5V32H15a1.5 1.5 0 00-1.5 1.5V41H6a1.5 1.5 0 100 3h9a1.5 1.5 0 001.5-1.5V35H24a1.44 1.44 0 00.84-.26 1.49 1.49 0 00.66-1.24V26H33a1.5 1.5 0 001.5-1.5V17H42a1.5 1.5 0 000-3zM6.39 29.73L29.73 6.39a1.5 1.5 0 10-2.12-2.12L4.27 27.61a1.51 1.51 0 000 2.12 1.51 1.51 0 002.12 0z"/>
+        </svg>',
+
+    'fnd-star-filled' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-star-filled" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path data-name="Star Filled" d="M44 19.57v-.14a1.49 1.49 0 000-.15v-.11a1.47 1.47 0 00-.06-.17v-.08a1.5 1.5 0 00-.1-.18l-.06-.06-.12-.14-.1-.08-.13-.1-.12-.06-.31-.1H29.56L25.45 5.23v-.09a1.5 1.5 0 00-.27-.48 1.5 1.5 0 00-.19-.18l-.2-.13h-.07l-.15-.07H23.7l-.15.07h-.07l-.2.13a1.5 1.5 0 00-.19.18 1.5 1.5 0 00-.27.48v.09L18.36 18.1H5.1l-.1.1-.13.06-.13.07-.11.08-.12.1-.1.12-.07.08-.08.14-.13.15v.12a1.46 1.46 0 000 .16v.1a1.49 1.49 0 000 .19v.09a1.51 1.51 0 000 .18v.12a1.51 1.51 0 000 .15l.06.12.08.14.08.11.1.12.11.1.09.08L15 28.37 10.93 41v.13a1.48 1.48 0 00.23 1.24 1.5 1.5 0 002.1.33L24 34.89l10.79 7.84a1.5 1.5 0 002.1-.33 1.48 1.48 0 00.23-1.24v-.13L33 28.37l10.41-7.56.07-.06.13-.12.08-.1.1-.13.06-.11.07-.15v-.12a1.52 1.52 0 000-.16v-.14-.12c0-.04.08-.02.08-.03z"/>
+        </svg>',
+
+    'fnd-star' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-star" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M44 19.57v-.14a1.49 1.49 0 000-.15v-.11a1.47 1.47 0 00-.06-.17v-.08a1.5 1.5 0 00-.1-.18l-.06-.06-.12-.14-.1-.08-.13-.1-.12-.06-.31-.1H29.56L25.45 5.23v-.09a1.5 1.5 0 00-.27-.48 1.5 1.5 0 00-.19-.18l-.2-.13h-.07l-.15-.07H23.7l-.15.07h-.07l-.2.13a1.5 1.5 0 00-.19.18 1.5 1.5 0 00-.27.48v.09L18.36 18.1H5.1l-.1.1-.13.06-.13.07-.11.08-.12.1-.1.12-.07.08-.08.14-.13.15v.12a1.46 1.46 0 000 .16v.1a1.49 1.49 0 000 .19v.09a1.51 1.51 0 000 .18v.12a1.51 1.51 0 000 .15l.06.12.08.14.08.11.1.12.11.1.09.08L15 28.37 10.93 41v.13a1.48 1.48 0 00.23 1.24 1.5 1.5 0 002.1.33L24 34.89l10.79 7.84a1.5 1.5 0 002.1-.33 1.48 1.48 0 00.23-1.24v-.13L33 28.37l10.41-7.56.07-.06.13-.12.08-.1.1-.13.06-.11.07-.15v-.12a1.52 1.52 0 000-.16v-.14-.12c0-.04.08-.02.08-.03zm-12 5.8l-2.55 1.85 1 3 2.39 7.36L26.55 33 24 31.18 21.45 33l-6.26 4.55 2.39-7.36 1-3L16 25.37l-5.88-4.27h10.42l1-3L24 10.46l2.48 7.63 1 3h10.4z"/>
+        </svg>',
+
+    'fnd-stats-average' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-stats-average" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12.39 31.37a1.5 1.5 0 002-.76L19.09 20l3.11 7a1.48 1.48 0 00.45.57l.17.1.13.06h.22l14.49 3.88a1.5 1.5 0 00.78-2.9l-13.82-3.7-4.11-9.23a1.49 1.49 0 00-2.81-.21l-6.1 13.7a1.5 1.5 0 00.79 2.1z"/><path d="M40.5 37H9V7.5a1.5 1.5 0 00-3 0v31A1.5 1.5 0 007.5 40h33a1.5 1.5 0 100-3z"/>
+        </svg>',
+
+    'fnd-stats-bad' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-stats-bad" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g data-name="Stats Bad"><path d="M14.15 18.89l5.24-6.25 4.18 15.59v.12a1.49 1.49 0 00.12.24 1.48 1.48 0 00.16.21l.19.17.19.11h.09l.17.06h.82l.22-.08h.05l.21-.13a1.49 1.49 0 00.19-.18l.08-.09L30.42 23l6 6.85a1.5 1.5 0 002.25-2l-7.23-8.21a1.48 1.48 0 00-2.38.06l-3.45 4.74-4.06-15.33A1.5 1.5 0 0020 8H19.7a1.49 1.49 0 00-.78.49L11.85 17a1.5 1.5 0 002.3 1.93z"/><path d="M40.5 37H9V7.5a1.5 1.5 0 00-3 0v31A1.5 1.5 0 007.5 40h33a1.5 1.5 0 100-3z"/></g>
+        </svg>',
+
+    'fnd-stats-good' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-stats-good" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g data-name="Stats Good"><path d="M36.43 18.89l-5.24-6.25L27 28.24v.12a1.49 1.49 0 01-.12.24 1.48 1.48 0 01-.16.21l-.19.17-.19.11h-.09l-.17.06h-.82l-.22-.08h-.05l-.32-.07a1.49 1.49 0 01-.19-.18l-.08-.09L20.16 23l-6 6.85a1.5 1.5 0 01-2.25-2l7.23-8.21a1.48 1.48 0 012.38.06l3.45 4.74L29 9.11A1.5 1.5 0 0130.63 8h.26a1.49 1.49 0 01.78.49L38.73 17a1.5 1.5 0 01-2.3 1.93z"/><path d="M40.5 37H9V7.5a1.5 1.5 0 00-3 0v31A1.5 1.5 0 007.5 40h33a1.5 1.5 0 100-3z"/></g>
+        </svg>',
+
+    'fnd-success-alt' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-success-alt" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 4a20 20 0 1020 20A20.06 20.06 0 0024 4z" /><path d="M33.9 18.7a1.45 1.45 0 00-2.1 0l-11 11-4.6-4.7a1.48 1.48 0 10-2.1 2.1l5.7 5.7a1.71 1.71 0 002.2 0l12-12a1.54 1.54 0 00-.1-2.1z" fill="#fff"/>
+        </svg>',
+
+    'fnd-success' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-success" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M33.91 18.66a1.5 1.5 0 00-2.12 0l-11 11L16.23 25a1.5 1.5 0 10-2.12 2.12l5.65 5.65a1.5 1.5 0 002.12 0l12-12a1.5 1.5 0 00.03-2.11z"/><path d="M24 4a20 20 0 1020 20A20 20 0 0024 4zm0 37a17 17 0 1117-17 17 17 0 01-17 17z"/>
+        </svg>',
+
+    'fnd-sun' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-sun" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 15a9 9 0 109 9 9 9 0 00-9-9zm0 15a6 6 0 116-6 6 6 0 01-6 6zM24 36a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5A1.5 1.5 0 0024 36zM34.61 32.48a1.5 1.5 0 00-2.12 2.12L36 38.14A1.5 1.5 0 1038.14 36zM42.5 22.5h-5a1.5 1.5 0 000 3h5a1.5 1.5 0 000-3zM34.61 15.51L38.14 12A1.5 1.5 0 1036 9.86l-3.54 3.54a1.5 1.5 0 102.12 2.12zM24 12a1.5 1.5 0 001.5-1.5v-5a1.5 1.5 0 00-3 0v5A1.5 1.5 0 0024 12zM13.39 15.52a1.5 1.5 0 002.12-2.12L12 9.86A1.5 1.5 0 109.86 12zM12 24a1.5 1.5 0 00-1.5-1.5h-5a1.5 1.5 0 000 3h5A1.5 1.5 0 0012 24zM13.39 32.49L9.86 36A1.5 1.5 0 0012 38.14l3.54-3.54a1.5 1.5 0 10-2.12-2.12z"/>
+        </svg>',
+
+    'fnd-supermarket' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-supermarket" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M44.5 18h-8.88L25.06 7.44A1.51 1.51 0 0024 7a1.49 1.49 0 00-1.06.44L12.38 18H3.5a1.5 1.5 0 000 3h1.21L8 39.76a1.46 1.46 0 00.63.94 1.55 1.55 0 00.22.12h.07l.2.07H39l.14-.08.11-.06.13-.12.09-.07.12-.14.06-.08a.8.8 0 00.08-.16.31.31 0 00.05-.1.43.43 0 000-.16.56.56 0 000-.12L43.29 21h1.21a1.5 1.5 0 000-3zM24 10.62L31.38 18H16.62zM37.24 38H10.75l-3-17h32.49z"/><path d="M14 28h20a1.5 1.5 0 000-3H14a1.5 1.5 0 000 3zM32.5 31h-17a1.5 1.5 0 000 3h17a1.5 1.5 0 000-3z"/>
+        </svg>',
+
+    'fnd-surface' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-surface" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M38.5 32.25v-16.5a5 5 0 10-6.25-6.25h-16.5a5 5 0 10-6.25 6.25v16.5a5 5 0 106.25 6.25h16.5a5 5 0 106.25-6.25zm-6.25 3.25h-16.5a5 5 0 00-3.25-3.25v-16.5a5 5 0 003.25-3.25h16.5a5 5 0 003.25 3.25v16.5a5 5 0 00-3.25 3.25zM37 9a2 2 0 11-2 2 2 2 0 012-2zM11 9a2 2 0 11-2 2 2 2 0 012-2zm0 30a2 2 0 112-2 2 2 0 01-2 2zm26 0a2 2 0 112-2 2 2 0 01-2 2z"/>
+        </svg>',
+
+    'fnd-target' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-target" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path fill="none" d="M0 0h48v48H0z"/><path d="M24 7A17 17 0 117 24 17 17 0 0124 7m0-3a20 20 0 1020 20A20 20 0 0024 4z"/><path d="M24 22a2 2 0 102 2 2 2 0 00-2-2z"/><path d="M24 15a9 9 0 11-9 9 9 9 0 019-9m0-3a12 12 0 1012 12 12 12 0 00-12-12z"/>
+        </svg>',
+
+    'fnd-thumbs-down' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-thumbs-down" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M43.32 22.34c-.9-3.94-3.18-12-3.25-12.22a5.78 5.78 0 00-5.86-4.24h-7.05a11.56 11.56 0 00-5.09.9L21.6 7a10.14 10.14 0 01-5.21 1.74H16V7.5A1.5 1.5 0 0014.5 6h-9A1.5 1.5 0 004 7.5v21A1.5 1.5 0 005.5 30h9a1.5 1.5 0 001.5-1.5v-1.06a35.71 35.71 0 004 2.94c.56.34 2.52 2.1 4.25 10.3a1.5 1.5 0 001 1.12 5.24 5.24 0 001.46.2 4.84 4.84 0 002.91-.93c1.6-1.16 2.38-3.27 2.38-6.26a45.62 45.62 0 00-.44-5.71h7.2a6.32 6.32 0 003.91-2.48 5.31 5.31 0 00.65-4.28zM7 9h6v18H7zm33.2 15.93a3.3 3.3 0 01-1.84 1.17h-8.52a1.5 1.5 0 00-1.48 1.76 49.31 49.31 0 01.66 7c0 1.91-.41 3.28-1.15 3.84a1.8 1.8 0 01-.93.34c-1.4-6.15-3.16-9.81-5.38-11.17a41.48 41.48 0 01-5.47-4.3l-.09-.1V11.78h.38a13 13 0 006.72-2.14l.44-.25a9.14 9.14 0 013.57-.51h7.1a2.76 2.76 0 013 2c0 .08 2.35 8.28 3.24 12.15a2.41 2.41 0 01-.25 1.9z"/>
+        </svg>',
+
+    'fnd-thumbs-up' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-thumbs-up" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42.69 21.4a6.32 6.32 0 00-3.91-2.48h-7.2a45.62 45.62 0 00.42-5.73c0-3-.8-5.1-2.38-6.26a5.16 5.16 0 00-4.37-.73 1.5 1.5 0 00-1 1.12c-1.73 8.21-3.69 10-4.25 10.3a35.7 35.7 0 00-4 2.94V19.5a1.5 1.5 0 00-1.5-1.5h-9A1.5 1.5 0 004 19.5v21A1.5 1.5 0 005.5 42h9a1.5 1.5 0 001.5-1.5v-1.28h.38A10.15 10.15 0 0121.6 41l.46.27a10.78 10.78 0 004.68.9h7.47A5.77 5.77 0 0040 38c.1-.34 2.37-8.36 3.27-12.3a5.31 5.31 0 00-.58-4.3zM7 21h6v18H7zm33.4 4a352.28 352.28 0 01-3.26 12.23 2.74 2.74 0 01-2.94 1.91h-7.13a9.07 9.07 0 01-3.53-.51l-.44-.25a13 13 0 00-6.73-2.14H16V24.53l.09-.06a41.47 41.47 0 015.47-4.3c2.22-1.36 4-5 5.38-11.17a1.8 1.8 0 01.93.34c.74.56 1.15 1.93 1.15 3.84a49.31 49.31 0 01-.66 7 1.5 1.5 0 001.48 1.76h8.52a3.33 3.33 0 011.83 1.16 2.4 2.4 0 01.21 1.9z"/>
+        </svg>',
+
+    'fnd-train' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-train" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M33 41h-1.69l2.8 6h3.31l-2.9-6.2A5.81 5.81 0 0133 41zM13.48 40.8l-2.9 6.2h3.31l2.8-6H15a5.81 5.81 0 01-1.52-.2z"/><path data-name="Train" d="M38.59 5.3a6.06 6.06 0 00-4.69-3.77l-.47-.05h-.11A90.31 90.31 0 0024 1a90.17 90.17 0 00-9.32.47h-.11l-.47.05A6 6 0 009 7.46V34a6 6 0 004.48 5.8A5.81 5.81 0 0015 40h18a5.81 5.81 0 001.52-.2A6 6 0 0039 34V7.46a6 6 0 00-.41-2.16zM20 4.09L21.3 4H26l2 .07c1.74.07 3.34.2 4.83.36-.33 2.59-.58 5.41-.72 8.4Q32 15.82 32 19v.26a5 5 0 01-4.71 4.71h-6.5A5 5 0 0116 19.23a2.3 2.3 0 010-.23 121.1 121.1 0 00-.87-14.52c1.49-.19 3.09-.32 4.87-.39zm16 5.07V34a3 3 0 01-3 3H15a3 3 0 01-3-3V7.46a3 3 0 01.31-1.31A111.9 111.9 0 0113 19v.48a8.08 8.08 0 00.76 2.95 7.8 7.8 0 00.75 1.28 8.89 8.89 0 001.32 1.42A8 8 0 0020.94 27H27.08a8 8 0 005.09-1.88 8.89 8.89 0 001.32-1.42 7.8 7.8 0 00.75-1.28 8.08 8.08 0 00.76-2.98V19a111.9 111.9 0 01.69-12.82A3 3 0 0136 7.46z"/><circle cx="18" cy="32" r="2"/><circle cx="30" cy="32" r="2"/><circle cx="24" cy="8" r="2"/>
+        </svg>',
+
+    'fnd-tram' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-tram" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g data-name="Tram v4"><circle cx="19" cy="34" r="2"/><path d="M29 32a2 2 0 102 2 2 2 0 00-2-2zM32 42h-1.23l2.34 5h3.31l-2.52-5.39A5 5 0 0132 42zM16.23 42H16a5 5 0 01-1.9-.39L11.58 47h3.31l2.34-5h-1z"/><path d="M32 6h-6.5V4h5a1.5 1.5 0 000-3h-13a1.5 1.5 0 000 3h5v2H16a5 5 0 00-5 5v25a5 5 0 005 5h16a5 5 0 005-5V11a5 5 0 00-5-5zm-3 9.88v9a.84.84 0 010 .12c0 .5-1.77 2-5 2s-5-1.5-5-2a.84.84 0 010-.12V9h10zM34 36a2 2 0 01-2 2H16a2 2 0 01-2-2V11a2 2 0 012-2v16c0 2.76 3.58 5 8 5s8-2.24 8-5V9a2 2 0 012 2z"/></g>
+        </svg>',
+
+    'fnd-trash' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-trash" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g data-name="Trash"><path d="M37.5 8h-27a1.5 1.5 0 000 3h27a1.5 1.5 0 000-3zM19.5 7h9a1.5 1.5 0 000-3h-9a1.5 1.5 0 000 3zM35.5 14a1.5 1.5 0 00-1.5 1.5V38a3 3 0 01-3 3H17a3 3 0 01-3-3V15.5a1.5 1.5 0 00-3 0v23a1.37 1.37 0 00.09.49A6 6 0 0017 44h14a6 6 0 005.91-5 1.63 1.63 0 00.09-.5v-23a1.5 1.5 0 00-1.5-1.5z"/></g><rect x="17" y="14" width="3" height="24" rx="1.5" ry="1.5"/><rect x="28" y="14" width="3" height="24" rx="1.5" ry="1.5"/>
+        </svg>',
+
+    'fnd-tv' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-tv" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M15.85 34h16.27l3.44 3.46A1.5 1.5 0 0136 38.5c0 .2-.06.4-.15.59a1.5 1.5 0 01-.32.49 1.49 1.49 0 01-1.03.42h-21a1.5 1.5 0 01-1.15-2.46l.1-.13 3.4-3.41zm15.02 3l-3-3H20c-.03.08-.08.16-.13.23L17.1 37h13.77zM10 8h29a3 3 0 013 3v20a3 3 0 01-3 3H10a3 3 0 01-3-3V11a3 3 0 013-3zm0 23h29V11H10v20z"/>
+        </svg>',
+
+    'fnd-twitter' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-twitter" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M44 11.59a16.4 16.4 0 01-4.71 1.29 8.23 8.23 0 003.61-4.53 16.43 16.43 0 01-5.21 2 8.21 8.21 0 00-14 7.49A23.3 23.3 0 016.78 9.25a8.22 8.22 0 002.54 11 8.17 8.17 0 01-3.72-1 8.21 8.21 0 006.58 8.15 8.22 8.22 0 01-3.71.14 8.21 8.21 0 007.67 5.7A16.5 16.5 0 014 36.57a23.23 23.23 0 0012.58 3.69c15.24 0 23.84-12.87 23.33-24.41A16.67 16.67 0 0044 11.59z"/>
+        </svg>',
+
+    'fnd-user-menu' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-user-menu" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M25.89 15.5H43.5a1.5 1.5 0 000-3H25.89A11 11 0 0126 14a11 11 0 01-.11 1.5zM43.5 22.5H24.12a8.93 8.93 0 014.31 3H43.5a1.5 1.5 0 000-3zM43.5 32.5H30v3h13.5a1.5 1.5 0 000-3zM18 24h-6c-4.63 0-8.44 3.11-8.94 7.1a1.48 1.48 0 00-.06.4v8a1.5 1.5 0 003 0V32c0-2.45 2.12-4.48 4.91-4.91A7.16 7.16 0 0112 27h6a7.16 7.16 0 011.09.09C21.88 27.52 24 29.55 24 32v7.5a1.5 1.5 0 003 0v-8a1.48 1.48 0 00-.06-.4c-.5-3.99-4.31-7.1-8.94-7.1zM15 22a8 8 0 10-8-8 8 8 0 008 8zm0-13a5 5 0 11-5 5 5 5 0 015-5z"/>
+        </svg>',
+
+    'fnd-user' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-user" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M35.94 31.1c-.5-4-4.31-7.1-8.94-7.1h-6c-4.63 0-8.44 3.11-8.94 7.1a1.48 1.48 0 00-.06.4v8a1.5 1.5 0 003 0V32c0-2.45 2.12-4.48 4.91-4.91A7.16 7.16 0 0121 27h6a7.16 7.16 0 011.09.09C30.88 27.52 33 29.55 33 32v7.5a1.5 1.5 0 003 0v-8a1.48 1.48 0 00-.06-.4zM24 22a8 8 0 10-8-8 8 8 0 008 8zm0-13a5 5 0 11-5 5 5 5 0 015-5z"/>
+        </svg>',
+
+    'fnd-users' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-users" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M33.23 28.1c2.72.48 4.77 2.5 4.77 4.9v5.5a1.5 1.5 0 003 0v-6c0-.14-.02-.27-.06-.4-.5-4-4.31-7.1-8.94-7.1l-.35.02-.15-.02h-.24c.83.92 1.5 1.96 1.97 3.1zM28.5 8.47A6.98 6.98 0 0138 15a7 7 0 01-10.55 6.04 11 11 0 001.6-2.55 4 4 0 10.6-7.25c-.26-1-.64-1.92-1.15-2.78zm2.44 22.64c.04.13.06.26.06.4v9a1.5 1.5 0 01-3 0V32c0-2.45-2.12-4.48-4.9-4.91A7.16 7.16 0 0022 27h-6c-.38 0-.74.03-1.1.09-2.78.43-4.9 2.46-4.9 4.91v8.5a1.5 1.5 0 01-3 0v-9c0-.14.03-.27.06-.4.5-4 4.31-7.1 8.94-7.1l.35.02.15-.02h5l.15.02L22 24c4.63 0 8.44 3.1 8.94 7.1zM19 6a8 8 0 110 16 8 8 0 010-16zm0 3a5 5 0 10.01 10.01A5 5 0 0019 9z"/>
+        </svg>',
+
+    'fnd-video' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-video" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M39.16 23.19a1.48 1.48 0 00-.51-.48l-.11-.09L13.32 6.24l-.16-.08h-.09l-.18-.06h-.11L12.6 6H12.19a1.49 1.49 0 00-1 .65 1.47 1.47 0 00-.1.2 1.46 1.46 0 00-.07.21v.08a1.48 1.48 0 000 .2V40.52a1.49 1.49 0 000 .2v.08a1.46 1.46 0 00.07.21 1.48 1.48 0 00.11.21 1.49 1.49 0 001 .65H12.9l.18-.06h.08l.16-.08 25.41-16.5a1.5 1.5 0 00.43-2.04zM14 10.26L35.16 24 14 37.74z"/>
+        </svg>',
+
+    'fnd-view' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-view" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path fill-rule="evenodd" d="M23.71 16a8 8 0 110 16 8 8 0 010-16zm0 13a5 5 0 100-10 5 5 0 000 10zm0-19C12.58 10 4.25 18.73 1.97 21.4a3.98 3.98 0 000 5.2C4.25 29.27 12.58 38 23.7 38c11.14 0 19.46-8.73 21.75-11.4a3.98 3.98 0 000-5.2C43.17 18.73 34.85 10 23.71 10m0 3c9.89 0 17.45 8 19.47 10.35a1 1 0 010 1.3C41.16 27 33.6 35 23.71 35c-9.88 0-17.45-8-19.46-10.35a1 1 0 010-1.3C6.26 21 13.83 13 23.7 13"/>
+        </svg>',
+
+    'fnd-vr' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-vr" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 17a6 6 0 106 6 6 6 0 00-6-6zm0 9a3 3 0 113-3 3 3 0 01-3 3zM35 17a6 6 0 106 6 6 6 0 00-6-6zm0 9a3 3 0 113-3 3 3 0 01-3 3z"/><path d="M41 10H7a6 6 0 00-6 6v16a6 6 0 006 6h13.23l.64-3 .2-.94.93-4.41v-.1a2 2 0 013.88 0v.14l.93 4.4.2.94.64 3H41a6 6 0 006-6V16a6 6 0 00-6-6zm3 22a3 3 0 01-3 3H30.14l-1.26-5.94v-.15a4.89 4.89 0 00-.15-.47 5 5 0 00-9.44 0 4.91 4.91 0 00-.16.53v.12L17.8 35H7a3 3 0 01-3-3V16a3 3 0 013-3h34a3 3 0 013 3z"/>
+        </svg>',
+
+    'fnd-walk' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-walk" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24.47 15a6 6 0 10-6-6 6 6 0 006 6zm0-9a3 3 0 11-3 3 3 3 0 013-3zM32.28 26.41l-5.66-3.54L24 17a1.52 1.52 0 00-1.1-1.05 1.5 1.5 0 00-1.31.33l-7.42 4.64a1.49 1.49 0 00-.49.51 1.23 1.23 0 00-.17.32l-1.71 4.7a1.49 1.49 0 00.89 1.92 1.51 1.51 0 001.93-.89l1.55-4.28 4.11-2.57-1.76 7.62a1.52 1.52 0 000 .6 1.44 1.44 0 00.22.71l8.86 14.18a1.5 1.5 0 002.07.48h.08a1.5 1.5 0 00.48-2.07l-8.65-13.83L23 22.13l1 2.28a1.32 1.32 0 00.38.51 1.53 1.53 0 00.35.32L30.69 29a1.5 1.5 0 001.59-2.54z"/><path d="M17.52 32.85a1.5 1.5 0 00-1.74 1.21l-.56 3.16-3.92 5.4a1.5 1.5 0 002.43 1.76l4.11-5.66a1.49 1.49 0 00.27-.67v-.15l.59-3.32a1.5 1.5 0 00-1.18-1.73z"/>
+        </svg>',
+
+    'fnd-warning' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-warning" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M45.79 41.26l.08-.14V41a1.5 1.5 0 000-.16v-.12a1.49 1.49 0 000-.18v-.07a1.48 1.48 0 000-.18v-.13a1.49 1.49 0 000-.15l-.06-.14v-.08L25.3 4.24l-.05-.07-.09-.17-.1-.11-.06-.05-.14-.1h-.07l-.15-.07H23.53l-.15.07h-.07l-.14.1-.1.09-.1.11-.09.12-.05.07L2.2 39.75v.07l-.1.18v.13a1.26 1.26 0 000 .3v.14a1.48 1.48 0 000 .16V41a1.49 1.49 0 00.05.14l.07.12.08.13.09.11.1.11.11.09.13.09h.08l.19.11H45.03l.14-.06h.08l.12-.09.12-.1.09-.09.1-.13zM24 8l17.9 31H6.1z"/><rect x="22.5" y="16" width="3" height="15" rx="1.5" ry="1.5" transform="rotate(180 24 23.5)"/><rect x="22.5" y="33" width="3" height="3" rx="1.5" ry="1.5" transform="rotate(-180 24 34.5)"/>
+        </svg>',
+
+    'fnd-water' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-water" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path id="a" d="M24 43.1a14 14 0 01-14-14c0-4.93 4.28-12.78 12.83-23.53a1.5 1.5 0 012.34 0C33.72 16.32 38 24.17 38 29.1a14 14 0 01-14 14zm0-34.17C16.65 18.4 13 25.28 13 29.1a11 11 0 0022 0c0-3.82-3.65-10.7-11-20.17zm-8.75 19.42a1.5 1.5 0 113 0A5.75 5.75 0 0024 34.1a1.5 1.5 0 110 3 8.75 8.75 0 01-8.75-8.75z"/>
+        </svg>',
+
+    'fnd-youtube' => '<svg xmlns="http://www.w3.org/2000/svg"  id="fnd-youtube" class="icon fnd-icon" width="100%" height="100%" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M36.69 9.31a262 262 0 00-25.38 0C4.81 9.75 4 13.67 4 24s.81 14.25 7.31 14.69a262 262 0 0025.38 0C43.19 38.25 44 34.33 44 24s-.81-14.25-7.31-14.69zM19 30.67V17.33L32.33 24z"/>
+        </svg>'
 
 );
-
-?>

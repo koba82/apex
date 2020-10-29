@@ -68,7 +68,6 @@ h2, h3, h4, h5, h6 {
     width: calc( 100% - var(--logo-width) - var(--gutter-lg) );
     top: var(--content-margin);
     left: calc(var(--logo-width) + var(--gutter-lg) );
-    border: 0;
     grid-column: content / content-end;
     grid-template-columns: none;
     display: block;

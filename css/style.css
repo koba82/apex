@@ -149,6 +149,10 @@ Description: A full solution for small and medium businesses
 	--transition-fast: .25s var(--transition-selector) var(--transition-timing-function);
 	--transition-medium: .4s var(--transition-selector) var(--transition-timing-function);
 	--transition-slow: .8s var(--transition-selector) var(--transition-timing-function);
+
+
+	--card-border-radius: var(--bor-radius-md);
+	--card-box-shadow: var(--box-shadow);
 }
 
 /*=========================================================================================
@@ -188,8 +192,6 @@ h1 {
 	font-weight: 700;
 	margin: 1rem 0;
 	text-align: center;
-	color: white;
-	text-shadow: 2px 2px 0px var(--sec-color);
 }
 
 h2 {
@@ -530,6 +532,7 @@ section.bgc.sec-color:last-of-type ~ section.bgc.sec-color {
 
 .header-images {
 	height: var(--header-height);
+	position: relative;
 	grid-row: 1 / 1;
 	overflow: hidden;
 	z-index: 1;
@@ -632,7 +635,6 @@ section.bgc.sec-color:last-of-type ~ section.bgc.sec-color {
 	left: 0;
 	display: grid;
 	grid-template-columns: var(--page-column-layout);
-	border-bottom: 3px solid var(--ter-color);
 }
 
 .scroll-offset .nav-main {
@@ -663,7 +665,7 @@ section.bgc.sec-color:last-of-type ~ section.bgc.sec-color {
 	flex-direction: column;
 }
 
-.nav-main ul li:hover > ul.sub-menu  {
+.nav-main ul li:hover > ul.sub-menu, .nav-main ul li.touch-hover > ul.sub-menu  {
 	display: flex;
 }
 
@@ -679,11 +681,10 @@ section.bgc.sec-color:last-of-type ~ section.bgc.sec-color {
 	height:  auto;
 	padding: 0.6rem .8rem;
 	font-weight: bold;
-	margin: 0 1px 1px 0;
 	transition: all 0.1s ease-in-out;
 }
 
-.nav-main ul a:hover {
+.nav-main ul li:hover a {
 	background: var(--con-color);
 	color: var(--pri-color);
 }
@@ -818,49 +819,18 @@ section.bgc.sec-color:last-of-type ~ section.bgc.sec-color {
 	transform: rotate(-225deg);
 }
 
-.nav-mobile {
-	display: block;
-	position: absolute;
-	left: 0px;
-	right: 0px;
-	top: var(--header-height);
-	overflow: hidden;
-	height: 0px;
-	transition: var(--transition-medium);
-	z-index: 99;
-}
-
 .nav-open .nav-mobile {
 	height: auto;
-}
-
-.nav-mobile ul:not(.sub-menu){
-	width: 100%;
-	text-align: center;
-	position: relative;
-	margin:0;
-	padding: 0;
-	background: rgba(0,0,0,0.85);
-	transform: translate3d(0, -100vh, 0);
-	transition: var(--transition-medium);
 }
 
 .nav-opr(0,0,0,1);en .nav-mobile ul {
 					  transform: translate3d(0, 0, 0);
 				  }
 
-.nav-mobile > ul:last-of-type {
-	border-top: 1px dotted rgba(255,255,255,0.3);
-}
-
 .nav-mobile li a {
 	display: block;
-	width: 100%;
-	position:relative !important;
 	z-index: 200;
 	text-decoration: none;
-	padding: 15px 10px;
-	color: white;
 }
 
 .nav-mobile ul.children {
@@ -896,6 +866,9 @@ div#primary-menu > ul > li:last-of-type a {
 	align-items: center;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.text-font-Spartan .ico-wrap {
 	margin-bottom: .15em;
 }
 
@@ -904,15 +877,25 @@ div#primary-menu > ul > li:last-of-type a {
 }
 
 svg.icon {
+	--icon-color: var(--pri-color);
 	stroke-width: var(--icon-stroke-width);
 	width: 100%;
 	height: 100%;
-	stroke: var(--pri-color);
+	stroke: var(--icon-color);
+	margin: auto;
+}
+
+svg.fnd-icon {
+	stroke-width: 0;
+	stroke: none;
+	fill: var(--icon-color);
+	width: 100%;
+	height: 100%;
 	margin: auto;
 }
 
 .bgc svg.icon, .button svg.icon {
-	stroke: var(--con-color);
+	--icon-color: var(--con-color);
 }
 
 .icon-wrap.small {
@@ -959,6 +942,10 @@ svg.icon {
 	border-radius: var(--bor-radius-sm);
 	border: 1px solid transparent;
 	z-index: 1;
+}
+
+.text-font-Spartan .button {
+	padding: .6em 1.5em .4em 1.5em;
 }
 
 .button.closed {
@@ -1089,6 +1076,12 @@ svg.icon {
 .content-image-overlay .icon-wrap {
 	width: 100%;
 	height: 100%;
+}
+
+.content-image-overlay .icon-wrap .icon {
+	width: var(--icon-size);
+	height: var(--icon-size);
+	stroke: var(--con-color);
 }
 
 .content-image:hover .content-image-overlay {
@@ -1233,9 +1226,9 @@ svg.icon {
 	text-align: center;
 	z-index: 1;
 	overflow: hidden;
-	border-radius:var(--bor-radius-md);
+	border-radius:var(--card-border-radius);
 	position: relative;
-	box-shadow: var(--box-shadow);
+	box-shadow: var(--card-box-shadow);
 	transition: var(--transition-slow);
 }
 

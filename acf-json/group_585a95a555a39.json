@@ -99,6 +99,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_5f89aa6acc68f",
+            "label": "Hamburger menu op desktop",
+            "name": "theme-setting-use-hamburger",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5b17a675d4417",
             "label": "Override header height",
             "name": "override-header-height",
@@ -359,16 +378,16 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "horizontal",
             "choices": {
                 "true": "Aan",
                 "false": "Uit"
             },
-            "default_value": "",
-            "other_choice": 0,
-            "save_other_choice": 0,
             "allow_null": 0,
-            "return_format": "value"
+            "other_choice": 0,
+            "default_value": "false : Uit",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         },
         {
             "key": "field_585a95af75aca",
@@ -383,16 +402,16 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "horizontal",
             "choices": {
                 "true": "Aan",
                 "false": "Uit"
             },
-            "default_value": "",
-            "other_choice": 0,
-            "save_other_choice": 0,
             "allow_null": 0,
-            "return_format": "value"
+            "other_choice": 0,
+            "default_value": "false : Uit",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         },
         {
             "key": "field_585a95bd75acb",
@@ -407,16 +426,16 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "horizontal",
             "choices": {
                 "true": "Aan",
                 "false": "Uit"
             },
-            "default_value": "",
-            "other_choice": 0,
-            "save_other_choice": 0,
             "allow_null": 0,
-            "return_format": "value"
+            "other_choice": 0,
+            "default_value": "false : Uit",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         },
         {
             "key": "field_5b119cd12a8b1",
@@ -638,5 +657,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1600759693
+    "modified": 1603982538
 }

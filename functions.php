@@ -1212,6 +1212,60 @@ add_filter('acf/load_field/name=flex-card-bgc-select', 'acf_load_color_field_cho
 		    echo '</div>';
 		}
 
+
+        /**
+         * Add the Cost of Products to WooCommerce products (COP)
+         *
+         * @link https://www.innonet.nl/
+         */
+
+        /**
+         */
+        function woocommerce_render_cop_field() {
+            $input   = array(
+                'id'          => '_cop',
+                'label'       => sprintf(
+                    '<abbr title="%1$s">%2$s</abbr>',
+                    _x( 'Inkoopprijs', 'field label', 'my-theme' ),
+                    _x( 'Inkoopprijs', 'abbreviated field label', 'my-theme' )
+                ),
+                'value'       => get_post_meta( get_the_ID(), '_cop', true ),
+                'desc_tip'    => true,
+                'description' => __( 'Voer de inkoopprijs van het product in', 'my-theme' ),
+            );
+            ?>
+
+            <div id="cop_attr" class="options_group">
+                <?php woocommerce_wp_text_input( $input ); ?>
+            </div>
+
+            <?php
+        }
+
+        add_action( 'woocommerce_product_options_inventory_product_data', 'woocommerce_render_cop_field' );
+
+        /**
+         * Save the product's COP number, if provided.
+         *
+         * @param int $product_id The ID of the product being saved.
+         */
+        function woocommerce_save_cop_field( $product_id ) {
+            if (
+                ! isset( $_POST['_cop'], $_POST['woocommerce_meta_nonce'] )
+                || ( defined( 'DOING_AJAX' ) && DOING_AJAX )
+                || ! current_user_can( 'edit_products' )
+                || ! wp_verify_nonce( $_POST['woocommerce_meta_nonce'], 'woocommerce_save_data' )
+            ) {
+                return;
+            }
+
+            $cop = sanitize_text_field( $_POST['_cop'] );
+
+            update_post_meta( $product_id, '_cop', $cop );
+        }
+
+        add_action( 'woocommerce_process_product_meta','woocommerce_save_cop_field' );
+
 	}
 
 
