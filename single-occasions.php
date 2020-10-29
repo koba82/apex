@@ -13,7 +13,7 @@ get_header(); ?>
 <?php
 	$slider_id = rand (9999, 99999); ?>
 		<div class="content-block">
-			<div class="content content-width c-flex-image-slider">
+			<div class="content content-width block-slider -image-slider">
 				<div class="mod-res-top-wrap">
 				<?php $slider_id = rand (9999, 99999); ?>
 				<div class="flex-image-slider">

@@ -5,7 +5,10 @@ $maps_height = get_sub_field('flex-maps-height');
 $background_color =  get_sub_field('flex-bgc');
 ?>
 
-<section class="content-wrap c-google-maps <?php the_sub_Field('flex-bgc'); ?> <?php if($maps_width == 'full') : echo 'full-width bgc'; endif;?>"  style="height:<?=$maps_height; ?>px">
+<section class="content-wrap block-maps <?php the_sub_Field('flex-bgc'); ?> <?php if($maps_width == 'full') : echo 'full-width bgc'; endif;?>"  style="height:<?=$maps_height; ?>px">
+
+    <?php include 'components/header-and-text.php'; ?>
+
     <div class="google-maps-wrap">
 
 

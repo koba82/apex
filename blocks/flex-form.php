@@ -4,99 +4,99 @@ $form_source = get_sub_field('form-source');
 //Create some variables
 $field_counter = 1; $field_type = array(); $field_label = array(); $body = array(); $form_id = rand (9999, 99999); ?>
 
-	<section class="content-wrap c-flex-form <?php getBackgroundColor(); ?>" id="form-id-<?=$form_id;?>" >
-		<div class="content">
-			<div class="content-animation">
-				<div class="flex-form-wrap">
-					<h2><?php the_sub_field('flex-form-title'); ?></h2>
-					<form id="form-<?=$form_id;?>" method="post" action="<?php echo the_permalink(); ?>#form-id-<?=$form_id;?>">
-					
-					<?php
-					if ( have_rows( 'flex-form-fields' ) ) :
-					
-						while ( have_rows( 'flex-form-fields' ) ) : the_row(); 
-						
-							$req_field = (get_sub_field('flex-form-field-required')) ? "required" : ""; ?>
-							
-							<?php 
-							if(get_sub_field('flex-form-field-type') == "select") : ?>
-								
-								<div class="flex-field-wrap">
-									<label for="field-<?=$field_counter;?>" class="field-<?=$field_counter;?> <?php the_sub_field('flex-form-field-type'); ?>-field<?php if($req_field) : ?> required-field <?php endif; ?>"><?php the_sub_field('flex-form-field-label'); ?></label>
-									<select id="field-<?=$field_counter;?>" name="field-<?=$field_counter;?>" <?=$req_field;?>>
-										<?php
-										if(get_sub_field('select-options')):
-											$options = get_sub_field('select-options');
-											foreach($options as $single_option): ?>
-												<option>
-													<?=$single_option['select-option']; ?>
-												</option>
-											<?php
-											endforeach;
-										endif; ?>
-									</select>								
-									<div class="clear"></div>
-								</div>
-								<?php
-								//Add current field type to field_type array
-								$field_type[$field_counter] = get_sub_field('flex-form-field-type');
-								
-								//Add current label to field_label array
-								$field_label[$field_counter] = get_sub_field('flex-form-field-label');
-								
-								$field_counter++ ;
-							
-							elseif(get_sub_field('flex-form-field-type') == "textarea") : ?>
-								<div class="flex-field-wrap">
-									<label for="field-<?=$field_counter;?>" class="field-<?=$field_counter;?> <?php the_sub_field('flex-form-field-type'); ?>-field<?php if($req_field) { ?> required-field <?php }; ?>"><?php the_sub_field('flex-form-field-label'); ?></label>
-									<textarea id="field-<?=$field_counter;?>" name="field-<?=$field_counter;?>" <?=$req_field;?> rows="4"></textarea>
-								</div>
-							<?php
+    <section class="content-wrap block-form <?php getBackgroundColor(); ?>" id="form-id-<?=$form_id;?>" >
+        <div class="content">
+            <div class="flex-form-wrap">
 
-								//Add current field type to field_type array
-								$field_type[$field_counter] = get_sub_field('flex-form-field-type');
+                <?php include 'components/header-and-text.php'; ?>
 
-								//Add current label to field_label array
-								$field_label[$field_counter] = get_sub_field('flex-form-field-label');
+                <form id="form-<?=$form_id;?>" method="post" action="<?php echo the_permalink(); ?>#form-id-<?=$form_id;?>">
 
-								$field_counter++ ;
-							
-							else : ?>
-								<div class="flex-field-wrap">
-									<label for="field-<?=$field_counter;?>" class="field-<?=$field_counter;?> <?php the_sub_field('flex-form-field-type'); ?>-field<?php if($req_field) { ?> required-field <?php }; ?>"><?php the_sub_field('flex-form-field-label'); ?></label>
-									<input id="field-<?=$field_counter;?>" name="field-<?=$field_counter;?>" type="<?php the_sub_field('flex-form-field-type'); ?>" <?=$req_field;?>>
-									<div class="clear"></div>
-		
-								</div>
-								<?php
-								//Add current field type to field_type array
-								$field_type[$field_counter] = get_sub_field('flex-form-field-type');
-								
-								//Add current label to field_label array
-								$field_label[$field_counter] = get_sub_field('flex-form-field-label');
-								
-								$field_counter++ ;
-							endif;
-						
-						endwhile;
-					endif; ?>
-					
-					<?php
-					//Custom send button text
-					if(get_sub_field('flex-form-alt-send')) {
-						$send_text = get_sub_field('flex-form-alt-send');	
-					} else {
-						$send_text = 'Verzenden';
-					} ?>
-	
-						<div class="g-recaptcha" data-sitekey="<?php the_field("recaptcha_site_key", "options"); ?>"></div>
-						<input type="submit" name="submit" id="recaptcha-submit" value="<?=$send_text;?>" class="button" >
-					
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
+                    <?php
+                    if ( have_rows( 'flex-form-fields' ) ) :
+
+                        while ( have_rows( 'flex-form-fields' ) ) : the_row();
+
+                            $req_field = (get_sub_field('flex-form-field-required')) ? "required" : ""; ?>
+
+                            <?php
+                            if(get_sub_field('flex-form-field-type') == "select") : ?>
+
+                                <div class="flex-field-wrap">
+                                    <label for="field-<?=$field_counter;?>" class="field-<?=$field_counter;?> <?php the_sub_field('flex-form-field-type'); ?>-field<?php if($req_field) : ?> required-field <?php endif; ?>"><?php the_sub_field('flex-form-field-label'); ?></label>
+                                    <select id="field-<?=$field_counter;?>" name="field-<?=$field_counter;?>" <?=$req_field;?>>
+                                        <?php
+                                        if(get_sub_field('select-options')):
+                                            $options = get_sub_field('select-options');
+                                            foreach($options as $single_option): ?>
+                                                <option>
+                                                    <?=$single_option['select-option']; ?>
+                                                </option>
+                                            <?php
+                                            endforeach;
+                                        endif; ?>
+                                    </select>
+                                </div>
+                                <?php
+                                //Add current field type to field_type array
+                                $field_type[$field_counter] = get_sub_field('flex-form-field-type');
+
+                                //Add current label to field_label array
+                                $field_label[$field_counter] = get_sub_field('flex-form-field-label');
+
+                                $field_counter++ ;
+
+                            elseif(get_sub_field('flex-form-field-type') == "textarea") : ?>
+                                <div class="flex-field-wrap">
+                                    <label for="field-<?=$field_counter;?>" class="field-<?=$field_counter;?> <?php the_sub_field('flex-form-field-type'); ?>-field<?php if($req_field) { ?> required-field <?php }; ?>"><?php the_sub_field('flex-form-field-label'); ?></label>
+                                    <textarea id="field-<?=$field_counter;?>" name="field-<?=$field_counter;?>" <?=$req_field;?> rows="4"></textarea>
+                                </div>
+                                <?php
+
+                                //Add current field type to field_type array
+                                $field_type[$field_counter] = get_sub_field('flex-form-field-type');
+
+                                //Add current label to field_label array
+                                $field_label[$field_counter] = get_sub_field('flex-form-field-label');
+
+                                $field_counter++ ;
+
+                            else : ?>
+                                <div class="flex-field-wrap">
+                                    <label for="field-<?=$field_counter;?>" class="field-<?=$field_counter;?> <?php the_sub_field('flex-form-field-type'); ?>-field<?php if($req_field) { ?> required-field <?php }; ?>"><?php the_sub_field('flex-form-field-label'); ?></label>
+                                    <input id="field-<?=$field_counter;?>" name="field-<?=$field_counter;?>" type="<?php the_sub_field('flex-form-field-type'); ?>" <?=$req_field;?>>
+
+                                </div>
+                                <?php
+                                //Add current field type to field_type array
+                                $field_type[$field_counter] = get_sub_field('flex-form-field-type');
+
+                                //Add current label to field_label array
+                                $field_label[$field_counter] = get_sub_field('flex-form-field-label');
+
+                                $field_counter++ ;
+                            endif;
+
+                        endwhile;
+                    endif; ?>
+
+                    <?php
+                    //Custom send button text
+                    if(get_sub_field('flex-form-alt-send')) {
+                        $send_text = get_sub_field('flex-form-alt-send');
+                    } else {
+                        $send_text = 'Verzenden';
+                    } ?>
+
+                    <div class="g-recaptcha" data-sitekey="<?php the_field("recaptcha_site_key", "options"); ?>"></div>
+                    <div class="button-container">
+                        <input type="submit" name="submit" id="recaptcha-submit" value="<?=$send_text;?>" class="button" />
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
 
 <?php	
 
@@ -116,9 +116,9 @@ $field_counter = 1; $field_type = array(); $field_label = array(); $body = array
 		if(!$captcha){
 			echo '<div class="flex-form-success-wrap flex-form-success-show">
 				<div class="flex-form-success">
-					<div class="flex-form-success-icon" data-icon="&#xf191;"></div>
-					<h2>Vink het reCaptcha vinkje aan</h2>
-					<div class="flex-form-close-button">Sluiten</div>
+					<div class="flex-form-error-icon" data-icon="&#xf1cf;"></div>
+					<p>Vink het reCaptcha vinkje aan</p>
+					<div class="button flex-form-close-button">Sluiten</div>
 				</div>
 			</div>';
 		};
@@ -130,9 +130,9 @@ $field_counter = 1; $field_type = array(); $field_label = array(); $body = array
 		if(intval($responseKeys["success"]) !== 1) :
 			echo '<div class="flex-form-success-wrap flex-form-success-show">
 				<div class="flex-form-success">
-					<div class="flex-form-success-icon" data-icon="&#xf191;"></div>
-					<h2>Er is een fout opgetreden: vink het reCaptcha vinkje aan.</h2>
-					<div class="flex-form-close-button">Sluiten</div>
+					<div class="flex-form-error-icon" data-icon="&#xf1cf;"></div>
+					<p>Vink het reCaptcha vinkje aan.</p>
+					<div class="button flex-form-close-button">Sluiten</div>
 				</div>
 			</div>';
 		
@@ -166,7 +166,7 @@ $field_counter = 1; $field_type = array(); $field_label = array(); $body = array
 				add_filter( 'wp_mail_content_type','set_my_mail_content_type' );
 				add_action( 'phpmailer_init', 'send_smtp_email' );
 			
-				wp_mail( $email_to, $subject, $body);
+				    wp_mail( $email_to, $subject, $body);
 
 				remove_filter( 'wp_mail_content_type','set_my_mail_content_type' );
 				remove_action( 'phpmailer_init', 'send_smtp_email' );
@@ -177,19 +177,26 @@ $field_counter = 1; $field_type = array(); $field_label = array(); $body = array
 			$emailSent = true;
 			
 			//Show success message
-			echo '<div class="flex-form-success-wrap flex-form-success-show"><div class="flex-form-success"><div class="flex-form-success-icon" data-icon="&#xf17f;"></div><h2>' . get_sub_field('flex-form-success-message') . '</h2><div class="flex-form-close-button">Sluiten</div></div></div>';
+			echo '<div class="flex-form-success-wrap flex-form-success-show"><div class="flex-form-success"><div class="flex-form-success-icon" data-icon="&#xf1a1;"></div><p>' . get_sub_field('flex-form-success-message') . '</p><div class="button flex-form-close-button">Sluiten</div></div></div>';
 		
 		// Recaptcha if/else
 		endif;
 	endif;
 	
 	?>
-	
-	<script>
-		window.addEventListener('load', function () {
-			$(".flex-form-close-button").click(function() {
-				$(".flex-form-success-wrap").removeClass('flex-form-success-show');
-			});
-			
-		});
+
+<script>
+    window.addEventListener('load', function () {
+        $(".flex-form-close-button").click(function() {
+            $(".flex-form-success-wrap").removeClass('flex-form-success-show');
+        });
+
+        jQuery(document).ready(function() {
+            loadRecaptcha('#form-id-<?=$form_id;?>', 0)
+        });
+
+        jQuery(document).scroll(function() {
+            loadRecaptcha('#form-id-<?=$form_id;?>', 0)
+        });
+    });
 </script>

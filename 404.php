@@ -8,11 +8,12 @@
  */
 
 get_header(); ?>
-	
-	
-<div class="content-wrap h1-headline">
-	<h1 itemprop="headline">De pagina kan niet worden gevonden</h1>
-</div>
+
+
+<?php
+    $args[0] = 'Pagina niet gevonden';
+    get_template_part('/blocks/block-h1', 'h1-headline', $args);
+?>
 
 <main>
 

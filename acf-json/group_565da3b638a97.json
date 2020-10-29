@@ -278,11 +278,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_57a9a2dcd379d",
-            "label": "Primair logo",
+            "key": "field_5f71e9d0e2f26",
+            "label": "Logo's",
             "name": "config-logo",
-            "type": "file",
-            "instructions": "Bestandstype: PNG of SVG",
+            "type": "group",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -290,30 +290,47 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "0.5",
-            "mime_types": ""
-        },
-        {
-            "key": "field_584fe5afbde30",
-            "label": "Secundair logo",
-            "name": "config-logo-sec",
-            "type": "file",
-            "instructions": "Bestandstype: PNG of SVG",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "0.5",
-            "mime_types": "png, svg"
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_57a9a2dcd379d",
+                    "label": "Primair logo",
+                    "name": "primary-logo",
+                    "type": "file",
+                    "instructions": "Bestandstype: PNG of SVG",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "0.5",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_584fe5afbde30",
+                    "label": "Logo in footer",
+                    "name": "secondary-logo",
+                    "type": "file",
+                    "instructions": "Bestandstype: PNG of SVG",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "0.5",
+                    "mime_types": "png, svg"
+                }
+            ]
         },
         {
             "key": "field_5a741cade8522",
@@ -374,6 +391,42 @@
                         "id": ""
                     },
                     "default_value": ""
+                },
+                {
+                    "key": "field_5f71e8b2e244e",
+                    "label": "Additionele kleuren",
+                    "name": "additional-colors",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Kleur toevoegen",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f71e8d2e244f",
+                            "label": "Kleur",
+                            "name": "add-color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": ""
+                        }
+                    ]
                 },
                 {
                     "key": "field_5a741cd2e8524",
@@ -543,86 +596,6 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_58243de5a591e",
-            "label": "Social Media",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_58243df8a591f",
-            "label": "Facebook",
-            "name": "config-facebook-link",
-            "type": "url",
-            "instructions": "Vul hier uw Facebook link in",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_5824418aa5920",
-            "label": "Twitter",
-            "name": "config-twitter-link",
-            "type": "url",
-            "instructions": "Vul hier uw Twitter link in",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_5824419aa5921",
-            "label": "Instagram",
-            "name": "config-instagram-link",
-            "type": "url",
-            "instructions": "Vul hier uw Instagram link in",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_582441aca5922",
-            "label": "LinkedIn",
-            "name": "config-linkedin-link",
-            "type": "url",
-            "instructions": "Vul hier uw LinkedIn link in",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
             "key": "field_582ee5c6ef595",
             "label": "Openingstijden",
             "name": "",
@@ -715,6 +688,176 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_5f737279b02f9",
+            "label": "GDPR (Cookie verklaringen)",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f737384a5eab",
+            "label": "Cookiemelding gebruiken",
+            "name": "use-cookiealert",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f737296b02fa",
+            "label": "Tekst cookiemelding",
+            "name": "cookiealert-text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Wij gebruiken analytische cookies om je een optimale gebruikerservaring te bieden en we gebruiken functionele cookies om jouw voorkeuren op te slaan. Door op 'Instellingen wijzigen' te klikken, kun je meer lezen over onze cookies en je voorkeuren aanpassen. Door op 'Accepteren' te klikken, ga je akkoord met het gebruik van alle cookies zoals omschreven in onze cookieverklaring.",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5f7374cc20ddb",
+            "label": "Trackingcookies",
+            "name": "trackingcookies",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Tracking cookie toevoegen",
+            "sub_fields": [
+                {
+                    "key": "field_5f7374e520ddc",
+                    "label": "Naam",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f7374f520ddd",
+                    "label": "Beschrijving voor gebruiker",
+                    "name": "description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f73750f20dde",
+                    "label": "Partij",
+                    "name": "party",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f73751c20ddf",
+                    "label": "Script",
+                    "name": "script",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "<script.... <\/script>",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f7375bdf4c87",
+                    "label": "Cookienaam",
+                    "name": "tracking-name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -743,7 +886,7 @@
         "tags",
         "send-trackbacks"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1586357546
+    "modified": 1602512951
 }

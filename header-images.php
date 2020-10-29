@@ -51,8 +51,6 @@
 			<?php endforeach; ?>
 			</div>
 		</div>
-	<?php
-	endif; ?>									
 
 <script>
 	window.addEventListener('load', function () {
@@ -76,4 +74,6 @@
 		});
 	});
 </script>
-<?php endif; ?>
+    <?php
+    endif;
+endif; ?>

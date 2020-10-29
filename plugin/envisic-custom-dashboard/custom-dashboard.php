@@ -126,12 +126,11 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 
 					//Bundle CSS files
 					$cssFiles = array(
-						'/css/aos.css',
-						'/css/flickity.css',
-						'/css/reset.css',
-						'/css/simplelightbox.css',
+						'/css/includes/pre-base.css',
+						'/css/includes/vendor/flickity.css',
+						'/css/includes/vendor/simplelightbox.css',
 						'/css/style.css',
-						'/css/' . $theme_sub_style_sheet,
+						'/css/themes/' . $theme_sub_style_sheet,
 						'/css/config.css',
 						'/css/override.css'
 					);
@@ -146,6 +145,8 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 					$buffer = str_replace(': ', ':', $buffer);
 					//Remove whitespace
 					$buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
+					//rewrite the URL to icons font
+					$buffer = str_replace("url('../../fonts/Icon", "url('fonts/Icon", $buffer);
 					$file = get_template_directory() . '/bundled-min.css';
 					file_put_contents($file, $buffer ) or print_r(error_get_last()); 
 

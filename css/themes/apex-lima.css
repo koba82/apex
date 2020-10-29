@@ -13,28 +13,19 @@ Author URI: http://www.envisic.nl/
 
 :root {
 
-	--page-border: 100px;
-
     /* Some widths */
     --header-height: 600px;
-    --col-1: 550px;
-    --col-2: 550px;
-    --stickout: var(--page-border);
-    
-    /* The basic grid columns and rows for the page */
-    --page-column-layout: [page] auto [stickout-l] 80px [content] 530px [col-2] 530px [content-end] 80px [stickout-r] auto [page-end];
-    --page-column-layout: [page] auto [stickout-l] var(--stickout) [content] var(--col-1) [col-2] var(--col-2) [content-end] var(--stickout) [stickout-r] auto [page-end];
-    --page-row-layout: [header] var(--header-height) [content] 1fr [footer] auto;
-    
-    /* Colors */
-    --pri-color: rgb(250, 80, 66);
-    --sec-color: rgb( 88, 88, 88);
+    --content-width: 1100px;
+
 }
 
-.page-wrapper {
-	margin: 0 auto;
+.content-wrap {
+    margin: var(--content-margin) auto;
 }
 
+.bgc {
+    padding: var(--content-margin) 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	color: var(--h-color);
@@ -48,7 +39,7 @@ h1 {
 	font-size: 2.5rem;
 }
 
-.h1-headline {
+.block-h1 {
 	margin: 0 auto;
 	grid-row: 2 / 2;
 	grid-column: stickout-l / stickout-r;
@@ -59,9 +50,10 @@ h1 {
 	top: -4rem;
     position: relative;
 	border-top: 1px solid rgba(0,0,0,0.3);
+    z-index: 10;
 }
 
-.h1-headline:before {
+.block-h1:before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -72,7 +64,7 @@ h1 {
 	background: rgba(0,0,0,0.3);
 }
 
-.h1-headline:after {
+.block-h1:after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -118,7 +110,6 @@ em {
 	padding:3px 7px;
 }
 
-
 /*=========================================================================================
  ======= Page Layout
  =========================================================================================*/
@@ -155,6 +146,8 @@ main {
     height: calc(var(--header-height) - 140px );
 	border-top: 1px solid rgba(0,0,0,0.3);
 	border-bottom:1px solid rgba(0,0,0,0.3);
+    grid-column: page / page-end;
+    -ms-grid-colum: page / page-end;
 }
 
 .nav-main {
@@ -330,11 +323,11 @@ main {
 	transform: translate3d(0px, 0, 0);
 }
 
-.spotlight {
+.spotlight .flex-paragraph {
     padding-left: 50px;
 }
 
-.spotlight:before {
+.spotlight .flex-paragraph:before {
     content: '\f16a';
     font-family: 'IconsFont';
     font-size: 3rem;
@@ -345,11 +338,11 @@ main {
     color: var(--h-color);
 }
 
-.spotlight:after {
+.spotlight .flex-paragraph:after {
     display: none;
 }
 
-.content-wrap.c-flex-image.no-bgc {
+.content-wrap.block-image.no-bgc {
 	grid-column: stickout-l / stickout-r;
 }
  
@@ -362,16 +355,6 @@ main {
     background: rgba(0,0,0,0.05);
     padding: 40px;
     margin: 0 auto;
-}
-
-.has-large-buttons > * {
-    display:grid;
-    grid-template-columns: var(--page-column-layout);
-	-ms-grid-template-columns: var(--page-column-layout);
-}
-
-.has-large-buttons > * > * {
-    grid-column: stickout-l / stickout-r;
 }
 
 .large-button .cta-text {
@@ -710,11 +693,11 @@ span[itemprop=name] {
         --col-2:1fr;
     }
     
-    .h1-headline:before, .h1-headline:after {
+    .block-h1:before, .block-h1:after {
         display: none;
     }
     
-    .h1-headline, main {
+    .block-h1, main {
         top: 0;
     }
     
@@ -741,13 +724,13 @@ span[itemprop=name] {
         padding: 20px 20px;
     }
     
-    .spotlight {
+    .spotlight .flex-paragraph {
         padding-left: 60px;
         font-size: 1rem;
         line-height: 1.6rem;
     }
     
-    .spotlight:before {
+    .spotlight .flex-paragraph:before {
         top: 2rem;
         left: 0.5rem;
     }
