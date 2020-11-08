@@ -41,6 +41,12 @@ h2 {
     padding-bottom: 15px;
 }
 
+.header-icon {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 .block-h1 {
     grid-row: 1 / 2;
     z-index: 9;
