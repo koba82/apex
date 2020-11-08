@@ -1437,10 +1437,6 @@ a.card.has-bg-img:hover .flex-cta-bg-image::after {
 	text-align: center;
 }
 
-.block-usp .icon-wrap {
-	--icon-size: 2rem;
-}
-
 .block-usp .usp-text {
 	font-size: 1.2rem;
 }
