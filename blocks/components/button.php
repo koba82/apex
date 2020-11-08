@@ -2,11 +2,18 @@
     $group_field = ($args['group-field']) ? $args['group-field'] : 'button-group';
     $button = get_sub_field($group_field);
     $icon = $button['icon-select'] ? $button['icon-select'] : false;
+    $link;
 
     if($button['button-link-type'] == 'no-link') :
         $link = false;
     else :
-        $link = ($button['button-link-type'] == 'internal') ? $button['button-internal-link'] : ($button['button-link-type'] == 'external') ? $button['button-external-link'] : $button['button-file-link'];
+        if($button['button-link-type']) :
+            $link = $button['button-internal-link'];
+        elseif ($button['button-link-type'] == 'external') :
+            $link = $button['button-external-link'];
+        else :
+            $link = $button['button-file-link'];
+        endif;
     endif;
 
     echo ($link) ? '<a href="' . $link . '" class="button ' . $button['button-type'] . '">' : '<div class="button ' . $button['button-type'] . '">';
