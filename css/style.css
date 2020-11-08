@@ -1680,6 +1680,10 @@ form input:not([type=submit]), form select, form textarea {
 	border-radius: var(--bor-radius-sm);
 }
 
+form textarea {
+	height: auto;
+}
+
 form input[type=checkbox], form input[type=radio] {
 	display: block;
 	flex: 0 0 var(--check-radio-size);
