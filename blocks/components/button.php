@@ -7,7 +7,7 @@
     if($button['button-link-type'] == 'no-link') :
         $link = false;
     else :
-        if($button['button-link-type']) :
+        if($button['button-link-type'] == 'internal') :
             $link = $button['button-internal-link'];
         elseif ($button['button-link-type'] == 'external') :
             $link = $button['button-external-link'];
