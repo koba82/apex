@@ -1196,7 +1196,7 @@
                                     "key": "field_5f8577eb08428",
                                     "label": "Link",
                                     "name": "button-external-link",
-                                    "type": "url",
+                                    "type": "text",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": [
@@ -1214,7 +1214,10 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": ""
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 },
                                 {
                                     "key": "field_5f85780408429",
@@ -8549,5 +8552,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1604843662
+    "modified": 1604843928
 }
