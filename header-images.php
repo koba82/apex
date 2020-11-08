@@ -6,8 +6,14 @@
 	else :
 	
 	// Images from the current page have precedence over the images from the options page
-	$img = ( get_field('page-header-images') ) ? get_field('page-header-images') : get_field('header-images', 'options');
-	
+	$img = [];
+
+	if(get_field('page-header-images')) :
+        $img[] = get_field('page-header-images');
+	else :
+        $img = get_field('header-images', 'options');
+	endif;
+
 	//If there's only one image, display a static image. If more than one image, create a flickity slider	
 	if(!$img) : ?>
 		<div class="header-images header-background-color"></div>
