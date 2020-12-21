@@ -77,5 +77,13 @@ function fireScripts() {
         }
     });
 
+    jQuery('.woocommerce-message').on('click', function() {
+            jQuery(this).addClass('hide');
+            setTimeout(function() {
+                jQuery(this).remove();
+            }, 300);
+
+    })
+
 }
 </script>

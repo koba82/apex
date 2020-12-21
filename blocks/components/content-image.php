@@ -1,9 +1,14 @@
 <?php
-    $component = $args;
-    $image = $component['image'];
-    $display_caption = $components['caption'];
-    $card = ($component['context'] == 'card');
 
+    if(!isset($component)) :
+        $component = $args;
+    endif;
+
+    $image = $component['image'];
+    $display_caption = $component['caption'];
+    $card = ($component['context'] == 'card');
+    $lightbox_id = $component['lightbox-id'];
+    
 ?>
 <div class="content-image-wrap">
     <?php if($card) : ?>
@@ -14,7 +19,7 @@
                         <?=$image['sizes']['image-560']; ?> 560w" />
         </div>
     <?php else : ?>
-        <a href="<?=$image['sizes']['main-image-size']; ?>" data-lightbox-id="<?=$id; ?>" class="content-image" <?=($image['alt']) ? 'title="' . $image['alt'] . '"' : '';?>>
+        <a href="<?=$image['sizes']['main-image-size']; ?>" <?php if($lightbox_id) : ?> data-lightbox-id="<?=$lightbox_id; ?>" <?php endif;?> class="content-image" <?=($image['alt']) ? 'title="' . $image['alt'] . '"' : '';?>>
             <img src="<?=$image['sizes']['image-1066']; ?>"
                  srcset="<?=$image['sizes']['image-320']; ?> 320w,
                         <?=$image['sizes']['image-400']; ?> 400w,

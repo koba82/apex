@@ -8,9 +8,18 @@ get_header(); ?>
 <?php
     $page_properties = get_field('seo-options');
 
-    $args[0] = ($page_properties['h1-text'] !== '') ? $page_properties['h1-text'] : ( ($page_properties['seo-title'] !== '') ? $page_properties['seo-title'] : get_the_title() );
+    if(!$page_properties['hide-h1']) :
 
-    get_template_part('/blocks/block-h1', 'h1-headline', $args);
+        $args[0] = ($page_properties['h1-text'] !== '') ? $page_properties['h1-text'] : ( ($page_properties['seo-title'] !== '') ? $page_properties['seo-title'] : get_the_title() );
+
+        if($args[0]) :
+
+            get_template_part('/blocks/block-h1', 'h1-headline', $args);
+
+        endif;
+
+    endif;
+
 ?>
 
 <main>
@@ -18,18 +27,7 @@ get_header(); ?>
     <?php
     get_template_part('acf-flex-content-loop');
 
-    if ( WPEX_WOOCOMMERCE_ACTIVE ) :
-
-        do_shortcode('aws_search_form'); ?>
-
-        <section class="content-wrap woo-content-wrap">
-            <div class="content woo-content">
-            </div>
-        </section>
-
-    <?php
-    endif; ?>
-
+    ?>
 
 </main>
 
