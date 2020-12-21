@@ -43,9 +43,12 @@ Description: A full solution for small and medium businesses
 	/* Grid */
 	--grid: 8; /* sets number of grid columns */
 	--col-span: 1; /* Sets number of columns an element should span (default is 1); */
+
+	--gutter-xs: min(0.5vw, 0.5rem);
 	--gutter-sm: min(1.2vw, 15px);
 	--gutter-md: min(2vw, 25px);
 	--gutter-lg: min(2.5vw, 35px);
+	--gutter-xl: min(3vw, 2.5rem);
 
 	/* Radius */
 	--bor-radius-sm: .3rem;
@@ -2131,7 +2134,6 @@ footer, footer a.footer-link, footer a, footer a:hover, footer-content {
 	}
 
 	.page-wrapper {
-		overflow-x: hidden;
 	}
 
 	main {

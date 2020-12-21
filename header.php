@@ -82,6 +82,11 @@
 <div class="page-wrapper scroll-top">
     <header itemscope="itemscope" itemtype="http://schema.org/WPHeader">
         <div class="menu-button"></div>
+
+        <?php if ( WPEX_WOOCOMMERCE_ACTIVE ) :
+            include 'blocks/woo/top-reassurance.php';
+        endif; ?>
+
         <?php get_template_part('header-images'); ?>
         <div class="header-content">
 
@@ -91,8 +96,30 @@
                 </a>
             </div>
 
+            <?php if ( WPEX_WOOCOMMERCE_ACTIVE ) :
+
+                if (function_exists('aws_get_search_form')) : ?>
+
+                    <div class="search-box">
+
+                        <?php dynamic_sidebar('searchbar'); ?>
+
+                    </div>
+
+                    <div class="shopping-cart">
+                        <a class="shopping-cart-link" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+                        <div class="icon-wrap shopping-cart-icon" data-product-count="<?php echo WC()->cart->get_cart_contents_count();?>"><?php echo display_icon('shopping-cart'); ?></div>
+
+                        </a>
+                    </div>
+
+                 <?php endif;
+            endif; ?>
+
             <?php
-            if(!$use_mob_nav) : ?>
+            if(!$use_mob_nav) :
+
+                if(WPEX_WOOCOMMERCE_ACTIVE == false) : ?>
                 <div class="nav nav-top-bar">
                     <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
 
@@ -103,10 +130,12 @@
                     </nav>
                 </div>
 
+                <?php endif; ?>
+
                 <nav class="nav nav-main" itemscope itemtype="http://schema.org/SiteNavigationElement">
 
                     <?php get_template_part('nav-main'); ?>
-
+                    <?php dynamic_sidebar('navbar'); ?>
                 </nav>
 
             <?php endif; ?>

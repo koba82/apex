@@ -256,6 +256,7 @@
 //**********************************************************************************************************************
 
 	if( function_exists('acf_add_options_page') ) {
+
 		acf_add_options_page(array(
 			'page_title' 	=> 'Configuratie',
 			'menu_title'	=> 'Configuratie',
@@ -264,17 +265,6 @@
 			'redirect'		=> false
 		));
 
-		//acf_add_options_sub_page(array(
-		//	'page_title' 	=> 'Contactformulier',
-		//	'menu_title'	=> 'Contactformulier',
-		//	'parent_slug'	=> 'theme-general-settings',
-		//));
-		//
-		//acf_add_options_sub_page(array(
-		//	'page_title' 	=> 'Unieke punten',
-		//	'menu_title'	=> 'Unieke punten',
-		//	'parent_slug'	=> 'theme-general-settings',
-		//));
 	}
 
 
@@ -284,14 +274,18 @@
 
 	//Remove menu's
 	if( ! function_exists( 'remove_menus' ) ) {
-		function remove_menus(){
-		  //remove_menu_page( 'index.php' );
-		  remove_submenu_page( 'index.php', 'update-core.php' );  //Update
-		  remove_submenu_page( 'index.php', 'index.php' );  //index submenu
-		  remove_menu_page( 'edit.php' );           //Posts
-		  remove_menu_page( 'edit-comments.php' );  //Comments
-		}
-		add_action( 'admin_menu', 'remove_menus' );
+        if( ! current_user_can('administrator') ) {
+            function remove_menus()
+            {
+                //remove_menu_page( 'index.php' );
+                remove_submenu_page('index.php', 'update-core.php');  //Update
+                remove_submenu_page('index.php', 'index.php');  //index submenu
+                remove_menu_page('edit.php');           //Posts
+                remove_menu_page('edit-comments.php');  //Comments
+            }
+
+            add_action('admin_menu', 'remove_menus');
+        }
 	};
 
 	//Remove tools menu only if current user is not administrator
@@ -323,18 +317,23 @@
 
 	//Remove columns from posts/pages overview page (Page table)
 	if( ! function_exists( 'custom_column_init' ) ) {
-	  function my_manage_columns( $columns ) {
-		unset($columns['comments']);	//Comments
-		unset($columns['author']);	//Author
-		unset($columns['cb']);		//Checkbox
-		return $columns;
-	}
+        if( ! current_user_can('administrator') ) {
+            function my_manage_columns($columns)
+            {
+                unset($columns['comments']);    //Comments
+                unset($columns['author']);    //Author
+                unset($columns['cb']);        //Checkbox
+                return $columns;
+            }
 
-	function custom_column_init() {
-		add_filter( 'manage_posts_columns' , 'my_manage_columns' );
-		add_filter( 'manage_pages_columns' , 'my_manage_columns' );
-	}
-	add_action( 'admin_init' , 'custom_column_init' );
+            function custom_column_init()
+            {
+                add_filter('manage_posts_columns', 'my_manage_columns');
+                add_filter('manage_pages_columns', 'my_manage_columns');
+            }
+
+            add_action('admin_init', 'custom_column_init');
+        }
 	};
 
 	// Remove personal options from profile page, removes the `profile.php` admin color scheme options
@@ -560,14 +559,17 @@
 	add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 	// Customizing meta box names
-	function my_remove_meta_boxes() {
-		remove_meta_box( 'pageparentdiv', 'post', 'side' );
-		remove_meta_box( 'postimagediv', 'post', 'side' );
-		add_meta_box('pageparentdiv', __('Pagina eigenschappen'), 'page_attributes_meta_box', 'post', 'normal', 'high');
-	}
-	add_action( 'admin_menu', 'my_remove_meta_boxes' );
-	add_filter('upload_mimes', 'custom_upload_mimes');
+    if( ! current_user_can('administrator') ) {
+        function my_remove_meta_boxes()
+        {
+            remove_meta_box('pageparentdiv', 'post', 'side');
+            remove_meta_box('postimagediv', 'post', 'side');
+            add_meta_box('pageparentdiv', __('Pagina eigenschappen'), 'page_attributes_meta_box', 'post', 'normal', 'high');
+        }
 
+        add_action('admin_menu', 'my_remove_meta_boxes');
+        add_filter('upload_mimes', 'custom_upload_mimes');
+    }
 	// Add role class to body
 	function add_role_to_body($classes) {
 
@@ -583,14 +585,17 @@
 	//Add button to publish metabox
 	add_action( 'post_submitbox_misc_actions', 'custom_button' );
 
-	function custom_button(){
-		$html  = '<div id="major-publishing-actions" style="overflow:hidden">';
-		$html .= '<div id="publishing-action">';
-		$html .= '<div class="button-grey more-publishing-options" >Meer opties</div>';
-		$html .= '</div>';
-		$html .= '</div>';
-		echo $html;
-	}
+    if( ! current_user_can('administrator') ) {
+        function custom_button()
+        {
+            $html = '<div id="major-publishing-actions" style="overflow:hidden">';
+            $html .= '<div id="publishing-action">';
+            $html .= '<div class="button-grey more-publishing-options" >Meer opties</div>';
+            $html .= '</div>';
+            $html .= '</div>';
+            echo $html;
+        }
+    }
 
 //**********************************************************************************************************************
 //	Duplicate post/page
@@ -1170,104 +1175,20 @@ add_filter('acf/load_field/name=flex-card-bgc-select', 'acf_load_color_field_cho
 //	WooSupport
 //**********************************************************************************************************************
 
-	// Add new constant that returns true if WooCommerce is active
+	/**
+	 * Add new constant that returns true if WooCommerce is active
+     *
+     * In mixed templates (Woo and non-Woo content), test for WPEX_WOOCOMMERCE_ACTIVE
+     *
+	 */
 	define( 'WPEX_WOOCOMMERCE_ACTIVE', class_exists( 'WooCommerce' ) );
 
 	// Checking if WooCommerce is active
 	if ( WPEX_WOOCOMMERCE_ACTIVE ) {
 
-		//Add class to admin body if WooCommerce is active
-		function woo_body_class( $classes ) {
-			$classes .= ' woo-com-active';
-			return $classes;
-		};
-		add_filter( 'admin_body_class', 'woo_body_class' );
+        get_template_part('/woocommerce/functions/woo-functions');
 
-		add_action( 'after_setup_theme', function() {
-			add_theme_support( 'woocommerce' );
-		} );
-
-		add_filter( 'woocommerce_show_page_title', '__return_false' );
-
-		add_theme_support( 'wc-product-gallery-slider' );
-		add_theme_support( 'wc-product-gallery-zoom' );
-		add_theme_support( 'wc-product-gallery-lightbox' );
-
-		remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-
-
-		remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-
-
-		add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
-		add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
-
-		function my_theme_wrapper_start() {
-		    echo '<div id="woo-content">';
-		}
-
-		function my_theme_wrapper_end() {
-		    echo '</div>';
-		}
-
-
-        /**
-         * Add the Cost of Products to WooCommerce products (COP)
-         *
-         * @link https://www.innonet.nl/
-         */
-
-        /**
-         */
-        function woocommerce_render_cop_field() {
-            $input   = array(
-                'id'          => '_cop',
-                'label'       => sprintf(
-                    '<abbr title="%1$s">%2$s</abbr>',
-                    _x( 'Inkoopprijs', 'field label', 'my-theme' ),
-                    _x( 'Inkoopprijs', 'abbreviated field label', 'my-theme' )
-                ),
-                'value'       => get_post_meta( get_the_ID(), '_cop', true ),
-                'desc_tip'    => true,
-                'description' => __( 'Voer de inkoopprijs van het product in', 'my-theme' ),
-            );
-            ?>
-
-            <div id="cop_attr" class="options_group">
-                <?php woocommerce_wp_text_input( $input ); ?>
-            </div>
-
-            <?php
-        }
-
-        add_action( 'woocommerce_product_options_inventory_product_data', 'woocommerce_render_cop_field' );
-
-        /**
-         * Save the product's COP number, if provided.
-         *
-         * @param int $product_id The ID of the product being saved.
-         */
-        function woocommerce_save_cop_field( $product_id ) {
-            if (
-                ! isset( $_POST['_cop'], $_POST['woocommerce_meta_nonce'] )
-                || ( defined( 'DOING_AJAX' ) && DOING_AJAX )
-                || ! current_user_can( 'edit_products' )
-                || ! wp_verify_nonce( $_POST['woocommerce_meta_nonce'], 'woocommerce_save_data' )
-            ) {
-                return;
-            }
-
-            $cop = sanitize_text_field( $_POST['_cop'] );
-
-            update_post_meta( $product_id, '_cop', $cop );
-        }
-
-        add_action( 'woocommerce_process_product_meta','woocommerce_save_cop_field' );
-
-	}
-
+    }
 
 //**********************************************************************************************************************
 //	Adding Menus & adding menu option in backend top level menu
@@ -1494,8 +1415,60 @@ add_filter('acf/load_field/name=flex-card-bgc-select', 'acf_load_color_field_cho
                 $custom_style.= file_get_contents($header_font);
                 $custom_style.= file_get_contents($body_font);
 
+
+                //Download Google fonts
+
+                function getContents($str, $startDelimiter, $endDelimiter) {
+                    $contents = array();
+                    $startDelimiterLength = strlen($startDelimiter);
+                    $endDelimiterLength = strlen($endDelimiter);
+                    $startFrom = $contentStart = $contentEnd = 0;
+                    while (false !== ($contentStart = strpos($str, $startDelimiter, $startFrom))) {
+                        $contentStart += $startDelimiterLength;
+                        $contentEnd = strpos($str, $endDelimiter, $contentStart);
+                        if (false === $contentEnd) {
+                            break;
+                        }
+                        $contents[] = substr($str, $contentStart, $contentEnd - $contentStart);
+                        $startFrom = $contentEnd + $endDelimiterLength;
+                    }
+
+                    return $contents;
+                }
+
+                //Download Google Fonts and replace the original font file URLs with local ones
+                    $headerFontFilesContent = getContents(file_get_contents($header_font), 'url(', ') format');
+                    $bodyFontFilesContent = getContents(file_get_contents($body_font), 'url(', ') format');
+
+                    $newFiles = array();
+                    $oldFiles = $headerFontFilesContent;
+
+                    foreach($bodyFontFilesContent as $i) {
+                        $oldFiles[] = $i;
+                    }
+
+                    foreach($headerFontFilesContent as $fontUrl) {
+                        $file_name = basename($fontUrl);
+                        file_put_contents(get_template_directory() . '/fonts/google/' . $file_name, file_get_contents($fontUrl));
+                        $newFiles[] = get_template_directory_uri() . '/fonts/google/' . $file_name;
+                    }
+
+                    foreach($bodyFontFilesContent as $fontUrl) {
+                        $file_name = basename($fontUrl);
+                        file_put_contents(get_template_directory() . '/fonts/google/' . $file_name, file_get_contents($fontUrl));
+                        $newFiles[] = get_template_directory_uri() . '/fonts/google/' . $file_name;
+                    }
+
+                    foreach($oldFiles as $i => $oldFile) {
+                        $newCustomStyle = str_replace($oldFile, $newFiles[$i], $custom_style);
+                        $custom_style = $newCustomStyle;
+                    }
+                //End download Google fonts
+
                 $file = get_template_directory() . '/css/config.css';
                 file_put_contents($file, $custom_style ) or print_r(error_get_last());
+
+
 
             endif;
         }
@@ -1703,12 +1676,40 @@ add_filter('acf/load_field/name=flex-card-bgc-select', 'acf_load_color_field_cho
              * @param stdClass $args        An object of wp_nav_menu() arguments.
              */
 
-
             $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
         }
 
 
     }
 
+//**********************************************************************************************************************
+//	Work around get_template_part(): this function lets you include a php file with parameters.
+//**********************************************************************************************************************
+
+
+    function includeWithVariables($filePath, $variables = array(), $print = true)
+    {
+        $output = NULL;
+        if(file_exists($filePath)){
+            // Extract the variables to a local namespace
+            extract($variables);
+
+            // Start output buffering
+            ob_start();
+
+            // Include the template file
+            include $filePath;
+
+            // End buffering and return its contents
+            $output = ob_get_clean();
+        } else {
+            $output = "Error, no such file";
+        }
+        if ($print) {
+            print $output;
+        }
+        return $output;
+
+    }
 
 ?>
