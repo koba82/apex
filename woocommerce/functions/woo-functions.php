@@ -135,6 +135,62 @@
 
 
     /**
+     *  PDP product title based on attributes
+     */
+
+    function woocommerce_pdp_title() {
+        global $product;
+
+        if($product->get_attribute('brand') && $product->get_attribute('brand-type')) : ?>
+
+            <h1 class="product_title entry-title"><?=$product->get_attribute('brand');?>  <?=$product->get_attribute('brand-type');?></h1>
+
+            <?php the_title( '<h2 class="product-sub-title">', '</h2>' ); ?>
+
+        <?php else :
+
+            the_title( '<h1 class="product_title entry-title">', '</h1>' );
+
+        endif;
+
+    }
+
+    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+    add_action('woocommerce_single_product_summary', 'woocommerce_pdp_title', 5);
+
+    /**
+     *  PDP Custom availability
+     */
+
+    function woocommerce_pdp_custom_availability() {
+
+        $availability_markup = '<div class="stock ' . esc_attr( $class ) . '">';
+
+        switch($class) {
+            case "in-stock" :
+                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('fnd-success-alt') . '</span>' . wp_kses_post( $availability ) . '</p>';
+                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('truck-delivery') . '</span>Binnen 24 uur verzonden</p>';
+                break;
+            case "available-on-backorder" :
+                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('fnd-info') . '</span>' . wp_kses_post( $availability ) . '</p>';
+                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Levertijd: ~ 2 weken</p>';
+                break;
+            case "out-of-stock" :
+                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('fnd-close-circle') . '</span>' . wp_kses_post( $availability ) . '</p>';
+                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Helaas is de levertijd op dit moment niet bekend.</p>';
+                break;
+            default :
+
+        };
+
+        $availability_markup.= '</div>';
+
+        return $availability_markup;
+
+    }
+
+
+    /**
      * Add static content to PDP
      */
     function woocommerce_add_flex_content_to_pdp() {
@@ -209,7 +265,10 @@
         return $availability;
     }
 
-    //Wrap listerpage in div
+    /**
+     * Wrap listerpage in div
+     */
+
 
 
     function lister_page_open_div() {
