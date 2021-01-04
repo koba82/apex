@@ -375,7 +375,7 @@ form input:not([type=submit]), form select, form textarea {
 	grid-column: content / content-end;
 	flex: 0 0 100%;
 	--col-span: var(--grid);
-	width: var(--width);
+	width: 100%;
 }
 
 .gallery-and-summary-wrap .content {
@@ -1157,11 +1157,9 @@ ul.products {
 }
 
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
-	background: white;
+	background: rgb(245,245,245);
 	border-left: 15px solid transparent;
 	border-top: 0px;
-	border-radius: var(--bor-radius-sm);
-	box-shadow: var(--box-shadow);
 	border-left-color: var(--message-color);
 }
 
