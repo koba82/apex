@@ -59,30 +59,49 @@
 
 
     /**
-     * Add the Cost of Products to WooCommerce products (COP)
+     * Add the Custom fields for Products in WooCommerce backend (COP)
      */
     function woocommerce_render_cop_field() {
-        $input   = array(
-            'id'          => '_cop',
-            'label'       => sprintf(
-                '<abbr title="%1$s">%2$s</abbr>',
-                _x( 'Inkoopprijs', 'field label', 'my-theme' ),
-                _x( 'Inkoopprijs', 'abbreviated field label', 'my-theme' )
-            ),
-            'value'       => get_post_meta( get_the_ID(), '_cop', true ),
-            'desc_tip'    => true,
-            'description' => __( 'Voer de inkoopprijs van het product in', 'my-theme' ),
+        $inputGDJ   = array(
+            'id'          => '_cop_gdj',
+            'label'       => 'Inkoopprijs GDJ',
+            'value'       => get_post_meta( get_the_ID(), '_cop_gdj', true )
         );
+        $inputMCW   = array(
+            'id'          => '_cop_mcw',
+            'label'       => 'Inkoopprijs MCW',
+            'value'       => get_post_meta( get_the_ID(), '_cop_mcw', true )
+        );
+        $inputGDJstock   = array(
+            'id'          => '_stock_gdj',
+            'label'       => 'Voorraad GDJ',
+            'value'       => get_post_meta( get_the_ID(), '_stock_gdj', true )
+        );
+        $inputMCWstock   = array(
+            'id'          => '_stock_mcw',
+            'label'       => 'Voorraad MCW',
+            'value'       => get_post_meta( get_the_ID(), '_stock_mcw', true )
+        );
+
         ?>
 
-        <div id="cop_attr" class="options_group">
-            <?php woocommerce_wp_text_input( $input ); ?>
+        <div id="cop_attr" style="background: rgb(225,225,255)" class="options_group">
+            <?php woocommerce_wp_text_input( $inputGDJ ); ?>
+        </div>
+        <div id="cop_attr" style="background: rgb(225,225,255)" class="options_group">
+            <?php woocommerce_wp_text_input( $inputGDJstock ); ?>
+        </div>
+        <div id="cop_attr" style="background: rgb(255,225,225)" class="options_group">
+            <?php woocommerce_wp_text_input( $inputMCW ); ?>
+        </div>
+        <div id="cop_attr" style="background: rgb(255,225,225)" class="options_group">
+            <?php woocommerce_wp_text_input( $inputMCWstock ); ?>
         </div>
 
         <?php
     }
 
-    add_action( 'woocommerce_product_options_inventory_product_data', 'woocommerce_render_cop_field' );
+    add_action( 'woocommerce_product_options_general_product_data', 'woocommerce_render_cop_field' );
 
     /**
      * Save the product's COP number, if provided.
@@ -105,6 +124,21 @@
     }
 
     add_action( 'woocommerce_process_product_meta','woocommerce_save_cop_field' );
+
+
+    /**
+     * Change number of products that are displayed per page (shop page)
+     */
+    function new_loop_shop_per_page( $cols ) {
+        // $cols contains the current number of products per page based on the value stored on Options –> Reading
+        // Return the number of products you wanna show per page.
+        $cols = 12;
+        return $cols;
+    }
+
+    add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+
 
     /**
      * Add specific product attributes to PDP summary based on backend list
@@ -145,7 +179,7 @@
 
             <h1 class="product_title entry-title"><?=$product->get_attribute('brand');?>  <?=$product->get_attribute('brand-type');?></h1>
 
-            <?php the_title( '<h2 class="product-sub-title">', '</h2>' ); ?>
+            <?php the_title( '<p class="product-sub-title">', '</p>' ); ?>
 
         <?php else :
 
@@ -161,33 +195,57 @@
     /**
      *  PDP Custom availability
      */
+    // Add new stock status options
+    function filter_woocommerce_product_stock_status_options( $status ) {
+        // Add new statuses
+        $status['pre_order'] = 'Voorbestellen';
 
-    function woocommerce_pdp_custom_availability() {
+        return $status;
+    }
+    add_filter( 'woocommerce_product_stock_status_options', 'filter_woocommerce_product_stock_status_options', 10, 1 );
 
-        $availability_markup = '<div class="stock ' . esc_attr( $class ) . '">';
-
-        switch($class) {
-            case "in-stock" :
-                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('fnd-success-alt') . '</span>' . wp_kses_post( $availability ) . '</p>';
-                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('truck-delivery') . '</span>Binnen 24 uur verzonden</p>';
+    // Availability text
+    function filter_woocommerce_get_availability_text( $availability, $product ) {
+        switch( $product->stock_status ) {
+            case 'pre_order':
+                $availability = 'Voorbestellen';
                 break;
-            case "available-on-backorder" :
-                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('fnd-info') . '</span>' . wp_kses_post( $availability ) . '</p>';
-                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Levertijd: ~ 2 weken</p>';
+        }
+        return $availability;
+    }
+    add_filter( 'woocommerce_get_availability_text', 'filter_woocommerce_get_availability_text', 10, 2 );
+
+    // Availability class
+    function filter_woocommerce_get_availability_class( $class, $product ) {
+        switch( $product->stock_status ) {
+            case 'pre_order':
+                $class = 'pre-order';
                 break;
-            case "out-of-stock" :
-                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('fnd-close-circle') . '</span>' . wp_kses_post( $availability ) . '</p>';
-                $availability_markup.= '<p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Helaas is de levertijd op dit moment niet bekend.</p>';
-                break;
-            default :
+        }
 
-        };
+        return $class;
+    }
+    add_filter( 'woocommerce_get_availability_class', 'filter_woocommerce_get_availability_class', 10, 2 );
 
-        $availability_markup.= '</div>';
+    function filter_woocommerce_admin_stock_html( $stock_html, $product ) {
 
-        return $availability_markup;
+     switch($product->stock_status) {
+        case "in_stock" :
+            $stock_html =  '<p><span class="icon-wrap small">' . display_icon('fnd-success-alt') . '</span>' . wp_kses_post( $availability ) . '</p><p><span class="icon-wrap small">' . display_icon('truck-delivery') . '</span>Binnen 24 uur verzonden</p>';
+            break;
+        case "on_backorder" :
+            $stock_html =  '<p><span class="icon-wrap small">' . display_icon('fnd-info') . '</span>' . wp_kses_post( $availability ) . '</p><p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Levertijd: enkele werkdagen</p>';
+            break;
+        case "out_of_stock" :
+            $stock_html = '<p><span class="icon-wrap small">' . display_icon('fnd-close-circle') . '</span>' . wp_kses_post( $availability ) . '</p><p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Helaas is de levertijd op dit moment niet bekend.</p>';
+            break;
+        default :
 
     }
+
+        return $stock_html;
+    }
+    add_filter( 'woocommerce_admin_stock_html', 'filter_woocommerce_admin_stock_html', 10, 2 );
 
 
     /**

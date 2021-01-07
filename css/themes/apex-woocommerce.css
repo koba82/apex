@@ -500,7 +500,7 @@ form input:not([type=submit]), form select, form textarea {
 /* Summary order */
 
 h1.product_title.entry-title {						order: 1; }
-h2.product-sub-title {								order: 2; }
+p.product-sub-title {								order: 2; }
 .woocommerce-product-rating {						order: 3; }
 .price {											order: 5; }
 .stock {											order: 7; }
@@ -517,6 +517,7 @@ h1.product_title.entry-title {
 
 .product-sub-title {
 	font-size: 1rem;
+	font-weight: bold;
 }
 
 .woocommerce-product-rating {
@@ -633,7 +634,7 @@ span.woocommerce-Price-currencySymbol {
 }
 
 .stock.available-on-backorder svg.icon {
-	--icon-color: var(--warning-color);
+	--icon-color: var(--success-color);
 }
 
 .summary-attributes {
@@ -889,6 +890,7 @@ header.woocommerce-products-header {
 }
 
 .products .product {
+	position: relative;
 	margin-bottom: 1.4em;
     border:1px solid rgb(225,225,225);
 	border-radius: var(--card-border-radius);
@@ -1002,7 +1004,6 @@ ul.page-numbers {
 	width: var(--width);
 	order: 30;
 	border: var(--card-border);
-	padding: var(--gutter-md);
 	margin-bottom: auto;
 	position: relative;
 }
@@ -1044,6 +1045,10 @@ aside#woocommerce_layered_nav_filters-3 {
 	padding-bottom: 10px;
 }
 
+aside.widget_layered_nav {
+	padding: var(--gutter-md);
+}
+
 .widget_layered_nav_filters ul {
 	margin: 0;
 	padding: 0;
@@ -1052,12 +1057,21 @@ aside#woocommerce_layered_nav_filters-3 {
 	flex-wrap: wrap;
 }
 
+ul.woocommerce-widget-layered-nav-list {
+	max-height: 300px;
+	overflow-y: auto;
+}
+
 .widget_layered_nav_filters ul li a {
 	flex: 1 1 auto;
 	padding: 3px 5px;
 	background: rgb(245,245,245);
 	border: 1px solid rgb(220,220,220);
 	margin: 0 5px 5px 0;
+}
+
+span.count {
+	font-size: 0.8em;
 }
 
 .widget_layered_nav_filters ul li a:hover {
@@ -1089,15 +1103,32 @@ aside#woocommerce_layered_nav_filters-3 {
 	flex: 0 0 23%;
 }
 
-.products .product:hover {
-	background: rgb(250,250,250);
+.products .product:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.03);
+	opacity:0;
+	pointer-events:none;
+}
+
+.products .product:hover:after {
+	opacity:1;
 }
 
 img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
-	width: calc(100% - ( 2 * var(--card-padding) ) );
+	width: calc(100% - var(--card-padding));
 	height: auto;
 	object-fit: contain;
-	margin: var(--card-padding);
+	margin: calc(0.5 * var(--card-padding));
+}
+
+img.woocommerce-placeholder.wp-post-image {
+	width: 100%;
 }
 
 .products .product .button {
