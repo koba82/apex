@@ -28,8 +28,21 @@ if ( ! defined( 'ABSPATH' ) ) {
             echo '<p><span class="icon-wrap small">' . display_icon('truck-delivery') . '</span>Binnen 24 uur verzonden</p>';
             break;
         case "available-on-backorder" :
-            echo '<p><span class="icon-wrap small">' . display_icon('fnd-info') . '</span>' . wp_kses_post( $availability ) . '</p>';
-            echo '<p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Levertijd: ~ 2 weken</p>';
+
+            $mcwStock = get_post_meta( get_the_ID(), '_stock_mcw', true );
+            $gdjStock = get_post_meta( get_the_ID(), '_stock_gdj', true );
+
+            if(strpos($gdjStock, 'Yes') !== false ) :
+                echo '<p><span class="icon-wrap small">' . display_icon('fnd-info') . '</span>Op voorraad bij leverancier</p>';
+                echo '<p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Levertijd: ca. 5 werkdagen</p>';
+            elseif(strpos($mcwStock, 'available') !== false ) :
+                echo '<p><span class="icon-wrap small">' . display_icon('fnd-info') . '</span>Op voorraad bij leverancier</p>';
+                echo '<p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Levertijd: ca. 10 werkdagen</p>';
+            else:
+                echo '<p><span class="icon-wrap small">' . display_icon('fnd-close-circle') . '</span>' . wp_kses_post( $availability ) . '</p>';
+                echo '<p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Helaas is de levertijd op dit moment niet bekend.</p>';
+            endif;
+
             break;
         case "out-of-stock" :
             echo '<p><span class="icon-wrap small">' . display_icon('fnd-close-circle') . '</span>' . wp_kses_post( $availability ) . '</p>';
@@ -38,5 +51,4 @@ if ( ! defined( 'ABSPATH' ) ) {
         default :
 
     }; ?>
-
 </div>
