@@ -27,6 +27,10 @@ Description: A full solution for small and medium businesses
 
 	--icon-stroke-width: max(1px, min( calc( var(--icon-size) * 0.02), 1px) );
 
+	--h-font-scale-factor: 1;
+	--h-font-size: calc(var(--font-size) * var(--h-font-scale-factor));
+	--h-line-height: max(1.3em, min( calc( 2em / var(--h-font-scale-factor)  ) ) );
+
 }
 
 :root {
@@ -126,6 +130,8 @@ Description: A full solution for small and medium businesses
 	--text-font: Helvetica, Arial, sans-serif;
 	--header-font: Helvetica, Arial, sans-serif;
 
+	--font-size: max(14px, min(2vw, 18px));
+
 	--icon-size: 1.4em;
 
 	--icon-lg: 7rem;
@@ -169,9 +175,8 @@ html {
 }
 
 body {
-	--font-size: max(16px, min(1.2vw, 20px) );
 	font-size: var(--font-size);
-	line-height: 1.7em;
+	line-height: 1.6em;
 	color: var(--text-color);
 	font-family: var(--text-font);
 	height: 100%;
@@ -185,35 +190,35 @@ input, textarea, select, button {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	line-height: var(--h-line-height);
+	font-size: var(--h-font-size);
 	color: var(--h-color);
 	font-family: var(--header-font);
 }
 
 h1 {
-	line-height: 1em;
-	font-size: 4rem;
 	font-weight: 700;
-	margin: 1rem 0;
-	text-align: center;
+	--h-font-scale-factor: 4;
 }
 
 h2 {
-	font-size: 2rem;
-	line-height: 1.4em;
-	font-weight: normal;
+	--h-font-scale-factor: 2;
 }
 
 h3 {
-	font-family: var(--text-font);
+	--h-font-scale-factor: 1.6;
 }
 
-h3 {
-	font-size: 1.4rem;
-	line-height: 2em;
+h4,h5,h6 {
+	--h-font-scale-factor: 1.2;
 }
 
 p {
 	padding-bottom: 1em;
+}
+
+p:last-child {
+	padding-bottom:0;
 }
 
 strong {
@@ -366,8 +371,8 @@ body::-webkit-scrollbar-thumb {
 	align-content: stretch;
 	grid-template-columns: var( --page-column-layout);
 	grid-template-rows:  var(--page-row-layout);
-	-ms-grid-template-columns: var( --page-column-layout);
-	-ms-grid-template-rows:  var(--page-row-layout);
+		-ms-grid-template-columns: var( --page-column-layout);
+		-ms-grid-template-rows:  var(--page-row-layout);
 }
 
 header {
@@ -377,14 +382,14 @@ header {
 	display: grid;
 	grid-template-columns: var(--page-column-layout);
 	position: relative;
-	-ms-grid-column: page / page-end;
-	-ms-grid-row: 1 / 1;
-	-ms-grid-template-columns: var(--page-column-layout);
+		-ms-grid-column: page / page-end;
+		-ms-grid-row: 1 / 1;
+		-ms-grid-template-columns: var(--page-column-layout);
 }
 
 .block-h1 {
 	grid-column: content / content-end;
-	-ms-grid-column: content / content-end;
+		-ms-grid-column: content / content-end;
 }
 
 main {
@@ -392,8 +397,8 @@ main {
 	display: grid;
 	grid-template-columns: var( --page-column-layout);
 	padding-top: 50px;
-	-ms-grid-column: page / page-end;
-	-ms-grid-template-columns: var( --page-column-layout);
+		-ms-grid-column: page / page-end;
+		-ms-grid-template-columns: var( --page-column-layout);
 }
 
 .content-wrap {
@@ -402,8 +407,8 @@ main {
 	grid-column: page / page-end;
 	width: 100%;
 	margin: var(--content-margin) auto;
-	-ms-grid-template-columns: var( --page-column-layout);
-	-ms-grid-column: content / content-end;
+		-ms-grid-template-columns: var( --page-column-layout);
+		-ms-grid-column: content / content-end;
 }
 
 .content-wrap.bgc {
@@ -420,8 +425,8 @@ footer {
 	grid-column: page / page-end;
 	grid-template-columns: var(--page-column-layout);
 	background: var(--pri-color);
-	-ms-grid-column: page / page-end;
-	-ms-grid-template-columns: var(--page-column-layout);
+		-ms-grid-column: page / page-end;
+		-ms-grid-template-columns: var(--page-column-layout);
 }
 
 .bgc h1, .bgc h2, .bgc h3, .bgc h4, .bgc h5, .bgc h6, .bgc a {
@@ -431,8 +436,8 @@ footer {
 .bgc {
 	color: var(--sec-color-con);
 	background: var(--sec-color);
-	-ms-grid-template-columns: var(--page-column-layout);
-	-ms-grid-column: page / page-end;
+		-ms-grid-template-columns: var(--page-column-layout);
+		-ms-grid-column: page / page-end;
 }
 
 .bgc.pri-color {
@@ -596,7 +601,6 @@ section.bgc.sec-color:last-of-type ~ section.bgc.sec-color {
 }
 
 .logo-wrap {
-	margin-right: var(--column-gap);
 	margin-top: var(--content-margin);
 	display: inline-block;
 	width: var(--logo-width);

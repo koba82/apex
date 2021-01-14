@@ -138,6 +138,44 @@
 
     add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 
+    /**
+     *  Lister page product title
+     */
+
+    function custom_lister_page_product_title() {
+
+        global $product;
+
+        $year = ($product->get_attribute('jaar')) ? $product->get_attribute('jaar') : '';
+        $driver = ($product->get_attribute('driver')) ? $product->get_attribute('driver') : '';
+        $manufacturer = ($product->get_attribute('manufacturer')) ? $product->get_attribute('manufacturer') : false;
+        $scale = ($product->get_attribute('schaal')) ? $product->get_attribute('schaal') : false;
+
+        echo '<h3>' . $product->get_attribute('brand') . ' ' . $product->get_attribute('brand-type') . '</h3>';
+
+        echo '<div class="lister-subtitle">';
+
+            if($driver) :
+                echo '<span class="lister-driver">' . $driver . '</span>';
+            endif;
+
+            if($year) :
+                echo '<span class="lister-year">' . $year . '</span>';
+            endif;
+
+            if($manufacturer) :
+                echo '<span class="lister-manufacturer">' . $manufacturer . '</span>';
+            endif;
+
+            if($year) :
+                echo '<span class="lister-scale">' . $scale . '</span>';
+            endif;
+
+        echo '</div>';
+    }
+
+    remove_filter('woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title', 10);
+    add_filter('woocommerce_shop_loop_item_title','custom_lister_page_product_title', 10);
 
 
     /**
@@ -155,7 +193,7 @@
             foreach($attr as $at) :
 
                 if($product->get_attribute($at['attribute-id'])) :
-                   echo '<div class="attr-row"><span class="attr-key">' . $at['attribute-label'] . '</span><span class="attr-value">' . $product->get_attribute($at['attribute-id']) . '</<span></div>';
+                   echo '<div class="attr-row"><span class="attr-key">' . $at['attribute-label'] . '</span><span class="attr-value"><a href="/product-category/raceklassen/?filter_' . $at['attribute-id'] . '=' . $product->get_attribute($at['attribute-id']) . '">' . $product->get_attribute($at['attribute-id']) . '</a></<span></div>';
                 endif;
 
            endforeach;
