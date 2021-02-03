@@ -650,7 +650,6 @@ section.bgc.sec-color:last-of-type ~ section.bgc.sec-color {
 	bottom: auto;
 	top: 0;
 	left: 0;
-	display: grid;
 	grid-template-columns: var(--page-column-layout);
 }
 
@@ -755,6 +754,8 @@ section.bgc.sec-color:last-of-type ~ section.bgc.sec-color {
 	transition: var(--transition-medium);
 	background: rgba(0,0,0,0.2);
 	pointer-events: all;
+	display: flex;
+	align-items: center;
 }
 
 .nav-top a:hover {

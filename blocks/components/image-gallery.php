@@ -30,25 +30,27 @@ $display_caption = $component['caption'];
         </div>
     </div>
 
-    <div class="image-reel flex-slider-<?=$slider_id; ?>">
-        <?php foreach($images as $key => $image) : ?>
+    <?php if(count($images) > 1) : ?>
+        <div class="image-reel flex-slider-<?=$slider_id; ?>">
+            <?php foreach($images as $key => $image) : ?>
 
-            <div class="content-image" data-href="<?=$image['sizes']['main-image-size']; ?>" data-lightbox-id="<?=$id; ?>">
-                <img src="<?=$image['sizes']['image-400']; ?>"
-                     data-image='{"imageMain" : "<?=$image['sizes']['main-image-size']; ?>",
-                            "imageLarge" : "<?=$image['sizes']['image-800']; ?>",
-                            "imageThumb" : "<?=$image['sizes']['image-400']; ?>",
-                            "imagePosition" : "<?php echo $key;?>",
-                            "lightbox" : "<?=$id; ?>"}'
-                     data-img-main="<?=$image['sizes']['image-800']; ?>" data-img-lg="<?=$image['sizes']['main-image-size']; ?>"/>
-                <div class="content-image-overlay">
-                    <div class="icon-wrap medium">
-                        <?=display_icon('chevron-up'); ?>
+                <div class="content-image" data-href="<?=$image['sizes']['main-image-size']; ?>" data-lightbox-id="<?=$id; ?>">
+                    <img src="<?=$image['sizes']['image-400']; ?>"
+                         data-image='{"imageMain" : "<?=$image['sizes']['main-image-size']; ?>",
+                                "imageLarge" : "<?=$image['sizes']['image-800']; ?>",
+                                "imageThumb" : "<?=$image['sizes']['image-400']; ?>",
+                                "imagePosition" : "<?php echo $key;?>",
+                                "lightbox" : "<?=$id; ?>"}'
+                         data-img-main="<?=$image['sizes']['image-800']; ?>" data-img-lg="<?=$image['sizes']['main-image-size']; ?>"/>
+                    <div class="content-image-overlay">
+                        <div class="icon-wrap medium">
+                            <?=display_icon('chevron-up'); ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
 
     <script>
         window.addEventListener('load', function () {
