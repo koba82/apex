@@ -148,8 +148,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 					//rewrite the URL to icons font
 					$buffer = str_replace("url('../../fonts/Icon", "url('fonts/Icon", $buffer);
 					$file = get_template_directory() . '/bundled-min.css';
-					file_put_contents($file, $buffer ) or print_r(error_get_last()); 
-
+					file_put_contents($file, $buffer ) or print_r(error_get_last());
 				};
 
 				?>

@@ -28,13 +28,13 @@ if ( ! comments_open() ) {
 ?>
 <div id="reviews" class="woocommerce-Reviews">
     <div id="comments">
-        <h2 class="woocommerce-Reviews-title"><?php
+        <h4 class="woocommerce-Reviews-title"><?php
             if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) )
                 //printf( _n( '%s review for %s%s%s', '%s reviews for %s%s%s', $count, 'woocommerce' ), $count, '<span>', get_the_title(), '</span>' );
                 echo 'Beoordelingen voor ' . get_the_title();
             else
                 _e( 'Reviews', 'woocommerce' );
-            ?></h2>
+            ?></h4>
 
         <?php if ( have_comments() ) : ?>
 
@@ -54,7 +54,6 @@ if ( ! comments_open() ) {
 
         <?php else : ?>
 
-            <p class="woocommerce-noreviews"><?php _e( 'There are no reviews yet.', 'woocommerce' ); ?></p>
 
         <?php endif; ?>
     </div>
@@ -68,6 +67,8 @@ if ( ! comments_open() ) {
 
                 $comment_form = array(
                     'title_reply'          => have_comments() ? __( 'Add a review', 'woocommerce' ) : sprintf( __( 'Be the first to review &ldquo;%s&rdquo;', 'woocommerce' ), get_the_title() ),
+                    'title_reply_before'    => '<p class="reviews-main-title">',
+                    'title_reply_after'     => '</p>',
                     'title_reply_to'       => __( 'Leave a Reply to %s', 'woocommerce' ),
                     'comment_notes_before' => 'Kies het aantal sterren:',
                     'comment_notes_after'  => '',
@@ -140,7 +141,15 @@ if ( ! comments_open() ) {
             jQuery('#commentform .star-wrap.closed').css('width', starWidth + '%');
         })
 
+        jQuery('.reviews-main-title').on('click', function() {
+
+            jQuery('#respond .comment-form').toggleClass('active');
+
+        });
+
     </script>
+
+
 
 
     <div class="clear"></div>

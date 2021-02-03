@@ -2248,3 +2248,23 @@ div#save-action > input {
 	}
 
 }
+
+
+
+/************************
+    ACF Table plugin
+ */
+
+.acf-table-cell-editor {
+    top: -20vh;
+    width: 25vw;
+    height: 20vh;
+}
+
+textarea.acf-table-cell-editor-textarea {
+    resize: both;
+    width: 100% !important;
+    height: 100%;
+    background: white;
+    padding: 1rem !important;
+}
