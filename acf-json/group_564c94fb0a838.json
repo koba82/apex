@@ -2437,9 +2437,9 @@
                                     },
                                     "choices": {
                                         "geen": "<span class=\"color-selector\" style=\"background: #fffff\"> Geen <\/span>",
-                                        "pri-color": "<span class=\"color-selector\" style=\"background: #cc1e4a;\"> <\/span>",
-                                        "sec-color": "<span class=\"color-selector\" style=\"background: #d0e4ea;\"> <\/span>",
-                                        "ter-color": "<span class=\"color-selector\" style=\"background: #ffc906;\"> <\/span>",
+                                        "pri-color": "<span class=\"color-selector\" style=\"background: #e84615;\"> <\/span>",
+                                        "sec-color": "<span class=\"color-selector\" style=\"background: #e2e2d9;\"> <\/span>",
+                                        "ter-color": "<span class=\"color-selector\" style=\"background: #e2ad00;\"> <\/span>",
                                         "additional-color-1": "<span class=\"color-selector\" style=\"background: #38b589;\"> <\/span>",
                                         "additional-color-2": "<span class=\"color-selector\" style=\"background: #e86d02;\"> <\/span>",
                                         "additional-color-3": "<span class=\"color-selector\" style=\"background: #ad2200;\"> <\/span>"
@@ -8245,9 +8245,9 @@
                             },
                             "choices": {
                                 "geen": "<span class=\"color-selector\" style=\"background: #fffff\"> Geen <\/span>",
-                                "pri-color": "<span class=\"color-selector\" style=\"background: #cc1e4a;\"> <\/span>",
-                                "sec-color": "<span class=\"color-selector\" style=\"background: #d0e4ea;\"> <\/span>",
-                                "ter-color": "<span class=\"color-selector\" style=\"background: #ffc906;\"> <\/span>",
+                                "pri-color": "<span class=\"color-selector\" style=\"background: #e84615;\"> <\/span>",
+                                "sec-color": "<span class=\"color-selector\" style=\"background: #e2e2d9;\"> <\/span>",
+                                "ter-color": "<span class=\"color-selector\" style=\"background: #e2ad00;\"> <\/span>",
                                 "additional-color-1": "<span class=\"color-selector\" style=\"background: #38b589;\"> <\/span>",
                                 "additional-color-2": "<span class=\"color-selector\" style=\"background: #e86d02;\"> <\/span>",
                                 "additional-color-3": "<span class=\"color-selector\" style=\"background: #ad2200;\"> <\/span>"
@@ -9778,6 +9778,13 @@
                 "operator": "!=",
                 "value": "8"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
         ]
     ],
     "menu_order": 2,
@@ -9800,5 +9807,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1607021063
+    "modified": 1611251434
 }
