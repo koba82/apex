@@ -36,10 +36,10 @@ class rc_sweet_custom_dashboard {
 	/**
 	 * Initializes the plugin by setting localization, filters, and administration functions.
 	 */
-	function __construct() {
+    function __construct() {
 	
-		add_action('admin_menu', array( &$this,'rc_scd_register_menu') );
-		add_action('load-index.php', array( &$this,'rc_scd_redirect_dashboard') );
+    add_action('admin_menu', array( &$this,'rc_scd_register_menu') );
+    add_action('load-index.php', array( &$this,'rc_scd_redirect_dashboard') );
  
 	} // end constructor
  

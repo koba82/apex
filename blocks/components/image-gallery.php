@@ -13,13 +13,13 @@ $display_caption = $component['caption'];
 <div class="image-gallery">
     <div class="main-image">
         <div class="content-image-wrap">
-            <a data-href="<?=$images[0]['sizes']['main-image-size']; ?>"
+            <a href="<?=$images[0]['sizes']['main-image-size']; ?>"
                data-image='{"imageMain" : "<?=$images[0]['sizes']['main-image-size']; ?>",
                             "imageLarge" : "<?=$images[0]['sizes']['image-800']; ?>",
                             "imageThumb" : "<?=$images[0]['sizes']['image-400']; ?>",
                             "imagePosition" : "0",
-                            "lightbox" : "<?=$id; ?>"}'
-               data-lightbox-id="<?=$id; ?>" class="content-image" <?=($image[0]['alt']) ? 'title="' . $image[0]['alt'] . '"' : '';?>>
+                            "fancybox" : "<?=$id; ?>"}'
+               data-fancybox="<?=$id; ?>" class="content-image" <?=($image[0]['alt']) ? 'title="' . $image[0]['alt'] . '"' : '';?>>
                 <img src="<?=$images[0]['sizes']['image-800']; ?>"/>
                 <div class="content-image-overlay">
                     <div class="icon-wrap medium">
@@ -30,17 +30,24 @@ $display_caption = $component['caption'];
         </div>
     </div>
 
-    <?php if(count($images) > 1) : ?>
+    <?php if(count($images) > 1 )  : ?>
         <div class="image-reel flex-slider-<?=$slider_id; ?>">
-            <?php foreach($images as $key => $image) : ?>
 
-                <div class="content-image" data-href="<?=$image['sizes']['main-image-size']; ?>" data-lightbox-id="<?=$id; ?>">
+            <?php $counter = 1;
+            foreach($images as $key => $image) : ?>
+
+                <div class="content-image" data-href="<?=$image['sizes']['main-image-size']; ?>">
+
+                    <?php if($counter !== 1) : ?>
+                        <a href="<?=$image['sizes']['main-image-size']; ?>" data-fancybox="<?=$id; ?>"></a>
+                    <?php endif; ?>
+
                     <img src="<?=$image['sizes']['image-400']; ?>"
                          data-image='{"imageMain" : "<?=$image['sizes']['main-image-size']; ?>",
                                 "imageLarge" : "<?=$image['sizes']['image-800']; ?>",
                                 "imageThumb" : "<?=$image['sizes']['image-400']; ?>",
                                 "imagePosition" : "<?php echo $key;?>",
-                                "lightbox" : "<?=$id; ?>"}'
+                                "fancybox" : "<?=$id; ?>"}'
                          data-img-main="<?=$image['sizes']['image-800']; ?>" data-img-lg="<?=$image['sizes']['main-image-size']; ?>"/>
                     <div class="content-image-overlay">
                         <div class="icon-wrap medium">
@@ -48,7 +55,9 @@ $display_caption = $component['caption'];
                         </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            <?php
+            $counter++;
+            endforeach; ?>
         </div>
     <?php endif; ?>
 
