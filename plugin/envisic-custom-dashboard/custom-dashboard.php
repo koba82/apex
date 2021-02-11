@@ -129,6 +129,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 						'/css/includes/pre-base.css',
 						'/css/includes/vendor/flickity.css',
 						'/css/includes/vendor/simplelightbox.css',
+						'/css/includes/vendor/fancybox.css',
 						'/css/style.css',
 						'/css/themes/' . $theme_sub_style_sheet,
 						'/css/config.css',

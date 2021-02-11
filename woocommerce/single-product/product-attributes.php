@@ -49,8 +49,15 @@ ob_start();
 
         <?php endif; ?>
 
-        <?php foreach ( $attributes as $attribute ) :
-            if ( empty( $attribute['is_visible'] ) || $attribute['name'] == 'pa_original-category' || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) {
+        <?php
+
+        $base_slug = returnCategorySlug($page->ID);
+        $wc_options = get_option('woocommerce_permalinks');
+        $attribute_base = $wc_options['attribute_base'];
+
+        foreach ( $attributes as $attribute ) :
+
+            if ( empty( $attribute['is_visible'] ) || $attribute['name'] == 'pa_original-category' || !$attribute['options'] || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) {
                 continue;
             } else {
                 $has_row = true;
@@ -66,12 +73,6 @@ ob_start();
 
                         $attr_filter_name = str_replace('pa_', '', $attribute['name']);
 
-                        $base_slug = returnCategorySlug($page->ID);
-
-
-                        $wc_options = get_option('woocommerce_permalinks');
-                        $attribute_base = $wc_options['attribute_base'];
-
                         foreach($values as $value) :
 
                             $value_slug = str_replace(' ', '-', $value);
@@ -82,11 +83,27 @@ ob_start();
                         endforeach;
 
                     } else {
-
                         // Convert pipes to commas and display values
                         $values = array_map( 'trim', explode( WC_DELIMITER, $attribute['value'] ) );
-                        echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
 
+                        $value_count = count($values);
+                        $counter = 1;
+                        foreach($values as $value) :
+
+                            $suffix = '';
+                            if($counter !== $value_count) :
+                                $suffix = ' / ';
+                            endif;
+
+                            $value_slug = str_replace(' ', '-', $value);
+                            $value_slug = str_replace(':', '-', $value_slug);
+
+                            echo '<a href="' . get_site_url() . '/' . $attribute_base . '/' . str_replace(' ', '-', $attribute['name']) . '/' . $value_slug . '">' . $value . '</a>' . $suffix;
+
+                            $counter++;
+                        endforeach;
+
+                        //echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
                     }
                     ?></td>
             </tr>

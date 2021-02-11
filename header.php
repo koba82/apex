@@ -18,7 +18,7 @@
     if ($page_properties['no-index'] || $page_properties['no-follow']) :
         if ($page_properties['no-index'] && $page_properties['no-follow'] || get_post_type() == 'static-content'):
             $index_follow .= 'noindex,nofollow"/>';
-        elseif (page_properties['no-index']):
+        elseif ($page_properties['no-index']):
             $index_follow .= 'noindex,follow"/>';
         else :
             $index_follow .= 'index,nofollow"/>';
@@ -102,7 +102,7 @@
 
                     <div class="search-box">
 
-                        <?php dynamic_sidebar('searchbar'); ?>
+                        <?php echo do_shortcode('[wcas-search-form]'); ?>
 
                     </div>
 

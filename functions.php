@@ -166,6 +166,7 @@
 				wp_enqueue_style( 'pre-base', get_template_directory_uri() .'/css/includes/pre-base.css', array(), false, 'all');
 				wp_enqueue_style( 'flickity', get_template_directory_uri() .'/css/includes/vendor/flickity.css', array(), false, 'all');
 				wp_enqueue_style( 'simple-lightbox', get_template_directory_uri() .'/css/includes/vendor/simplelightbox.css', array(), false, 'all');
+				wp_enqueue_style( 'fancybox', get_template_directory_uri() .'/css/includes/vendor/fancybox.css', array(), false, 'all');
 				wp_enqueue_style( 'style', get_template_directory_uri() .'/css/style.css', array(), false, 'all');
 				wp_enqueue_style( 'sub-theme-style', get_template_directory_uri() .'/css/themes/' . $theme_sub_style_sheet, array(), false, 'all');
 				wp_enqueue_style( 'override', get_template_directory_uri() .'/css/override.css', array(), false, 'all');
@@ -1546,14 +1547,19 @@ add_filter('acf/load_field/name=flex-card-bgc-select', 'acf_load_color_field_cho
             $icon = (display_icon(get_field('icon-select', $item->object_id ))) ? '<span class="icon-wrap nav-icon">' . display_icon(get_field('icon-select', $item->object_id )) . '</span>' : false;
             $icon_name = ($icon) ? get_field('icon-select', $item->object_id) : '';
 
+            $thumb = '';
+            if (WPEX_WOOCOMMERCE_ACTIVE) :
+                //Check for WooCommerce category image
+                $thumbnail_id = get_woocommerce_term_meta( $item->object_id, 'thumbnail_id', true );
+                $thumb = wp_get_attachment_url( $thumbnail_id );
+            endif;
+
             $indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
             $classes   = empty( $item->classes ) ? array() : (array) $item->classes;
             //$classes[] = 'menu-item-' . $item->ID;
             $classes[] = 'post-id-' . $item->object_id;
 
             $classes[] = ($icon) ? 'has-icon has-icon-' . $icon_name : 'has-no-icon';
-
-
 
             /**
              * Filters the arguments for a single nav menu item.
@@ -1654,7 +1660,8 @@ add_filter('acf/load_field/name=flex-card-bgc-select', 'acf_load_color_field_cho
 
             $item_output  = $args->before;
             $item_output .= '<a' . $attributes . '>';
-            $item_output .= ($icon) ? $icon : '';
+            $item_output .= ($icon) ?? '';
+            $item_output .= ($thumb) ? '<img class="nav-thumb" src="'.$thumb.'" />' : '';
             $item_output .= '<span class="menu-item-text">';
             $item_output .= $args->link_before . $title . $args->link_after;
             $item_output .= '</span>';

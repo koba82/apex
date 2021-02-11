@@ -29,9 +29,12 @@ do_action( 'woocommerce_before_single_product' );
 if ( post_password_required() ) {
     echo get_the_password_form(); // WPCS: XSS ok.
     return;
+
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+
+
 
     <section class="content-wrap gallery-and-summary-wrap">
         <div class="content">
