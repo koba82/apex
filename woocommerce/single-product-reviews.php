@@ -80,8 +80,8 @@ if ( ! comments_open() ) {
                         'cookies' => '<p class="form-email-notes">We gebruiken je e-mail adres alleen om je beoordeling te verifiëren, <em>niet</em> voor commerciële doeleinden.</p>',
                     ),
                     'label_submit'  => __( 'Submit', 'woocommerce' ),
-                    'logged_in_as'  => '',
-                    'comment_field' => ''
+                    'logged_in_as'  => ''
+                    //'comment_field' => ''
                 );
 
                 if ( $account_page_url = wc_get_page_permalink( 'myaccount' ) ) {
@@ -119,7 +119,7 @@ if ( ! comments_open() ) {
     </div>';
                 }
 
-                $comment_form['comment_field'] .= '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" placeholder="Beoordeling" aria-required="true" required></textarea></p>';
+                $comment_form['comment_field'] .= '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" placeholder="Beoordeling" aria-required="true"></textarea></p>';
 
                     comment_form( apply_filters( 'woocommerce_product_review_comment_form_args', $comment_form ) );
                 ?>
@@ -146,6 +146,17 @@ if ( ! comments_open() ) {
             jQuery('#respond .comment-form').toggleClass('active');
 
         });
+
+        jQuery('#commentform #submit').on('click', function(e) {
+            e.preventDefault();
+
+            if( !jQuery('#commentform #comment').val()) {
+                jQuery('#commentform #comment').val('-geen tekst-');
+            }
+
+            jQuery('#commentform').submit();
+
+        })
 
     </script>
 

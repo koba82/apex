@@ -1,6 +1,6 @@
 <?php 
 $form_source = get_sub_field('form-source');
-		
+
 //Create some variables
 $field_counter = 1; $field_type = array(); $field_label = array(); $body = array(); $form_id = rand (9999, 99999); ?>
 
@@ -166,20 +166,23 @@ $field_counter = 1; $field_type = array(); $field_label = array(); $body = array
 				add_filter( 'wp_mail_content_type','set_my_mail_content_type' );
 				add_action( 'phpmailer_init', 'send_smtp_email' );
 			
-				    wp_mail( $email_to, $subject, $body);
+				    return wp_mail( $email_to, $subject, $body);
 
 				remove_filter( 'wp_mail_content_type','set_my_mail_content_type' );
 				remove_action( 'phpmailer_init', 'send_smtp_email' );
 			
 			}
-			send_my_mail($email_to, $subject, $body);
 
-			$emailSent = true;
+			$emailSent = false;
+            $emailSent = send_my_mail($email_to, $subject, $body);
 			
 			//Show success message
-			echo '<div class="flex-form-success-wrap flex-form-success-show"><div class="flex-form-success"><div class="flex-form-success-icon" data-icon="&#xf1a1;"></div><p>' . get_sub_field('flex-form-success-message') . '</p><div class="button flex-form-close-button">Sluiten</div></div></div>';
-		
-		// Recaptcha if/else
+            if($emailSent) :
+			    echo '<div class="flex-form-success-wrap flex-form-success-show"><div class="flex-form-success"><div class="flex-form-success-icon" data-icon="&#xf1a1;"></div><p>' . get_sub_field('flex-form-success-message') . '</p><div class="button flex-form-close-button">Sluiten</div></div></div>';
+            else :
+                echo '<div class="flex-form-success-wrap flex-form-success-show"><div class="flex-form-success"><div class="flex-form-success-icon" data-icon="&#xf1a1;"></div><p>Er is iets fout gegaan bij het versturen van de mail. Neem contact op met de site beheerder.</p><div class="button flex-form-close-button">Sluiten</div></div></div>';
+            endif;
+                // Recaptcha if/else
 		endif;
 	endif;
 	

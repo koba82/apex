@@ -86,6 +86,11 @@ function woocommerce_render_meta_field()
         'label' => 'Inkoopprijs MCW',
         'value' => get_post_meta(get_the_ID(), '_cop_mcw', true)
     );
+    $inputBevro = array(
+        'id' => '_cop_bev',
+        'label' => 'Inkoopprijs Bevro',
+        'value' => get_post_meta(get_the_ID(), '_cop_bev', true)
+    );
     $inputGDJstock = array(
         'id' => '_stock_gdj',
         'label' => 'Voorraad GDJ',
@@ -95,6 +100,11 @@ function woocommerce_render_meta_field()
         'id' => '_stock_mcw',
         'label' => 'Voorraad MCW',
         'value' => get_post_meta(get_the_ID(), '_stock_mcw', true)
+    );
+    $inputBevroStock = array(
+        'id' => '_stock_bev',
+        'label' => 'Voorraad Bevro',
+        'value' => get_post_meta(get_the_ID(), '_stock_bev', true)
     );
 
     ?>
@@ -113,6 +123,12 @@ function woocommerce_render_meta_field()
     </div>
     <div id="cop_attr" style="background: rgb(255,225,225)" class="options_group">
         <?php woocommerce_wp_text_input($inputMCWstock); ?>
+    </div>
+    <div id="cop_attr" style="background: rgb(225,255,255)" class="options_group">
+        <?php woocommerce_wp_text_input($inputBevro); ?>
+    </div>
+    <div id="cop_attr" style="background: rgb(225,255,255)" class="options_group">
+        <?php woocommerce_wp_text_input($inputBevroStock); ?>
     </div>
 
     <?php
@@ -305,8 +321,17 @@ function seo_links_on_pdp()
 add_action('woocommerce_after_single_product_summary', 'seo_links_on_pdp', 50);
 
 /***
- * PDP Rich snippets
+ * Lister page pagination arrows
  */
+function apex_woo_pagination( $args ) {
+
+    $args['prev_text'] = 'Vorige';
+    $args['next_text'] = 'Volgende';
+
+    return $args;
+}
+add_filter( 'woocommerce_pagination_args', 	'apex_woo_pagination' );
+
 function generateRichDataPDP() {
     global $product;
 
@@ -673,7 +698,7 @@ function woocommerce_template_custom_loop_rating($arg)
     if ($rating_count > 0) :
 
         $star_width = $average * 20;
-        $plural = ($rating_count == 1) ? 'beoordeling' : 'beoordelingen';
+        $plural = ($review_count == 1) ? 'beoordeling' : 'beoordelingen';
 
         ?>
 
@@ -696,7 +721,7 @@ function woocommerce_template_custom_loop_rating($arg)
             </div>
 
             <?php if ($arg) : ?>
-                <div class="no-of-ratings"><?php echo $rating_count . ' ' . $plural; ?></div>
+                <div class="no-of-ratings"><?php echo $review_count . ' ' . $plural; ?></div>
             <?php endif; ?>
 
         </div>
