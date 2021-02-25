@@ -586,7 +586,6 @@
 	//Add button to publish metabox
 	add_action( 'post_submitbox_misc_actions', 'custom_button' );
 
-    if( ! current_user_can('administrator') ) {
         function custom_button()
         {
             $html = '<div id="major-publishing-actions" style="overflow:hidden">';
@@ -596,7 +595,7 @@
             $html .= '</div>';
             echo $html;
         }
-    }
+
 
 //**********************************************************************************************************************
 //	Duplicate post/page
@@ -732,8 +731,9 @@
 		};
 
 		if( get_row_layout() == 'flex-usp') {
-		    $title .= display_header_for_handle(get_sub_field('content-header-text')) . '<span>Bevat ' . count(get_sub_field("flex-usp-list")) . ' punt(en)</span>';
-        }
+		    $list = get_sub_field("list-group");
+		    $title .= display_header_for_handle(get_sub_field('content-header-text')) . '<span>Bevat ' . count($list['list-repeater']) . ' punt(en)</span>';
+		}
 
 
 		//Flex image
