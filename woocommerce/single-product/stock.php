@@ -31,8 +31,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             $mcwStock = get_post_meta( get_the_ID(), '_stock_mcw', true );
             $gdjStock = get_post_meta( get_the_ID(), '_stock_gdj', true );
+            $bevStock = get_post_meta( get_the_ID(), '_stock_bev', true );
 
             if(strpos($gdjStock, 'Yes') !== false ) :
+                echo '<p><span class="icon-wrap small">' . display_icon('fnd-info') . '</span>Op voorraad bij leverancier</p>';
+                echo '<p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Levertijd: ca. 5 werkdagen</p>';
+            elseif($bevStock !== '' && $bevStock !== NULL && $bevStock !== false ) :
                 echo '<p><span class="icon-wrap small">' . display_icon('fnd-info') . '</span>Op voorraad bij leverancier</p>';
                 echo '<p><span class="icon-wrap small">' . display_icon('calendar') . '</span>Levertijd: ca. 5 werkdagen</p>';
             elseif(strpos($mcwStock, 'available') !== false ) :

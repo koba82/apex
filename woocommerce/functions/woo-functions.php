@@ -261,7 +261,7 @@ function seo_links_on_pdp()
 
     foreach ( $attributes as $attribute ) :
 
-        if ( empty( $attribute['is_visible'] ) || $attribute['name'] == 'pa_original-category' || !$attribute['options'] || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) :
+        if ( empty( $attribute['is_visible'] ) || $attribute['name'] == 'Original category' || !$attribute['options'] || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) :
             continue;
         else :
             $has_row = true;
@@ -870,10 +870,12 @@ function getProductInfo()
 
         $wooProduct = wc_get_product($id);
         $sku = $wooProduct->get_sku();
-        $stock = $wooProduct->get_stock_quantity();
 
         $ids[strval($sku)]['id'] = $id;
-        $ids[strval($sku)]['stock'] = $stock;
+        $ids[strval($sku)]['stock'] = $wooProduct->get_stock_quantity();
+        $ids[strval($sku)]['year'] = $wooProduct->get_attribute( 'pa_jaar' );
+        $ids[strval($sku)]['event'] = $wooProduct->get_attribute( 'pa_evenement' );
+        $ids[strval($sku)]['driver'] = $wooProduct->get_attribute( 'pa_coureur' );
     }
 
     return $ids;

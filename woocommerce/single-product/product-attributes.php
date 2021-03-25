@@ -57,7 +57,7 @@ ob_start();
 
         foreach ( $attributes as $attribute ) :
 
-            if ( empty( $attribute['is_visible'] ) || $attribute['name'] == 'pa_original-category' || !$attribute['options'] || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) {
+            if ( empty( $attribute['is_visible'] ) || $attribute['name'] == 'Original category' || !$attribute['options'] || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) {
                 continue;
             } else {
                 $has_row = true;
