@@ -14,7 +14,16 @@
 
 <?php if(woocommerce_product_loop()) : ?>
     <div class="sidebar">
-        <div class="sidebar-filter-button">Filter</div>
+        <?php
+
+        $activeFilters = WC_Widget_Layered_Nav_Filters_Apex::countActiveAttributes();
+
+        $filterBlob = ($activeFilters) ? '<span class="filter-blob">' . $activeFilters . '</span>' : '';
+
+        ?>
+
+        <div class="sidebar-filter-button">Filters <?=$filterBlob;?></div>
+
         <div class="sidebar-inner">
             <?php dynamic_sidebar('filterbox'); ?>
         </div>
